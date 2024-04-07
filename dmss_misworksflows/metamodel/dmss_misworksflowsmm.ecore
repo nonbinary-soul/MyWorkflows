@@ -7,42 +7,49 @@
         eType="#//BaseDeDatos" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actores" upperBound="-1"
         eType="#//Actor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actor">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tareas" upperBound="-1"
         eType="#//Tarea" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BaseDeDatos">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tablas" upperBound="-1"
         eType="#//Tabla" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tabla">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//EAtributo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" lowerBound="1" eType="#//EAtributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EAtributo">
     <eLiterals name="INTEGER"/>
     <eLiterals name="REAL"/>
     <eLiterals name="TEXT"/>
-    <eLiterals name="NUMERIC"/>
+    <eLiterals name="BOOLEAN" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tarea" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" lowerBound="1"
-        eType="#//Tarea" eOpposite="#//Tarea/predecesor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="predecesor" lowerBound="1"
-        eType="#//Tarea" eOpposite="#//Tarea/sucesor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" eType="#//Tarea"
+        eOpposite="#//Tarea/predecesor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predecesor" eType="#//Tarea"
+        eOpposite="#//Tarea/sucesor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inicio" eSuperTypes="#//Tarea"/>
   <eClassifiers xsi:type="ecore:EClass" name="Fin" eSuperTypes="#//Tarea"/>
   <eClassifiers xsi:type="ecore:EClass" name="Intermedia" abstract="true" eSuperTypes="#//Tarea">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -67,5 +74,8 @@
         lowerBound="1" eType="#//Atributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencia_a" lowerBound="1"
+        eType="#//PrimaryKey"/>
+  </eClassifiers>
 </ecore:EPackage>
