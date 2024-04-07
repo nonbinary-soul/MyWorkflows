@@ -4,7 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dmss_misworksflowsmm="http://www.example.org/dmss_misworksflowsmm"
-    nombre="Registro de un usuario">
+    nombre="Pedido de una pizza de un usuario registrado">
   <bases_de_datos
       nombre="Pizzeria">
     <tablas
@@ -25,6 +25,19 @@
           nombre="correo_electronico"
           tipo="TEXT"/>
     </tablas>
+    <tablas
+        nombre="tabla_pedidos">
+      <atributos
+          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          nombre="numero_de_pedido"/>
+      <atributos
+          nombre="pizza_seleccionada"
+          tipo="TEXT"/>
+      <atributos
+          xsi:type="dmss_misworksflowsmm:ForeignKey"
+          nombre="dni_cliente"
+          referencia_a="//@bases_de_datos.0/@tablas.0/@atributos.0"/>
+    </tablas>
   </bases_de_datos>
   <actores nombre="Cliente">
     <tareas
@@ -34,10 +47,20 @@
         xsi:type="dmss_misworksflowsmm:Usuario"
         sucesor="//@actores.0/@tareas.2"
         predecesor="//@actores.0/@tareas.0"
-        nombre="rellenar formulario de registro"
-        formulario="//@bases_de_datos.0/@tablas.0"/>
+        nombre="rellenar forms para hacer pedido"
+        formulario="//@bases_de_datos.0/@tablas.1"/>
     <tareas
-        xsi:type="dmss_misworksflowsmm:Fin"
-        predecesor="//@actores.0/@tareas.1"/>
+        xsi:type="dmss_misworksflowsmm:Envio"
+        sucesor="//@actores.1/@tareas.0"
+        predecesor="//@actores.0/@tareas.1"
+        nombre="Enviar datos del pedido"
+        datos_adjuntos="tabla_"/>
+    <tareas
+        xsi:type="dmss_misworksflowsmm:Fin"/>
+  </actores>
+  <actores nombre="Pizzería">
+    <tareas
+        xsi:type="dmss_misworksflowsmm:Recepcion"
+        predecesor="//@actores.0/@tareas.2"/>
   </actores>
 </dmss_misworksflowsmm:ProcesoDeNegocio>
