@@ -52,10 +52,11 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
+        eType="#//Tabla"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Usuario" eSuperTypes="#//Intermedia">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formulario" lowerBound="1"
-        eType="#//Tabla"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opciones" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Intermedia">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
