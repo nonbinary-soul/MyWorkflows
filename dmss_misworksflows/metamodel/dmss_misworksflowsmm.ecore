@@ -27,16 +27,22 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actor">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R05_minTareaIntermedia R08_sonMisTareas"/>
+      <details key="constraints" value="R05_minTareaIntermedia"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R05_minTareaIntermedia" value="tareas->selectByType(Intermedia)->size() > 0"/>
-      <details key="R08_sonMisTareas" value="self.tareas->excludesAll(self.tareas->selectByKind(Mensaje))->forAll(&#xA;&#x9;&#x9;&#x9;t1 : Tarea | &#xA;&#x9;&#x9;&#x9;if (t1.sucesor.oclIsUndefined()) then &#xA;&#x9;&#x9;&#x9;&#x9;t1.oclContainer() &lt;> t1.sucesor.oclContainer()&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;true&#xA;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tareas" upperBound="-1"
         eType="#//Tarea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="num_tareas" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
+        transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.tareas->size()"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BaseDeDatos">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
@@ -60,13 +66,16 @@
     <eLiterals name="REAL"/>
     <eLiterals name="TEXT"/>
     <eLiterals name="BOOLEAN" value="3"/>
+    <eLiterals name="LIST" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tarea" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R06_noReflexiva"/>
+      <details key="constraints" value="R06_noReflexiva R08_ConexionesEntreTareas R09_unidireccionalidad"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R06_noReflexiva" value="sucesor &lt;> self"/>
+      <details key="R08_ConexionesEntreTareas" value="&#xA;&#x9;&#x9;  if self.oclIsTypeOf(Envio) then&#xA;&#x9;&#x9;    -- Se evalúa que Envio y Recepcion sean de distinto actor&#xA;&#x9;&#x9;    self.oclContainer() &lt;> self.sucesor.oclContainer() &#xA;&#x9;&#x9;  else&#xA;&#x9;&#x9;    -- El resto de conexiones deben ser del mismo actor&#xA;&#x9;&#x9;    self.sucesor->isEmpty() or&#xA;&#x9;&#x9;    self.sucesor.oclContainer() = self.oclContainer()&#xA;&#x9;&#x9;  endif"/>
+      <details key="R09_unidireccionalidad" value="&#xA;&#x9;&#x9;&#x9;self.predecesor->size() &lt;= 1 and self.sucesor->size() &lt;= 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" eType="#//Tarea"
         eOpposite="#//Tarea/predecesor"/>
@@ -97,28 +106,29 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
         eType="#//Tabla"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Usuario" eSuperTypes="#//Intermedia">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opciones" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Intermedia">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="output" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Usuario" eSuperTypes="#//Intermedia"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Intermedia"/>
   <eClassifiers xsi:type="ecore:EClass" name="Mensaje" abstract="true" eSuperTypes="#//Intermedia"/>
   <eClassifiers xsi:type="ecore:EClass" name="Envio" eSuperTypes="#//Mensaje">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mensaje" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="datos_adjuntos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recepcion" eSuperTypes="#//Mensaje">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R07_envioPrecedido"/>
+      <details key="constraints" value="R07_envioAsociado"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R07_envioPrecedido" value="predecesor.oclIsTypeOf(Envio)"/>
+      <details key="R07_envioAsociado" value="predecesor.oclIsTypeOf(Envio)"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Borrado" eSuperTypes="#//BD"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Lectura" eSuperTypes="#//BD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lectura" eSuperTypes="#//BD">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datos_a_leer" lowerBound="1"
+        eType="#//Tabla" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.atributo_seleccionado.oclContainer().oclAsType(Tabla)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BD" abstract="true" eSuperTypes="#//Intermedia">
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributo_seleccionado"
         lowerBound="1" eType="#//Atributo"/>
