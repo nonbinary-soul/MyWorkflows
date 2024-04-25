@@ -1,0 +1,113 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/dmss_misworksflowsmm')]
+
+[template public generateWorkflow(workflow: ProcesoDeNegocio)]
+[comment @main/]
+[file (workflow.nombre, false, 'UTF-8')]
+
+[/file]
+[/template]
+
+[template public generate(database: BaseDeDatos)]
+[file (database.nombre + '.sql', false, 'UTF-8')]
+
+-- Creación de la base de datos
+CREATE DATABASE IF NOT EXISTS [database.nombre/];
+
+-- Cambio al contexto de la base de datos
+USE [database.nombre/];
+
+-- Creación de tablas
+[for (tabla: Tabla | database.tablas)]
+    [tabla.generate()/]
+[/for]
+
+[/file]
+[/template]
+
+[template public generate(table: Tabla)]
+
+-- Definición de la tabla [table.nombre/]
+CREATE TABLE IF NOT EXISTS [table.nombre/] (
+    [for (atributo : Atributo | table.atributos) separator(', ')]
+        [atributo.nombre/] [atributo.tipo.getTipoAtributo()/]
+    [/for]
+);
+
+[/template]
+
+[template public generate(atributo: Atributo)]
+
+    [atributo.nombre/] [atributo.tipo.getTipoAtributo()/],
+[/template]
+
+[template public generate(atributo: PrimaryKey)]
+    [atributo.nombre/] [atributo.tipo.getTipoAtributo()/] PRIMARY KEY AUTOINCREMENT
+[/template]
+
+[template public generate(atributo: ForeignKey)]
+
+    [atributo.nombre/] [atributo.tipo.getTipoAtributo()/] REFERENCES [atributo.referencia_a.nombre/]
+[/template]
+
+[query public getTipoAtributo(tipo: EAtributo): String = 
+
+    [if (EAtributo.INTEGER)]
+        INTEGER
+    [elseif (EAtributo.REAL)]
+        REAL
+    [elseif (EAtributo.TEXT)]
+        TEXT
+    [elseif (EAtributo.BOOLEAN)]
+        BOOLEAN
+    [elseif (EAtributo.LIST)]
+        TEXT -- Cambiar según la representación correcta en SQLite
+    [else]
+        TEXT -- Tratamiento por defecto
+	[/if]
+/]
+
+[template public generate(actor: Actor)]
+
+
+[/template]
+
+[template public generate(tarea: Inicio)]
+
+
+[/template]
+
+[template public generate(tarea: Fin)]
+[file ('fin.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Fin</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<p>¡Proceso finalizado!</p>
+</body>
+</html>
+[/file]
+[/template]
+
+[template public generate(tarea: Usuario)]
+
+
+[/template]
+
+
+[template public generate(tarea: Servicio)]
+
+
+[/template]
+
+[template public generate(tarea: Envio)]
+
+[/template]
+
+[template public generate(tarea: Recepcion)]
+
+[/template]
