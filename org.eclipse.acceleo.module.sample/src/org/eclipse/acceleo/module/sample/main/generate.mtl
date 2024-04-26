@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS [table.nombre/] (
 INTEGER
 [elseif (ETipo = EAtributo::REAL)]
 REAL
-[elseif (ETipo = EAtributo::TEXT or ETipo = EAtributo::LIST)]
+[elseif (ETipo = EAtributo::TEXT or ETipo = EAtributo::LIST or ETipo = EAtributo::DATE)]
 TEXT
 [elseif (ETipo = EAtributo::BOOLEAN)]
 BOOLEAN
@@ -99,13 +99,13 @@ TEXT
     <h1>Índice - [actor.nombre/]</h1>
     <ul>
 		[if (actor.tareas->selectByType(Inicio)->size() > 0)]
-            <li><a href="[actor.tareas->selectByType(Inicio).generate()/]">Inicio</a></li>
+            <li><a href="[actor.tareas->selectByType(Inicio).generate().trim()/]">Inicio</a></li>
         [/if]
         [for (tarea: Recepcion | actor.tareas->selectByType(Recepcion))]
-            <li><a href="[tarea.generate()/]">Recepción: [tarea.nombre/]</a></li>
+            <li><a href="[tarea.generate().trim()/]">Recepción: [tarea.nombre/]</a></li>
         [/for]
         [if (actor.tareas->selectByType(Fin)->size() > 0)]
-            <li><a href="[actor.tareas->selectByType(Fin).generate()/]">Finalización</a></li>
+            <li><a href="[actor.tareas->selectByType(Fin).generate().trim()/]">Finalización</a></li>
         [/if]
     </ul>
 </div>
@@ -130,7 +130,7 @@ inicio.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-<a href="[tarea.sucesor.generateTarea()/]" class="center-message"><button type="button">¡Comenzar!</button></a>
+<a href="[tarea.sucesor.generateTarea().trim()/]" class="center-message"><button type="button">¡Comenzar!</button></a>
 </body>
 </html>
 [/file]
@@ -175,7 +175,7 @@ fin.html
 
 [template public generate(tarea: Usuario)]
 tareaUsuario.html
-[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaUsuario.html', false, 'UTF-8')]
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tUsuario.html', false, 'UTF-8')]
 <!doctype html>
 <html lang="en">
 <head>
@@ -185,13 +185,65 @@ tareaUsuario.html
 </head>
 <body>
 	
-    <form class="box" action="[tarea.sucesor.generateTarea()/]" method="POST">
+    <form class="box" action="[tarea.sucesor.generateTarea().trim()/]" method="POST">
 	<fieldset>
-		<legend>[tarea.nombre/]</legend>
-        <!-- Recorrer los campos de la tabla y poner los campos del forms -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <button type="submit">Siguiente</button>
+		<legend>Rellena los siguientes campos</legend>
+		[for (atributo : Atributo | tarea.tabla_accedida.atributos)]
+		[if (not(atributo.oclIsTypeOf(PrimaryKey)) and not(atributo.oclIsTypeOf(ForeignKey)))]
+        [if (atributo.tipo = EAtributo::LIST)]
+        <!-- Generar un select para atributos de tipo LIST -->
+		<div>
+	        <label for="[atributo.nombre/]">[atributo.nombre/]</label>
+	        <div>
+	            <select name="[atributo.nombre/]">
+                [for (opcion : String | atributo.valor.tokenize(','))]
+                    <option value="[opcion.trim()/]">[opcion.trim()/]</option>
+                [/for]
+	            </select>
+	        </div>
+	    </div>
+	    [else]
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+        [if (atributo.tipo = EAtributo::TEXT)]
+			<label>
+			[atributo.nombre/]<span class="required-mark">*</span>
+            <input type="text" name="[atributo.nombre/]" required>
+			</label>
+        [elseif (atributo.tipo = EAtributo::BOOLEAN)]
+			<div>
+				<label>[atributo.nombre/]<span class="required-mark">*</span></label>
+			</div>
+			
+            <label class="form-option">
+                <input type="radio" name="[atributo.nombre/]" value="yes" [atributo.valor/].equals("1") ? "checked" : "">
+                Sí
+            </label>
+            <label class="form-option">
+                <input type="radio" name="[atributo.nombre/]" value="no" [atributo.valor/].equals("0") ? "checked" : ""}>
+                No
+            </label>
+        [elseif (atributo.tipo = EAtributo::INTEGER)]
+			<label>
+			[atributo.nombre/]<span class="required-mark">*</span>
+            <input type="number" name="[atributo.nombre/]" required>
+			</label>
+        [elseif (atributo.tipo = EAtributo::DATE)]
+			<label>
+			[atributo.nombre/]<span class="required-mark">*</span>
+            <input type="date" name="[atributo.nombre/]" required>
+			</label>            
+        [elseif (atributo.tipo = EAtributo::REAL)]
+			<label>
+			[atributo.nombre/]<span class="required-mark">*</span>
+            <input type="number" step="any" name="[atributo.nombre/]" required>
+			</label>
+        [/if]
+		<div>
+        [/if]
+		[/if]
+		[/for]
+		<button type="submit">Siguiente</button>
 	</fieldset>
     </form>
 </body>

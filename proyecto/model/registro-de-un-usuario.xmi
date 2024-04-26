@@ -19,8 +19,22 @@
           nombre="direccion"
           tipo="TEXT"/>
       <atributos
+          nombre="jaja"
+          tipo="BOOLEAN"
+          valor="0"/>
+      <atributos
+          nombre="dafafds"
+          tipo="REAL"/>
+      <atributos
+          nombre="asdffdsfds"
+          tipo="DATE"/>
+      <atributos
           nombre="telefono"
           tipo="TEXT"/>
+      <atributos
+          nombre="opciones"
+          tipo="LIST"
+          valor="item1, item2, item3"/>
       <atributos
           nombre="correo_electronico"
           tipo="TEXT"/>
@@ -34,7 +48,8 @@
         xsi:type="proyectomm:Usuario"
         sucesor="//@actores.0/@tareas.2"
         predecesor="//@actores.0/@tareas.0"
-        nombre="rellenar formulario de registro"/>
+        nombre="rellenar formulario de registro"
+        tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Fin"
         predecesor="//@actores.0/@tareas.1"/>

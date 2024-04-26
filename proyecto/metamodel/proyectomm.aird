@@ -4,7 +4,7 @@
     <semanticResources>proyectomm.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_GHCpMAPCEe-2fI0P-ARlsw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HcjDkAPCEe-2fI0P-ARlsw" name="proyectomm class diagram" repPath="#_Ha7S8APCEe-2fI0P-ARlsw" changeId="1714157809179">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HcjDkAPCEe-2fI0P-ARlsw" name="proyectomm class diagram" repPath="#_Ha7S8APCEe-2fI0P-ARlsw" changeId="1714162479265">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="proyectomm.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -121,6 +121,10 @@
             <children xmi:type="notation:Node" xmi:id="_WPCLAAPDEe-2fI0P-ARlsw" type="3010" element="_WOBeYQPDEe-2fI0P-ARlsw">
               <styles xmi:type="notation:FontStyle" xmi:id="_WPCLAQPDEe-2fI0P-ARlsw" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_WPCLAgPDEe-2fI0P-ARlsw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_mhseYAQJEe-2fI0P-ARlsw" type="3010" element="_mhIdsAQJEe-2fI0P-ARlsw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_mhseYQQJEe-2fI0P-ARlsw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_mhseYgQJEe-2fI0P-ARlsw"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_WOvQEgPDEe-2fI0P-ARlsw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_WOvQEwPDEe-2fI0P-ARlsw"/>
@@ -891,6 +895,14 @@
         <target xmi:type="ecore:EEnumLiteral" href="proyectomm.ecore#//EAtributo/LIST"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="proyectomm.ecore#//EAtributo/LIST"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_WOBeYgPDEe-2fI0P-ARlsw" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_mhIdsAQJEe-2fI0P-ARlsw" name="DATE" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="proyectomm.ecore#//EAtributo/DATE"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="proyectomm.ecore#//EAtributo/DATE"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_mhJEwAQJEe-2fI0P-ARlsw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

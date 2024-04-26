@@ -7,19 +7,80 @@
 </head>
 <body>
 	
-    <form class="box" action="        fin.html
-            
-    " method="POST">
+    <form class="box" action="fin.html" method="POST">
 	<fieldset>
-		<legend>rellenar formulario de registro</legend>
-        <!-- Aquí van los campos del formulario -->
-        <!-- Por ejemplo, si la tarea requiere un campo "nombre", puedes tener algo como: -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <!-- Puedes agregar más campos según las necesidades de la tarea -->
-
-        <!-- Botón para enviar el formulario -->
-        <button type="submit">Siguiente</button>
+		<legend>Rellena los siguientes campos</legend>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			nombre<span class="required-mark">*</span>
+            <input type="text" name="nombre" required>
+			</label>
+		<div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			direccion<span class="required-mark">*</span>
+            <input type="text" name="direccion" required>
+			</label>
+		<div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<div>
+				<label>jaja<span class="required-mark">*</span></label>
+			</div>
+			
+            <label class="form-option">
+                <input type="radio" name="jaja" value="yes" 0.equals("1") ? "checked" : "">
+                Sí
+            </label>
+            <label class="form-option">
+                <input type="radio" name="jaja" value="no" 0.equals("0") ? "checked" : ""}>
+                No
+            </label>
+		<div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			dafafds<span class="required-mark">*</span>
+            <input type="number" step="any" name="dafafds" required>
+			</label>
+		<div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			asdffdsfds<span class="required-mark">*</span>
+            <input type="date" name="asdffdsfds" required>
+			</label>            
+		<div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			telefono<span class="required-mark">*</span>
+            <input type="text" name="telefono" required>
+			</label>
+		<div>
+        <!-- Generar un select para atributos de tipo LIST -->
+		<div>
+			<div>
+	        <label for="opciones">opciones</label>
+			</div>
+	        <div>
+	            <select name="opciones">
+	                    <option value="item1">item1</option>
+	                    <option value="item2">item2</option>
+	                    <option value="item3">item3</option>
+	            </select>
+	        </div>
+	    </div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			correo_electronico<span class="required-mark">*</span>
+            <input type="text" name="correo_electronico" required>
+			</label>
+		<div>
+		<button type="submit">Siguiente</button>
 	</fieldset>
     </form>
 </body>

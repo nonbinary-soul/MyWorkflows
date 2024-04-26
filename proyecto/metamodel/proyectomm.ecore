@@ -67,6 +67,7 @@
     <eLiterals name="TEXT"/>
     <eLiterals name="BOOLEAN" value="3"/>
     <eLiterals name="LIST" value="4"/>
+    <eLiterals name="DATE" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tarea" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
