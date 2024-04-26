@@ -3,19 +3,19 @@
 
 [template public generateWorkflow(workflow: ProcesoDeNegocio)]
 [comment @main/]
-[file (workflow.nombre, false, 'UTF-8')]
-	[comment Generación de las bases de datos/]
+[comment Generación de las bases de datos/]
 	[for (database: BaseDeDatos | workflow.bases_de_datos)]
 		[database.generate()/]
 	[/for]
-	
-	[workflow.actores->first().tareas->selectByType(Fin).generate()/]
-[/file]
+[comment Generación de los actores/]
+	[for (actor: Actor | workflow.actores)]
+		[actor.generate()/]
+	[/for]
 [/template]
 
 [comment
 	
-	GENERACIÓN DEL CÓDIGO SQL	
+	GENERACIÓN DEL CÓDIGO SQL: BASES DE DATOS	
 
 /]
 [template public generate(database: BaseDeDatos)]
@@ -82,27 +82,89 @@ TEXT
 
 [comment
 	
-	GENERACIÓN DEL CÓDIGO HTML	
+	GENERACIÓN DEL CÓDIGO HTML: ACTORES	
 
 /]
 [template public generate(actor: Actor)]
-
-
+[file (actor.nombre + '/index.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>[actor.nombre/]</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+<div class="box">
+    <h1>Índice - [actor.nombre/]</h1>
+    <ul>
+		[if (actor.tareas->selectByType(Inicio)->size() > 0)]
+            <li><a href="[actor.tareas->selectByType(Inicio).generate()/]">Inicio</a></li>
+        [/if]
+        [for (tarea: Recepcion | actor.tareas->selectByType(Recepcion))]
+            <li><a href="[tarea.generate()/]">Recepción: [tarea.nombre/]</a></li>
+        [/for]
+        [if (actor.tareas->selectByType(Fin)->size() > 0)]
+            <li><a href="[actor.tareas->selectByType(Fin).generate()/]">Finalización</a></li>
+        [/if]
+    </ul>
+</div>
+</body>
+</html>
+[/file]
 [/template]
 
+[comment
+	
+	GENERACIÓN DEL CÓDIGO HTML: TAREAS	
+
+/]
 [template public generate(tarea: Inicio)]
+inicio.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'inicio.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Inicio</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+<a href="[tarea.sucesor.generateTarea()/]" class="center-message"><button type="button">¡Comenzar!</button></a>
+</body>
+</html>
+[/file]
+[/template]
 
-
+[template public generateTarea(tarea: Tarea)]
+[if (tarea.oclIsTypeOf(Usuario))]
+        [tarea.oclAsType(Usuario).generate()/]
+    [elseif (tarea.oclIsTypeOf(Servicio))]
+        [tarea.oclAsType(Servicio).generate()/]
+    [elseif (tarea.oclIsTypeOf(Envio))]
+        [tarea.oclAsType(Envio).generate()/]
+    [elseif (tarea.oclIsTypeOf(Recepcion))]
+        [tarea.oclAsType(Recepcion).generate()/]
+    [elseif (tarea.oclIsTypeOf(Lectura))]
+        [tarea.oclAsType(Lectura).generate()/]
+    [elseif (tarea.oclIsTypeOf(Borrado))]
+        [tarea.oclAsType(Borrado).generate()/]
+    [elseif (tarea.oclIsTypeOf(Fin))]
+        [tarea.oclAsType(Fin).generate()/]
+    [else]
+		[tarea.oclAsType(Fin).generate()/]
+[/if]
 [/template]
 
 [template public generate(tarea: Fin)]
-[file ('fin.html', false, 'UTF-8')]
+fin.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'fin.html', false, 'UTF-8')]
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Fin</title>
-	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
 <p class="center-message">¡Proceso finalizado!</p>
@@ -112,8 +174,29 @@ TEXT
 [/template]
 
 [template public generate(tarea: Usuario)]
-
-
+tareaUsuario.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaUsuario.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TareaUsuario</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+	
+    <form class="box" action="[tarea.sucesor.generateTarea()/]" method="POST">
+	<fieldset>
+		<legend>[tarea.nombre/]</legend>
+        <!-- Recorrer los campos de la tabla y poner los campos del forms -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Siguiente</button>
+	</fieldset>
+    </form>
+</body>
+</html>
+[/file]
 [/template]
 
 
@@ -127,5 +210,13 @@ TEXT
 [/template]
 
 [template public generate(tarea: Recepcion)]
+
+[/template]
+
+[template public generate(tarea: Lectura)]
+
+[/template]
+
+[template public generate(tarea: Borrado)]
 
 [/template]

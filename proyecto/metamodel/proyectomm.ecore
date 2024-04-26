@@ -59,6 +59,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" lowerBound="1" eType="#//EAtributo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EAtributo">
     <eLiterals name="INTEGER"/>
