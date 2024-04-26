@@ -4,7 +4,12 @@
 [template public generateWorkflow(workflow: ProcesoDeNegocio)]
 [comment @main/]
 [file (workflow.nombre, false, 'UTF-8')]
-
+	[comment Generación de las bases de datos/]
+	[for (database: BaseDeDatos | workflow.bases_de_datos)]
+		[database.generate()/]
+	[/for]
+	
+	[workflow.actores->first().tareas->selectByType(Fin).generate()/]
 [/file]
 [/template]
 
@@ -14,7 +19,7 @@
 
 /]
 [template public generate(database: BaseDeDatos)]
-[file (database.nombre + '.sql', false, 'UTF-8')]
+[file ('/database/' + database.nombre + '.sql', false, 'UTF-8')]
 
 -- Creación de la base de datos
 CREATE DATABASE IF NOT EXISTS [database.nombre/];
@@ -24,47 +29,55 @@ USE [database.nombre/];
 
 -- Creación de tablas
 [for (tabla: Tabla | database.tablas)]
-    [tabla.generate()/]
+[tabla.generate()/]
 [/for]
 
 [/file]
 [/template]
 
 [template public generate(table: Tabla)]
-
 -- Definición de la tabla [table.nombre/]
 CREATE TABLE IF NOT EXISTS [table.nombre/] (
-    [for (atributo : Atributo | table.atributos) separator(', ')]
-        [atributo.generate()/]
-    [/for]
+[for (atributo : Atributo | table.atributos)]
+	[comment 
+		No se usa separator porque se añade sí o sí un salto de línea y en esa línea en donde se pone el separator. 
+		Por ejemplo: 
+		dni TEXT
+		, nombre TEXT
+		Además, se emplea trim() para eliminar los espacios en blanco finales e iniciales de forma que quede en una sola línea: 
+		dni TEXT, 
+		nombre TEXT
+	/]
+	[atributo.generate().trim()/][if (not(atributo = table.atributos->last()))], [/if]
+[/for]
 );
 
 [/template]
 
 [template public generate(atributo: Atributo)]
-    [atributo.nombre/] [atributo.tipo.getTipo()/]
+[atributo.nombre/] [atributo.tipo.getTipo().trim()/]
 [/template]
 
 [template public generate(atributo: PrimaryKey)]
-    [atributo.nombre/] [atributo.tipo.getTipo()/] PRIMARY KEY AUTOINCREMENT
+[atributo.nombre/] [atributo.tipo.getTipo().trim()/] PRIMARY KEY AUTOINCREMENT
 [/template]
 
 [template public generate(atributo: ForeignKey)]
-    [atributo.nombre/] [atributo.tipo.getTipo()/] REFERENCES [atributo.referencia_a.nombre/]
+[atributo.nombre/] [atributo.tipo.getTipo().trim()/] REFERENCES [atributo.referencia_a.nombre/]
 [/template]
 
 [template public getTipo(ETipo: EAtributo)]
-	[if (ETipo = EAtributo::INTEGER)]
- 		'INTEGER'
-	[elseif (ETipo = EAtributo::REAL)]
-		'REAL'
-	[elseif (ETipo = EAtributo::TEXT or ETipo = EAtributo::LIST)]
-		'TEXT'
-	[elseif (ETipo = EAtributo::BOOLEAN)]
-		'BOOLEAN'
-	[else]
-		'TEXT'
-	[/if]
+[if (ETipo = EAtributo::INTEGER)]
+INTEGER
+[elseif (ETipo = EAtributo::REAL)]
+REAL
+[elseif (ETipo = EAtributo::TEXT or ETipo = EAtributo::LIST)]
+TEXT
+[elseif (ETipo = EAtributo::BOOLEAN)]
+BOOLEAN
+[else]
+TEXT
+[/if]
 [/template]
 
 [comment
@@ -89,10 +102,10 @@ CREATE TABLE IF NOT EXISTS [table.nombre/] (
 <head>
 	<meta charset="utf-8">
 	<title>Fin</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-<p>¡Proceso finalizado!</p>
+<p class="center-message">¡Proceso finalizado!</p>
 </body>
 </html>
 [/file]
