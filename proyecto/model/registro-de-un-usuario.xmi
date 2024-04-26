@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmss_misworksflowsmm:ProcesoDeNegocio
+<proyectomm:ProcesoDeNegocio
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:dmss_misworksflowsmm="http://www.example.org/dmss_misworksflowsmm"
+    xmlns:proyectomm="http://www.example.org/proyectomm"
     nombre="Registro de un usuario">
   <bases_de_datos
       nombre="Pizzeria">
     <tablas
         nombre="tabla_clientes">
       <atributos
-          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          xsi:type="proyectomm:PrimaryKey"
           nombre="dni"/>
       <atributos
           nombre="nombre"
@@ -28,16 +28,15 @@
   </bases_de_datos>
   <actores nombre="Cliente">
     <tareas
-        xsi:type="dmss_misworksflowsmm:Inicio"
+        xsi:type="proyectomm:Inicio"
         sucesor="//@actores.0/@tareas.1"/>
     <tareas
-        xsi:type="dmss_misworksflowsmm:Usuario"
+        xsi:type="proyectomm:Usuario"
         sucesor="//@actores.0/@tareas.2"
         predecesor="//@actores.0/@tareas.0"
-        nombre="rellenar formulario de registro"
-        formulario="//@bases_de_datos.0/@tablas.0"/>
+        nombre="rellenar formulario de registro"/>
     <tareas
-        xsi:type="dmss_misworksflowsmm:Fin"
+        xsi:type="proyectomm:Fin"
         predecesor="//@actores.0/@tareas.1"/>
   </actores>
-</dmss_misworksflowsmm:ProcesoDeNegocio>
+</proyectomm:ProcesoDeNegocio>

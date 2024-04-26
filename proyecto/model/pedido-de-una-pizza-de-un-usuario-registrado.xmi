@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmss_misworksflowsmm:ProcesoDeNegocio
+<proyectomm:ProcesoDeNegocio
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:dmss_misworksflowsmm="http://www.example.org/dmss_misworksflowsmm"
+    xmlns:proyectomm="http://www.example.org/proyectomm"
     nombre="Pedido de una pizza de un usuario registrado">
   <bases_de_datos
       nombre="Pizzeria">
     <tablas
         nombre="tabla_clientes">
       <atributos
-          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          xsi:type="proyectomm:PrimaryKey"
           nombre="dni"/>
       <atributos
           nombre="nombre"
@@ -28,23 +28,23 @@
     <tablas
         nombre="tabla_pedidos">
       <atributos
-          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          xsi:type="proyectomm:PrimaryKey"
           nombre="numero_de_pedido"/>
       <atributos
           nombre="pizza_seleccionada"
           tipo="TEXT"/>
       <atributos
-          xsi:type="dmss_misworksflowsmm:ForeignKey"
+          xsi:type="proyectomm:ForeignKey"
           nombre="dni_cliente"
           referencia_a="//@bases_de_datos.0/@tablas.0/@atributos.0"/>
     </tablas>
     <tablas
         nombre="tabla_estado">
       <atributos
-          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          xsi:type="proyectomm:PrimaryKey"
           nombre="numero_de_registro"/>
       <atributos
-          xsi:type="dmss_misworksflowsmm:ForeignKey"
+          xsi:type="proyectomm:ForeignKey"
           nombre="numero_de_pedido"
           referencia_a="//@bases_de_datos.0/@tablas.1/@atributos.0"/>
       <atributos
@@ -60,10 +60,10 @@
     <tablas
         nombre="tabla_valoraciones">
       <atributos
-          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          xsi:type="proyectomm:PrimaryKey"
           nombre="numero_de_valoracion"/>
       <atributos
-          xsi:type="dmss_misworksflowsmm:ForeignKey"
+          xsi:type="proyectomm:ForeignKey"
           nombre="numero_de_pedido"
           referencia_a="//@bases_de_datos.0/@tablas.1/@atributos.0"/>
       <atributos
@@ -72,29 +72,28 @@
   </bases_de_datos>
   <actores nombre="Cliente">
     <tareas
-        xsi:type="dmss_misworksflowsmm:Inicio"
+        xsi:type="proyectomm:Inicio"
         sucesor="//@actores.0/@tareas.1"/>
     <tareas
-        xsi:type="dmss_misworksflowsmm:Usuario"
+        xsi:type="proyectomm:Usuario"
         sucesor="1"
         predecesor="//@actores.0/@tareas.0"
-        nombre="rellenar forms para hacer pedido"
-        formulario="//@bases_de_datos.0/@tablas.1"/>
+        nombre="rellenar forms para hacer pedido"/>
     <tareas
-        xsi:type="dmss_misworksflowsmm:Envio"
+        xsi:type="proyectomm:Envio"
         sucesor="2"
         predecesor="//@actores.0/@tareas.1"
         id="1"
         nombre="Enviar datos del pedido"
         datos_adjuntos="tabla_pedidos"/>
     <tareas
-        xsi:type="dmss_misworksflowsmm:Fin"/>
+        xsi:type="proyectomm:Fin"/>
   </actores>
   <actores nombre="Pizzería">
     <tareas
-        xsi:type="dmss_misworksflowsmm:Recepcion"
+        xsi:type="proyectomm:Recepcion"
         predecesor="1"
         id="2"
         nombre="Recibir pedido"/>
   </actores>
-</dmss_misworksflowsmm:ProcesoDeNegocio>
+</proyectomm:ProcesoDeNegocio>

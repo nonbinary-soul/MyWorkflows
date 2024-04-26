@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generate('http://www.example.org/dmss_misworksflowsmm')]
+[module generate('http://www.example.org/proyectomm')]
 
 [template public generateWorkflow(workflow: ProcesoDeNegocio)]
 [comment @main/]
@@ -8,6 +8,11 @@
 [/file]
 [/template]
 
+[comment
+	
+	GENERACIÓN DEL CÓDIGO SQL	
+
+/]
 [template public generate(database: BaseDeDatos)]
 [file (database.nombre + '.sql', false, 'UTF-8')]
 
@@ -30,43 +35,43 @@ USE [database.nombre/];
 -- Definición de la tabla [table.nombre/]
 CREATE TABLE IF NOT EXISTS [table.nombre/] (
     [for (atributo : Atributo | table.atributos) separator(', ')]
-        [atributo.nombre/] [atributo.tipo.getTipoAtributo()/]
+        [atributo.generate()/]
     [/for]
 );
 
 [/template]
 
 [template public generate(atributo: Atributo)]
-
-    [atributo.nombre/] [atributo.tipo.getTipoAtributo()/],
+    [atributo.nombre/] [atributo.tipo.getTipo()/]
 [/template]
 
 [template public generate(atributo: PrimaryKey)]
-    [atributo.nombre/] [atributo.tipo.getTipoAtributo()/] PRIMARY KEY AUTOINCREMENT
+    [atributo.nombre/] [atributo.tipo.getTipo()/] PRIMARY KEY AUTOINCREMENT
 [/template]
 
 [template public generate(atributo: ForeignKey)]
-
-    [atributo.nombre/] [atributo.tipo.getTipoAtributo()/] REFERENCES [atributo.referencia_a.nombre/]
+    [atributo.nombre/] [atributo.tipo.getTipo()/] REFERENCES [atributo.referencia_a.nombre/]
 [/template]
 
-[query public getTipoAtributo(tipo: EAtributo): String = 
-
-    [if (EAtributo.INTEGER)]
-        INTEGER
-    [elseif (EAtributo.REAL)]
-        REAL
-    [elseif (EAtributo.TEXT)]
-        TEXT
-    [elseif (EAtributo.BOOLEAN)]
-        BOOLEAN
-    [elseif (EAtributo.LIST)]
-        TEXT -- Cambiar según la representación correcta en SQLite
-    [else]
-        TEXT -- Tratamiento por defecto
+[template public getTipo(ETipo: EAtributo)]
+	[if (ETipo = EAtributo::INTEGER)]
+ 		'INTEGER'
+	[elseif (ETipo = EAtributo::REAL)]
+		'REAL'
+	[elseif (ETipo = EAtributo::TEXT or ETipo = EAtributo::LIST)]
+		'TEXT'
+	[elseif (ETipo = EAtributo::BOOLEAN)]
+		'BOOLEAN'
+	[else]
+		'TEXT'
 	[/if]
-/]
+[/template]
 
+[comment
+	
+	GENERACIÓN DEL CÓDIGO HTML	
+
+/]
 [template public generate(actor: Actor)]
 
 
