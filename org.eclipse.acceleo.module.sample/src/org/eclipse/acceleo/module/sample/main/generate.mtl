@@ -175,12 +175,12 @@ fin.html
 
 [template public generate(tarea: Usuario)]
 tareaUsuario.html
-[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tUsuario.html', false, 'UTF-8')]
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaUsuario.html', false, 'UTF-8')]
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>TareaUsuario</title>
+	<title>tUsuario</title>
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
@@ -216,11 +216,11 @@ tareaUsuario.html
 			</div>
 			
             <label class="form-option">
-                <input type="radio" name="[atributo.nombre/]" value="yes" [atributo.valor/].equals("1") ? "checked" : "">
+                <input type="radio" name="[atributo.nombre/]" value="yes" [if (atributo.valor.equalsIgnoreCase('1'))]checked[/if]>
                 Sí
             </label>
             <label class="form-option">
-                <input type="radio" name="[atributo.nombre/]" value="no" [atributo.valor/].equals("0") ? "checked" : ""}>
+                <input type="radio" name="[atributo.nombre/]" value="no" [if (atributo.valor.equalsIgnoreCase('0'))]checked[/if]>
                 No
             </label>
         [elseif (atributo.tipo = EAtributo::INTEGER)]
@@ -253,8 +253,30 @@ tareaUsuario.html
 
 
 [template public generate(tarea: Servicio)]
+tareaServicio.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaServicio.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tServicio</title>
+	<link rel="stylesheet" href="../../css/styles.css">
 
-
+	<script>
+        function ejecutarServicio() {
+            alert("¡Servicio ejecutado!");
+        }
+    </script>
+</head>
+<body>
+	<div class="box center-message">
+		<h1>[tarea.nombre/]</h1>
+		<button type="button" onclick="ejecutarServicio()">Ejecutar Servicio</button>
+		<a href="[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
+	</div>
+</body>
+</html>
+[/file]
 [/template]
 
 [template public generate(tarea: Envio)]

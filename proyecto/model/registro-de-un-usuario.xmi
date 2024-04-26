@@ -46,12 +46,19 @@
         sucesor="//@actores.0/@tareas.1"/>
     <tareas
         xsi:type="proyectomm:Usuario"
-        sucesor="//@actores.0/@tareas.2"
+        sucesor="1000"
         predecesor="//@actores.0/@tareas.0"
         nombre="rellenar formulario de registro"
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
+        xsi:type="proyectomm:Servicio"
+        sucesor="//@actores.0/@tareas.3"
+        predecesor="//@actores.0/@tareas.1"
+        id="1000"
+        nombre="imprimir registro"
+        descripcion="imprimir registro"/>
+    <tareas
         xsi:type="proyectomm:Fin"
-        predecesor="//@actores.0/@tareas.1"/>
+        predecesor="1000"/>
   </actores>
 </proyectomm:ProcesoDeNegocio>
