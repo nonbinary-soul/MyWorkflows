@@ -280,15 +280,106 @@ tareaServicio.html
 [/template]
 
 [template public generate(tarea: Envio)]
+tareaEnvio.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaEnvio.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tEnvio</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+	
+	<script>
+        function ejecutarServicio() {
+            alert("¡Mensaje enviado!");
+        }
+    </script>
+</head>
+<body>
+	<div class="box">
+		<p>Nombre: [tarea.nombre/]</p>
+		<p>Descripcion: [tarea.descripcion/]</p>
+		<p>Accede a la tabla: [tarea.tabla_accedida.nombre/]</p>
+	</div>
 
+	<div class="box center-message">
+		<h1>[tarea.nombre/]</h1>
+		<button type="button" onclick="ejecutarServicio()">Enviar mensaje</button>
+		<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/index.html"><button type="button">Índice del receptor</button></a>
+	</div>
+</body>
+</html>
+[/file]
 [/template]
 
 [template public generate(tarea: Recepcion)]
-
+tareaRecepcion.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaRecepcion.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tRecepcion</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+	<div class="box center-message">
+		<h1>[tarea.nombre/]</h1>
+		<ul>
+			<li><a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]">Pendiente: [tarea.predecesor.oclAsType(Envio).nombre/]</a></li>
+			[for (i : Integer | Sequence{1..5})]
+			<li><a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]">Pendiente: mensaje [i/]</a></li>
+			[/for]
+		</ul>
+	</div>
+</body>
+</html>
+[/file]
 [/template]
 
 [template public generate(tarea: Lectura)]
+tareaLectura.html
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'tareaLectura.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tLectura</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+	<form class="box" action="consulta.html" method="POST">
+		<fieldset>
+			<legend>Atributo a leer</legend>
+			<label>
+			Indica el campo que quieres leer<span class="required-mark">*</span>
+            <input type="text" name="atributo_seleccionado" required>
+			</label>
+			<button type="submit">Siguiente</button>
+		</fieldset>
+	</form>
+</body>
+</html>
+[/file]
 
+[file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'consulta.html', false, 'UTF-8')]
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tLConsulta</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+	<div class="box center-message">
+		<p>Se ha realizado la siguiente consulta: </p>
+		<p>SELECT [tarea.atributo_seleccionado.nombre/] FROM [tarea.datos_a_leer.nombre/];</p>
+		<p>Lo que ha devuelto</p>
+		TODO: mostrar datos ficticios
+	</div>
+</body>
+</html>
+[/file]
 [/template]
 
 [template public generate(tarea: Borrado)]

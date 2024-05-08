@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS tabla_clientes (
 	dni INTEGER PRIMARY KEY AUTOINCREMENT, 
 	nombre TEXT, 
 	direccion TEXT, 
-	jaja BOOLEAN, 
-	dafafds REAL, 
-	asdffdsfds TEXT, 
+	viveEnCaceres BOOLEAN, 
+	cReal REAL, 
+	cDate TEXT, 
 	telefono TEXT, 
 	opciones TEXT, 
 	correo_electronico TEXT
