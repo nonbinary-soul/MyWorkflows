@@ -29,7 +29,7 @@
       <details key="constraints" value="R05_minTareaIntermedia"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R05_minTareaIntermedia" value="tareas->selectByType(Intermedia)->size() > 0"/>
+      <details key="R05_minTareaIntermedia" value="tareas->select(oclIsKindOf(Intermedia))->size() > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -50,16 +50,31 @@
         upperBound="-1" eType="#//Tabla" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tabla">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="P02_soloUnaClavePrimaria P03_clavesTipoInteger"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="P02_soloUnaClavePrimaria" value="&#xA;&#x9;&#x9;        self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"/>
+      <details key="P03_clavesTipoInteger" value="&#xA;&#x9;&#x9;&#x9;    self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))&#xA;&#x9;&#x9;&#x9;                 ->forAll(at | at.tipo = EAtributo::INTEGER)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" lowerBound="1"
         upperBound="-1" eType="#//Atributo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="P01_tieneOpciones P05_sinEspaciosEnBlanco"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="P01_tieneOpciones" value="&#xA;&#x9;&#x9;&#x9;    if self.tipo = EAtributo::LIST then&#xA;&#x9;&#x9;&#x9;        self.opciones->notEmpty()&#xA;&#x9;&#x9;&#x9;    else&#xA;&#x9;&#x9;&#x9;        self.opciones->isEmpty()&#xA;&#x9;&#x9;&#x9;    endif"/>
+      <details key="P05_sinEspaciosEnBlanco" value="&#xA;&#x9;&#x9;        not self.nombre->includes(' ')"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" lowerBound="1" eType="#//EAtributo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opciones" upperBound="-1"
+        eType="#//Opcion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EAtributo">
     <eLiterals name="INTEGER"/>
@@ -126,7 +141,14 @@
       <details key="R07_envioAsociado" value="predecesor.oclIsTypeOf(Envio)"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Borrado" eSuperTypes="#//BD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Borrado" eSuperTypes="#//BD">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="P04_borradoConClavePrimaria"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="P04_borradoConClavePrimaria" value="&#xA;&#x9;&#x9;        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lectura" eSuperTypes="#//BD">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datos_a_leer" lowerBound="1"
         eType="#//Tabla" volatile="true" transient="true" derived="true">
@@ -143,5 +165,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia_a" lowerBound="1"
         eType="#//PrimaryKey"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Opcion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -196,8 +196,8 @@ tareaUsuario.html
 	        <label for="[atributo.nombre/]">[atributo.nombre/]</label>
 	        <div>
 	            <select name="[atributo.nombre/]">
-                [for (opcion : String | atributo.valor.tokenize(','))]
-                    <option value="[opcion.trim()/]">[opcion.trim()/]</option>
+                [for (opcion : Opcion | atributo.opciones)]
+                    <option value="[opcion.nombre/]">[opcion.nombre/]</option>
                 [/for]
 	            </select>
 	        </div>
@@ -216,11 +216,11 @@ tareaUsuario.html
 			</div>
 			
             <label class="form-option">
-                <input type="radio" name="[atributo.nombre/]" value="yes" [if (atributo.valor.equalsIgnoreCase('1'))]checked[/if]>
+                <input type="radio" name="[atributo.nombre/]" value="yes" checked>
                 Sí
             </label>
             <label class="form-option">
-                <input type="radio" name="[atributo.nombre/]" value="no" [if (atributo.valor.equalsIgnoreCase('0'))]checked[/if]>
+                <input type="radio" name="[atributo.nombre/]" value="no">
                 No
             </label>
         [elseif (atributo.tipo = EAtributo::INTEGER)]

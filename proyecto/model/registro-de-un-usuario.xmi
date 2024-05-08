@@ -19,22 +19,25 @@
           nombre="direccion"
           tipo="TEXT"/>
       <atributos
-          nombre="jaja"
-          tipo="BOOLEAN"
-          valor="0"/>
+          nombre="viveEnCaceres"
+          tipo="BOOLEAN"/>
       <atributos
-          nombre="dafafds"
+          nombre="cReal"
           tipo="REAL"/>
       <atributos
-          nombre="asdffdsfds"
+          nombre="cDate"
           tipo="DATE"/>
       <atributos
           nombre="telefono"
           tipo="TEXT"/>
       <atributos
           nombre="opciones"
-          tipo="LIST"
-          valor="item1, item2, item3"/>
+          tipo="LIST">
+        <opciones
+            nombre="item 1"/>
+        <opciones
+            nombre="item 2"/>
+      </atributos>
       <atributos
           nombre="correo_electronico"
           tipo="TEXT"/>
@@ -56,7 +59,8 @@
         predecesor="//@actores.0/@tareas.1"
         id="1000"
         nombre="imprimir registro"
-        descripcion="imprimir registro"/>
+        descripcion="imprimir registro"
+        tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Fin"
         predecesor="1000"/>
