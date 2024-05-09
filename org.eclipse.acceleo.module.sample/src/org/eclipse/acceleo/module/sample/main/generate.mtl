@@ -436,6 +436,9 @@ tareaBorrado.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+	<header>
+	
+	</header>
 	<div class="box">
 		<h1>[tarea.nombre/]</h1>
 		<p>[tarea.descripcion/]</p>
