@@ -245,6 +245,38 @@ textarea {
     margin-bottom: 0.5em; 
 }
 
+/*header*/
+.topnav {
+    overflow: hidden;
+    background-color: #424B7A;
+    position: fixed; 
+    z-index: 3; 
+    top:0; 
+    width:100%;
+    margin-bottom: 3em;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1em;
+    font-size: 17px;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .topnav span{
+      display: block;
+      text-align: center; 
+  }
+  
+  .topnav a span, .topnav a i{
+      color: inherit;
+  }
+  
 /* MAIN */
 main {
     display: flex;
