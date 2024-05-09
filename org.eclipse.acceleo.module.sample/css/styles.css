@@ -115,6 +115,19 @@ select, input{
     padding: 2em;
     margin: 0.5em;
     background-color: white;
+    height: match-parent;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.inner {
+    position: relative;
+    padding: 2em;
+    margin: 0.5em;
+    background-color: #fffff0;
+    height: match-parent;
     border: none;
     border-radius: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);

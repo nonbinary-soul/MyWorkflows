@@ -71,7 +71,7 @@
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Fin"
-        predecesor="3000"/>
+        predecesor="4000"/>
   </actores>
   <actores nombre="Pizzeria">
     <tareas
@@ -84,11 +84,19 @@
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Lectura"
-        sucesor="//@actores.0/@tareas.4"
+        sucesor="4000"
         predecesor="10000"
         id="3000"
         nombre="lectura"
         descripcion="esta es la descripcion"
         atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.1"/>
+    <tareas
+        xsi:type="proyectomm:Borrado"
+        sucesor="//@actores.0/@tareas.4"
+        predecesor="3000"
+        id="4000"
+        nombre="tareaBorrado"
+        descripcion="este es la descripcion de la tarea"
+        atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.4"/>
   </actores>
 </proyectomm:ProcesoDeNegocio>
