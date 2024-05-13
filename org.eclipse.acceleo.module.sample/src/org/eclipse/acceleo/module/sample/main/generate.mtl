@@ -95,6 +95,9 @@ TEXT
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+
+[generateHeader()/]
+
 <div class="box">
     <h1>Índice - [actor.nombre/]</h1>
     <ul>
@@ -106,6 +109,8 @@ TEXT
         [/for]
     </ul>
 </div>
+
+[generateFooter()/]
 </body>
 </html>
 [/file]
@@ -127,7 +132,23 @@ inicio.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]" class="center-message"><button type="button">¡Comenzar!</button></a>
+
+[generateHeader()/]
+
+	
+
+<div class ="box">
+	<h1> Tarea inicial </h1>
+
+	<br>
+	<p>Pulse para iniciar su workflow: </p> 
+
+	<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]" class="center-message"><button type="button">¡Comenzar!</button></a>
+</div>
+
+
+[generateFooter()/]
+
 </body>
 </html>
 [/file]
@@ -164,7 +185,18 @@ fin.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-<p class="center-message">¡Proceso finalizado!</p>
+
+[generateHeader()/]
+
+<div class="box">
+	<h1>Tarea de cierre</h1>
+	<br>
+
+	<p class="center-message">¡Proceso finalizado!</p>
+</div>
+
+[generateFooter()/]
+
 </body>
 </html>
 [/file]
@@ -181,8 +213,13 @@ tareaUsuario.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+
+	[generateHeader()/]
 	
     <form class="box" action="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]" method="POST">
+
+	<h1>Tarea de Usuario</h1>
+
 	<fieldset>
 		<legend>Rellena los siguientes campos</legend>
 		[for (atributo : Atributo | tarea.tabla_accedida.atributos)]
@@ -243,6 +280,9 @@ tareaUsuario.html
 		<button type="submit">Siguiente</button>
 	</fieldset>
     </form>
+
+	[generateFooter()/]
+
 </body>
 </html>
 [/file]
@@ -266,11 +306,21 @@ tareaServicio.html
     </script>
 </head>
 <body>
-	<div class="box center-message">
-		<h1>[tarea.nombre/]</h1>
-		<button type="button" onclick="ejecutarServicio()">Ejecutar Servicio</button>
-		<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
+
+	[generateHeader()/]
+
+	<div class="box">
+
+		<h1>Tarea de servicio</h1>
+
+		<div class="center-message">
+			<h1>[tarea.nombre/]</h1>
+			<button type="button" onclick="ejecutarServicio()">Ejecutar Servicio</button>
+			<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
+		</div>
 	</div>
+
+	[generateFooter()/]
 </body>
 </html>
 [/file]
@@ -293,16 +343,26 @@ tareaEnvio.html
     </script>
 </head>
 <body>
+
+	[generateHeader()/]	
+
 	<div class="box">
-		<p>Nombre: [tarea.nombre/]</p>
+	<h1>Tarea de Envio</h1>
+
+	<div class="box">
+		<p>Nombre de Tarea: [tarea.nombre/]</p>
 		<p>Descripcion: [tarea.descripcion/]</p>
 		<p>Accede a la tabla: [tarea.tabla_accedida.nombre/]</p>
+		</br>
+		<div>
+			<h2>Realizar envio:</h2>
+			Pulse para realizar el envio: <a href="../[tarea.eContainer().oclAsType(Actor).nombre/]/index.html"><button type="button">Continuar</button></a>
+		</div>
 	</div>
 
-	<div class="box center-message">
-		<h1>[tarea.nombre/]</h1>
-		<a href="../[tarea.eContainer().oclAsType(Actor).nombre/]/index.html"><button type="button">Continuar</button></a>
 	</div>
+
+	[generateFooter()/]
 </body>
 </html>
 [/file]
@@ -319,10 +379,20 @@ tareaRecepcion.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-	<div class="box center-message">
+
+	[generateHeader()/]
+
+	<div class="box">
+		<h1>Tarea de Recepción</h1>
+
+	<div class="center-message">
 		Se está procesando la tabla [tarea.tabla_accedida.nombre/]. Puedes continuar cuando quieras. 
-		<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]//[tarea.sucesor.generateTarea().trim()/]"><button type="button">Continuar</button></a>
+		<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Continuar</button></a>
 	</div>
+
+	</div>
+
+	[generateFooter()/]
 </body>
 </html>
 [/file]
@@ -339,20 +409,31 @@ tareaLectura.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+
+	[generateHeader()/]
+
 	<div class="box">
-		<h1>[tarea.nombre/]</h1>
-		<p>[tarea.descripcion/]</p>
-		<form class="box inner" action="consulta.html" method="POST">
-			<fieldset>
-				<legend>Formulario de consulta</legend>
-				<label>
-				[tarea.atributo_seleccionado.nombre/]<span class="required-mark">*</span>
-	            <input type="text" required>
-				</label>
-				<button type="submit">Siguiente</button>
-			</fieldset>
-		</form>
+		<h1>Tarea de Lectura</h1>
+
+		<div class="box">
+			<h2>[tarea.nombre/]</h2>
+			<p>[tarea.descripcion/]</p>
+			<form class="box inner" action="consulta.html" method="POST">
+				<fieldset>
+					<legend>Formulario de consulta</legend>
+					<label>
+					[tarea.atributo_seleccionado.nombre/]<span class="required-mark">*</span>
+		            <input type="text" required>
+					</label>
+					<button type="submit">Siguiente</button>
+				</fieldset>
+			</form>
+		</div>
+
 	</div>
+
+	[generateFooter()/]
+
 </body>
 </html>
 [/file]
@@ -366,33 +447,44 @@ tareaLectura.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+
+	[generateHeader()/]
+
 	<div class="box">
-		<h1>[tarea.nombre/]</h1>
-		<p>[tarea.descripcion/]</p>
-		
-		<div class="box inner">
-			<p>Se ha realizado la siguiente consulta SQL</p>
-			<div class="box"><em>SELECT [tarea.atributo_seleccionado.nombre/] FROM [tarea.atributo_seleccionado.eContainer().oclAsType(Tabla).nombre/];</em></div>
-			<p>Se ha leído la siguiente información</p>
-			<div class="box">
-			<table>
-			  <thead>
-			    <tr>
-			      <th>[tarea.atributo_seleccionado.nombre/]</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-				[for (i : Integer | Sequence{1..5})]
-			    <tr>
-			      <td><em>Aquí iría el valor del atributo para esta tupla</em></td>
-			    </tr>
-				[/for]
-			  </tbody>
-			</table>
+		<h1>Tarea de Consulta</h1>
+
+		<div class="box">
+			<h2>[tarea.nombre/]</h2>
+			<p>[tarea.descripcion/]</p>
+			
+			<div class="box inner">
+				<p>Se ha realizado la siguiente consulta SQL</p>
+				<div class="box"><em>SELECT [tarea.atributo_seleccionado.nombre/] FROM [tarea.atributo_seleccionado.eContainer().oclAsType(Tabla).nombre/];</em></div>
+				<p>Se ha leído la siguiente información</p>
+				<div class="box">
+				<table>
+				  <thead>
+				    <tr>
+				      <th>[tarea.atributo_seleccionado.nombre/]</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+					[for (i : Integer | Sequence{1..5})]
+				    <tr>
+				      <td><em>Aquí iría el valor del atributo para esta tupla</em></td>
+				    </tr>
+					[/for]
+				  </tbody>
+				</table>
+				</div>
+				<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
 			</div>
-			<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
 		</div>
+
 	</div>
+
+	[generateFooter()/]
+
 </body>
 </html>
 [/file]
@@ -409,20 +501,31 @@ tareaBorrado.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
+
+	[generateHeader()/]
+
 	<div class="box">
-		<h1>[tarea.nombre/]</h1>
-		<p>[tarea.descripcion/]</p>	
-		<form class="box inner" action="sentenciaBorrado.html" method="POST">
-			<fieldset>
-				<legend>Formulario de borrado</legend>
-				<label>
-				[tarea.atributo_seleccionado.nombre/]<span class="required-mark">*</span>
-	            <input type="text" name="atributo_seleccionado" required>
-				</label>
-				<button type="submit">Siguiente</button>
-			</fieldset>
-		</form>
+		<h1>Tarea de borrado</h1>
+
+		<div class="box">
+			<h2>[tarea.nombre/]</h2>
+			<p>[tarea.descripcion/]</p>	
+			<form class="box inner" action="sentenciaBorrado.html" method="POST">
+				<fieldset>
+					<legend>Formulario de borrado</legend>
+					<label>
+					[tarea.atributo_seleccionado.nombre/]<span class="required-mark">*</span>
+		            <input type="text" name="atributo_seleccionado" required>
+					</label>
+					<button type="submit">Siguiente</button>
+				</fieldset>
+			</form>
+		</div>
+
 	</div>
+
+	[generateFooter()/]
+
 </body>
 </html>
 [/file]
@@ -436,11 +539,14 @@ tareaBorrado.html
 	<link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-	<header>
 	
-	</header>
+	[generateHeader()/]
+
 	<div class="box">
-		<h1>[tarea.nombre/]</h1>
+		<h1>Sentencia de borrado</h1>
+
+	<div class="box">
+		<h2>[tarea.nombre/]</h2>
 		<p>[tarea.descripcion/]</p>
 		<div class="box inner">
 			<p>Se ha realizado la siguiente sentencia SQL</p>
@@ -448,7 +554,26 @@ tareaBorrado.html
 			<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
 		</div>
 	</div>
+
+	</div>
+
+	[generateFooter()/]
+
 </body>
 </html>
 [/file]
 [/template]
+
+[template public generateHeader()]
+	<header class="topnav">
+        <h1><a href="index.html">MisWorkflows</a></h1>
+    </header>
+[/template]
+
+[template public generateFooter()]
+	<footer class="bottomnav">
+        <p>&copy; 2024 MisWorkflows. Todos los derechos reservados.</p>
+    </footer>
+[/template]
+
+
