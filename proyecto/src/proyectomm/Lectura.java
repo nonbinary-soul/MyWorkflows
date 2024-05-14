@@ -16,7 +16,7 @@ package proyectomm;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getLectura()
- * @model
+ * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/read.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Lectura extends BD {

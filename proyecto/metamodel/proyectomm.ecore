@@ -10,6 +10,11 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eAnnotations source="gmf"/>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="operationReflection" value="true"/>
+    <details key="tableProviders" value="true"/>
+    <details key="complianceLevel" value="6.0"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ProcesoDeNegocio">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="R01_unaTareaInicial R02_unaTareaFinal"/>
@@ -35,6 +40,10 @@
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/start.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -49,6 +58,13 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BaseDeDatos">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/database.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tablas" lowerBound="1"
@@ -62,6 +78,13 @@
       <details key="P02_soloUnaClavePrimaria" value="&#xA;&#x9;&#x9;        self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"/>
       <details key="P03_clavesTipoInteger" value="&#xA;&#x9;&#x9;&#x9;    self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))&#xA;&#x9;&#x9;&#x9;                 ->forAll(at | at.tipo = EAtributo::INTEGER)"/>
     </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/table.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" lowerBound="1"
@@ -74,6 +97,13 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="P01_tieneOpciones" value="&#xA;&#x9;&#x9;&#x9;    if self.tipo = EAtributo::LIST then&#xA;&#x9;&#x9;&#x9;        self.opciones->notEmpty()&#xA;&#x9;&#x9;&#x9;    else&#xA;&#x9;&#x9;&#x9;        self.opciones->isEmpty()&#xA;&#x9;&#x9;&#x9;    endif"/>
       <details key="P05_sinEspaciosEnBlanco" value="&#xA;&#x9;&#x9;        not self.nombre->includes(' ')"/>
+    </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/attribute.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -126,10 +156,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Usuario" eSuperTypes="#//Intermedia">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/form.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
         eType="#//Tabla"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Intermedia">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/service.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
         eType="#//Tabla"/>
   </eClassifiers>
@@ -137,7 +181,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
         eType="#//Tabla"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Envio" eSuperTypes="#//Mensaje"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Envio" eSuperTypes="#//Mensaje">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/sent-message.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recepcion" eSuperTypes="#//Mensaje">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="R07_envioAsociado P06_mismaTablaQueEnvio"/>
@@ -145,6 +197,13 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R07_envioAsociado" value="predecesor.oclIsTypeOf(Envio)"/>
       <details key="P06_mismaTablaQueEnvio" value="self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida"/>
+    </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/received-message.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Borrado" eSuperTypes="#//BD">
@@ -154,8 +213,22 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="P04_borradoConClavePrimaria" value="&#xA;&#x9;&#x9;        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"/>
     </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/delete.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lectura" eSuperTypes="#//BD">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/read.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datos_a_leer" lowerBound="1"
         eType="#//Tabla" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
@@ -167,12 +240,34 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributo_seleccionado"
         lowerBound="1" eType="#//Atributo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/pk.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/fk.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia_a" lowerBound="1"
         eType="#//PrimaryKey"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Opcion">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/option.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

@@ -16,7 +16,7 @@ package proyectomm;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getForeignKey()
- * @model
+ * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/fk.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface ForeignKey extends Atributo {

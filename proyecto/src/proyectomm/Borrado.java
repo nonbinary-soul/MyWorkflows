@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *
  * @see proyectomm.ProyectommPackage#getBorrado()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P04_borradoConClavePrimaria'"
+ *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/delete.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Borrado extends BD {

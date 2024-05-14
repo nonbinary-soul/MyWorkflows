@@ -23,8 +23,9 @@ public class ProyectommModelingAssistantProviderOfProcesoDeNegocioEditPart exten
 	@Override
 
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
-		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(ProyectommElementTypes.Actor_2001);
+		List<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(ProyectommElementTypes.BaseDeDatos_2001);
+		types.add(ProyectommElementTypes.Actor_2002);
 		return types;
 	}
 

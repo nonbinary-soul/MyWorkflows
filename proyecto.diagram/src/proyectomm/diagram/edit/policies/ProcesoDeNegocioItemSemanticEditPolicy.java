@@ -11,6 +11,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 
 import proyectomm.diagram.edit.commands.ActorCreateCommand;
+import proyectomm.diagram.edit.commands.BaseDeDatosCreateCommand;
 import proyectomm.diagram.providers.ProyectommElementTypes;
 
 /**
@@ -29,7 +30,10 @@ public class ProcesoDeNegocioItemSemanticEditPolicy extends ProyectommBaseItemSe
 	* @generated
 	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ProyectommElementTypes.Actor_2001 == req.getElementType()) {
+		if (ProyectommElementTypes.BaseDeDatos_2001 == req.getElementType()) {
+			return getGEFWrapper(new BaseDeDatosCreateCommand(req));
+		}
+		if (ProyectommElementTypes.Actor_2002 == req.getElementType()) {
 			return getGEFWrapper(new ActorCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getBaseDeDatos()
- * @model
+ * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/database.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface BaseDeDatos extends EObject {

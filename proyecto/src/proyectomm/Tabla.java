@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see proyectomm.ProyectommPackage#getTabla()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P03_clavesTipoInteger'"
+ *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/table.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Tabla extends EObject {

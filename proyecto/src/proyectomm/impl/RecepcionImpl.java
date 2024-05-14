@@ -168,4 +168,21 @@ public class RecepcionImpl extends MensajeImpl implements Recepcion {
 		}
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ProyectommPackage.RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP:
+				return R07_envioAsociado((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP:
+				return P06_mismaTablaQueEnvio((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
 } //RecepcionImpl

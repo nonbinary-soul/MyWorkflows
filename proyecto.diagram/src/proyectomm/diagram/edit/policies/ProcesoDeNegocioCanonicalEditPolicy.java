@@ -6,9 +6,11 @@ package proyectomm.diagram.edit.policies;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
@@ -27,6 +29,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import proyectomm.ProyectommPackage;
 import proyectomm.diagram.edit.parts.ActorEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.part.ProyectommDiagramUpdater;
 import proyectomm.diagram.part.ProyectommNodeDescriptor;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
@@ -35,6 +38,11 @@ import proyectomm.diagram.part.ProyectommVisualIDRegistry;
  * @generated
  */
 public class ProcesoDeNegocioCanonicalEditPolicy extends CanonicalEditPolicy {
+
+	/**
+	* @generated
+	*/
+	private Set<EStructuralFeature> myFeaturesToSynchronize;
 
 	/**
 	* @generated
@@ -51,8 +59,13 @@ public class ProcesoDeNegocioCanonicalEditPolicy extends CanonicalEditPolicy {
 	/**
 	* @generated
 	*/
-	protected EStructuralFeature getFeatureToSynchronize() {
-		return ProyectommPackage.eINSTANCE.getProcesoDeNegocio_Actores();
+	protected Set getFeaturesToSynchronize() {
+		if (myFeaturesToSynchronize == null) {
+			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
+			myFeaturesToSynchronize.add(ProyectommPackage.eINSTANCE.getProcesoDeNegocio_Bases_de_datos());
+			myFeaturesToSynchronize.add(ProyectommPackage.eINSTANCE.getProcesoDeNegocio_Actores());
+		}
+		return myFeaturesToSynchronize;
 	}
 
 	/**
@@ -85,7 +98,8 @@ public class ProcesoDeNegocioCanonicalEditPolicy extends CanonicalEditPolicy {
 	* @generated
 	*/
 	private boolean isMyDiagramElement(View view) {
-		return ActorEditPart.VISUAL_ID == ProyectommVisualIDRegistry.getVisualID(view);
+		int visualID = ProyectommVisualIDRegistry.getVisualID(view);
+		return visualID == BaseDeDatosEditPart.VISUAL_ID || visualID == ActorEditPart.VISUAL_ID;
 	}
 
 	/**

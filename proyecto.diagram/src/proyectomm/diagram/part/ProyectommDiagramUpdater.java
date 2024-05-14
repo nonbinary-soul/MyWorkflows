@@ -12,8 +12,10 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 
 import proyectomm.Actor;
+import proyectomm.BaseDeDatos;
 import proyectomm.ProcesoDeNegocio;
 import proyectomm.diagram.edit.parts.ActorEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 
 /**
@@ -48,6 +50,14 @@ public class ProyectommDiagramUpdater {
 		}
 		ProcesoDeNegocio modelElement = (ProcesoDeNegocio) view.getElement();
 		LinkedList<ProyectommNodeDescriptor> result = new LinkedList<ProyectommNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getBases_de_datos().iterator(); it.hasNext();) {
+			BaseDeDatos childElement = (BaseDeDatos) it.next();
+			int visualID = ProyectommVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == BaseDeDatosEditPart.VISUAL_ID) {
+				result.add(new ProyectommNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
 		for (Iterator<?> it = modelElement.getActores().iterator(); it.hasNext();) {
 			Actor childElement = (Actor) it.next();
 			int visualID = ProyectommVisualIDRegistry.getNodeVisualID(view, childElement);
@@ -66,8 +76,10 @@ public class ProyectommDiagramUpdater {
 		switch (ProyectommVisualIDRegistry.getVisualID(view)) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
 			return getProcesoDeNegocio_1000ContainedLinks(view);
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return getBaseDeDatos_2001ContainedLinks(view);
 		case ActorEditPart.VISUAL_ID:
-			return getActor_2001ContainedLinks(view);
+			return getActor_2002ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -77,8 +89,10 @@ public class ProyectommDiagramUpdater {
 	*/
 	public static List<ProyectommLinkDescriptor> getIncomingLinks(View view) {
 		switch (ProyectommVisualIDRegistry.getVisualID(view)) {
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return getBaseDeDatos_2001IncomingLinks(view);
 		case ActorEditPart.VISUAL_ID:
-			return getActor_2001IncomingLinks(view);
+			return getActor_2002IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -88,8 +102,10 @@ public class ProyectommDiagramUpdater {
 	*/
 	public static List<ProyectommLinkDescriptor> getOutgoingLinks(View view) {
 		switch (ProyectommVisualIDRegistry.getVisualID(view)) {
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return getBaseDeDatos_2001OutgoingLinks(view);
 		case ActorEditPart.VISUAL_ID:
-			return getActor_2001OutgoingLinks(view);
+			return getActor_2002OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -104,21 +120,42 @@ public class ProyectommDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ProyectommLinkDescriptor> getActor_2001ContainedLinks(View view) {
+	public static List<ProyectommLinkDescriptor> getBaseDeDatos_2001ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<ProyectommLinkDescriptor> getActor_2001IncomingLinks(View view) {
+	public static List<ProyectommLinkDescriptor> getActor_2002ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<ProyectommLinkDescriptor> getActor_2001OutgoingLinks(View view) {
+	public static List<ProyectommLinkDescriptor> getBaseDeDatos_2001IncomingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProyectommLinkDescriptor> getActor_2002IncomingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProyectommLinkDescriptor> getBaseDeDatos_2001OutgoingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<ProyectommLinkDescriptor> getActor_2002OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 

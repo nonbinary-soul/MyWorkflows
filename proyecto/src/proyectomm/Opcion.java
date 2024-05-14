@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getOpcion()
- * @model
+ * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/option.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Opcion extends EObject {

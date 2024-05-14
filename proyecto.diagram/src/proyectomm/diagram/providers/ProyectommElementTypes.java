@@ -19,6 +19,7 @@ import org.eclipse.swt.graphics.Image;
 
 import proyectomm.ProyectommPackage;
 import proyectomm.diagram.edit.parts.ActorEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 
@@ -56,7 +57,11 @@ public class ProyectommElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType Actor_2001 = getElementType("proyecto.diagram.Actor_2001"); //$NON-NLS-1$
+	public static final IElementType BaseDeDatos_2001 = getElementType("proyecto.diagram.BaseDeDatos_2001"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType Actor_2002 = getElementType("proyecto.diagram.Actor_2002"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -98,7 +103,9 @@ public class ProyectommElementTypes {
 
 			elements.put(ProcesoDeNegocio_1000, ProyectommPackage.eINSTANCE.getProcesoDeNegocio());
 
-			elements.put(Actor_2001, ProyectommPackage.eINSTANCE.getActor());
+			elements.put(BaseDeDatos_2001, ProyectommPackage.eINSTANCE.getBaseDeDatos());
+
+			elements.put(Actor_2002, ProyectommPackage.eINSTANCE.getActor());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -117,7 +124,8 @@ public class ProyectommElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(ProcesoDeNegocio_1000);
-			KNOWN_ELEMENT_TYPES.add(Actor_2001);
+			KNOWN_ELEMENT_TYPES.add(BaseDeDatos_2001);
+			KNOWN_ELEMENT_TYPES.add(Actor_2002);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -129,8 +137,10 @@ public class ProyectommElementTypes {
 		switch (visualID) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
 			return ProcesoDeNegocio_1000;
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return BaseDeDatos_2001;
 		case ActorEditPart.VISUAL_ID:
-			return Actor_2001;
+			return Actor_2002;
 		}
 		return null;
 	}

@@ -99,4 +99,19 @@ public class FinImpl extends TareaImpl implements Fin {
 		}
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ProyectommPackage.FIN___R04_SIN_SUCESOR__DIAGNOSTICCHAIN_MAP:
+				return R04_sinSucesor((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
 } //FinImpl

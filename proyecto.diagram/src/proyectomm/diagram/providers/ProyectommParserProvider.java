@@ -18,6 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import proyectomm.ProyectommPackage;
 import proyectomm.diagram.edit.parts.ActorNombreEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
 import proyectomm.diagram.parsers.MessageFormatParser;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
@@ -29,18 +30,35 @@ public class ProyectommParserProvider extends AbstractProvider implements IParse
 	/**
 	* @generated
 	*/
-	private IParser actorNombre_5001Parser;
+	private IParser baseDeDatosNombre_5001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getActorNombre_5001Parser() {
-		if (actorNombre_5001Parser == null) {
+	private IParser getBaseDeDatosNombre_5001Parser() {
+		if (baseDeDatosNombre_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { ProyectommPackage.eINSTANCE.getBaseDeDatos_Nombre() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			baseDeDatosNombre_5001Parser = parser;
+		}
+		return baseDeDatosNombre_5001Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser actorNombre_5002Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getActorNombre_5002Parser() {
+		if (actorNombre_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { ProyectommPackage.eINSTANCE.getActor_Nombre() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			actorNombre_5001Parser = parser;
+			actorNombre_5002Parser = parser;
 		}
-		return actorNombre_5001Parser;
+		return actorNombre_5002Parser;
 	}
 
 	/**
@@ -48,8 +66,10 @@ public class ProyectommParserProvider extends AbstractProvider implements IParse
 	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
+		case BaseDeDatosNombreEditPart.VISUAL_ID:
+			return getBaseDeDatosNombre_5001Parser();
 		case ActorNombreEditPart.VISUAL_ID:
-			return getActorNombre_5001Parser();
+			return getActorNombre_5002Parser();
 		}
 		return null;
 	}

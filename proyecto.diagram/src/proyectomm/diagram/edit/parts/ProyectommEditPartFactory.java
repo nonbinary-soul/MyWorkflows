@@ -28,6 +28,12 @@ public class ProyectommEditPartFactory implements EditPartFactory {
 			case ProcesoDeNegocioEditPart.VISUAL_ID:
 				return new ProcesoDeNegocioEditPart(view);
 
+			case BaseDeDatosEditPart.VISUAL_ID:
+				return new BaseDeDatosEditPart(view);
+
+			case BaseDeDatosNombreEditPart.VISUAL_ID:
+				return new BaseDeDatosNombreEditPart(view);
+
 			case ActorEditPart.VISUAL_ID:
 				return new ActorEditPart(view);
 

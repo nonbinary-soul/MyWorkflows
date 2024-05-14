@@ -27,6 +27,7 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -40,6 +41,8 @@ import org.eclipse.swt.graphics.FontData;
 
 import proyectomm.diagram.edit.parts.ActorEditPart;
 import proyectomm.diagram.edit.parts.ActorNombreEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
@@ -126,6 +129,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 					return false; // foreign diagram
 				}
 				switch (visualID) {
+				case BaseDeDatosEditPart.VISUAL_ID:
 				case ActorEditPart.VISUAL_ID:
 					if (domainElement == null || visualID != ProyectommVisualIDRegistry
 							.getNodeVisualID(op.getContainerView(), domainElement)) {
@@ -137,7 +141,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 				}
 			}
 		}
-		return ActorEditPart.VISUAL_ID == visualID;
+		return BaseDeDatosEditPart.VISUAL_ID == visualID || ActorEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -186,8 +190,10 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 			visualID = ProyectommVisualIDRegistry.getVisualID(semanticHint);
 		}
 		switch (visualID) {
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return createBaseDeDatos_2001(domainElement, containerView, index, persisted, preferencesHint);
 		case ActorEditPart.VISUAL_ID:
-			return createActor_2001(domainElement, containerView, index, persisted, preferencesHint);
+			return createActor_2002(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -209,7 +215,48 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 	/**
 	* @generated
 	*/
-	public Node createActor_2001(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createBaseDeDatos_2001(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(ProyectommVisualIDRegistry.getType(BaseDeDatosEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5001 = createLabel(node, ProyectommVisualIDRegistry.getType(BaseDeDatosNombreEditPart.VISUAL_ID));
+		label5001.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location5001 = (Location) label5001.getLayoutConstraint();
+		location5001.setX(0);
+		location5001.setY(5);
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createActor_2002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -239,7 +286,11 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5001 = createLabel(node, ProyectommVisualIDRegistry.getType(ActorNombreEditPart.VISUAL_ID));
+		Node label5002 = createLabel(node, ProyectommVisualIDRegistry.getType(ActorNombreEditPart.VISUAL_ID));
+		label5002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location5002 = (Location) label5002.getLayoutConstraint();
+		location5002.setX(0);
+		location5002.setY(5);
 		return node;
 	}
 

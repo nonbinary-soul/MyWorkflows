@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see proyectomm.ProyectommPackage#getActor()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='R05_minTareaIntermedia'"
- *        annotation="gmf.node label='nombre'"
+ *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/start.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Actor extends EObject {

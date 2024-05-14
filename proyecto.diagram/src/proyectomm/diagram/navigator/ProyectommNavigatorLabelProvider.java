@@ -23,6 +23,8 @@ import org.eclipse.ui.navigator.ICommonLabelProvider;
 import proyectomm.ProcesoDeNegocio;
 import proyectomm.diagram.edit.parts.ActorEditPart;
 import proyectomm.diagram.edit.parts.ActorNombreEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
@@ -93,9 +95,12 @@ public class ProyectommNavigatorLabelProvider extends LabelProvider
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
 			return getImage("Navigator?Diagram?http://www.example.org/proyectomm?ProcesoDeNegocio", //$NON-NLS-1$
 					ProyectommElementTypes.ProcesoDeNegocio_1000);
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return getImage("Navigator?TopLevelNode?http://www.example.org/proyectomm?BaseDeDatos", //$NON-NLS-1$
+					ProyectommElementTypes.BaseDeDatos_2001);
 		case ActorEditPart.VISUAL_ID:
 			return getImage("Navigator?TopLevelNode?http://www.example.org/proyectomm?Actor", //$NON-NLS-1$
-					ProyectommElementTypes.Actor_2001);
+					ProyectommElementTypes.Actor_2002);
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -156,8 +161,10 @@ public class ProyectommNavigatorLabelProvider extends LabelProvider
 		switch (ProyectommVisualIDRegistry.getVisualID(view)) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
 			return getProcesoDeNegocio_1000Text(view);
+		case BaseDeDatosEditPart.VISUAL_ID:
+			return getBaseDeDatos_2001Text(view);
 		case ActorEditPart.VISUAL_ID:
-			return getActor_2001Text(view);
+			return getActor_2002Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -178,15 +185,31 @@ public class ProyectommNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getActor_2001Text(View view) {
-		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.Actor_2001,
+	private String getBaseDeDatos_2001Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.BaseDeDatos_2001,
+				view.getElement() != null ? view.getElement() : view,
+				ProyectommVisualIDRegistry.getType(BaseDeDatosNombreEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getActor_2002Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.Actor_2002,
 				view.getElement() != null ? view.getElement() : view,
 				ProyectommVisualIDRegistry.getType(ActorNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
-			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

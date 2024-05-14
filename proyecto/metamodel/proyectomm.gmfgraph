@@ -2,15 +2,160 @@
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="proyectomm">
   <figures name="Default">
     <descriptors name="ActorFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ActorFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/proyecto/icons/start.svg">
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
-        <children xsi:type="gmfgraph:Label" name="ActorLabelFigure" text="Actor"/>
       </actualFigure>
-      <accessors accessor="getFigureActorLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ActorLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ActorLabelFigure" text="Actor"/>
+    </descriptors>
+    <descriptors name="BaseDeDatosFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="BaseDeDatosFigure" documentURI="platform:/plugin/proyecto/icons/database.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="BaseDeDatosLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="BaseDeDatosLabelFigure" text="BaseDeDatos"/>
+    </descriptors>
+    <descriptors name="TablaFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="TablaFigure" documentURI="platform:/plugin/proyecto/icons/table.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="TablaLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TablaLabelFigure" text="Tabla"/>
+    </descriptors>
+    <descriptors name="AtributoFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="AtributoFigure" documentURI="platform:/plugin/proyecto/icons/attribute.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="AtributoLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AtributoLabelFigure" text="Atributo"/>
+    </descriptors>
+    <descriptors name="UsuarioFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="UsuarioFigure" documentURI="platform:/plugin/proyecto/icons/form.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="UsuarioLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="UsuarioLabelFigure" text="Usuario"/>
+    </descriptors>
+    <descriptors name="ServicioFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ServicioFigure" documentURI="platform:/plugin/proyecto/icons/service.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ServicioLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ServicioLabelFigure" text="Servicio"/>
+    </descriptors>
+    <descriptors name="EnvioFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="EnvioFigure" documentURI="platform:/plugin/proyecto/icons/sent-message.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="EnvioLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="EnvioLabelFigure" text="Envio"/>
+    </descriptors>
+    <descriptors name="RecepcionFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="RecepcionFigure" documentURI="platform:/plugin/proyecto/icons/received-message.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="RecepcionLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="RecepcionLabelFigure" text="Recepcion"/>
+    </descriptors>
+    <descriptors name="BorradoFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="BorradoFigure" documentURI="platform:/plugin/proyecto/icons/delete.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="BorradoLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="BorradoLabelFigure" text="Borrado"/>
+    </descriptors>
+    <descriptors name="LecturaFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="LecturaFigure" documentURI="platform:/plugin/proyecto/icons/read.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="LecturaLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="LecturaLabelFigure" text="Lectura"/>
+    </descriptors>
+    <descriptors name="PrimaryKeyFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="PrimaryKeyFigure" documentURI="platform:/plugin/proyecto/icons/pk.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="PrimaryKeyLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="PrimaryKeyLabelFigure" text="PrimaryKey"/>
+    </descriptors>
+    <descriptors name="ForeignKeyFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ForeignKeyFigure" documentURI="platform:/plugin/proyecto/icons/fk.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ForeignKeyLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ForeignKeyLabelFigure" text="ForeignKey"/>
+    </descriptors>
+    <descriptors name="OpcionFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="OpcionFigure" documentURI="platform:/plugin/proyecto/icons/option.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="OpcionLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="OpcionLabelFigure" text="Opcion"/>
     </descriptors>
   </figures>
   <nodes name="Actor" figure="ActorFigure"/>
-  <labels name="ActorLabel" figure="ActorFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <nodes name="BaseDeDatos" figure="BaseDeDatosFigure"/>
+  <nodes name="Tabla" figure="TablaFigure"/>
+  <nodes name="Atributo" figure="AtributoFigure"/>
+  <nodes name="Usuario" figure="UsuarioFigure"/>
+  <nodes name="Servicio" figure="ServicioFigure"/>
+  <nodes name="Envio" figure="EnvioFigure"/>
+  <nodes name="Recepcion" figure="RecepcionFigure"/>
+  <nodes name="Borrado" figure="BorradoFigure"/>
+  <nodes name="Lectura" figure="LecturaFigure"/>
+  <nodes name="PrimaryKey" figure="PrimaryKeyFigure"/>
+  <nodes name="ForeignKey" figure="ForeignKeyFigure"/>
+  <nodes name="Opcion" figure="OpcionFigure"/>
+  <labels name="ActorLabel" figure="ActorLabelFigure" elementIcon="false"/>
+  <labels name="BaseDeDatosLabel" figure="BaseDeDatosLabelFigure" elementIcon="false"/>
+  <labels name="TablaLabel" figure="TablaLabelFigure" elementIcon="false"/>
+  <labels name="AtributoLabel" figure="AtributoLabelFigure" elementIcon="false"/>
+  <labels name="UsuarioLabel" figure="UsuarioLabelFigure" elementIcon="false"/>
+  <labels name="ServicioLabel" figure="ServicioLabelFigure" elementIcon="false"/>
+  <labels name="EnvioLabel" figure="EnvioLabelFigure" elementIcon="false"/>
+  <labels name="RecepcionLabel" figure="RecepcionLabelFigure" elementIcon="false"/>
+  <labels name="BorradoLabel" figure="BorradoLabelFigure" elementIcon="false"/>
+  <labels name="LecturaLabel" figure="LecturaLabelFigure" elementIcon="false"/>
+  <labels name="PrimaryKeyLabel" figure="PrimaryKeyLabelFigure" elementIcon="false"/>
+  <labels name="ForeignKeyLabel" figure="ForeignKeyLabelFigure" elementIcon="false"/>
+  <labels name="OpcionLabel" figure="OpcionLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

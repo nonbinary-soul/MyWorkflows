@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Proyectomm"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002"/>
       </viewProvider>
    </extension>
 
@@ -270,13 +270,13 @@
             <method name="getType()" value="Proyectomm"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001"/>
+            <method name="getType()" value="2001,2002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value=""/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001"/>
+            <method name="getType()" value="5001,5002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -293,10 +293,15 @@
          <object class="proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart" id="ProcesoDeNegocio_1000"/>
          <context elements="ProcesoDeNegocio_1000"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfBaseDeDatosEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.BaseDeDatosEditPart" id="BaseDeDatos_2001"/>
+         <context elements="BaseDeDatos_2001"/>
+      </modelingAssistantProvider>
             <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfActorEditPart">
          <Priority name="Lowest"/>
-         <object class="proyectomm.diagram.edit.parts.ActorEditPart" id="Actor_2001"/>
-         <context elements="Actor_2001"/>
+         <object class="proyectomm.diagram.edit.parts.ActorEditPart" id="Actor_2002"/>
+         <context elements="Actor_2002"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -321,7 +326,7 @@
       <decoratorProvider class="proyectomm.diagram.providers.ProyectommShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
-            <method name="getType()" value="2001"/>
+            <method name="getType()" value="2001,2002"/>
          </object>
          <context decoratorTargets="generated-top-nodes"/>
       </decoratorProvider>
@@ -341,12 +346,22 @@
       </metamodel>
       <metamodel nsURI="http://www.example.org/proyectomm">
          <metamodelType
-               id="proyecto.diagram.Actor_2001"
-               name="%metatype.name.Actor_2001"
+               id="proyecto.diagram.BaseDeDatos_2001"
+               name="%metatype.name.BaseDeDatos_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="BaseDeDatos"
+               edithelper="proyectomm.diagram.edit.helpers.BaseDeDatosEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Actor_2002"
+               name="%metatype.name.Actor_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Actor"
                edithelper="proyectomm.diagram.edit.helpers.ActorEditHelper">
-            <param name="semanticHint" value="2001"/>
+            <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
    </extension>
@@ -362,7 +377,8 @@
       </clientContext> 
       <binding context="proyecto.diagram.TypeContext">
          <elementType ref="proyecto.diagram.ProcesoDeNegocio_1000"/>
-         <elementType ref="proyecto.diagram.Actor_2001"/>
+         <elementType ref="proyecto.diagram.BaseDeDatos_2001"/>
+         <elementType ref="proyecto.diagram.Actor_2002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

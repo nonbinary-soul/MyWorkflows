@@ -22,7 +22,7 @@ public class ActorItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 	* @generated
 	*/
 	public ActorItemSemanticEditPolicy() {
-		super(ProyectommElementTypes.Actor_2001);
+		super(ProyectommElementTypes.Actor_2002);
 	}
 
 	/**

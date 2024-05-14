@@ -7,6 +7,26 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
+        href="proyectomm.ecore#//ProcesoDeNegocio/bases_de_datos"/>
+    <ownedChild>
+      <domainMetaElement
+          href="proyectomm.ecore#//BaseDeDatos"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="proyectomm.gmfgraph#BaseDeDatosLabel"/>
+        <features
+            href="proyectomm.ecore#//BaseDeDatos/nombre"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="proyectomm.gmftool#//@palette/@tools.0/@tools.2"/>
+      <diagramNode
+          href="proyectomm.gmfgraph#BaseDeDatos"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
         href="proyectomm.ecore#//ProcesoDeNegocio/actores"/>
     <ownedChild>
       <domainMetaElement

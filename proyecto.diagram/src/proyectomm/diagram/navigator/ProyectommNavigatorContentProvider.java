@@ -28,6 +28,7 @@ import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
 
 import proyectomm.diagram.edit.parts.ActorEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
@@ -228,6 +229,9 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			result.addAll(getForeignShortcuts((Diagram) view, parentElement));
 			Diagram sv = (Diagram) view;
 			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(BaseDeDatosEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					ProyectommVisualIDRegistry.getType(ActorEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));

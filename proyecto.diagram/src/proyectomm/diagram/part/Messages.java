@@ -261,6 +261,126 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String Atributo2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Atributo2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String BaseDeDatos3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String BaseDeDatos3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Borrado4CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Borrado4CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Envio5CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Envio5CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String ForeignKey6CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String ForeignKey6CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Lectura7CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Lectura7CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Opcion8CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Opcion8CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String PrimaryKey9CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String PrimaryKey9CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Recepcion10CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Recepcion10CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Servicio11CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Servicio11CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla12CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla12CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Usuario13CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Usuario13CreationTool_desc;
+
+	/**
+	* @generated
+	*/
 	public static String CommandName_OpenDiagram;
 
 	/**

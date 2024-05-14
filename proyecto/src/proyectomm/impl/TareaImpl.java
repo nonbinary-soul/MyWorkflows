@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.ocl.pivot.evaluation.Executor;
 
@@ -573,6 +572,25 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 				return predecesor != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ProyectommPackage.TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP:
+				return R09_unidireccionalidad((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.TAREA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP:
+				return R06_noReflexiva((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.TAREA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP:
+				return R08_ConexionesEntreTareas((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //TareaImpl

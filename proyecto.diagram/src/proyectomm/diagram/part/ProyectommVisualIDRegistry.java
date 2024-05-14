@@ -14,6 +14,8 @@ import proyectomm.ProcesoDeNegocio;
 import proyectomm.ProyectommPackage;
 import proyectomm.diagram.edit.parts.ActorEditPart;
 import proyectomm.diagram.edit.parts.ActorNombreEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 
 /**
@@ -118,6 +120,9 @@ public class ProyectommVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getBaseDeDatos().isSuperTypeOf(domainElement.eClass())) {
+				return BaseDeDatosEditPart.VISUAL_ID;
+			}
 			if (ProyectommPackage.eINSTANCE.getActor().isSuperTypeOf(domainElement.eClass())) {
 				return ActorEditPart.VISUAL_ID;
 			}
@@ -146,7 +151,15 @@ public class ProyectommVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
+			if (BaseDeDatosEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (ActorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case BaseDeDatosEditPart.VISUAL_ID:
+			if (BaseDeDatosNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -205,6 +218,7 @@ public class ProyectommVisualIDRegistry {
 		switch (visualID) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
 			return false;
+		case BaseDeDatosEditPart.VISUAL_ID:
 		case ActorEditPart.VISUAL_ID:
 			return true;
 		default:
