@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -68,7 +69,7 @@ import proyectomm.ProyectommTables;
  *
  * @generated
  */
-public class AtributoImpl extends MinimalEObjectImpl.Container implements Atributo {
+public class AtributoImpl extends EObjectImpl implements Atributo {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -403,23 +404,6 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 				return opciones != null && !opciones.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ProyectommPackage.ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP:
-				return P01_tieneOpciones((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ProyectommPackage.ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP:
-				return P05_sinEspaciosEnBlanco((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

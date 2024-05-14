@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see proyectomm.ProyectommPackage#getProcesoDeNegocio()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='R02_unaTareaFinal'"
+ *        annotation="gmf.diagram"
  * @generated
  */
 public interface ProcesoDeNegocio extends EObject {

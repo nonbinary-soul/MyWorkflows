@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -36,7 +37,7 @@ import proyectomm.Tabla;
  *
  * @generated
  */
-public class BaseDeDatosImpl extends MinimalEObjectImpl.Container implements BaseDeDatos {
+public class BaseDeDatosImpl extends EObjectImpl implements BaseDeDatos {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->

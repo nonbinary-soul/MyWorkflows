@@ -99,19 +99,4 @@ public class InicioImpl extends TareaImpl implements Inicio {
 		}
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ProyectommPackage.INICIO___R03_SIN_PREDECESOR__DIAGNOSTICCHAIN_MAP:
-				return R03_sinPredecesor((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 } //InicioImpl

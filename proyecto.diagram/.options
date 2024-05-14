@@ -1,0 +1,7 @@
+# Tracing options for the proyecto.diagram plug-in
+
+# Common issues
+proyecto.diagram/debug=false
+
+# Visual IDs
+proyecto.diagram/debug/visualID=false

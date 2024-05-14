@@ -9,6 +9,7 @@
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
+  <eAnnotations source="gmf"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProcesoDeNegocio">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="R01_unaTareaInicial R02_unaTareaFinal"/>
@@ -17,6 +18,7 @@
       <details key="R01_unaTareaInicial" value="Inicio.allInstances()->size() = 1"/>
       <details key="R02_unaTareaFinal" value="Fin.allInstances()->size() = 1"/>
     </eAnnotations>
+    <eAnnotations source="gmf.diagram"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bases_de_datos" lowerBound="1"
         upperBound="-1" eType="#//BaseDeDatos" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actores" lowerBound="1"
@@ -30,6 +32,9 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R05_minTareaIntermedia" value="tareas->select(oclIsKindOf(Intermedia))->size() > 0"/>
+    </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -90,7 +95,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R06_noReflexiva" value="sucesor &lt;> self"/>
-      <details key="R08_ConexionesEntreTareas" value="&#xA;&#x9;&#x9;  if self.oclIsTypeOf(Envio) then&#xA;&#x9;&#x9;    -- Se evalúa que Envio y Recepcion sean de distinto actor&#xA;&#x9;&#x9;    self.oclContainer() &lt;> self.sucesor.oclContainer() &#xA;&#x9;&#x9;  else&#xA;&#x9;&#x9;    -- El resto de conexiones deben ser del mismo actor&#xA;&#x9;&#x9;    self.sucesor->isEmpty() or&#xA;&#x9;&#x9;    self.sucesor.oclContainer() = self.oclContainer()&#xA;&#x9;&#x9;  endif"/>
+      <details key="R08_ConexionesEntreTareas" value="&#xA;&#x9;&#x9;  if self.oclIsTypeOf(Envio) then&#xA;&#x9;&#x9;    -- Se evalï¿½a que Envio y Recepcion sean de distinto actor&#xA;&#x9;&#x9;    self.oclContainer() &lt;> self.sucesor.oclContainer() &#xA;&#x9;&#x9;  else&#xA;&#x9;&#x9;    -- El resto de conexiones deben ser del mismo actor&#xA;&#x9;&#x9;    self.sucesor->isEmpty() or&#xA;&#x9;&#x9;    self.sucesor.oclContainer() = self.oclContainer()&#xA;&#x9;&#x9;  endif"/>
       <details key="R09_unidireccionalidad" value="&#xA;&#x9;&#x9;self.predecesor->size() &lt;= 1 and self.sucesor->size() &lt;= 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" eType="#//Tarea"

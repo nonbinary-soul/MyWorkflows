@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -70,7 +71,7 @@ import proyectomm.Tabla;
  *
  * @generated
  */
-public class TablaImpl extends MinimalEObjectImpl.Container implements Tabla {
+public class TablaImpl extends EObjectImpl implements Tabla {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -427,23 +428,6 @@ public class TablaImpl extends MinimalEObjectImpl.Container implements Tabla {
 				return atributos != null && !atributos.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ProyectommPackage.TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP:
-				return P02_soloUnaClavePrimaria((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ProyectommPackage.TABLA___P03_CLAVES_TIPO_INTEGER__DIAGNOSTICCHAIN_MAP:
-				return P03_clavesTipoInteger((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

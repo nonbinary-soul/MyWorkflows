@@ -94,7 +94,7 @@ public interface Tarea extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t  if self.oclIsTypeOf(Envio) then\n\t\t    -- Se eval\372a que Envio y Recepcion sean de distinto actor\n\t\t    self.oclContainer() &lt;&gt; self.sucesor.oclContainer() \n\t\t  else\n\t\t    -- El resto de conexiones deben ser del mismo actor\n\t\t    self.sucesor-&gt;isEmpty() or\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\n\t\t  endif'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t  if self.oclIsTypeOf(Envio) then\n\t\t    -- Se eval\357\277\275a que Envio y Recepcion sean de distinto actor\n\t\t    self.oclContainer() &lt;&gt; self.sucesor.oclContainer() \n\t\t  else\n\t\t    -- El resto de conexiones deben ser del mismo actor\n\t\t    self.sucesor-&gt;isEmpty() or\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\n\t\t  endif'"
 	 * @generated
 	 */
 	boolean R08_ConexionesEntreTareas(DiagnosticChain diagnostics, Map<Object, Object> context);

@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import proyectomm.Opcion;
@@ -25,7 +26,7 @@ import proyectomm.ProyectommPackage;
  *
  * @generated
  */
-public class OpcionImpl extends MinimalEObjectImpl.Container implements Opcion {
+public class OpcionImpl extends EObjectImpl implements Opcion {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->

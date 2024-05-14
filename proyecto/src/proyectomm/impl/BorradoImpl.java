@@ -104,19 +104,4 @@ public class BorradoImpl extends BDImpl implements Borrado {
 		}
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ProyectommPackage.BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP:
-				return P04_borradoConClavePrimaria((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 } //BorradoImpl

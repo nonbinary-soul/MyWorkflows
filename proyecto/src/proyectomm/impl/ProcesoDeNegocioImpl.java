@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -63,7 +64,7 @@ import proyectomm.ProyectommTables;
  *
  * @generated
  */
-public class ProcesoDeNegocioImpl extends MinimalEObjectImpl.Container implements ProcesoDeNegocio {
+public class ProcesoDeNegocioImpl extends EObjectImpl implements ProcesoDeNegocio {
 	/**
 	 * The cached value of the '{@link #getBases_de_datos() <em>Bases de datos</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -357,23 +358,6 @@ public class ProcesoDeNegocioImpl extends MinimalEObjectImpl.Container implement
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ProyectommPackage.PROCESO_DE_NEGOCIO___R01_UNA_TAREA_INICIAL__DIAGNOSTICCHAIN_MAP:
-				return R01_unaTareaInicial((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ProyectommPackage.PROCESO_DE_NEGOCIO___R02_UNA_TAREA_FINAL__DIAGNOSTICCHAIN_MAP:
-				return R02_unaTareaFinal((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

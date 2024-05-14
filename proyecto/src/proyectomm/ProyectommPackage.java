@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * @see proyectomm.ProyectommFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore"
+ *        annotation="gmf"
  * @generated
  */
 public interface ProyectommPackage extends EPackage {
@@ -106,33 +107,6 @@ public interface ProyectommPackage extends EPackage {
 	int PROCESO_DE_NEGOCIO_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>R01 una Tarea Inicial</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESO_DE_NEGOCIO___R01_UNA_TAREA_INICIAL__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>R02 una Tarea Final</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESO_DE_NEGOCIO___R02_UNA_TAREA_FINAL__DIAGNOSTICCHAIN_MAP = 1;
-
-	/**
-	 * The number of operations of the '<em>Proceso De Negocio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESO_DE_NEGOCIO_OPERATION_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.ActorImpl <em>Actor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -179,24 +153,6 @@ public interface ProyectommPackage extends EPackage {
 	int ACTOR_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>R05 min Tarea Intermedia</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR___R05_MIN_TAREA_INTERMEDIA__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The number of operations of the '<em>Actor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR_OPERATION_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.BaseDeDatosImpl <em>Base De Datos</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -234,15 +190,6 @@ public interface ProyectommPackage extends EPackage {
 	int BASE_DE_DATOS_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Base De Datos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BASE_DE_DATOS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.TablaImpl <em>Tabla</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,33 +225,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABLA_FEATURE_COUNT = 2;
-
-	/**
-	 * The operation id for the '<em>P02 solo Una Clave Primaria</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>P03 claves Tipo Integer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLA___P03_CLAVES_TIPO_INTEGER__DIAGNOSTICCHAIN_MAP = 1;
-
-	/**
-	 * The number of operations of the '<em>Tabla</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLA_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.
@@ -353,33 +273,6 @@ public interface ProyectommPackage extends EPackage {
 	int ATRIBUTO_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>P01 tiene Opciones</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>P05 sin Espacios En Blanco</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = 1;
-
-	/**
-	 * The number of operations of the '<em>Atributo</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUTO_OPERATION_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.TareaImpl <em>Tarea</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -415,42 +308,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int TAREA_FEATURE_COUNT = 2;
-
-	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAREA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = 1;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAREA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = 2;
-
-	/**
-	 * The number of operations of the '<em>Tarea</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAREA_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.InicioImpl <em>Inicio</em>}' class.
@@ -490,51 +347,6 @@ public interface ProyectommPackage extends EPackage {
 	int INICIO_FEATURE_COUNT = TAREA_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INICIO___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INICIO___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = TAREA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INICIO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = TAREA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R03 sin Predecesor</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INICIO___R03_SIN_PREDECESOR__DIAGNOSTICCHAIN_MAP = TAREA_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Inicio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INICIO_OPERATION_COUNT = TAREA_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.FinImpl <em>Fin</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -570,51 +382,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIN_FEATURE_COUNT = TAREA_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIN___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIN___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = TAREA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIN___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = TAREA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R04 sin Sucesor</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIN___R04_SIN_SUCESOR__DIAGNOSTICCHAIN_MAP = TAREA_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Fin</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIN_OPERATION_COUNT = TAREA_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.IntermediaImpl <em>Intermedia</em>}' class.
@@ -679,42 +446,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERMEDIA_FEATURE_COUNT = TAREA_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = TAREA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = TAREA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Intermedia</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIA_OPERATION_COUNT = TAREA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.UsuarioImpl <em>Usuario</em>}' class.
@@ -790,42 +521,6 @@ public interface ProyectommPackage extends EPackage {
 	int USUARIO_FEATURE_COUNT = INTERMEDIA_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USUARIO___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USUARIO___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USUARIO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Usuario</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USUARIO_OPERATION_COUNT = INTERMEDIA_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.ServicioImpl <em>Servicio</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -897,42 +592,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVICIO_FEATURE_COUNT = INTERMEDIA_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICIO___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICIO___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICIO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Servicio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICIO_OPERATION_COUNT = INTERMEDIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.MensajeImpl <em>Mensaje</em>}' class.
@@ -1008,42 +667,6 @@ public interface ProyectommPackage extends EPackage {
 	int MENSAJE_FEATURE_COUNT = INTERMEDIA_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MENSAJE___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MENSAJE___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MENSAJE___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Mensaje</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MENSAJE_OPERATION_COUNT = INTERMEDIA_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.EnvioImpl <em>Envio</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1115,42 +738,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENVIO_FEATURE_COUNT = MENSAJE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIO___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = MENSAJE___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIO___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = MENSAJE___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = MENSAJE___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Envio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIO_OPERATION_COUNT = MENSAJE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.RecepcionImpl <em>Recepcion</em>}' class.
@@ -1226,60 +813,6 @@ public interface ProyectommPackage extends EPackage {
 	int RECEPCION_FEATURE_COUNT = MENSAJE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = MENSAJE___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = MENSAJE___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = MENSAJE___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R07 envio Asociado</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP = MENSAJE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>P06 misma Tabla Que Envio</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP = MENSAJE_OPERATION_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Recepcion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION_OPERATION_COUNT = MENSAJE_OPERATION_COUNT + 2;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.BDImpl <em>BD</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1353,42 +886,6 @@ public interface ProyectommPackage extends EPackage {
 	int BD_FEATURE_COUNT = INTERMEDIA_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BD___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BD___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BD___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>BD</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BD_OPERATION_COUNT = INTERMEDIA_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.BorradoImpl <em>Borrado</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1460,51 +957,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int BORRADO_FEATURE_COUNT = BD_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BORRADO___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = BD___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BORRADO___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = BD___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BORRADO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = BD___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>P04 borrado Con Clave Primaria</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = BD_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Borrado</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BORRADO_OPERATION_COUNT = BD_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.LecturaImpl <em>Lectura</em>}' class.
@@ -1589,42 +1041,6 @@ public interface ProyectommPackage extends EPackage {
 	int LECTURA_FEATURE_COUNT = BD_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LECTURA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = BD___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R06 no Reflexiva</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LECTURA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = BD___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LECTURA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = BD___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Lectura</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LECTURA_OPERATION_COUNT = BD_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.PrimaryKeyImpl <em>Primary Key</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1669,33 +1085,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRIMARY_KEY_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>P01 tiene Opciones</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMARY_KEY___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>P05 sin Espacios En Blanco</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMARY_KEY___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Primary Key</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMARY_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.
@@ -1753,33 +1142,6 @@ public interface ProyectommPackage extends EPackage {
 	int FOREIGN_KEY_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>P01 tiene Opciones</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOREIGN_KEY___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>P05 sin Espacios En Blanco</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOREIGN_KEY___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The number of operations of the '<em>Foreign Key</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOREIGN_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link proyectomm.impl.OpcionImpl <em>Opcion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1806,15 +1168,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int OPCION_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Opcion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPCION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.EAtributo <em>EAtributo</em>}' enum.
@@ -1871,26 +1224,6 @@ public interface ProyectommPackage extends EPackage {
 	EAttribute getProcesoDeNegocio_Nombre();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.ProcesoDeNegocio#R01_unaTareaInicial(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R01 una Tarea Inicial</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R01 una Tarea Inicial</em>' operation.
-	 * @see proyectomm.ProcesoDeNegocio#R01_unaTareaInicial(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getProcesoDeNegocio__R01_unaTareaInicial__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.ProcesoDeNegocio#R02_unaTareaFinal(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R02 una Tarea Final</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R02 una Tarea Final</em>' operation.
-	 * @see proyectomm.ProcesoDeNegocio#R02_unaTareaFinal(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getProcesoDeNegocio__R02_unaTareaFinal__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Actor <em>Actor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1932,16 +1265,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getActor_Num_tareas();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Actor#R05_minTareaIntermedia(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R05 min Tarea Intermedia</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R05 min Tarea Intermedia</em>' operation.
-	 * @see proyectomm.Actor#R05_minTareaIntermedia(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getActor__R05_minTareaIntermedia__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.BaseDeDatos <em>Base De Datos</em>}'.
@@ -2008,26 +1331,6 @@ public interface ProyectommPackage extends EPackage {
 	EReference getTabla_Atributos();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Tabla#P02_soloUnaClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P02 solo Una Clave Primaria</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P02 solo Una Clave Primaria</em>' operation.
-	 * @see proyectomm.Tabla#P02_soloUnaClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 claves Tipo Integer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P03 claves Tipo Integer</em>' operation.
-	 * @see proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTabla__P03_clavesTipoInteger__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Atributo <em>Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2071,26 +1374,6 @@ public interface ProyectommPackage extends EPackage {
 	EReference getAtributo_Opciones();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Atributo#P01_tieneOpciones(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P01 tiene Opciones</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P01 tiene Opciones</em>' operation.
-	 * @see proyectomm.Atributo#P01_tieneOpciones(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getAtributo__P01_tieneOpciones__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 sin Espacios En Blanco</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P05 sin Espacios En Blanco</em>' operation.
-	 * @see proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Tarea <em>Tarea</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2123,36 +1406,6 @@ public interface ProyectommPackage extends EPackage {
 	EReference getTarea_Predecesor();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Tarea#R09_unidireccionalidad(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R09 unidireccionalidad</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R09 unidireccionalidad</em>' operation.
-	 * @see proyectomm.Tarea#R09_unidireccionalidad(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTarea__R09_unidireccionalidad__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Tarea#R06_noReflexiva(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R06 no Reflexiva</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R06 no Reflexiva</em>' operation.
-	 * @see proyectomm.Tarea#R06_noReflexiva(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTarea__R06_noReflexiva__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Tarea#R08_ConexionesEntreTareas(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R08 Conexiones Entre Tareas</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R08 Conexiones Entre Tareas</em>' operation.
-	 * @see proyectomm.Tarea#R08_ConexionesEntreTareas(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTarea__R08_ConexionesEntreTareas__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Inicio <em>Inicio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2163,16 +1416,6 @@ public interface ProyectommPackage extends EPackage {
 	EClass getInicio();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Inicio#R03_sinPredecesor(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R03 sin Predecesor</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R03 sin Predecesor</em>' operation.
-	 * @see proyectomm.Inicio#R03_sinPredecesor(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getInicio__R03_sinPredecesor__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Fin <em>Fin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2181,16 +1424,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFin();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Fin#R04_sinSucesor(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R04 sin Sucesor</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R04 sin Sucesor</em>' operation.
-	 * @see proyectomm.Fin#R04_sinSucesor(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getFin__R04_sinSucesor__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Intermedia <em>Intermedia</em>}'.
@@ -2319,26 +1552,6 @@ public interface ProyectommPackage extends EPackage {
 	EClass getRecepcion();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Recepcion#R07_envioAsociado(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R07 envio Asociado</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>R07 envio Asociado</em>' operation.
-	 * @see proyectomm.Recepcion#R07_envioAsociado(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getRecepcion__R07_envioAsociado__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 misma Tabla Que Envio</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P06 misma Tabla Que Envio</em>' operation.
-	 * @see proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Borrado <em>Borrado</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2347,16 +1560,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBorrado();
-
-	/**
-	 * Returns the meta object for the '{@link proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 borrado Con Clave Primaria</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P04 borrado Con Clave Primaria</em>' operation.
-	 * @see proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Lectura <em>Lectura</em>}'.
@@ -2520,22 +1723,6 @@ public interface ProyectommPackage extends EPackage {
 		EAttribute PROCESO_DE_NEGOCIO__NOMBRE = eINSTANCE.getProcesoDeNegocio_Nombre();
 
 		/**
-		 * The meta object literal for the '<em><b>R01 una Tarea Inicial</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PROCESO_DE_NEGOCIO___R01_UNA_TAREA_INICIAL__DIAGNOSTICCHAIN_MAP = eINSTANCE.getProcesoDeNegocio__R01_unaTareaInicial__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>R02 una Tarea Final</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PROCESO_DE_NEGOCIO___R02_UNA_TAREA_FINAL__DIAGNOSTICCHAIN_MAP = eINSTANCE.getProcesoDeNegocio__R02_unaTareaFinal__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link proyectomm.impl.ActorImpl <em>Actor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2568,14 +1755,6 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTOR__NUM_TAREAS = eINSTANCE.getActor_Num_tareas();
-
-		/**
-		 * The meta object literal for the '<em><b>R05 min Tarea Intermedia</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTOR___R05_MIN_TAREA_INTERMEDIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getActor__R05_minTareaIntermedia__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.BaseDeDatosImpl <em>Base De Datos</em>}' class.
@@ -2630,22 +1809,6 @@ public interface ProyectommPackage extends EPackage {
 		EReference TABLA__ATRIBUTOS = eINSTANCE.getTabla_Atributos();
 
 		/**
-		 * The meta object literal for the '<em><b>P02 solo Una Clave Primaria</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>P03 claves Tipo Integer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TABLA___P03_CLAVES_TIPO_INTEGER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P03_clavesTipoInteger__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2680,22 +1843,6 @@ public interface ProyectommPackage extends EPackage {
 		EReference ATRIBUTO__OPCIONES = eINSTANCE.getAtributo_Opciones();
 
 		/**
-		 * The meta object literal for the '<em><b>P01 tiene Opciones</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getAtributo__P01_tieneOpciones__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>P05 sin Espacios En Blanco</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link proyectomm.impl.TareaImpl <em>Tarea</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2722,30 +1869,6 @@ public interface ProyectommPackage extends EPackage {
 		EReference TAREA__PREDECESOR = eINSTANCE.getTarea_Predecesor();
 
 		/**
-		 * The meta object literal for the '<em><b>R09 unidireccionalidad</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTarea__R09_unidireccionalidad__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>R06 no Reflexiva</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TAREA___R06_NO_REFLEXIVA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTarea__R06_noReflexiva__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>R08 Conexiones Entre Tareas</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TAREA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTarea__R08_ConexionesEntreTareas__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link proyectomm.impl.InicioImpl <em>Inicio</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2756,14 +1879,6 @@ public interface ProyectommPackage extends EPackage {
 		EClass INICIO = eINSTANCE.getInicio();
 
 		/**
-		 * The meta object literal for the '<em><b>R03 sin Predecesor</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation INICIO___R03_SIN_PREDECESOR__DIAGNOSTICCHAIN_MAP = eINSTANCE.getInicio__R03_sinPredecesor__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link proyectomm.impl.FinImpl <em>Fin</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2772,14 +1887,6 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FIN = eINSTANCE.getFin();
-
-		/**
-		 * The meta object literal for the '<em><b>R04 sin Sucesor</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FIN___R04_SIN_SUCESOR__DIAGNOSTICCHAIN_MAP = eINSTANCE.getFin__R04_sinSucesor__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.IntermediaImpl <em>Intermedia</em>}' class.
@@ -2890,22 +1997,6 @@ public interface ProyectommPackage extends EPackage {
 		EClass RECEPCION = eINSTANCE.getRecepcion();
 
 		/**
-		 * The meta object literal for the '<em><b>R07 envio Asociado</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRecepcion__R07_envioAsociado__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>P06 misma Tabla Que Envio</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link proyectomm.impl.BorradoImpl <em>Borrado</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2914,14 +2005,6 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BORRADO = eINSTANCE.getBorrado();
-
-		/**
-		 * The meta object literal for the '<em><b>P04 borrado Con Clave Primaria</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.LecturaImpl <em>Lectura</em>}' class.

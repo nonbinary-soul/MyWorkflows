@@ -1,0 +1,143 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="http://www.example.org/proyectomm", prefix="proyectomm")
+@gmf
+package proyectomm;
+
+@Ecore(constraints="R01_unaTareaInicial R02_unaTareaFinal")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R01_unaTareaInicial="Inicio.allInstances()->size() = 1", R02_unaTareaFinal="Fin.allInstances()->size() = 1")
+@gmf.diagram
+class ProcesoDeNegocio {
+	val BaseDeDatos[+] bases_de_datos;
+	val Actor[+] actores;
+	attr String[1] nombre;
+}
+
+@Ecore(constraints="R05_minTareaIntermedia")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R05_minTareaIntermedia="tareas->select(oclIsKindOf(Intermedia))->size() > 0")
+@gmf.node(label="nombre")
+class Actor {
+	attr String[1] nombre;
+	val Tarea[*] tareas;
+
+	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.tareas->size()")
+	volatile transient derived attr int[1] num_tareas;
+}
+
+class BaseDeDatos {
+	attr String[1] nombre;
+	val Tabla[+] tablas;
+}
+
+@Ecore(constraints="P02_soloUnaClavePrimaria P03_clavesTipoInteger")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P02_soloUnaClavePrimaria="
+		        self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1", P03_clavesTipoInteger="
+			    self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))
+			                 ->forAll(at | at.tipo = EAtributo::INTEGER)")
+class Tabla {
+	attr String[1] nombre;
+	val Atributo[+] atributos;
+}
+
+@Ecore(constraints="P01_tieneOpciones P05_sinEspaciosEnBlanco")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P01_tieneOpciones="
+			    if self.tipo = EAtributo::LIST then
+			        self.opciones->notEmpty()
+			    else
+			        self.opciones->isEmpty()
+			    endif", P05_sinEspaciosEnBlanco="
+		        not self.nombre->includes(' ')")
+class Atributo {
+	attr String[1] nombre;
+	attr EAtributo[1] tipo;
+	val Opcion[*] opciones;
+}
+
+enum EAtributo {
+	INTEGER = 0;
+	REAL = 0;
+	TEXT = 0;
+	BOOLEAN = 3;
+	LIST = 4;
+	DATE = 5;
+}
+
+@Ecore(constraints="R06_noReflexiva R08_ConexionesEntreTareas R09_unidireccionalidad")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R06_noReflexiva="sucesor <> self", R08_ConexionesEntreTareas="
+		  if self.oclIsTypeOf(Envio) then
+		    -- Se eval�a que Envio y Recepcion sean de distinto actor
+		    self.oclContainer() <> self.sucesor.oclContainer() 
+		  else
+		    -- El resto de conexiones deben ser del mismo actor
+		    self.sucesor->isEmpty() or
+		    self.sucesor.oclContainer() = self.oclContainer()
+		  endif", R09_unidireccionalidad="
+		self.predecesor->size() <= 1 and self.sucesor->size() <= 1")
+abstract class Tarea {
+	ref Tarea#predecesor sucesor;
+	ref Tarea#sucesor predecesor;
+}
+
+@Ecore(constraints="R03_sinPredecesor")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R03_sinPredecesor="predecesor = null")
+class Inicio extends Tarea {
+}
+
+@Ecore(constraints="R04_sinSucesor")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R04_sinSucesor="sucesor = null")
+class Fin extends Tarea {
+}
+
+abstract class Intermedia extends Tarea {
+	id attr int[1] ~id;
+	attr String nombre;
+	attr String descripcion;
+}
+
+class Usuario extends Intermedia {
+	ref Tabla[1] tabla_accedida;
+}
+
+class Servicio extends Intermedia {
+	ref Tabla[1] tabla_accedida;
+}
+
+abstract class Mensaje extends Intermedia {
+	ref Tabla[1] tabla_accedida;
+}
+
+class Envio extends Mensaje {
+}
+
+@Ecore(constraints="R07_envioAsociado P06_mismaTablaQueEnvio")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R07_envioAsociado="predecesor.oclIsTypeOf(Envio)", P06_mismaTablaQueEnvio="self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida")
+class Recepcion extends Mensaje {
+}
+
+@Ecore(constraints="P04_borradoConClavePrimaria")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P04_borradoConClavePrimaria="
+		        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)")
+class Borrado extends BD {
+}
+
+class Lectura extends BD {
+
+	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.atributo_seleccionado.oclContainer().oclAsType(Tabla)")
+	volatile transient derived ref Tabla[1] datos_a_leer;
+}
+
+abstract class BD extends Intermedia {
+	ref Atributo[1] atributo_seleccionado;
+}
+
+class PrimaryKey extends Atributo {
+}
+
+class ForeignKey extends Atributo {
+	ref PrimaryKey[1] referencia_a;
+}
+
+class Opcion {
+	attr String[1] nombre;
+}
+
