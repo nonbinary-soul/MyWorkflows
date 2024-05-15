@@ -84,6 +84,7 @@ public interface Atributo extends EObject {
 	 * @return the value of the '<em>Opciones</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getAtributo_Opciones()
 	 * @model containment="true"
+	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Opcion> getOpciones();

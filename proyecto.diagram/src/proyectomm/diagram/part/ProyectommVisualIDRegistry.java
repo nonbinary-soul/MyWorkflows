@@ -12,11 +12,43 @@ import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 
 import proyectomm.ProcesoDeNegocio;
 import proyectomm.ProyectommPackage;
+import proyectomm.diagram.edit.parts.ActorActorTareasCompartmentEditPart;
 import proyectomm.diagram.edit.parts.ActorEditPart;
 import proyectomm.diagram.edit.parts.ActorNombreEditPart;
+import proyectomm.diagram.edit.parts.AtributoAtributoOpcionesCompartmentEditPart;
+import proyectomm.diagram.edit.parts.AtributoEditPart;
+import proyectomm.diagram.edit.parts.AtributoNombreEditPart;
+import proyectomm.diagram.edit.parts.BaseDeDatosBaseDeDatosTablasCompartmentEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
+import proyectomm.diagram.edit.parts.BorradoEditPart;
+import proyectomm.diagram.edit.parts.BorradoNombreEditPart;
+import proyectomm.diagram.edit.parts.EnvioEditPart;
+import proyectomm.diagram.edit.parts.EnvioNombreEditPart;
+import proyectomm.diagram.edit.parts.FinEditPart;
+import proyectomm.diagram.edit.parts.FinNombreEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyForeignKeyOpcionesCompartmentEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyNombreEditPart;
+import proyectomm.diagram.edit.parts.InicioEditPart;
+import proyectomm.diagram.edit.parts.InicioNombreEditPart;
+import proyectomm.diagram.edit.parts.LecturaEditPart;
+import proyectomm.diagram.edit.parts.LecturaNombreEditPart;
+import proyectomm.diagram.edit.parts.OpcionEditPart;
+import proyectomm.diagram.edit.parts.OpcionNombreEditPart;
+import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
+import proyectomm.diagram.edit.parts.PrimaryKeyNombreEditPart;
+import proyectomm.diagram.edit.parts.PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
+import proyectomm.diagram.edit.parts.RecepcionEditPart;
+import proyectomm.diagram.edit.parts.RecepcionNombreEditPart;
+import proyectomm.diagram.edit.parts.ServicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioNombreEditPart;
+import proyectomm.diagram.edit.parts.TablaEditPart;
+import proyectomm.diagram.edit.parts.TablaNombreEditPart;
+import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
+import proyectomm.diagram.edit.parts.UsuarioEditPart;
+import proyectomm.diagram.edit.parts.UsuarioNombreEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -127,6 +159,63 @@ public class ProyectommVisualIDRegistry {
 				return ActorEditPart.VISUAL_ID;
 			}
 			break;
+		case BaseDeDatosBaseDeDatosTablasCompartmentEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getTabla().isSuperTypeOf(domainElement.eClass())) {
+				return TablaEditPart.VISUAL_ID;
+			}
+			break;
+		case TablaTablaAtributosCompartmentEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getPrimaryKey().isSuperTypeOf(domainElement.eClass())) {
+				return PrimaryKeyEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getForeignKey().isSuperTypeOf(domainElement.eClass())) {
+				return ForeignKeyEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getAtributo().isSuperTypeOf(domainElement.eClass())) {
+				return AtributoEditPart.VISUAL_ID;
+			}
+			break;
+		case PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getOpcion().isSuperTypeOf(domainElement.eClass())) {
+				return OpcionEditPart.VISUAL_ID;
+			}
+			break;
+		case ForeignKeyForeignKeyOpcionesCompartmentEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getOpcion().isSuperTypeOf(domainElement.eClass())) {
+				return OpcionEditPart.VISUAL_ID;
+			}
+			break;
+		case AtributoAtributoOpcionesCompartmentEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getOpcion().isSuperTypeOf(domainElement.eClass())) {
+				return OpcionEditPart.VISUAL_ID;
+			}
+			break;
+		case ActorActorTareasCompartmentEditPart.VISUAL_ID:
+			if (ProyectommPackage.eINSTANCE.getEnvio().isSuperTypeOf(domainElement.eClass())) {
+				return EnvioEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getRecepcion().isSuperTypeOf(domainElement.eClass())) {
+				return RecepcionEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getBorrado().isSuperTypeOf(domainElement.eClass())) {
+				return BorradoEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getLectura().isSuperTypeOf(domainElement.eClass())) {
+				return LecturaEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getUsuario().isSuperTypeOf(domainElement.eClass())) {
+				return UsuarioEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getServicio().isSuperTypeOf(domainElement.eClass())) {
+				return ServicioEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getInicio().isSuperTypeOf(domainElement.eClass())) {
+				return InicioEditPart.VISUAL_ID;
+			}
+			if (ProyectommPackage.eINSTANCE.getFin().isSuperTypeOf(domainElement.eClass())) {
+				return FinEditPart.VISUAL_ID;
+			}
+			break;
 		}
 		return -1;
 	}
@@ -162,9 +251,149 @@ public class ProyectommVisualIDRegistry {
 			if (BaseDeDatosNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (BaseDeDatosBaseDeDatosTablasCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case ActorEditPart.VISUAL_ID:
 			if (ActorNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ActorActorTareasCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case TablaEditPart.VISUAL_ID:
+			if (TablaNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (TablaTablaAtributosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case PrimaryKeyEditPart.VISUAL_ID:
+			if (PrimaryKeyNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case OpcionEditPart.VISUAL_ID:
+			if (OpcionNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForeignKeyEditPart.VISUAL_ID:
+			if (ForeignKeyNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForeignKeyForeignKeyOpcionesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case AtributoEditPart.VISUAL_ID:
+			if (AtributoNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (AtributoAtributoOpcionesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case EnvioEditPart.VISUAL_ID:
+			if (EnvioNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case RecepcionEditPart.VISUAL_ID:
+			if (RecepcionNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case BorradoEditPart.VISUAL_ID:
+			if (BorradoNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case LecturaEditPart.VISUAL_ID:
+			if (LecturaNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UsuarioEditPart.VISUAL_ID:
+			if (UsuarioNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ServicioEditPart.VISUAL_ID:
+			if (ServicioNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case InicioEditPart.VISUAL_ID:
+			if (InicioNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case FinEditPart.VISUAL_ID:
+			if (FinNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case BaseDeDatosBaseDeDatosTablasCompartmentEditPart.VISUAL_ID:
+			if (TablaEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case TablaTablaAtributosCompartmentEditPart.VISUAL_ID:
+			if (PrimaryKeyEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ForeignKeyEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (AtributoEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart.VISUAL_ID:
+			if (OpcionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForeignKeyForeignKeyOpcionesCompartmentEditPart.VISUAL_ID:
+			if (OpcionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case AtributoAtributoOpcionesCompartmentEditPart.VISUAL_ID:
+			if (OpcionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ActorActorTareasCompartmentEditPart.VISUAL_ID:
+			if (EnvioEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (RecepcionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (BorradoEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (LecturaEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (UsuarioEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ServicioEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (InicioEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (FinEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -208,6 +437,17 @@ public class ProyectommVisualIDRegistry {
 	* @generated
 	*/
 	public static boolean isCompartmentVisualID(int visualID) {
+		switch (visualID) {
+		case BaseDeDatosBaseDeDatosTablasCompartmentEditPart.VISUAL_ID:
+		case TablaTablaAtributosCompartmentEditPart.VISUAL_ID:
+		case PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart.VISUAL_ID:
+		case ForeignKeyForeignKeyOpcionesCompartmentEditPart.VISUAL_ID:
+		case AtributoAtributoOpcionesCompartmentEditPart.VISUAL_ID:
+		case ActorActorTareasCompartmentEditPart.VISUAL_ID:
+			return true;
+		default:
+			break;
+		}
 		return false;
 	}
 
@@ -218,8 +458,15 @@ public class ProyectommVisualIDRegistry {
 		switch (visualID) {
 		case ProcesoDeNegocioEditPart.VISUAL_ID:
 			return false;
-		case BaseDeDatosEditPart.VISUAL_ID:
-		case ActorEditPart.VISUAL_ID:
+		case OpcionEditPart.VISUAL_ID:
+		case EnvioEditPart.VISUAL_ID:
+		case RecepcionEditPart.VISUAL_ID:
+		case BorradoEditPart.VISUAL_ID:
+		case LecturaEditPart.VISUAL_ID:
+		case UsuarioEditPart.VISUAL_ID:
+		case ServicioEditPart.VISUAL_ID:
+		case InicioEditPart.VISUAL_ID:
+		case FinEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

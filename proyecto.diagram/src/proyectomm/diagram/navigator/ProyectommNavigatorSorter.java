@@ -15,12 +15,12 @@ public class ProyectommNavigatorSorter extends ViewerSorter {
 	/**
 	* @generated
 	*/
-	private static final int GROUP_CATEGORY = 2004;
+	private static final int GROUP_CATEGORY = 7008;
 
 	/**
 	* @generated
 	*/
-	private static final int SHORTCUTS_CATEGORY = 2003;
+	private static final int SHORTCUTS_CATEGORY = 7007;
 
 	/**
 	* @generated

@@ -41,14 +41,16 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
       <details key="figure" value="svg"/>
-      <details key="svg.uri" value="platform:/plugin/proyecto/icons/start.svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/actor.svg"/>
       <details key="label.icon" value="false"/>
       <details key="label.placement" value="external"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tareas" upperBound="-1"
-        eType="#//Tarea" containment="true"/>
+        eType="#//Tarea" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="num_tareas" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
         transient="true" derived="true">
@@ -68,7 +70,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tablas" lowerBound="1"
-        upperBound="-1" eType="#//Tabla" containment="true"/>
+        upperBound="-1" eType="#//Tabla" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tabla">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -88,7 +92,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" lowerBound="1"
-        upperBound="-1" eType="#//Atributo" containment="true"/>
+        upperBound="-1" eType="#//Atributo" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -109,7 +115,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" lowerBound="1" eType="#//EAtributo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="opciones" upperBound="-1"
-        eType="#//Opcion" containment="true"/>
+        eType="#//Opcion" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EAtributo">
     <eLiterals name="INTEGER"/>
@@ -128,6 +136,7 @@
       <details key="R08_ConexionesEntreTareas" value="&#xA;&#x9;&#x9;  if self.oclIsTypeOf(Envio) then&#xA;&#x9;&#x9;    -- Se evalï¿½a que Envio y Recepcion sean de distinto actor&#xA;&#x9;&#x9;    self.oclContainer() &lt;> self.sucesor.oclContainer() &#xA;&#x9;&#x9;  else&#xA;&#x9;&#x9;    -- El resto de conexiones deben ser del mismo actor&#xA;&#x9;&#x9;    self.sucesor->isEmpty() or&#xA;&#x9;&#x9;    self.sucesor.oclContainer() = self.oclContainer()&#xA;&#x9;&#x9;  endif"/>
       <details key="R09_unidireccionalidad" value="&#xA;&#x9;&#x9;self.predecesor->size() &lt;= 1 and self.sucesor->size() &lt;= 1"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" eType="#//Tarea"
         eOpposite="#//Tarea/predecesor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="predecesor" eType="#//Tarea"
@@ -140,6 +149,13 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R03_sinPredecesor" value="predecesor = null"/>
     </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/start.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fin" eSuperTypes="#//Tarea">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -148,11 +164,17 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R04_sinSucesor" value="sucesor = null"/>
     </eAnnotations>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="nombre"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/finish.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Intermedia" abstract="true" eSuperTypes="#//Tarea">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Usuario" eSuperTypes="#//Intermedia">

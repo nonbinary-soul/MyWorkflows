@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Label;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.common.notify.Notification;
@@ -62,7 +63,7 @@ public class BaseDeDatosNombreEditPart extends LabelEditPart implements ITextAwa
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5001;
+	public static final int VISUAL_ID = 5006;
 
 	/**
 	* @generated
@@ -621,6 +622,7 @@ public class BaseDeDatosNombreEditPart extends LabelEditPart implements ITextAwa
 		 */
 		public BaseDeDatosLabelFigure() {
 			this.setText("BaseDeDatos");
+			this.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 		}
 
 	}

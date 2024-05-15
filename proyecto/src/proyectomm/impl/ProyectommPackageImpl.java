@@ -528,8 +528,18 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTarea_Nombre() {
+		return (EAttribute)tareaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EReference getTarea_Sucesor() {
-		return (EReference)tareaEClass.getEStructuralFeatures().get(0);
+		return (EReference)tareaEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -539,7 +549,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 */
 	@Override
 	public EReference getTarea_Predecesor() {
-		return (EReference)tareaEClass.getEStructuralFeatures().get(1);
+		return (EReference)tareaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -638,18 +648,8 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getIntermedia_Nombre() {
-		return (EAttribute)intermediaEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getIntermedia_Descripcion() {
-		return (EAttribute)intermediaEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)intermediaEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -932,6 +932,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createEOperation(atributoEClass, ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP);
 
 		tareaEClass = createEClass(TAREA);
+		createEAttribute(tareaEClass, TAREA__NOMBRE);
 		createEReference(tareaEClass, TAREA__SUCESOR);
 		createEReference(tareaEClass, TAREA__PREDECESOR);
 		createEOperation(tareaEClass, TAREA___R09_UNIDIRECCIONALIDAD__DIAGNOSTICCHAIN_MAP);
@@ -946,7 +947,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 
 		intermediaEClass = createEClass(INTERMEDIA);
 		createEAttribute(intermediaEClass, INTERMEDIA__ID);
-		createEAttribute(intermediaEClass, INTERMEDIA__NOMBRE);
 		createEAttribute(intermediaEClass, INTERMEDIA__DESCRIPCION);
 
 		usuarioEClass = createEClass(USUARIO);
@@ -1115,6 +1115,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tareaEClass, Tarea.class, "Tarea", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTarea_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Tarea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTarea_Sucesor(), this.getTarea(), this.getTarea_Predecesor(), "sucesor", null, 0, 1, Tarea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTarea_Predecesor(), this.getTarea(), this.getTarea_Sucesor(), "predecesor", null, 0, 1, Tarea.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1169,7 +1170,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 
 		initEClass(intermediaEClass, Intermedia.class, "Intermedia", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIntermedia_Id(), ecorePackage.getEInt(), "id", null, 1, 1, Intermedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIntermedia_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Intermedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIntermedia_Descripcion(), ecorePackage.getEString(), "descripcion", null, 0, 1, Intermedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(usuarioEClass, Usuario.class, "Usuario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1251,6 +1251,8 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createPivotAnnotations();
 		// gmf.node
 		createGmf_2Annotations();
+		// gmf.compartment
+		createGmf_3Annotations();
 	}
 
 	/**
@@ -1466,7 +1468,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		   new String[] {
 			   "label", "nombre",
 			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/start.svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/actor.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
 		   });
@@ -1497,6 +1499,26 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "label", "nombre",
 			   "figure", "svg",
 			   "svg.uri", "platform:/plugin/proyecto/icons/attribute.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (inicioEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/start.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (finEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/finish.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
 		   });
@@ -1589,6 +1611,36 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "svg.uri", "platform:/plugin/proyecto/icons/option.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_3Annotations() {
+		String source = "gmf.compartment";
+		addAnnotation
+		  (getActor_Tareas(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getBaseDeDatos_Tablas(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getTabla_Atributos(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getAtributo_Opciones(),
+		   source,
+		   new String[] {
 		   });
 	}
 

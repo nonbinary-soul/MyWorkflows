@@ -37,6 +37,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Atributo/opciones"/>
     </genClasses>
     <genClasses image="false" ecoreClass="proyectomm.ecore#//Tarea">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proyectomm.ecore#//Tarea/nombre"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Tarea/sucesor"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Tarea/predecesor"/>
     </genClasses>
@@ -44,7 +45,6 @@
     <genClasses ecoreClass="proyectomm.ecore#//Fin"/>
     <genClasses image="false" ecoreClass="proyectomm.ecore#//Intermedia">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proyectomm.ecore#//Intermedia/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proyectomm.ecore#//Intermedia/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proyectomm.ecore#//Intermedia/descripcion"/>
     </genClasses>
     <genClasses ecoreClass="proyectomm.ecore#//Usuario">

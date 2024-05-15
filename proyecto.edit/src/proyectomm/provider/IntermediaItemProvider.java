@@ -46,7 +46,6 @@ public class IntermediaItemProvider extends TareaItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIdPropertyDescriptor(object);
-			addNombrePropertyDescriptor(object);
 			addDescripcionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -70,28 +69,6 @@ public class IntermediaItemProvider extends TareaItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Nombre feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNombrePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Intermedia_nombre_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Intermedia_nombre_feature", "_UI_Intermedia_type"),
-				 ProyectommPackage.Literals.INTERMEDIA__NOMBRE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -144,7 +121,6 @@ public class IntermediaItemProvider extends TareaItemProvider {
 
 		switch (notification.getFeatureID(Intermedia.class)) {
 			case ProyectommPackage.INTERMEDIA__ID:
-			case ProyectommPackage.INTERMEDIA__NOMBRE:
 			case ProyectommPackage.INTERMEDIA__DESCRIPCION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -57,8 +57,26 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Fin"
+          description="Create new Fin">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="ForeignKey"
           description="Create new ForeignKey">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Inicio"
+          description="Create new Inicio">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

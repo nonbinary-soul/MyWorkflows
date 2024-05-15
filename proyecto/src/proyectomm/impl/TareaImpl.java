@@ -54,6 +54,7 @@ import proyectomm.Tarea;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link proyectomm.impl.TareaImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link proyectomm.impl.TareaImpl#getSucesor <em>Sucesor</em>}</li>
  *   <li>{@link proyectomm.impl.TareaImpl#getPredecesor <em>Predecesor</em>}</li>
  * </ul>
@@ -61,6 +62,26 @@ import proyectomm.Tarea;
  * @generated
  */
 public abstract class TareaImpl extends EObjectImpl implements Tarea {
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getSucesor() <em>Sucesor</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -98,6 +119,29 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 	@Override
 	protected EClass eStaticClass() {
 		return ProyectommPackage.Literals.TAREA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.TAREA__NOMBRE, oldNombre, nombre));
 	}
 
 	/**
@@ -512,6 +556,8 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ProyectommPackage.TAREA__NOMBRE:
+				return getNombre();
 			case ProyectommPackage.TAREA__SUCESOR:
 				if (resolve) return getSucesor();
 				return basicGetSucesor();
@@ -530,6 +576,9 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ProyectommPackage.TAREA__NOMBRE:
+				setNombre((String)newValue);
+				return;
 			case ProyectommPackage.TAREA__SUCESOR:
 				setSucesor((Tarea)newValue);
 				return;
@@ -548,6 +597,9 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ProyectommPackage.TAREA__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
 			case ProyectommPackage.TAREA__SUCESOR:
 				setSucesor((Tarea)null);
 				return;
@@ -566,6 +618,8 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ProyectommPackage.TAREA__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case ProyectommPackage.TAREA__SUCESOR:
 				return sucesor != null;
 			case ProyectommPackage.TAREA__PREDECESOR:
@@ -591,6 +645,22 @@ public abstract class TareaImpl extends EObjectImpl implements Tarea {
 				return R08_ConexionesEntreTareas((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nombre: ");
+		result.append(nombre);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TareaImpl

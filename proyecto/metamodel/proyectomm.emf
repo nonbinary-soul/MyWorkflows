@@ -16,9 +16,10 @@ class ProcesoDeNegocio {
 
 @Ecore(constraints="R05_minTareaIntermedia")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R05_minTareaIntermedia="tareas->select(oclIsKindOf(Intermedia))->size() > 0")
-@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/start.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/actor.svg", label.icon="false", label.placement="external")
 class Actor {
 	attr String[1] nombre;
+	@gmf.compartment
 	val Tarea[*] tareas;
 
 	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.tareas->size()")
@@ -28,6 +29,7 @@ class Actor {
 @gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/database.svg", label.icon="false", label.placement="external")
 class BaseDeDatos {
 	attr String[1] nombre;
+	@gmf.compartment
 	val Tabla[+] tablas;
 }
 
@@ -39,6 +41,7 @@ class BaseDeDatos {
 @gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/table.svg", label.icon="false", label.placement="external")
 class Tabla {
 	attr String[1] nombre;
+	@gmf.compartment
 	val Atributo[+] atributos;
 }
 
@@ -54,6 +57,7 @@ class Tabla {
 class Atributo {
 	attr String[1] nombre;
 	attr EAtributo[1] tipo;
+	@gmf.compartment
 	val Opcion[*] opciones;
 }
 
@@ -78,25 +82,25 @@ enum EAtributo {
 		  endif", R09_unidireccionalidad="
 		self.predecesor->size() <= 1 and self.sucesor->size() <= 1")
 abstract class Tarea {
+	attr String nombre;
 	ref Tarea#predecesor sucesor;
 	ref Tarea#sucesor predecesor;
 }
 
 @Ecore(constraints="R03_sinPredecesor")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R03_sinPredecesor="predecesor = null")
-// todo: ponerle el node
+@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/start.svg", label.icon="false", label.placement="external")
 class Inicio extends Tarea {
 }
 
 @Ecore(constraints="R04_sinSucesor")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R04_sinSucesor="sucesor = null")
-// todo: ponerle el node
+@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/finish.svg", label.icon="false", label.placement="external")
 class Fin extends Tarea {
 }
 
 abstract class Intermedia extends Tarea {
 	id attr int[1] ~id;
-	attr String nombre;
 	attr String descripcion;
 }
 

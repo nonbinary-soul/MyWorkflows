@@ -391,13 +391,22 @@ public interface ProyectommPackage extends EPackage {
 	int TAREA = 5;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAREA__NOMBRE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAREA__SUCESOR = 0;
+	int TAREA__SUCESOR = 1;
 
 	/**
 	 * The feature id for the '<em><b>Predecesor</b></em>' reference.
@@ -406,7 +415,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TAREA__PREDECESOR = 1;
+	int TAREA__PREDECESOR = 2;
 
 	/**
 	 * The number of structural features of the '<em>Tarea</em>' class.
@@ -415,7 +424,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TAREA_FEATURE_COUNT = 2;
+	int TAREA_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
@@ -462,6 +471,15 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 */
 	int INICIO = 6;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INICIO__NOMBRE = TAREA__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
@@ -546,6 +564,15 @@ public interface ProyectommPackage extends EPackage {
 	int FIN = 7;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIN__NOMBRE = TAREA__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -628,6 +655,15 @@ public interface ProyectommPackage extends EPackage {
 	int INTERMEDIA = 8;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERMEDIA__NOMBRE = TAREA__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -655,22 +691,13 @@ public interface ProyectommPackage extends EPackage {
 	int INTERMEDIA__ID = TAREA_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIA__NOMBRE = TAREA_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMEDIA__DESCRIPCION = TAREA_FEATURE_COUNT + 2;
+	int INTERMEDIA__DESCRIPCION = TAREA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Intermedia</em>' class.
@@ -679,7 +706,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMEDIA_FEATURE_COUNT = TAREA_FEATURE_COUNT + 3;
+	int INTERMEDIA_FEATURE_COUNT = TAREA_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
@@ -728,6 +755,15 @@ public interface ProyectommPackage extends EPackage {
 	int USUARIO = 9;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USUARIO__NOMBRE = INTERMEDIA__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -753,15 +789,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int USUARIO__ID = INTERMEDIA__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USUARIO__NOMBRE = INTERMEDIA__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -837,6 +864,15 @@ public interface ProyectommPackage extends EPackage {
 	int SERVICIO = 10;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICIO__NOMBRE = INTERMEDIA__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -862,15 +898,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVICIO__ID = INTERMEDIA__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICIO__NOMBRE = INTERMEDIA__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -946,6 +973,15 @@ public interface ProyectommPackage extends EPackage {
 	int MENSAJE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENSAJE__NOMBRE = INTERMEDIA__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -971,15 +1007,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int MENSAJE__ID = INTERMEDIA__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MENSAJE__NOMBRE = INTERMEDIA__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -1055,6 +1082,15 @@ public interface ProyectommPackage extends EPackage {
 	int ENVIO = 12;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIO__NOMBRE = MENSAJE__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1080,15 +1116,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENVIO__ID = MENSAJE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIO__NOMBRE = MENSAJE__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -1164,6 +1191,15 @@ public interface ProyectommPackage extends EPackage {
 	int RECEPCION = 13;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPCION__NOMBRE = MENSAJE__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1189,15 +1225,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECEPCION__ID = MENSAJE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEPCION__NOMBRE = MENSAJE__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -1291,6 +1318,15 @@ public interface ProyectommPackage extends EPackage {
 	int BD = 16;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BD__NOMBRE = INTERMEDIA__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1316,15 +1352,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int BD__ID = INTERMEDIA__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BD__NOMBRE = INTERMEDIA__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -1400,6 +1427,15 @@ public interface ProyectommPackage extends EPackage {
 	int BORRADO = 14;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BORRADO__NOMBRE = BD__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1425,15 +1461,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int BORRADO__ID = BD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BORRADO__NOMBRE = BD__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -1518,6 +1545,15 @@ public interface ProyectommPackage extends EPackage {
 	int LECTURA = 15;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LECTURA__NOMBRE = BD__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Sucesor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1543,15 +1579,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @ordered
 	 */
 	int LECTURA__ID = BD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LECTURA__NOMBRE = BD__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -2102,6 +2129,17 @@ public interface ProyectommPackage extends EPackage {
 	EClass getTarea();
 
 	/**
+	 * Returns the meta object for the attribute '{@link proyectomm.Tarea#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see proyectomm.Tarea#getNombre()
+	 * @see #getTarea()
+	 * @generated
+	 */
+	EAttribute getTarea_Nombre();
+
+	/**
 	 * Returns the meta object for the reference '{@link proyectomm.Tarea#getSucesor <em>Sucesor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2213,17 +2251,6 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIntermedia_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link proyectomm.Intermedia#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see proyectomm.Intermedia#getNombre()
-	 * @see #getIntermedia()
-	 * @generated
-	 */
-	EAttribute getIntermedia_Nombre();
 
 	/**
 	 * Returns the meta object for the attribute '{@link proyectomm.Intermedia#getDescripcion <em>Descripcion</em>}'.
@@ -2707,6 +2734,14 @@ public interface ProyectommPackage extends EPackage {
 		EClass TAREA = eINSTANCE.getTarea();
 
 		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TAREA__NOMBRE = eINSTANCE.getTarea_Nombre();
+
+		/**
 		 * The meta object literal for the '<em><b>Sucesor</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2799,14 +2834,6 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INTERMEDIA__ID = eINSTANCE.getIntermedia_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTERMEDIA__NOMBRE = eINSTANCE.getIntermedia_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Descripcion</b></em>' attribute feature.

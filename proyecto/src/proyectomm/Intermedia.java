@@ -13,7 +13,6 @@ package proyectomm;
  * </p>
  * <ul>
  *   <li>{@link proyectomm.Intermedia#getId <em>Id</em>}</li>
- *   <li>{@link proyectomm.Intermedia#getNombre <em>Nombre</em>}</li>
  *   <li>{@link proyectomm.Intermedia#getDescripcion <em>Descripcion</em>}</li>
  * </ul>
  *
@@ -43,28 +42,6 @@ public interface Intermedia extends Tarea {
 	 * @generated
 	 */
 	void setId(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see proyectomm.ProyectommPackage#getIntermedia_Nombre()
-	 * @model
-	 * @generated
-	 */
-	String getNombre();
-
-	/**
-	 * Sets the value of the '{@link proyectomm.Intermedia#getNombre <em>Nombre</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
-	 * @generated
-	 */
-	void setNombre(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.

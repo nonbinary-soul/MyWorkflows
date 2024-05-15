@@ -301,82 +301,132 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String ForeignKey6CreationTool_title;
+	public static String Fin6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String ForeignKey6CreationTool_desc;
+	public static String Fin6CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Lectura7CreationTool_title;
+	public static String ForeignKey7CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Lectura7CreationTool_desc;
+	public static String ForeignKey7CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Opcion8CreationTool_title;
+	public static String Inicio8CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Opcion8CreationTool_desc;
+	public static String Inicio8CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String PrimaryKey9CreationTool_title;
+	public static String Lectura9CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String PrimaryKey9CreationTool_desc;
+	public static String Lectura9CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Recepcion10CreationTool_title;
+	public static String Opcion10CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Recepcion10CreationTool_desc;
+	public static String Opcion10CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Servicio11CreationTool_title;
+	public static String PrimaryKey11CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Servicio11CreationTool_desc;
+	public static String PrimaryKey11CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla12CreationTool_title;
+	public static String Recepcion12CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla12CreationTool_desc;
+	public static String Recepcion12CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Usuario13CreationTool_title;
+	public static String Servicio13CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Usuario13CreationTool_desc;
+	public static String Servicio13CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla14CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla14CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Usuario15CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Usuario15CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String BaseDeDatosBaseDeDatosTablasCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String TablaTablaAtributosCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String ForeignKeyForeignKeyOpcionesCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String AtributoAtributoOpcionesCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String ActorActorTareasCompartmentEditPart_title;
 
 	/**
 	* @generated

@@ -415,7 +415,6 @@ public class ProyectommTables extends AbstractTables
 
 		public static final ExecutorProperty _Intermedia__descripcion = new EcoreExecutorProperty(ProyectommPackage.Literals.INTERMEDIA__DESCRIPCION, Types._Intermedia, 0);
 		public static final ExecutorProperty _Intermedia__id = new EcoreExecutorProperty(ProyectommPackage.Literals.INTERMEDIA__ID, Types._Intermedia, 1);
-		public static final ExecutorProperty _Intermedia__nombre = new EcoreExecutorProperty(ProyectommPackage.Literals.INTERMEDIA__NOMBRE, Types._Intermedia, 2);
 
 		public static final ExecutorProperty _Lectura__datos_a_leer = new EcoreExecutorProperty(ProyectommPackage.Literals.LECTURA__DATOS_ALEER, Types._Lectura, 0);
 
@@ -440,9 +439,10 @@ public class ProyectommTables extends AbstractTables
 		public static final ExecutorProperty _Tabla__Servicio__tabla_accedida = new ExecutorPropertyWithImplementation("Servicio", Types._Tabla, 5, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.SERVICIO__TABLA_ACCEDIDA));
 		public static final ExecutorProperty _Tabla__Usuario__tabla_accedida = new ExecutorPropertyWithImplementation("Usuario", Types._Tabla, 6, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA));
 
-		public static final ExecutorProperty _Tarea__predecesor = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__PREDECESOR, Types._Tarea, 0);
-		public static final ExecutorProperty _Tarea__sucesor = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__SUCESOR, Types._Tarea, 1);
-		public static final ExecutorProperty _Tarea__Actor__tareas = new ExecutorPropertyWithImplementation("Actor", Types._Tarea, 2, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.ACTOR__TAREAS));
+		public static final ExecutorProperty _Tarea__nombre = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__NOMBRE, Types._Tarea, 0);
+		public static final ExecutorProperty _Tarea__predecesor = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__PREDECESOR, Types._Tarea, 1);
+		public static final ExecutorProperty _Tarea__sucesor = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__SUCESOR, Types._Tarea, 2);
+		public static final ExecutorProperty _Tarea__Actor__tareas = new ExecutorPropertyWithImplementation("Actor", Types._Tarea, 3, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.ACTOR__TAREAS));
 
 		public static final ExecutorProperty _Usuario__tabla_accedida = new EcoreExecutorProperty(ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA, Types._Usuario, 0);
 		static {
@@ -1475,7 +1475,7 @@ public class ProyectommTables extends AbstractTables
 			ProyectommTables.Properties._BD__atributo_seleccionado,
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1493,7 +1493,7 @@ public class ProyectommTables extends AbstractTables
 			ProyectommTables.Properties._BD__atributo_seleccionado,
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1508,7 +1508,7 @@ public class ProyectommTables extends AbstractTables
 		private static final ExecutorProperty /*@NonNull*/ [] _Envio = {
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1517,6 +1517,7 @@ public class ProyectommTables extends AbstractTables
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Fin = {
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1533,6 +1534,7 @@ public class ProyectommTables extends AbstractTables
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Inicio = {
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1542,7 +1544,7 @@ public class ProyectommTables extends AbstractTables
 		private static final ExecutorProperty /*@NonNull*/ [] _Intermedia = {
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1554,7 +1556,7 @@ public class ProyectommTables extends AbstractTables
 			ProyectommTables.Properties._Lectura__datos_a_leer,
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1564,7 +1566,7 @@ public class ProyectommTables extends AbstractTables
 		private static final ExecutorProperty /*@NonNull*/ [] _Mensaje = {
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1597,7 +1599,7 @@ public class ProyectommTables extends AbstractTables
 		private static final ExecutorProperty /*@NonNull*/ [] _Recepcion = {
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1608,7 +1610,7 @@ public class ProyectommTables extends AbstractTables
 		private static final ExecutorProperty /*@NonNull*/ [] _Servicio = {
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1624,6 +1626,7 @@ public class ProyectommTables extends AbstractTables
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Tarea = {
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
@@ -1633,7 +1636,7 @@ public class ProyectommTables extends AbstractTables
 		private static final ExecutorProperty /*@NonNull*/ [] _Usuario = {
 			ProyectommTables.Properties._Intermedia__descripcion,
 			ProyectommTables.Properties._Intermedia__id,
-			ProyectommTables.Properties._Intermedia__nombre,
+			ProyectommTables.Properties._Tarea__nombre,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,

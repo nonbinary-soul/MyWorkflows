@@ -19,9 +19,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import proyectomm.ProyectommPackage;
+import proyectomm.Tarea;
 
 /**
  * This is the item provider adapter for a {@link proyectomm.Tarea} object.
@@ -59,10 +62,33 @@ public class TareaItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNombrePropertyDescriptor(object);
 			addSucesorPropertyDescriptor(object);
 			addPredecesorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Nombre feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNombrePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Tarea_nombre_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tarea_nombre_feature", "_UI_Tarea_type"),
+				 ProyectommPackage.Literals.TAREA__NOMBRE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -132,7 +158,10 @@ public class TareaItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tarea_type");
+		String label = ((Tarea)object).getNombre();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tarea_type") :
+			getString("_UI_Tarea_type") + " " + label;
 	}
 
 	/**
@@ -161,6 +190,12 @@ public class TareaItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Tarea.class)) {
+			case ProyectommPackage.TAREA__NOMBRE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

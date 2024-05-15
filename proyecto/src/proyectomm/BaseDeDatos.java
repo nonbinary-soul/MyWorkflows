@@ -54,6 +54,7 @@ public interface BaseDeDatos extends EObject {
 	 * @return the value of the '<em>Tablas</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getBaseDeDatos_Tablas()
 	 * @model containment="true" required="true"
+	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Tabla> getTablas();

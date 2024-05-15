@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import proyectomm.Fin;
+
 /**
  * This is the item provider adapter for a {@link proyectomm.Fin} object.
  * <!-- begin-user-doc -->
@@ -62,7 +64,10 @@ public class FinItemProvider extends TareaItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Fin_type");
+		String label = ((Fin)object).getNombre();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Fin_type") :
+			getString("_UI_Fin_type") + " " + label;
 	}
 
 

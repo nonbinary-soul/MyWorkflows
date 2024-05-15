@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link proyectomm.Tarea#getNombre <em>Nombre</em>}</li>
  *   <li>{@link proyectomm.Tarea#getSucesor <em>Sucesor</em>}</li>
  *   <li>{@link proyectomm.Tarea#getPredecesor <em>Predecesor</em>}</li>
  * </ul>
@@ -27,6 +28,28 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Tarea extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see proyectomm.ProyectommPackage#getTarea_Nombre()
+	 * @model
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link proyectomm.Tarea#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Sucesor</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link proyectomm.Tarea#getPredecesor <em>Predecesor</em>}'.

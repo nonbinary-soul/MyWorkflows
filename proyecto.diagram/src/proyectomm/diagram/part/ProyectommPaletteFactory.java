@@ -38,14 +38,16 @@ public class ProyectommPaletteFactory {
 		paletteContainer.add(createBaseDeDatos3CreationTool());
 		paletteContainer.add(createBorrado4CreationTool());
 		paletteContainer.add(createEnvio5CreationTool());
-		paletteContainer.add(createForeignKey6CreationTool());
-		paletteContainer.add(createLectura7CreationTool());
-		paletteContainer.add(createOpcion8CreationTool());
-		paletteContainer.add(createPrimaryKey9CreationTool());
-		paletteContainer.add(createRecepcion10CreationTool());
-		paletteContainer.add(createServicio11CreationTool());
-		paletteContainer.add(createTabla12CreationTool());
-		paletteContainer.add(createUsuario13CreationTool());
+		paletteContainer.add(createFin6CreationTool());
+		paletteContainer.add(createForeignKey7CreationTool());
+		paletteContainer.add(createInicio8CreationTool());
+		paletteContainer.add(createLectura9CreationTool());
+		paletteContainer.add(createOpcion10CreationTool());
+		paletteContainer.add(createPrimaryKey11CreationTool());
+		paletteContainer.add(createRecepcion12CreationTool());
+		paletteContainer.add(createServicio13CreationTool());
+		paletteContainer.add(createTabla14CreationTool());
+		paletteContainer.add(createUsuario15CreationTool());
 		return paletteContainer;
 	}
 
@@ -65,10 +67,11 @@ public class ProyectommPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createAtributo2CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Atributo2CreationTool_title, Messages.Atributo2CreationTool_desc, null,
-				null) {
-		};
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Atributo2CreationTool_title,
+				Messages.Atributo2CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Atributo_3005));
 		entry.setId("createAtributo2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Atributo_3005));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -89,10 +92,11 @@ public class ProyectommPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createBorrado4CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Borrado4CreationTool_title, Messages.Borrado4CreationTool_desc, null,
-				null) {
-		};
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Borrado4CreationTool_title,
+				Messages.Borrado4CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Borrado_3008));
 		entry.setId("createBorrado4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Borrado_3008));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -100,98 +104,134 @@ public class ProyectommPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createEnvio5CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Envio5CreationTool_title, Messages.Envio5CreationTool_desc, null,
-				null) {
-		};
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Envio5CreationTool_title,
+				Messages.Envio5CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Envio_3006));
 		entry.setId("createEnvio5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Envio_3006));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createForeignKey6CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.ForeignKey6CreationTool_title, Messages.ForeignKey6CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createForeignKey6CreationTool"); //$NON-NLS-1$
+	private ToolEntry createFin6CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Fin6CreationTool_title,
+				Messages.Fin6CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Fin_3013));
+		entry.setId("createFin6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Fin_3013));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createLectura7CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Lectura7CreationTool_title, Messages.Lectura7CreationTool_desc, null,
-				null) {
-		};
-		entry.setId("createLectura7CreationTool"); //$NON-NLS-1$
+	private ToolEntry createForeignKey7CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.ForeignKey7CreationTool_title,
+				Messages.ForeignKey7CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.ForeignKey_3004));
+		entry.setId("createForeignKey7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.ForeignKey_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createOpcion8CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Opcion8CreationTool_title, Messages.Opcion8CreationTool_desc, null,
-				null) {
-		};
-		entry.setId("createOpcion8CreationTool"); //$NON-NLS-1$
+	private ToolEntry createInicio8CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Inicio8CreationTool_title,
+				Messages.Inicio8CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Inicio_3012));
+		entry.setId("createInicio8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Inicio_3012));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createPrimaryKey9CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.PrimaryKey9CreationTool_title, Messages.PrimaryKey9CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createPrimaryKey9CreationTool"); //$NON-NLS-1$
+	private ToolEntry createLectura9CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Lectura9CreationTool_title,
+				Messages.Lectura9CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Lectura_3009));
+		entry.setId("createLectura9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Lectura_3009));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createRecepcion10CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Recepcion10CreationTool_title, Messages.Recepcion10CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createRecepcion10CreationTool"); //$NON-NLS-1$
+	private ToolEntry createOpcion10CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Opcion10CreationTool_title,
+				Messages.Opcion10CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Opcion_3003));
+		entry.setId("createOpcion10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Opcion_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createServicio11CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Servicio11CreationTool_title, Messages.Servicio11CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createServicio11CreationTool"); //$NON-NLS-1$
+	private ToolEntry createPrimaryKey11CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.PrimaryKey11CreationTool_title,
+				Messages.PrimaryKey11CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.PrimaryKey_3002));
+		entry.setId("createPrimaryKey11CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.PrimaryKey_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createTabla12CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Tabla12CreationTool_title, Messages.Tabla12CreationTool_desc, null,
-				null) {
-		};
-		entry.setId("createTabla12CreationTool"); //$NON-NLS-1$
+	private ToolEntry createRecepcion12CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Recepcion12CreationTool_title,
+				Messages.Recepcion12CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.Recepcion_3007));
+		entry.setId("createRecepcion12CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Recepcion_3007));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	* @generated
 	*/
-	private ToolEntry createUsuario13CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Usuario13CreationTool_title, Messages.Usuario13CreationTool_desc, null,
-				null) {
-		};
-		entry.setId("createUsuario13CreationTool"); //$NON-NLS-1$
+	private ToolEntry createServicio13CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Servicio13CreationTool_title,
+				Messages.Servicio13CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Servicio_3011));
+		entry.setId("createServicio13CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Servicio_3011));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createTabla14CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Tabla14CreationTool_title,
+				Messages.Tabla14CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Tabla_3001));
+		entry.setId("createTabla14CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Tabla_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createUsuario15CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Usuario15CreationTool_title,
+				Messages.Usuario15CreationTool_desc, Collections.singletonList(ProyectommElementTypes.Usuario_3010));
+		entry.setId("createUsuario15CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.Usuario_3010));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 

@@ -58,6 +58,7 @@ public interface Tabla extends EObject {
 	 * @return the value of the '<em>Atributos</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getTabla_Atributos()
 	 * @model containment="true" required="true"
+	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Atributo> getAtributos();
