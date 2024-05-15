@@ -100,14 +100,23 @@ TEXT
 
 <div class="box">
     <h1>Índice - [actor.nombre/]</h1>
+	<h2>Tareas</h2>
     <ul>
 		[if (actor.tareas->selectByType(Inicio)->size() > 0)]
             <li><a href="[actor.tareas->selectByType(Inicio).generate().trim()/]">Inicio</a></li>
         [/if]
-        [for (tarea: Recepcion | actor.tareas->selectByType(Recepcion))]
-            <li><a href="[tarea.generate().trim()/]">Recepción: [tarea.nombre/]</a></li>
-        [/for]
-    </ul>
+		[if (actor.tareas->selectByType(Inicio)->size() <= 0)]
+            <p>No hay tareas definidas</p>
+        [/if]
+	</ul>
+	[if (actor.tareas->selectByType(Recepcion)->size() > 0)]
+	    <h2>Mensajes Recibidos</h2>
+		<ul>
+	        [for (tarea: Recepcion | actor.tareas->selectByType(Recepcion))]
+	            <li><a href="[tarea.generate().trim()/]">Recepción: [tarea.nombre/]</a></li>
+	        [/for]
+	    </ul>
+    [/if]
 </div>
 
 [generateFooter()/]
@@ -121,6 +130,7 @@ TEXT
 	GENERACIÓN DEL CÓDIGO HTML: TAREAS	
 
 /]
+
 [template public generate(tarea: Inicio)]
 inicio.html
 [file ('/' + tarea.eContainer().oclAsType(Actor).nombre + '/' + 'inicio.html', false, 'UTF-8')]
@@ -138,7 +148,7 @@ inicio.html
 	
 
 <div class ="box">
-	<h1> Tarea inicial </h1>
+	<h1> Tarea inicial de [tarea.eContainer().oclAsType(Actor).nombre/]: [tarea.nombre/]</h1>
 
 	<br>
 	<p>Pulse para iniciar su workflow: </p> 
@@ -189,10 +199,11 @@ fin.html
 [generateHeader()/]
 
 <div class="box">
-	<h1>Tarea de cierre</h1>
+	<h1>Tarea de cierre de [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 	<br>
 
 	<p class="center-message">¡Proceso finalizado!</p>
+	<p class="center-message"><a style="text-align: center" href="index.html">Volver al índice de [tarea.eContainer().oclAsType(Actor).nombre/]</a></p>
 </div>
 
 [generateFooter()/]
@@ -218,7 +229,7 @@ tareaUsuario.html
 	
     <form class="box" action="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]" method="POST">
 
-	<h1>Tarea de Usuario</h1>
+	<h1>Tarea de Usuario de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 
 	<fieldset>
 		<legend>Rellena los siguientes campos</legend>
@@ -311,10 +322,28 @@ tareaServicio.html
 
 	<div class="box">
 
-		<h1>Tarea de servicio</h1>
+		<h1>Tarea de servicio: [tarea.nombre/]</h1>
 
-		<div class="center-message">
-			<h1>[tarea.nombre/]</h1>
+		<div class="box">
+			<h2>Información del servicio</h2>
+			<p>Id: [tarea.id/]</p>
+			<p>Nombre: [tarea.nombre/]</p>
+			<p>Descripción: [tarea.descripcion/]</p>
+			<p></p>
+		</div>
+
+		<div class="box">
+			<h2>Datos accedidos</h2>
+			<p>Tabla: [tarea.tabla_accedida.nombre/]</p>
+			<ul>
+				[for (atributo: Atributo | tarea.tabla_accedida.atributos)]
+		            <li>Nombre: [atributo.nombre/] &emsp; Tipo: [atributo.tipo/]</li>
+		        [/for]
+			</ul>
+		</div>
+
+		<div class="box">
+			<h2>Acciones a tomar</h2>
 			<button type="button" onclick="ejecutarServicio()">Ejecutar Servicio</button>
 			<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Siguiente</button></a>
 		</div>
@@ -347,15 +376,25 @@ tareaEnvio.html
 	[generateHeader()/]	
 
 	<div class="box">
-	<h1>Tarea de Envio</h1>
+	<h1>Tarea de Envio de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 
 	<div class="box">
 		<p>Nombre de Tarea: [tarea.nombre/]</p>
 		<p>Descripcion: [tarea.descripcion/]</p>
-		<p>Accede a la tabla: [tarea.tabla_accedida.nombre/]</p>
+
+		<div class="box">
+			<h2>Tabla a enviar</h2>
+			<p>Tabla: [tarea.tabla_accedida.nombre/]</p>
+			<ul>
+				[for (atributo: Atributo | tarea.tabla_accedida.atributos)]
+		            <li>Nombre: [atributo.nombre/] &emsp; Tipo: [atributo.tipo/]</li>
+		        [/for]
+			</ul>
+		</div>
+
 		</br>
 		<div>
-			<h2>Realizar envio:</h2>
+			<h2>Acciones a tomar:</h2>
 			Pulse para realizar el envio: <a href="../[tarea.eContainer().oclAsType(Actor).nombre/]/index.html"><button type="button">Continuar</button></a>
 		</div>
 	</div>
@@ -383,12 +422,25 @@ tareaRecepcion.html
 	[generateHeader()/]
 
 	<div class="box">
-		<h1>Tarea de Recepción</h1>
+		<h1>Tarea de Recepción de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 
-	<div class="center-message">
-		Se está procesando la tabla [tarea.tabla_accedida.nombre/]. Puedes continuar cuando quieras. 
-		<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Continuar</button></a>
-	</div>
+		<p>Nombre de Tarea: [tarea.nombre/]</p>
+		<p>Descripcion: [tarea.descripcion/]</p>
+
+		<div class="box">
+			<h2>Tabla Recibida</h2>
+			<p>Nombre: [tarea.tabla_accedida.nombre/]</p>
+			<ul>
+				[for (atributo: Atributo | tarea.tabla_accedida.atributos)]
+		            <li>Nombre: [atributo.nombre/] &emsp; Tipo: [atributo.tipo/]</li>
+		        [/for]
+			</ul>
+		</div>
+
+		<div class="box">
+			Se está procesando la tabla [tarea.tabla_accedida.nombre/]. Puedes continuar cuando quieras. 
+			<a href="../[tarea.sucesor.eContainer().oclAsType(Actor).nombre/]/[tarea.sucesor.generateTarea().trim()/]"><button type="button">Continuar</button></a>
+		</div>
 
 	</div>
 
@@ -413,7 +465,17 @@ tareaLectura.html
 	[generateHeader()/]
 
 	<div class="box">
-		<h1>Tarea de Lectura</h1>
+		<h1>Tarea de Lectura de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
+
+		<div class="box">
+			<h2>Datos Leidos</h2>
+			<p>Nombre: [tarea.datos_a_leer.nombre/]</p>
+			<ul>
+				[for (atributo: Atributo | tarea.datos_a_leer.atributos)]
+		            <li>Nombre: [atributo.nombre/] &emsp; Tipo: [atributo.tipo/]</li>
+		        [/for]
+			</ul>
+		</div>
 
 		<div class="box">
 			<h2>[tarea.nombre/]</h2>
@@ -451,7 +513,7 @@ tareaLectura.html
 	[generateHeader()/]
 
 	<div class="box">
-		<h1>Tarea de Consulta</h1>
+		<h1>Tarea de Consulta de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 
 		<div class="box">
 			<h2>[tarea.nombre/]</h2>
@@ -505,7 +567,7 @@ tareaBorrado.html
 	[generateHeader()/]
 
 	<div class="box">
-		<h1>Tarea de borrado</h1>
+		<h1>Tarea de borrado de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 
 		<div class="box">
 			<h2>[tarea.nombre/]</h2>
@@ -543,7 +605,7 @@ tareaBorrado.html
 	[generateHeader()/]
 
 	<div class="box">
-		<h1>Sentencia de borrado</h1>
+		<h1>Sentencia de borrado de: [tarea.eContainer().oclAsType(Actor).nombre/]</h1>
 
 	<div class="box">
 		<h2>[tarea.nombre/]</h2>
@@ -573,6 +635,7 @@ tareaBorrado.html
 [template public generateFooter()]
 	<footer class="bottomnav">
         <p>&copy; 2024 MisWorkflows. Todos los derechos reservados.</p>
+		<p>Jackie Lee Chong Ojeda & Sergio Eslava Velasco</p>
     </footer>
 [/template]
 

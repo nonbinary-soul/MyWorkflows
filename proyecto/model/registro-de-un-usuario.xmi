@@ -46,27 +46,28 @@
   <actores nombre="Cliente">
     <tareas
         xsi:type="proyectomm:Inicio"
+        nombre="Entrar al servicio"
         sucesor="//@actores.0/@tareas.1"/>
     <tareas
         xsi:type="proyectomm:Usuario"
+        nombre="rellenar formulario de registro"
         sucesor="1000"
         predecesor="//@actores.0/@tareas.0"
-        nombre="rellenar formulario de registro"
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Servicio"
+        nombre="imprimir registro"
         sucesor="20000"
         predecesor="//@actores.0/@tareas.1"
         id="1000"
-        nombre="imprimir registro"
         descripcion="imprimir registro"
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Envio"
+        nombre="envio"
         sucesor="10000"
         predecesor="1000"
         id="20000"
-        nombre="envio"
         descripcion="envia cosas"
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
@@ -76,26 +77,26 @@
   <actores nombre="Pizzeria">
     <tareas
         xsi:type="proyectomm:Recepcion"
+        nombre="Recepcion"
         sucesor="3000"
         predecesor="20000"
         id="10000"
-        nombre="Recepcion"
         descripcion="Recibe cosas"
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
     <tareas
         xsi:type="proyectomm:Lectura"
+        nombre="lectura"
         sucesor="4000"
         predecesor="10000"
         id="3000"
-        nombre="lectura"
         descripcion="esta es la descripcion"
         atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.1"/>
     <tareas
         xsi:type="proyectomm:Borrado"
+        nombre="tareaBorrado"
         sucesor="//@actores.0/@tareas.4"
         predecesor="3000"
         id="4000"
-        nombre="tareaBorrado"
         descripcion="este es la descripcion de la tarea"
         atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.4"/>
   </actores>
