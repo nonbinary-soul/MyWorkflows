@@ -290,22 +290,13 @@ public interface ProyectommPackage extends EPackage {
 	int TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>P03 claves Tipo Integer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLA___P03_CLAVES_TIPO_INTEGER__DIAGNOSTICCHAIN_MAP = 1;
-
-	/**
 	 * The number of operations of the '<em>Tabla</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLA_OPERATION_COUNT = 2;
+	int TABLA_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.
@@ -2046,16 +2037,6 @@ public interface ProyectommPackage extends EPackage {
 	EOperation getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 claves Tipo Integer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P03 claves Tipo Integer</em>' operation.
-	 * @see proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTabla__P03_clavesTipoInteger__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link proyectomm.Atributo <em>Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2664,14 +2645,6 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>P03 claves Tipo Integer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TABLA___P03_CLAVES_TIPO_INTEGER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P03_clavesTipoInteger__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.

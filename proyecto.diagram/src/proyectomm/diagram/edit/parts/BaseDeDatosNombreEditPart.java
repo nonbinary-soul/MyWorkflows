@@ -63,7 +63,7 @@ public class BaseDeDatosNombreEditPart extends LabelEditPart implements ITextAwa
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5006;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	* @generated

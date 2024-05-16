@@ -16,7 +16,7 @@ package proyectomm;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getUsuario()
- * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/form.svg' label.icon='false' label.placement='external'"
+ * @model
  * @generated
  */
 public interface Usuario extends Intermedia {

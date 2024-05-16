@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *
  * @see proyectomm.ProyectommPackage#getFin()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='R04_sinSucesor'"
- *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/finish.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Fin extends Tarea {

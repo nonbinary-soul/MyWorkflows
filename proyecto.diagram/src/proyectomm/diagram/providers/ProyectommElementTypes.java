@@ -19,21 +19,9 @@ import org.eclipse.swt.graphics.Image;
 
 import proyectomm.ProyectommPackage;
 import proyectomm.diagram.edit.parts.ActorEditPart;
-import proyectomm.diagram.edit.parts.AtributoEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
-import proyectomm.diagram.edit.parts.BorradoEditPart;
-import proyectomm.diagram.edit.parts.EnvioEditPart;
-import proyectomm.diagram.edit.parts.FinEditPart;
-import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
-import proyectomm.diagram.edit.parts.InicioEditPart;
-import proyectomm.diagram.edit.parts.LecturaEditPart;
-import proyectomm.diagram.edit.parts.OpcionEditPart;
-import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
-import proyectomm.diagram.edit.parts.RecepcionEditPart;
-import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
-import proyectomm.diagram.edit.parts.UsuarioEditPart;
 import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 
 /**
@@ -79,54 +67,6 @@ public class ProyectommElementTypes {
 	* @generated
 	*/
 	public static final IElementType Tabla_3001 = getElementType("proyecto.diagram.Tabla_3001"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType PrimaryKey_3002 = getElementType("proyecto.diagram.PrimaryKey_3002"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Opcion_3003 = getElementType("proyecto.diagram.Opcion_3003"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType ForeignKey_3004 = getElementType("proyecto.diagram.ForeignKey_3004"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Atributo_3005 = getElementType("proyecto.diagram.Atributo_3005"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Envio_3006 = getElementType("proyecto.diagram.Envio_3006"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Recepcion_3007 = getElementType("proyecto.diagram.Recepcion_3007"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Borrado_3008 = getElementType("proyecto.diagram.Borrado_3008"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Lectura_3009 = getElementType("proyecto.diagram.Lectura_3009"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Usuario_3010 = getElementType("proyecto.diagram.Usuario_3010"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Servicio_3011 = getElementType("proyecto.diagram.Servicio_3011"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Inicio_3012 = getElementType("proyecto.diagram.Inicio_3012"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Fin_3013 = getElementType("proyecto.diagram.Fin_3013"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -173,30 +113,6 @@ public class ProyectommElementTypes {
 			elements.put(Actor_2002, ProyectommPackage.eINSTANCE.getActor());
 
 			elements.put(Tabla_3001, ProyectommPackage.eINSTANCE.getTabla());
-
-			elements.put(PrimaryKey_3002, ProyectommPackage.eINSTANCE.getPrimaryKey());
-
-			elements.put(Opcion_3003, ProyectommPackage.eINSTANCE.getOpcion());
-
-			elements.put(ForeignKey_3004, ProyectommPackage.eINSTANCE.getForeignKey());
-
-			elements.put(Atributo_3005, ProyectommPackage.eINSTANCE.getAtributo());
-
-			elements.put(Envio_3006, ProyectommPackage.eINSTANCE.getEnvio());
-
-			elements.put(Recepcion_3007, ProyectommPackage.eINSTANCE.getRecepcion());
-
-			elements.put(Borrado_3008, ProyectommPackage.eINSTANCE.getBorrado());
-
-			elements.put(Lectura_3009, ProyectommPackage.eINSTANCE.getLectura());
-
-			elements.put(Usuario_3010, ProyectommPackage.eINSTANCE.getUsuario());
-
-			elements.put(Servicio_3011, ProyectommPackage.eINSTANCE.getServicio());
-
-			elements.put(Inicio_3012, ProyectommPackage.eINSTANCE.getInicio());
-
-			elements.put(Fin_3013, ProyectommPackage.eINSTANCE.getFin());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -218,18 +134,6 @@ public class ProyectommElementTypes {
 			KNOWN_ELEMENT_TYPES.add(BaseDeDatos_2001);
 			KNOWN_ELEMENT_TYPES.add(Actor_2002);
 			KNOWN_ELEMENT_TYPES.add(Tabla_3001);
-			KNOWN_ELEMENT_TYPES.add(PrimaryKey_3002);
-			KNOWN_ELEMENT_TYPES.add(Opcion_3003);
-			KNOWN_ELEMENT_TYPES.add(ForeignKey_3004);
-			KNOWN_ELEMENT_TYPES.add(Atributo_3005);
-			KNOWN_ELEMENT_TYPES.add(Envio_3006);
-			KNOWN_ELEMENT_TYPES.add(Recepcion_3007);
-			KNOWN_ELEMENT_TYPES.add(Borrado_3008);
-			KNOWN_ELEMENT_TYPES.add(Lectura_3009);
-			KNOWN_ELEMENT_TYPES.add(Usuario_3010);
-			KNOWN_ELEMENT_TYPES.add(Servicio_3011);
-			KNOWN_ELEMENT_TYPES.add(Inicio_3012);
-			KNOWN_ELEMENT_TYPES.add(Fin_3013);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -247,30 +151,6 @@ public class ProyectommElementTypes {
 			return Actor_2002;
 		case TablaEditPart.VISUAL_ID:
 			return Tabla_3001;
-		case PrimaryKeyEditPart.VISUAL_ID:
-			return PrimaryKey_3002;
-		case OpcionEditPart.VISUAL_ID:
-			return Opcion_3003;
-		case ForeignKeyEditPart.VISUAL_ID:
-			return ForeignKey_3004;
-		case AtributoEditPart.VISUAL_ID:
-			return Atributo_3005;
-		case EnvioEditPart.VISUAL_ID:
-			return Envio_3006;
-		case RecepcionEditPart.VISUAL_ID:
-			return Recepcion_3007;
-		case BorradoEditPart.VISUAL_ID:
-			return Borrado_3008;
-		case LecturaEditPart.VISUAL_ID:
-			return Lectura_3009;
-		case UsuarioEditPart.VISUAL_ID:
-			return Usuario_3010;
-		case ServicioEditPart.VISUAL_ID:
-			return Servicio_3011;
-		case InicioEditPart.VISUAL_ID:
-			return Inicio_3012;
-		case FinEditPart.VISUAL_ID:
-			return Fin_3013;
 		}
 		return null;
 	}

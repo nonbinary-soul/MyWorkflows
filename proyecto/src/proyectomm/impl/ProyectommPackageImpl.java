@@ -448,16 +448,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EOperation getTabla__P03_clavesTipoInteger__DiagnosticChain_Map() {
-		return tablaEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAtributo() {
 		return atributoEClass;
 	}
@@ -922,7 +912,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createEAttribute(tablaEClass, TABLA__NOMBRE);
 		createEReference(tablaEClass, TABLA__ATRIBUTOS);
 		createEOperation(tablaEClass, TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP);
-		createEOperation(tablaEClass, TABLA___P03_CLAVES_TIPO_INTEGER__DIAGNOSTICCHAIN_MAP);
 
 		atributoEClass = createEClass(ATRIBUTO);
 		createEAttribute(atributoEClass, ATRIBUTO__NOMBRE);
@@ -1074,15 +1063,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		initEReference(getTabla_Atributos(), this.getAtributo(), null, "atributos", null, 1, -1, Tabla.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P02_soloUnaClavePrimaria", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getTabla__P03_clavesTipoInteger__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P03_clavesTipoInteger", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1284,7 +1264,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (tablaEClass,
 		   source,
 		   new String[] {
-			   "constraints", "P03_clavesTipoInteger"
+			   "constraints", "P02_soloUnaClavePrimaria"
 		   });
 		addAnnotation
 		  (atributoEClass,
@@ -1387,12 +1367,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "body", "self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"
 		   });
 		addAnnotation
-		  (getTabla__P03_clavesTipoInteger__DiagnosticChain_Map(),
-		   source,
-		   new String[] {
-			   "body", "self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))->forAll(at | at.tipo = EAtributo::INTEGER)"
-		   });
-		addAnnotation
 		  (getAtributo__P01_tieneOpciones__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
@@ -1408,7 +1382,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTarea__R09_unidireccionalidad__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\r\n\t\tself.predecesor->size() <= 1 and self.sucesor->size() <= 1"
+			   "body", "\n\t\tself.predecesor->size() <= 1 and self.sucesor->size() <= 1"
 		   });
 		addAnnotation
 		  (getTarea__R06_noReflexiva__DiagnosticChain_Map(),
@@ -1420,7 +1394,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTarea__R08_ConexionesEntreTareas__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\r\n\t\t  if self.oclIsTypeOf(Envio) then\r\n\t\t    -- Se eval\u00ef\u00bf\u00bda que Envio y Recepcion sean de distinto actor\r\n\t\t    self.oclContainer() <> self.sucesor.oclContainer() \r\n\t\t  else\r\n\t\t    -- El resto de conexiones deben ser del mismo actor\r\n\t\t    self.sucesor->isEmpty() or\r\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\r\n\t\t  endif"
+			   "body", "\n\t\t  if self.oclIsTypeOf(Envio) then\n\t\t    -- Se eval\u00ef\u00bf\u00bda que Envio y Recepcion sean de distinto actor\n\t\t    self.oclContainer() <> self.sucesor.oclContainer() \n\t\t  else\n\t\t    -- El resto de conexiones deben ser del mismo actor\n\t\t    self.sucesor->isEmpty() or\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\n\t\t  endif"
 		   });
 		addAnnotation
 		  (getInicio__R03_sinPredecesor__DiagnosticChain_Map(),
@@ -1450,7 +1424,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\r\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
+			   "body", "\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
 		   });
 	}
 
@@ -1468,7 +1442,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		   new String[] {
 			   "label", "nombre",
 			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/delete.svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/actor.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
 		   });
@@ -1492,126 +1466,6 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "label.icon", "false",
 			   "label.placement", "external"
 		   });
-		addAnnotation
-		  (atributoEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/attribute.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (inicioEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/start.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (finEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/finish.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (usuarioEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/form.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (servicioEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/service.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (envioEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/sent-message.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (recepcionEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/received-message.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (borradoEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/delete.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (lecturaEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/read.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (primaryKeyEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/pk.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (foreignKeyEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/fk.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
-		addAnnotation
-		  (opcionEClass,
-		   source,
-		   new String[] {
-			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/option.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
-		   });
 	}
 
 	/**
@@ -1623,24 +1477,10 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	protected void createGmf_3Annotations() {
 		String source = "gmf.compartment";
 		addAnnotation
-		  (getActor_Tareas(),
-		   source,
-		   new String[] {
-		   });
-		addAnnotation
 		  (getBaseDeDatos_Tablas(),
 		   source,
 		   new String[] {
-		   });
-		addAnnotation
-		  (getTabla_Atributos(),
-		   source,
-		   new String[] {
-		   });
-		addAnnotation
-		  (getAtributo_Opciones(),
-		   source,
-		   new String[] {
+			   "foo", "bar"
 		   });
 	}
 

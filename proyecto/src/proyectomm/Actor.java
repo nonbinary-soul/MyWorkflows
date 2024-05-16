@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see proyectomm.ProyectommPackage#getActor()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='R05_minTareaIntermedia'"
- *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/delete.svg' label.icon='false' label.placement='external'"
+ *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/actor.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Actor extends EObject {
@@ -59,7 +59,6 @@ public interface Actor extends EObject {
 	 * @return the value of the '<em>Tareas</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getActor_Tareas()
 	 * @model containment="true"
-	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Tarea> getTareas();

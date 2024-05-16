@@ -9,7 +9,6 @@ import java.util.List;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.PositionConstants;
-import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
@@ -24,18 +23,15 @@ import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import proyectomm.diagram.edit.policies.OpenDiagramEditPolicy;
 import proyectomm.diagram.edit.policies.TablaItemSemanticEditPolicy;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
@@ -73,7 +69,7 @@ public class TablaEditPart extends AbstractBorderedShapeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new TablaItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -131,64 +127,6 @@ public class TablaEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	* @generated
 	*/
-	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof TablaTablaAtributosCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getTablaAtributosCompartmentFigure();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((TablaTablaAtributosCompartmentEditPart) childEditPart).getFigure());
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	* @generated
-	*/
-	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof TablaTablaAtributosCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getTablaAtributosCompartmentFigure();
-			pane.remove(((TablaTablaAtributosCompartmentEditPart) childEditPart).getFigure());
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	* @generated
-	*/
-	protected void addChildVisual(EditPart childEditPart, int index) {
-		if (addFixedChild(childEditPart)) {
-			return;
-		}
-		super.addChildVisual(childEditPart, -1);
-	}
-
-	/**
-	* @generated
-	*/
-	protected void removeChildVisual(EditPart childEditPart) {
-		if (removeFixedChild(childEditPart)) {
-			return;
-		}
-		super.removeChildVisual(childEditPart);
-	}
-
-	/**
-	* @generated
-	*/
-	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof TablaTablaAtributosCompartmentEditPart) {
-			return getPrimaryShape().getTablaAtributosCompartmentFigure();
-		}
-		if (editPart instanceof IBorderItemEditPart) {
-			return getBorderedFigure().getBorderItemContainer();
-		}
-		return getContentPane();
-	}
-
-	/**
-	* @generated
-	*/
 	protected void addBorderItem(IFigure borderItemContainer, IBorderItemEditPart borderItemEditPart) {
 		if (borderItemEditPart instanceof TablaNombreEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(), PositionConstants.SOUTH);
@@ -231,11 +169,6 @@ public class TablaEditPart extends AbstractBorderedShapeEditPart {
 	* @generated
 	*/
 	protected IFigure setupContentPane(IFigure nodeShape) {
-		if (nodeShape.getLayoutManager() == null) {
-			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
-			layout.setSpacing(5);
-			nodeShape.setLayoutManager(layout);
-		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -300,36 +233,10 @@ public class TablaEditPart extends AbstractBorderedShapeEditPart {
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fTablaAtributosCompartmentFigure;
-
-		/**
-		 * @generated
-		 */
 		public TablaFigure() {
 			this.setURI("platform:/plugin/proyecto/icons/table.svg");
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fTablaAtributosCompartmentFigure = new RectangleFigure();
-
-			fTablaAtributosCompartmentFigure.setOutline(false);
-
-			this.add(fTablaAtributosCompartmentFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public RectangleFigure getTablaAtributosCompartmentFigure() {
-			return fTablaAtributosCompartmentFigure;
 		}
 
 	}

@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see proyectomm.ProyectommPackage#getAtributo()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P05_sinEspaciosEnBlanco'"
- *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/attribute.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Atributo extends EObject {
@@ -84,7 +83,6 @@ public interface Atributo extends EObject {
 	 * @return the value of the '<em>Opciones</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getAtributo_Opciones()
 	 * @model containment="true"
-	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Opcion> getOpciones();

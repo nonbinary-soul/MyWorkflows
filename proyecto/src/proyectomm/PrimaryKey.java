@@ -10,7 +10,7 @@ package proyectomm;
  *
  *
  * @see proyectomm.ProyectommPackage#getPrimaryKey()
- * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/pk.svg' label.icon='false' label.placement='external'"
+ * @model
  * @generated
  */
 public interface PrimaryKey extends Atributo {

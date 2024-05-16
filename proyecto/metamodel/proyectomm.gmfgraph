@@ -2,18 +2,14 @@
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="proyectomm">
   <figures name="Default">
     <descriptors name="ActorFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/proyecto/icons/delete.svg">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/proyecto/icons/actor.svg">
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
-        <children xsi:type="gmfgraph:Rectangle" name="ActorTareasCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getActorTareasCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="ActorLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="ActorLabelFigure" text="Actor">
-        <maximumSize dx="10000" dy="50"/>
-      </actualFigure>
+      <actualFigure xsi:type="gmfgraph:Label" name="ActorLabelFigure" text="Actor"/>
     </descriptors>
     <descriptors name="BaseDeDatosFigure">
       <actualFigure xsi:type="gmfgraph:SVGFigure" name="BaseDeDatosFigure" documentURI="platform:/plugin/proyecto/icons/database.svg">
@@ -34,182 +30,17 @@
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
-        <children xsi:type="gmfgraph:Rectangle" name="TablaAtributosCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getTablaAtributosCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TablaLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="TablaLabelFigure" text="Tabla">
-        <maximumSize dx="10000" dy="50"/>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="AtributoFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="AtributoFigure" documentURI="platform:/plugin/proyecto/icons/attribute.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-        <children xsi:type="gmfgraph:Rectangle" name="AtributoOpcionesCompartmentFigure" outline="false"/>
-      </actualFigure>
-      <accessors accessor="getAtributoOpcionesCompartmentFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors name="AtributoLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="AtributoLabelFigure" text="Atributo">
-        <maximumSize dx="10000" dy="50"/>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="InicioFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="InicioFigure" documentURI="platform:/plugin/proyecto/icons/start.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="InicioLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="InicioLabelFigure" text="Inicio"/>
-    </descriptors>
-    <descriptors name="FinFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="FinFigure" documentURI="platform:/plugin/proyecto/icons/finish.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="FinLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="FinLabelFigure" text="Fin"/>
-    </descriptors>
-    <descriptors name="UsuarioFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="UsuarioFigure" documentURI="platform:/plugin/proyecto/icons/form.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="UsuarioLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="UsuarioLabelFigure" text="Usuario"/>
-    </descriptors>
-    <descriptors name="ServicioFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ServicioFigure" documentURI="platform:/plugin/proyecto/icons/service.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="ServicioLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="ServicioLabelFigure" text="Servicio"/>
-    </descriptors>
-    <descriptors name="EnvioFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="EnvioFigure" documentURI="platform:/plugin/proyecto/icons/sent-message.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="EnvioLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="EnvioLabelFigure" text="Envio"/>
-    </descriptors>
-    <descriptors name="RecepcionFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="RecepcionFigure" documentURI="platform:/plugin/proyecto/icons/received-message.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="RecepcionLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="RecepcionLabelFigure" text="Recepcion"/>
-    </descriptors>
-    <descriptors name="BorradoFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="BorradoFigure" documentURI="platform:/plugin/proyecto/icons/delete.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="BorradoLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="BorradoLabelFigure" text="Borrado"/>
-    </descriptors>
-    <descriptors name="LecturaFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="LecturaFigure" documentURI="platform:/plugin/proyecto/icons/read.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="LecturaLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="LecturaLabelFigure" text="Lectura"/>
-    </descriptors>
-    <descriptors name="PrimaryKeyFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="PrimaryKeyFigure" documentURI="platform:/plugin/proyecto/icons/pk.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-        <children xsi:type="gmfgraph:Rectangle" name="PrimaryKeyOpcionesCompartmentFigure" outline="false"/>
-      </actualFigure>
-      <accessors accessor="getPrimaryKeyOpcionesCompartmentFigure" figure="//@figures.0/@descriptors.24/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors name="PrimaryKeyLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="PrimaryKeyLabelFigure" text="PrimaryKey">
-        <maximumSize dx="10000" dy="50"/>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="ForeignKeyFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ForeignKeyFigure" documentURI="platform:/plugin/proyecto/icons/fk.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-        <children xsi:type="gmfgraph:Rectangle" name="ForeignKeyOpcionesCompartmentFigure" outline="false"/>
-      </actualFigure>
-      <accessors accessor="getForeignKeyOpcionesCompartmentFigure" figure="//@figures.0/@descriptors.26/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors name="ForeignKeyLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="ForeignKeyLabelFigure" text="ForeignKey">
-        <maximumSize dx="10000" dy="50"/>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="OpcionFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="OpcionFigure" documentURI="platform:/plugin/proyecto/icons/option.svg">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-      </actualFigure>
-    </descriptors>
-    <descriptors name="OpcionLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="OpcionLabelFigure" text="Opcion"/>
+      <actualFigure xsi:type="gmfgraph:Label" name="TablaLabelFigure" text="Tabla"/>
     </descriptors>
   </figures>
   <nodes name="Actor" figure="ActorFigure"/>
   <nodes name="BaseDeDatos" figure="BaseDeDatosFigure"/>
   <nodes name="Tabla" figure="TablaFigure"/>
-  <nodes name="Atributo" figure="AtributoFigure"/>
-  <nodes name="Inicio" figure="InicioFigure"/>
-  <nodes name="Fin" figure="FinFigure"/>
-  <nodes name="Usuario" figure="UsuarioFigure"/>
-  <nodes name="Servicio" figure="ServicioFigure"/>
-  <nodes name="Envio" figure="EnvioFigure"/>
-  <nodes name="Recepcion" figure="RecepcionFigure"/>
-  <nodes name="Borrado" figure="BorradoFigure"/>
-  <nodes name="Lectura" figure="LecturaFigure"/>
-  <nodes name="PrimaryKey" figure="PrimaryKeyFigure"/>
-  <nodes name="ForeignKey" figure="ForeignKeyFigure"/>
-  <nodes name="Opcion" figure="OpcionFigure"/>
-  <compartments name="ActorTareasCompartment" figure="ActorFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <compartments name="BaseDeDatosTablasCompartment" figure="BaseDeDatosFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
-  <compartments name="TablaAtributosCompartment" figure="TablaFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
-  <compartments name="AtributoOpcionesCompartment" figure="AtributoFigure" collapsible="true" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
-  <compartments name="PrimaryKeyOpcionesCompartment" figure="PrimaryKeyFigure" collapsible="true" accessor="//@figures.0/@descriptors.24/@accessors.0"/>
-  <compartments name="ForeignKeyOpcionesCompartment" figure="ForeignKeyFigure" collapsible="true" accessor="//@figures.0/@descriptors.26/@accessors.0"/>
   <labels name="ActorLabel" figure="ActorLabelFigure" elementIcon="false"/>
   <labels name="BaseDeDatosLabel" figure="BaseDeDatosLabelFigure" elementIcon="false"/>
   <labels name="TablaLabel" figure="TablaLabelFigure" elementIcon="false"/>
-  <labels name="AtributoLabel" figure="AtributoLabelFigure" elementIcon="false"/>
-  <labels name="InicioLabel" figure="InicioLabelFigure" elementIcon="false"/>
-  <labels name="FinLabel" figure="FinLabelFigure" elementIcon="false"/>
-  <labels name="UsuarioLabel" figure="UsuarioLabelFigure" elementIcon="false"/>
-  <labels name="ServicioLabel" figure="ServicioLabelFigure" elementIcon="false"/>
-  <labels name="EnvioLabel" figure="EnvioLabelFigure" elementIcon="false"/>
-  <labels name="RecepcionLabel" figure="RecepcionLabelFigure" elementIcon="false"/>
-  <labels name="BorradoLabel" figure="BorradoLabelFigure" elementIcon="false"/>
-  <labels name="LecturaLabel" figure="LecturaLabelFigure" elementIcon="false"/>
-  <labels name="PrimaryKeyLabel" figure="PrimaryKeyLabelFigure" elementIcon="false"/>
-  <labels name="ForeignKeyLabel" figure="ForeignKeyLabelFigure" elementIcon="false"/>
-  <labels name="OpcionLabel" figure="OpcionLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

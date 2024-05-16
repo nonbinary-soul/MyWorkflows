@@ -17,7 +17,6 @@ import proyectomm.Tabla;
  * The following operations are tested:
  * <ul>
  *   <li>{@link proyectomm.Tabla#P02_soloUnaClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P02 solo Una Clave Primaria</em>}</li>
- *   <li>{@link proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 claves Tipo Integer</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -101,19 +100,6 @@ public class TablaTest extends TestCase {
 	 * @generated
 	 */
 	public void testP02_soloUnaClavePrimaria__DiagnosticChain_Map() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 claves Tipo Integer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see proyectomm.Tabla#P03_clavesTipoInteger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	public void testP03_clavesTipoInteger__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

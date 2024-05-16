@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getTabla()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P03_clavesTipoInteger'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P02_soloUnaClavePrimaria'"
  *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/table.svg' label.icon='false' label.placement='external'"
  * @generated
  */
@@ -58,7 +58,6 @@ public interface Tabla extends EObject {
 	 * @return the value of the '<em>Atributos</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getTabla_Atributos()
 	 * @model containment="true" required="true"
-	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Atributo> getAtributos();
@@ -70,13 +69,5 @@ public interface Tabla extends EObject {
 	 * @generated
 	 */
 	boolean P02_soloUnaClavePrimaria(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))-&gt;forAll(at | at.tipo = EAtributo::INTEGER)'"
-	 * @generated
-	 */
-	boolean P03_clavesTipoInteger(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Tabla

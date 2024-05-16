@@ -72,20 +72,12 @@ public class ProyectommValidator extends EObjectValidator {
 	public static final int TABLA__P02_SOLO_UNA_CLAVE_PRIMARIA = 4;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P03 claves Tipo Integer' of 'Tabla'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int TABLA__P03_CLAVES_TIPO_INTEGER = 5;
-
-	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P01 tiene Opciones' of 'Atributo'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ATRIBUTO__P01_TIENE_OPCIONES = 6;
+	public static final int ATRIBUTO__P01_TIENE_OPCIONES = 5;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P05 sin Espacios En Blanco' of 'Atributo'.
@@ -93,7 +85,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ATRIBUTO__P05_SIN_ESPACIOS_EN_BLANCO = 7;
+	public static final int ATRIBUTO__P05_SIN_ESPACIOS_EN_BLANCO = 6;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R09 unidireccionalidad' of 'Tarea'.
@@ -101,7 +93,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R09_UNIDIRECCIONALIDAD = 8;
+	public static final int TAREA__R09_UNIDIRECCIONALIDAD = 7;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R06 no Reflexiva' of 'Tarea'.
@@ -109,7 +101,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R06_NO_REFLEXIVA = 9;
+	public static final int TAREA__R06_NO_REFLEXIVA = 8;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R08 Conexiones Entre Tareas' of 'Tarea'.
@@ -117,7 +109,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R08_CONEXIONES_ENTRE_TAREAS = 10;
+	public static final int TAREA__R08_CONEXIONES_ENTRE_TAREAS = 9;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R03 sin Predecesor' of 'Inicio'.
@@ -125,7 +117,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int INICIO__R03_SIN_PREDECESOR = 11;
+	public static final int INICIO__R03_SIN_PREDECESOR = 10;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R04 sin Sucesor' of 'Fin'.
@@ -133,7 +125,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int FIN__R04_SIN_SUCESOR = 12;
+	public static final int FIN__R04_SIN_SUCESOR = 11;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R07 envio Asociado' of 'Recepcion'.
@@ -141,7 +133,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int RECEPCION__R07_ENVIO_ASOCIADO = 13;
+	public static final int RECEPCION__R07_ENVIO_ASOCIADO = 12;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P06 misma Tabla Que Envio' of 'Recepcion'.
@@ -149,7 +141,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int RECEPCION__P06_MISMA_TABLA_QUE_ENVIO = 14;
+	public static final int RECEPCION__P06_MISMA_TABLA_QUE_ENVIO = 13;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P04 borrado Con Clave Primaria' of 'Borrado'.
@@ -157,7 +149,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int BORRADO__P04_BORRADO_CON_CLAVE_PRIMARIA = 15;
+	public static final int BORRADO__P04_BORRADO_CON_CLAVE_PRIMARIA = 14;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -165,7 +157,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 15;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 14;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -345,19 +337,8 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tabla, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTabla_P03_clavesTipoInteger(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTabla_P02_soloUnaClavePrimaria(tabla, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the P03_clavesTipoInteger constraint of '<em>Tabla</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTabla_P03_clavesTipoInteger(Tabla tabla, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return tabla.P03_clavesTipoInteger(diagnostics, context);
 	}
 
 	/**

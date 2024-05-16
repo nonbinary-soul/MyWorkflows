@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Label;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.emf.common.notify.Notification;
@@ -63,7 +62,7 @@ public class ActorNombreEditPart extends LabelEditPart implements ITextAwareEdit
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5015;
+	public static final int VISUAL_ID = 5003;
 
 	/**
 	* @generated
@@ -621,7 +620,6 @@ public class ActorNombreEditPart extends LabelEditPart implements ITextAwareEdit
 		 */
 		public ActorLabelFigure() {
 			this.setText("Actor");
-			this.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 		}
 
 	}

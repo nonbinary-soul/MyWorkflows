@@ -10,7 +10,7 @@ package proyectomm;
  *
  *
  * @see proyectomm.ProyectommPackage#getEnvio()
- * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/sent-message.svg' label.icon='false' label.placement='external'"
+ * @model
  * @generated
  */
 public interface Envio extends Mensaje {
