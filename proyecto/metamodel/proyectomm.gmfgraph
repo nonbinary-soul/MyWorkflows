@@ -2,7 +2,7 @@
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="proyectomm">
   <figures name="Default">
     <descriptors name="ActorFigure">
-      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/proyecto/icons/actor.svg">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/proyecto/icons/delete.svg">
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmss_misworksflowsmm:ProcesoDeNegocio
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dmss_misworksflowsmm="http://www.example.org/dmss_misworksflowsmm"
+    nombre="Registro de un usuario">
+  <bases_de_datos
+      nombre="Pizzeria">
+    <tablas
+        nombre="tabla_clientes">
+      <atributos
+          xsi:type="dmss_misworksflowsmm:PrimaryKey"
+          nombre="dni"/>
+      <atributos
+          nombre="nombre"
+          tipo="TEXT"/>
+      <atributos
+          nombre="direccion"
+          tipo="TEXT"/>
+      <atributos
+          nombre="telefono"
+          tipo="TEXT"/>
+      <atributos
+          nombre="correo_electronico"
+          tipo="TEXT"/>
+    </tablas>
+  </bases_de_datos>
+  <actores nombre="Cliente">
+    <tareas
+        xsi:type="dmss_misworksflowsmm:Inicio"
+        sucesor="//@actores.0/@tareas.1"/>
+    <tareas
+        xsi:type="dmss_misworksflowsmm:Usuario"
+        sucesor="//@actores.0/@tareas.2"
+        predecesor="//@actores.0/@tareas.0"
+        nombre="rellenar formulario de registro"
+        formulario="//@bases_de_datos.0/@tablas.0"/>
+    <tareas
+        xsi:type="dmss_misworksflowsmm:Fin"
+        predecesor="//@actores.0/@tareas.1"/>
+  </actores>
+</dmss_misworksflowsmm:ProcesoDeNegocio>

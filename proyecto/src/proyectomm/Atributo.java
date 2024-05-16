@@ -92,7 +92,7 @@ public interface Atributo extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t    if self.tipo = EAtributo::LIST then\n\t\t\t        self.opciones-&gt;notEmpty()\n\t\t\t    else\n\t\t\t        self.opciones-&gt;isEmpty()\n\t\t\t    endif'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='if self.tipo = EAtributo::LIST then self.opciones-&gt;notEmpty() else self.opciones-&gt;isEmpty() endif'"
 	 * @generated
 	 */
 	boolean P01_tieneOpciones(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -100,7 +100,7 @@ public interface Atributo extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t        not self.nombre-&gt;includes(\' \')'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not self.nombre-&gt;includes(\' \')'"
 	 * @generated
 	 */
 	boolean P05_sinEspaciosEnBlanco(DiagnosticChain diagnostics, Map<Object, Object> context);

@@ -320,7 +320,7 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 		 * @generated
 		 */
 		public ActorFigure() {
-			this.setURI("platform:/plugin/proyecto/icons/actor.svg");
+			this.setURI("platform:/plugin/proyecto/icons/delete.svg");
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();

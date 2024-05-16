@@ -469,9 +469,9 @@ tareaLectura.html
 
 		<div class="box">
 			<h2>Datos Leidos</h2>
-			<p>Nombre: [tarea.datos_a_leer.nombre/]</p>
+			<p>Nombre: [tarea.atributo_seleccionado.eContainer().oclAsType(Tabla).nombre/]</p>
 			<ul>
-				[for (atributo: Atributo | tarea.datos_a_leer.atributos)]
+				[for (atributo: Atributo | tarea.atributo_seleccionado.eContainer().oclAsType(Tabla).atributos)]
 		            <li>Nombre: [atributo.nombre/] &emsp; Tipo: [atributo.tipo/]</li>
 		        [/for]
 			</ul>

@@ -101,7 +101,7 @@ public interface Tarea extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\tself.predecesor-&gt;size() &lt;= 1 and self.sucesor-&gt;size() &lt;= 1'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\r\n\t\tself.predecesor-&gt;size() &lt;= 1 and self.sucesor-&gt;size() &lt;= 1'"
 	 * @generated
 	 */
 	boolean R09_unidireccionalidad(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -117,7 +117,7 @@ public interface Tarea extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t  if self.oclIsTypeOf(Envio) then\n\t\t    -- Se eval\357\277\275a que Envio y Recepcion sean de distinto actor\n\t\t    self.oclContainer() &lt;&gt; self.sucesor.oclContainer() \n\t\t  else\n\t\t    -- El resto de conexiones deben ser del mismo actor\n\t\t    self.sucesor-&gt;isEmpty() or\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\n\t\t  endif'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\r\n\t\t  if self.oclIsTypeOf(Envio) then\r\n\t\t    -- Se eval\357\277\275a que Envio y Recepcion sean de distinto actor\r\n\t\t    self.oclContainer() &lt;&gt; self.sucesor.oclContainer() \r\n\t\t  else\r\n\t\t    -- El resto de conexiones deben ser del mismo actor\r\n\t\t    self.sucesor-&gt;isEmpty() or\r\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\r\n\t\t  endif'"
 	 * @generated
 	 */
 	boolean R08_ConexionesEntreTareas(DiagnosticChain diagnostics, Map<Object, Object> context);

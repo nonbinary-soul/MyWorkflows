@@ -66,7 +66,7 @@ public interface Tabla extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t        self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey))-&gt;size() = 1'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey))-&gt;size() = 1'"
 	 * @generated
 	 */
 	boolean P02_soloUnaClavePrimaria(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -74,7 +74,7 @@ public interface Tabla extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t    self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))\n\t\t\t                 -&gt;forAll(at | at.tipo = EAtributo::INTEGER)'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))-&gt;forAll(at | at.tipo = EAtributo::INTEGER)'"
 	 * @generated
 	 */
 	boolean P03_clavesTipoInteger(DiagnosticChain diagnostics, Map<Object, Object> context);

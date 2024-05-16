@@ -41,7 +41,7 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
       <details key="figure" value="svg"/>
-      <details key="svg.uri" value="platform:/plugin/proyecto/icons/actor.svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/delete.svg"/>
       <details key="label.icon" value="false"/>
       <details key="label.placement" value="external"/>
     </eAnnotations>
@@ -79,8 +79,8 @@
       <details key="constraints" value="P02_soloUnaClavePrimaria P03_clavesTipoInteger"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="P02_soloUnaClavePrimaria" value="&#xA;&#x9;&#x9;        self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"/>
-      <details key="P03_clavesTipoInteger" value="&#xA;&#x9;&#x9;&#x9;    self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))&#xA;&#x9;&#x9;&#x9;                 ->forAll(at | at.tipo = EAtributo::INTEGER)"/>
+      <details key="P02_soloUnaClavePrimaria" value="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"/>
+      <details key="P03_clavesTipoInteger" value="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))->forAll(at | at.tipo = EAtributo::INTEGER)"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
@@ -101,8 +101,8 @@
       <details key="constraints" value="P01_tieneOpciones P05_sinEspaciosEnBlanco"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="P01_tieneOpciones" value="&#xA;&#x9;&#x9;&#x9;    if self.tipo = EAtributo::LIST then&#xA;&#x9;&#x9;&#x9;        self.opciones->notEmpty()&#xA;&#x9;&#x9;&#x9;    else&#xA;&#x9;&#x9;&#x9;        self.opciones->isEmpty()&#xA;&#x9;&#x9;&#x9;    endif"/>
-      <details key="P05_sinEspaciosEnBlanco" value="&#xA;&#x9;&#x9;        not self.nombre->includes(' ')"/>
+      <details key="P01_tieneOpciones" value="if self.tipo = EAtributo::LIST then self.opciones->notEmpty() else self.opciones->isEmpty() endif"/>
+      <details key="P05_sinEspaciosEnBlanco" value="not self.nombre->includes(' ')"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
@@ -133,8 +133,8 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R06_noReflexiva" value="sucesor &lt;> self"/>
-      <details key="R08_ConexionesEntreTareas" value="&#xA;&#x9;&#x9;  if self.oclIsTypeOf(Envio) then&#xA;&#x9;&#x9;    -- Se evalï¿½a que Envio y Recepcion sean de distinto actor&#xA;&#x9;&#x9;    self.oclContainer() &lt;> self.sucesor.oclContainer() &#xA;&#x9;&#x9;  else&#xA;&#x9;&#x9;    -- El resto de conexiones deben ser del mismo actor&#xA;&#x9;&#x9;    self.sucesor->isEmpty() or&#xA;&#x9;&#x9;    self.sucesor.oclContainer() = self.oclContainer()&#xA;&#x9;&#x9;  endif"/>
-      <details key="R09_unidireccionalidad" value="&#xA;&#x9;&#x9;self.predecesor->size() &lt;= 1 and self.sucesor->size() &lt;= 1"/>
+      <details key="R08_ConexionesEntreTareas" value="&#xD;&#xA;&#x9;&#x9;  if self.oclIsTypeOf(Envio) then&#xD;&#xA;&#x9;&#x9;    -- Se evalï¿½a que Envio y Recepcion sean de distinto actor&#xD;&#xA;&#x9;&#x9;    self.oclContainer() &lt;> self.sucesor.oclContainer() &#xD;&#xA;&#x9;&#x9;  else&#xD;&#xA;&#x9;&#x9;    -- El resto de conexiones deben ser del mismo actor&#xD;&#xA;&#x9;&#x9;    self.sucesor->isEmpty() or&#xD;&#xA;&#x9;&#x9;    self.sucesor.oclContainer() = self.oclContainer()&#xD;&#xA;&#x9;&#x9;  endif"/>
+      <details key="R09_unidireccionalidad" value="&#xD;&#xA;&#x9;&#x9;self.predecesor->size() &lt;= 1 and self.sucesor->size() &lt;= 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" eType="#//Tarea"
@@ -233,7 +233,7 @@
       <details key="constraints" value="P04_borradoConClavePrimaria"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="P04_borradoConClavePrimaria" value="&#xA;&#x9;&#x9;        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"/>
+      <details key="P04_borradoConClavePrimaria" value="&#xD;&#xA;&#x9;&#x9;        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>

@@ -1,8 +1,8 @@
 @"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
 @Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
-@namespace(uri="http://www.example.org/proyectomm", prefix="proyectomm")
 @gmf
-@GenModel(operationReflection="true",tableProviders="true",complianceLevel="6.0")
+@GenModel(operationReflection="true", tableProviders="true", complianceLevel="6.0")
+@namespace(uri="http://www.example.org/proyectomm", prefix="proyectomm")
 package proyectomm;
 
 @Ecore(constraints="R01_unaTareaInicial R02_unaTareaFinal")
@@ -16,9 +16,10 @@ class ProcesoDeNegocio {
 
 @Ecore(constraints="R05_minTareaIntermedia")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R05_minTareaIntermedia="tareas->select(oclIsKindOf(Intermedia))->size() > 0")
-@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/actor.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/delete.svg", label.icon="false", label.placement="external")
 class Actor {
 	attr String[1] nombre;
+
 	@gmf.compartment
 	val Tarea[*] tareas;
 
@@ -26,37 +27,31 @@ class Actor {
 	volatile transient derived attr int[1] num_tareas;
 }
 
-@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/database.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/database.svg", label.icon="false", label.placement="external")
 class BaseDeDatos {
 	attr String[1] nombre;
+
 	@gmf.compartment
 	val Tabla[+] tablas;
 }
 
 @Ecore(constraints="P02_soloUnaClavePrimaria P03_clavesTipoInteger")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P02_soloUnaClavePrimaria="
-		        self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1", P03_clavesTipoInteger="
-			    self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))
-			                 ->forAll(at | at.tipo = EAtributo::INTEGER)")
-@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/table.svg", label.icon="false", label.placement="external")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P02_soloUnaClavePrimaria="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1", P03_clavesTipoInteger="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))->forAll(at | at.tipo = EAtributo::INTEGER)")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/table.svg", label.icon="false", label.placement="external")
 class Tabla {
 	attr String[1] nombre;
+
 	@gmf.compartment
 	val Atributo[+] atributos;
 }
 
 @Ecore(constraints="P01_tieneOpciones P05_sinEspaciosEnBlanco")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P01_tieneOpciones="
-			    if self.tipo = EAtributo::LIST then
-			        self.opciones->notEmpty()
-			    else
-			        self.opciones->isEmpty()
-			    endif", P05_sinEspaciosEnBlanco="
-		        not self.nombre->includes(' ')")
-@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/attribute.svg", label.icon="false", label.placement="external")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P01_tieneOpciones="if self.tipo = EAtributo::LIST then self.opciones->notEmpty() else self.opciones->isEmpty() endif", P05_sinEspaciosEnBlanco="not self.nombre->includes(' ')")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/attribute.svg", label.icon="false", label.placement="external")
 class Atributo {
 	attr String[1] nombre;
 	attr EAtributo[1] tipo;
+
 	@gmf.compartment
 	val Opcion[*] opciones;
 }
@@ -89,13 +84,13 @@ abstract class Tarea {
 
 @Ecore(constraints="R03_sinPredecesor")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R03_sinPredecesor="predecesor = null")
-@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/start.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/start.svg", label.icon="false", label.placement="external")
 class Inicio extends Tarea {
 }
 
 @Ecore(constraints="R04_sinSucesor")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R04_sinSucesor="sucesor = null")
-@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/finish.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/finish.svg", label.icon="false", label.placement="external")
 class Fin extends Tarea {
 }
 

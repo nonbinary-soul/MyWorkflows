@@ -1384,31 +1384,31 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t        self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"
+			   "body", "self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"
 		   });
 		addAnnotation
 		  (getTabla__P03_clavesTipoInteger__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t\t    self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))\n\t\t\t                 ->forAll(at | at.tipo = EAtributo::INTEGER)"
+			   "body", "self.atributos->select(a | a.oclIsTypeOf(PrimaryKey) or a.oclIsTypeOf(ForeignKey))->forAll(at | at.tipo = EAtributo::INTEGER)"
 		   });
 		addAnnotation
 		  (getAtributo__P01_tieneOpciones__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t\t    if self.tipo = EAtributo::LIST then\n\t\t\t        self.opciones->notEmpty()\n\t\t\t    else\n\t\t\t        self.opciones->isEmpty()\n\t\t\t    endif"
+			   "body", "if self.tipo = EAtributo::LIST then self.opciones->notEmpty() else self.opciones->isEmpty() endif"
 		   });
 		addAnnotation
 		  (getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t        not self.nombre->includes(\' \')"
+			   "body", "not self.nombre->includes(\' \')"
 		   });
 		addAnnotation
 		  (getTarea__R09_unidireccionalidad__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\tself.predecesor->size() <= 1 and self.sucesor->size() <= 1"
+			   "body", "\r\n\t\tself.predecesor->size() <= 1 and self.sucesor->size() <= 1"
 		   });
 		addAnnotation
 		  (getTarea__R06_noReflexiva__DiagnosticChain_Map(),
@@ -1420,7 +1420,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTarea__R08_ConexionesEntreTareas__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t  if self.oclIsTypeOf(Envio) then\n\t\t    -- Se eval\u00ef\u00bf\u00bda que Envio y Recepcion sean de distinto actor\n\t\t    self.oclContainer() <> self.sucesor.oclContainer() \n\t\t  else\n\t\t    -- El resto de conexiones deben ser del mismo actor\n\t\t    self.sucesor->isEmpty() or\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\n\t\t  endif"
+			   "body", "\r\n\t\t  if self.oclIsTypeOf(Envio) then\r\n\t\t    -- Se eval\u00ef\u00bf\u00bda que Envio y Recepcion sean de distinto actor\r\n\t\t    self.oclContainer() <> self.sucesor.oclContainer() \r\n\t\t  else\r\n\t\t    -- El resto de conexiones deben ser del mismo actor\r\n\t\t    self.sucesor->isEmpty() or\r\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\r\n\t\t  endif"
 		   });
 		addAnnotation
 		  (getInicio__R03_sinPredecesor__DiagnosticChain_Map(),
@@ -1450,7 +1450,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
+			   "body", "\r\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
 		   });
 	}
 
@@ -1468,7 +1468,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		   new String[] {
 			   "label", "nombre",
 			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/actor.svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/delete.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
 		   });
