@@ -525,17 +525,17 @@ tareaLectura.html
 				<p>Se ha leído la siguiente información</p>
 				<div class="box">
 				<table>
-				  <thead>
-				    <tr>
-				      <th>[tarea.atributo_seleccionado.nombre/]</th>
-				    </tr>
-				  </thead>
 				  <tbody>
-					[for (i : Integer | Sequence{1..5})]
-				    <tr>
-				      <td><em>Aquí iría el valor del atributo para esta tupla</em></td>
-				    </tr>
-					[/for]
+					[for (atributo: Atributo | tarea.atributo_seleccionado.eContainer().oclAsType(Tabla).atributos)]
+						<tr>
+					      	<th>[atributo.nombre/]</th>
+							<td>Ejemplo de [atributo.nombre/]</td>
+							<td>Ejemplo de [atributo.nombre/]</td>
+							<td>Ejemplo de [atributo.nombre/]</td>
+							<td>Ejemplo de [atributo.nombre/]</td>
+							<td>Ejemplo de [atributo.nombre/]</td>
+					    </tr>
+		        	[/for]
 				  </tbody>
 				</table>
 				</div>
