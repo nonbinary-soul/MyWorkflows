@@ -18,8 +18,11 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
+import proyectomm.diagram.edit.commands.MensajeTabla_accedidaCreateCommand;
+import proyectomm.diagram.edit.commands.MensajeTabla_accedidaReorientCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorCreateCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorReorientCommand;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedidaEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
@@ -62,6 +65,13 @@ public class EnvioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
+			if (ProyectommVisualIDRegistry.getVisualID(outgoingLink) == MensajeTabla_accedidaEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
 		}
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {
@@ -91,6 +101,9 @@ public class EnvioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
+		if (ProyectommElementTypes.MensajeTabla_accedida_4004 == req.getElementType()) {
+			return getGEFWrapper(new MensajeTabla_accedidaCreateCommand(req, req.getSource(), req.getTarget()));
+		}
 		return null;
 	}
 
@@ -100,6 +113,9 @@ public class EnvioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
+		}
+		if (ProyectommElementTypes.MensajeTabla_accedida_4004 == req.getElementType()) {
+			return null;
 		}
 		return null;
 	}
@@ -114,6 +130,8 @@ public class EnvioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 		switch (getVisualID(req)) {
 		case TareaSucesorEditPart.VISUAL_ID:
 			return getGEFWrapper(new TareaSucesorReorientCommand(req));
+		case MensajeTabla_accedidaEditPart.VISUAL_ID:
+			return getGEFWrapper(new MensajeTabla_accedidaReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

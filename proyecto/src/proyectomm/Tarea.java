@@ -60,7 +60,7 @@ public interface Tarea extends EObject {
 	 * @see proyectomm.ProyectommPackage#getTarea_Sucesor()
 	 * @see proyectomm.Tarea#getPredecesor
 	 * @model opposite="predecesor"
-	 *        annotation="gmf.link source='predecesor' target='sucessor' style='dot' width='2'"
+	 *        annotation="gmf.link color='0,0,0' source='predecesor' target='sucessor' target.decoration='filledclosedarrow' style='solid' width='1'"
 	 * @generated
 	 */
 	Tarea getSucesor();

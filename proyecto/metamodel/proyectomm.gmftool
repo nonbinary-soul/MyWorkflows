@@ -152,8 +152,53 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Atributo_seleccionado"
+          description="Create new Atributo_seleccionado">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Referencia_a"
+          description="Create new Referencia_a">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Sucesor"
           description="Create new Sucesor">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Tabla_accedida"
+          description="Create new Tabla_accedida">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Tabla_accedida"
+          description="Create new Tabla_accedida">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Tabla_accedida"
+          description="Create new Tabla_accedida">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

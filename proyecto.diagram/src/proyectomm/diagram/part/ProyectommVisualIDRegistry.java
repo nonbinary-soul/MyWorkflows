@@ -18,6 +18,8 @@ import proyectomm.diagram.edit.parts.ActorNombreEditPart;
 import proyectomm.diagram.edit.parts.AtributoAtributoOpcionesCompartmentEditPart;
 import proyectomm.diagram.edit.parts.AtributoEditPart;
 import proyectomm.diagram.edit.parts.AtributoNombreTipoEditPart;
+import proyectomm.diagram.edit.parts.BDAtributo_seleccionadoEditPart;
+import proyectomm.diagram.edit.parts.BDAtributo_seleccionadoExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosBaseDeDatosTablasCompartmentEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
@@ -29,9 +31,13 @@ import proyectomm.diagram.edit.parts.FinEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyForeignKeyOpcionesCompartmentEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyNombreTipoEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.InicioEditPart;
 import proyectomm.diagram.edit.parts.LecturaEditPart;
 import proyectomm.diagram.edit.parts.LecturaNombreEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedidaEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedidaExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.OpcionEditPart;
 import proyectomm.diagram.edit.parts.OpcionNombreEditPart;
 import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
@@ -42,12 +48,16 @@ import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.RecepcionNombreEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.ServicioNombreEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedidaEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaNombreEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
 import proyectomm.diagram.edit.parts.UsuarioNombreEditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedidaEditPart;
+import proyectomm.diagram.edit.parts.WrappingLabel2EditPart;
+import proyectomm.diagram.edit.parts.WrappingLabel3EditPart;
 import proyectomm.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
@@ -389,6 +399,31 @@ public class ProyectommVisualIDRegistry {
 			break;
 		case TareaSucesorEditPart.VISUAL_ID:
 			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
+			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ServicioTabla_accedidaEditPart.VISUAL_ID:
+			if (WrappingLabel3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case MensajeTabla_accedidaEditPart.VISUAL_ID:
+			if (MensajeTabla_accedidaExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+			if (BDAtributo_seleccionadoExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
+			if (ForeignKeyReferencia_aExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

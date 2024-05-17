@@ -11,11 +11,14 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 
+import proyectomm.diagram.edit.parts.AtributoEditPart;
 import proyectomm.diagram.edit.parts.BorradoEditPart;
 import proyectomm.diagram.edit.parts.EnvioEditPart;
 import proyectomm.diagram.edit.parts.FinEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
 import proyectomm.diagram.edit.parts.InicioEditPart;
 import proyectomm.diagram.edit.parts.LecturaEditPart;
+import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
 import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
@@ -41,8 +44,9 @@ public class ProyectommModelingAssistantProviderOfLecturaEditPart extends Proyec
 	* @generated
 	*/
 	public List<IElementType> doGetRelTypesOnSource(LecturaEditPart source) {
-		List<IElementType> types = new ArrayList<IElementType>(1);
+		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(ProyectommElementTypes.TareaSucesor_4001);
+		types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
 		return types;
 	}
 
@@ -87,6 +91,15 @@ public class ProyectommModelingAssistantProviderOfLecturaEditPart extends Proyec
 		if (targetEditPart instanceof FinEditPart) {
 			types.add(ProyectommElementTypes.TareaSucesor_4001);
 		}
+		if (targetEditPart instanceof PrimaryKeyEditPart) {
+			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+		}
+		if (targetEditPart instanceof ForeignKeyEditPart) {
+			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+		}
+		if (targetEditPart instanceof AtributoEditPart) {
+			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+		}
 		return types;
 	}
 
@@ -114,6 +127,10 @@ public class ProyectommModelingAssistantProviderOfLecturaEditPart extends Proyec
 			types.add(ProyectommElementTypes.Servicio_3011);
 			types.add(ProyectommElementTypes.Inicio_3012);
 			types.add(ProyectommElementTypes.Fin_3013);
+		} else if (relationshipType == ProyectommElementTypes.BDAtributo_seleccionado_4005) {
+			types.add(ProyectommElementTypes.PrimaryKey_3002);
+			types.add(ProyectommElementTypes.ForeignKey_3004);
+			types.add(ProyectommElementTypes.Atributo_3005);
 		}
 		return types;
 	}

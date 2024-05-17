@@ -28,6 +28,7 @@ public interface ForeignKey extends Atributo {
 	 * @see #setReferencia_a(PrimaryKey)
 	 * @see proyectomm.ProyectommPackage#getForeignKey_Referencia_a()
 	 * @model required="true"
+	 *        annotation="gmf.link color='0,0,0' label='Referencia a...' target.decoration='filledclosedarrow' style='dash' width='2'"
 	 * @generated
 	 */
 	PrimaryKey getReferencia_a();

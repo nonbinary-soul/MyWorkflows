@@ -406,12 +406,62 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Sucesor1CreationTool_title;
+	public static String Atributo_seleccionado1CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Sucesor1CreationTool_desc;
+	public static String Atributo_seleccionado1CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Referencia_a2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Referencia_a2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Sucesor3CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Sucesor3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_accedida4CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_accedida4CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_accedida5CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_accedida5CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_accedida6CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_accedida6CreationTool_desc;
 
 	/**
 	* @generated
@@ -452,6 +502,31 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String NavigatorGroupName_ProcesoDeNegocio_1000_links;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Tabla_3001_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_PrimaryKey_3002_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ForeignKey_3004_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ForeignKey_3004_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Atributo_3005_incominglinks;
 
 	/**
 	* @generated
@@ -542,6 +617,56 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String NavigatorGroupName_TareaSucesor_4001_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_UsuarioTabla_accedida_4002_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_UsuarioTabla_accedida_4002_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ServicioTabla_accedida_4003_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ServicioTabla_accedida_4003_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_MensajeTabla_accedida_4004_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_MensajeTabla_accedida_4004_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_BDAtributo_seleccionado_4005_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_BDAtributo_seleccionado_4005_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ForeignKeyReferencia_a_4006_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ForeignKeyReferencia_a_4006_source;
 
 	/**
 	* @generated

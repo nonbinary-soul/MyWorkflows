@@ -130,10 +130,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sucesor" eType="#//Tarea"
         eOpposite="#//Tarea/predecesor">
       <eAnnotations source="gmf.link">
+        <details key="color" value="0,0,0"/>
         <details key="source" value="predecesor"/>
         <details key="target" value="sucessor"/>
-        <details key="style" value="dot"/>
-        <details key="width" value="2"/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="solid"/>
+        <details key="width" value="1"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="predecesor" eType="#//Tarea"
@@ -183,7 +185,14 @@
       <details key="label.placement" value="external"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
-        eType="#//Tabla"/>
+        eType="#//Tabla">
+      <eAnnotations source="gmf.link">
+        <details key="color" value="0,0,0"/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="dash"/>
+        <details key="width" value="2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Intermedia">
     <eAnnotations source="gmf.node">
@@ -194,11 +203,26 @@
       <details key="label.placement" value="external"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
-        eType="#//Tabla"/>
+        eType="#//Tabla">
+      <eAnnotations source="gmf.link">
+        <details key="color" value="0,0,0"/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="dash"/>
+        <details key="width" value="2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mensaje" abstract="true" eSuperTypes="#//Intermedia">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida" lowerBound="1"
-        eType="#//Tabla"/>
+        eType="#//Tabla">
+      <eAnnotations source="gmf.link">
+        <details key="color" value="0,0,0"/>
+        <details key="label" value="Acceso a la tabla..."/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="dash"/>
+        <details key="width" value="2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Envio" eSuperTypes="#//Mensaje">
     <eAnnotations source="gmf.node">
@@ -257,12 +281,28 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BD" abstract="true" eSuperTypes="#//Intermedia">
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributo_seleccionado"
-        lowerBound="1" eType="#//Atributo"/>
+        lowerBound="1" eType="#//Atributo">
+      <eAnnotations source="gmf.link">
+        <details key="color" value="0,0,0"/>
+        <details key="label" value="Acceso al atributo..."/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="dash"/>
+        <details key="width" value="2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia_a" lowerBound="1"
-        eType="#//PrimaryKey"/>
+        eType="#//PrimaryKey">
+      <eAnnotations source="gmf.link">
+        <details key="color" value="0,0,0"/>
+        <details key="label" value="Referencia a..."/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="dash"/>
+        <details key="width" value="2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Opcion">
     <eAnnotations source="gmf.node">

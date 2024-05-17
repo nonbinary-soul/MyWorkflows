@@ -1600,9 +1600,59 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTarea_Sucesor(),
 		   source,
 		   new String[] {
+			   "color", "0,0,0",
 			   "source", "predecesor",
 			   "target", "sucessor",
-			   "style", "dot",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "solid",
+			   "width", "1"
+		   });
+		addAnnotation
+		  (getUsuario_Tabla_accedida(),
+		   source,
+		   new String[] {
+			   "color", "0,0,0",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "dash",
+			   "width", "2"
+		   });
+		addAnnotation
+		  (getServicio_Tabla_accedida(),
+		   source,
+		   new String[] {
+			   "color", "0,0,0",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "dash",
+			   "width", "2"
+		   });
+		addAnnotation
+		  (getMensaje_Tabla_accedida(),
+		   source,
+		   new String[] {
+			   "color", "0,0,0",
+			   "label", "Acceso a la tabla...",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "dash",
+			   "width", "2"
+		   });
+		addAnnotation
+		  (getBD_Atributo_seleccionado(),
+		   source,
+		   new String[] {
+			   "color", "0,0,0",
+			   "label", "Acceso al atributo...",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "dash",
+			   "width", "2"
+		   });
+		addAnnotation
+		  (getForeignKey_Referencia_a(),
+		   source,
+		   new String[] {
+			   "color", "0,0,0",
+			   "label", "Referencia a...",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "dash",
 			   "width", "2"
 		   });
 	}

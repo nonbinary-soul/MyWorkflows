@@ -28,6 +28,7 @@ public interface BD extends Intermedia {
 	 * @see #setAtributo_seleccionado(Atributo)
 	 * @see proyectomm.ProyectommPackage#getBD_Atributo_seleccionado()
 	 * @model required="true"
+	 *        annotation="gmf.link color='0,0,0' label='Acceso al atributo...' target.decoration='filledclosedarrow' style='dash' width='2'"
 	 * @generated
 	 */
 	Atributo getAtributo_seleccionado();

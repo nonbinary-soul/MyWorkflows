@@ -74,7 +74,7 @@ enum EAtributo {
 
 abstract class Tarea {
 	attr String nombre;
-	@gmf.link(source="predecesor", target="sucessor", style="dot", width="2")
+	@gmf.link(color="0,0,0", source="predecesor", target="sucessor", target.decoration="filledclosedarrow", style="solid", width="1")
 	ref Tarea#predecesor sucesor;
 	ref Tarea#sucesor predecesor;
 }
@@ -98,15 +98,18 @@ abstract class Intermedia extends Tarea {
 
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/form.svg", label.icon="false", label.placement="external")
 class Usuario extends Intermedia {
+	@gmf.link(color="0,0,0", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref Tabla[1] tabla_accedida;
 }
 
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/service.svg", label.icon="false", label.placement="external")
 class Servicio extends Intermedia {
+	@gmf.link(color="0,0,0", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref Tabla[1] tabla_accedida;
 }
 
 abstract class Mensaje extends Intermedia {
+	@gmf.link(color="0,0,0", label="Acceso a la tabla...", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref Tabla[1] tabla_accedida;
 }
 
@@ -134,6 +137,7 @@ class Lectura extends BD {
 }
 
 abstract class BD extends Intermedia {
+	@gmf.link(color="0,0,0", label="Acceso al atributo...", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref Atributo[1] atributo_seleccionado;
 }
 
@@ -141,6 +145,7 @@ class PrimaryKey extends Atributo {
 }
 
 class ForeignKey extends Atributo {
+	@gmf.link(color="0,0,0", label="Referencia a...", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref PrimaryKey[1] referencia_a;
 }
 

@@ -28,6 +28,7 @@ import proyectomm.diagram.edit.parts.ActorEditPart;
 import proyectomm.diagram.edit.parts.ActorNombreEditPart;
 import proyectomm.diagram.edit.parts.AtributoEditPart;
 import proyectomm.diagram.edit.parts.AtributoNombreTipoEditPart;
+import proyectomm.diagram.edit.parts.BDAtributo_seleccionadoEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosNombreEditPart;
 import proyectomm.diagram.edit.parts.BorradoEditPart;
@@ -37,9 +38,11 @@ import proyectomm.diagram.edit.parts.EnvioNombreEditPart;
 import proyectomm.diagram.edit.parts.FinEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyNombreTipoEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aEditPart;
 import proyectomm.diagram.edit.parts.InicioEditPart;
 import proyectomm.diagram.edit.parts.LecturaEditPart;
 import proyectomm.diagram.edit.parts.LecturaNombreEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedidaEditPart;
 import proyectomm.diagram.edit.parts.OpcionEditPart;
 import proyectomm.diagram.edit.parts.OpcionNombreEditPart;
 import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
@@ -49,11 +52,13 @@ import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.RecepcionNombreEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.ServicioNombreEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedidaEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaNombreEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
 import proyectomm.diagram.edit.parts.UsuarioNombreEditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedidaEditPart;
 import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
@@ -170,6 +175,21 @@ public class ProyectommNavigatorLabelProvider extends LabelProvider
 		case TareaSucesorEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?http://www.example.org/proyectomm?Tarea?sucesor", //$NON-NLS-1$
 					ProyectommElementTypes.TareaSucesor_4001);
+		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?http://www.example.org/proyectomm?Usuario?tabla_accedida", //$NON-NLS-1$
+					ProyectommElementTypes.UsuarioTabla_accedida_4002);
+		case ServicioTabla_accedidaEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?http://www.example.org/proyectomm?Servicio?tabla_accedida", //$NON-NLS-1$
+					ProyectommElementTypes.ServicioTabla_accedida_4003);
+		case MensajeTabla_accedidaEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?http://www.example.org/proyectomm?Mensaje?tabla_accedida", //$NON-NLS-1$
+					ProyectommElementTypes.MensajeTabla_accedida_4004);
+		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?http://www.example.org/proyectomm?BD?atributo_seleccionado", //$NON-NLS-1$
+					ProyectommElementTypes.BDAtributo_seleccionado_4005);
+		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?http://www.example.org/proyectomm?ForeignKey?referencia_a", //$NON-NLS-1$
+					ProyectommElementTypes.ForeignKeyReferencia_a_4006);
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -262,6 +282,16 @@ public class ProyectommNavigatorLabelProvider extends LabelProvider
 			return getFin_3013Text(view);
 		case TareaSucesorEditPart.VISUAL_ID:
 			return getTareaSucesor_4001Text(view);
+		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
+			return getUsuarioTabla_accedida_4002Text(view);
+		case ServicioTabla_accedidaEditPart.VISUAL_ID:
+			return getServicioTabla_accedida_4003Text(view);
+		case MensajeTabla_accedidaEditPart.VISUAL_ID:
+			return getMensajeTabla_accedida_4004Text(view);
+		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+			return getBDAtributo_seleccionado_4005Text(view);
+		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
+			return getForeignKeyReferencia_a_4006Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -524,6 +554,81 @@ public class ProyectommNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getUsuarioTabla_accedida_4002Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.UsuarioTabla_accedida_4002,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getServicioTabla_accedida_4003Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ServicioTabla_accedida_4003,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getMensajeTabla_accedida_4004Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.MensajeTabla_accedida_4004,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getBDAtributo_seleccionado_4005Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.BDAtributo_seleccionado_4005,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6005); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getForeignKeyReferencia_a_4006Text(View view) {
+		IParser parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ForeignKeyReferencia_a_4006,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ProyectommDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6006); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

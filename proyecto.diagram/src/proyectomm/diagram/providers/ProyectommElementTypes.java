@@ -20,21 +20,26 @@ import org.eclipse.swt.graphics.Image;
 import proyectomm.ProyectommPackage;
 import proyectomm.diagram.edit.parts.ActorEditPart;
 import proyectomm.diagram.edit.parts.AtributoEditPart;
+import proyectomm.diagram.edit.parts.BDAtributo_seleccionadoEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
 import proyectomm.diagram.edit.parts.BorradoEditPart;
 import proyectomm.diagram.edit.parts.EnvioEditPart;
 import proyectomm.diagram.edit.parts.FinEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aEditPart;
 import proyectomm.diagram.edit.parts.InicioEditPart;
 import proyectomm.diagram.edit.parts.LecturaEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedidaEditPart;
 import proyectomm.diagram.edit.parts.OpcionEditPart;
 import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedidaEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedidaEditPart;
 import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 
 /**
@@ -132,6 +137,31 @@ public class ProyectommElementTypes {
 	* @generated
 	*/
 	public static final IElementType TareaSucesor_4001 = getElementType("proyecto.diagram.TareaSucesor_4001"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType UsuarioTabla_accedida_4002 = getElementType(
+			"proyecto.diagram.UsuarioTabla_accedida_4002"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType ServicioTabla_accedida_4003 = getElementType(
+			"proyecto.diagram.ServicioTabla_accedida_4003"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType MensajeTabla_accedida_4004 = getElementType(
+			"proyecto.diagram.MensajeTabla_accedida_4004"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType BDAtributo_seleccionado_4005 = getElementType(
+			"proyecto.diagram.BDAtributo_seleccionado_4005"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType ForeignKeyReferencia_a_4006 = getElementType(
+			"proyecto.diagram.ForeignKeyReferencia_a_4006"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -204,6 +234,16 @@ public class ProyectommElementTypes {
 			elements.put(Fin_3013, ProyectommPackage.eINSTANCE.getFin());
 
 			elements.put(TareaSucesor_4001, ProyectommPackage.eINSTANCE.getTarea_Sucesor());
+
+			elements.put(UsuarioTabla_accedida_4002, ProyectommPackage.eINSTANCE.getUsuario_Tabla_accedida());
+
+			elements.put(ServicioTabla_accedida_4003, ProyectommPackage.eINSTANCE.getServicio_Tabla_accedida());
+
+			elements.put(MensajeTabla_accedida_4004, ProyectommPackage.eINSTANCE.getMensaje_Tabla_accedida());
+
+			elements.put(BDAtributo_seleccionado_4005, ProyectommPackage.eINSTANCE.getBD_Atributo_seleccionado());
+
+			elements.put(ForeignKeyReferencia_a_4006, ProyectommPackage.eINSTANCE.getForeignKey_Referencia_a());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -238,6 +278,11 @@ public class ProyectommElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Inicio_3012);
 			KNOWN_ELEMENT_TYPES.add(Fin_3013);
 			KNOWN_ELEMENT_TYPES.add(TareaSucesor_4001);
+			KNOWN_ELEMENT_TYPES.add(UsuarioTabla_accedida_4002);
+			KNOWN_ELEMENT_TYPES.add(ServicioTabla_accedida_4003);
+			KNOWN_ELEMENT_TYPES.add(MensajeTabla_accedida_4004);
+			KNOWN_ELEMENT_TYPES.add(BDAtributo_seleccionado_4005);
+			KNOWN_ELEMENT_TYPES.add(ForeignKeyReferencia_a_4006);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -281,6 +326,16 @@ public class ProyectommElementTypes {
 			return Fin_3013;
 		case TareaSucesorEditPart.VISUAL_ID:
 			return TareaSucesor_4001;
+		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
+			return UsuarioTabla_accedida_4002;
+		case ServicioTabla_accedidaEditPart.VISUAL_ID:
+			return ServicioTabla_accedida_4003;
+		case MensajeTabla_accedidaEditPart.VISUAL_ID:
+			return MensajeTabla_accedida_4004;
+		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+			return BDAtributo_seleccionado_4005;
+		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
+			return ForeignKeyReferencia_a_4006;
 		}
 		return null;
 	}

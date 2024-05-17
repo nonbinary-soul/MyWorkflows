@@ -2,6 +2,42 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition">
   <gmfgraph:Canvas name="proyectomm">
     <figures name="Default">
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
       <descriptors name="ActorFigure">
         <actualFigure xsi:type="gmfgraph:Rectangle" name="ActorFigure">
           <backgroundColor xsi:type="gmfgraph:RGBColor" red="253" green="254" blue="230"/>
@@ -166,10 +202,52 @@
         <accessors accessor="getFigureOpcionLabelFigure" figure="/0/@figures.0/@descriptors.20/@actualFigure/@children.0"/>
       </descriptors>
       <descriptors name="TareaSucesorFigure">
-        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TareaSucesorFigure" lineWidth="2" lineKind="LINE_DOT"/>
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TareaSucesorFigure" targetDecoration="/0/@figures.0/@figures.0">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
       </descriptors>
       <descriptors name="TareaSucesorExternalLabelFigure">
         <actualFigure xsi:type="gmfgraph:Label" name="TareaSucesorExternalLabel"/>
+      </descriptors>
+      <descriptors name="UsuarioTabla_accedidaFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UsuarioTabla_accedidaFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.1">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="UsuarioTabla_accedidaExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="UsuarioTabla_accedidaExternalLabel"/>
+      </descriptors>
+      <descriptors name="ServicioTabla_accedidaFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ServicioTabla_accedidaFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="ServicioTabla_accedidaExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="ServicioTabla_accedidaExternalLabel"/>
+      </descriptors>
+      <descriptors name="MensajeTabla_accedidaFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MensajeTabla_accedidaFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.3">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="MensajeTabla_accedidaExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="MensajeTabla_accedidaExternalLabel" text="Acceso a la tabla..."/>
+      </descriptors>
+      <descriptors name="BDAtributo_seleccionadoFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="BDAtributo_seleccionadoFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.4">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="BDAtributo_seleccionadoExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="BDAtributo_seleccionadoExternalLabel" text="Acceso al atributo..."/>
+      </descriptors>
+      <descriptors name="ForeignKeyReferencia_aFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ForeignKeyReferencia_aFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.5">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="ForeignKeyReferencia_aExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="ForeignKeyReferencia_aExternalLabel" text="Referencia a..."/>
       </descriptors>
     </figures>
     <nodes name="Actor" figure="ActorFigure"/>
@@ -188,6 +266,11 @@
     <nodes name="ForeignKey" figure="ForeignKeyFigure"/>
     <nodes name="Opcion" figure="OpcionFigure"/>
     <connections name="TareaSucesor" figure="TareaSucesorFigure"/>
+    <connections name="UsuarioTabla_accedida" figure="UsuarioTabla_accedidaFigure"/>
+    <connections name="ServicioTabla_accedida" figure="ServicioTabla_accedidaFigure"/>
+    <connections name="MensajeTabla_accedida" figure="MensajeTabla_accedidaFigure"/>
+    <connections name="BDAtributo_seleccionado" figure="BDAtributo_seleccionadoFigure"/>
+    <connections name="ForeignKeyReferencia_a" figure="ForeignKeyReferencia_aFigure"/>
     <compartments name="ActorTareasCompartment" figure="ActorFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.0/@accessors.1"/>
     <compartments name="BaseDeDatosTablasCompartment" figure="BaseDeDatosFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.1/@accessors.1"/>
     <compartments name="TablaAtributosCompartment" figure="TablaFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.2/@accessors.1"/>
@@ -208,6 +291,11 @@
     <labels name="ForeignKeyLabel" figure="ForeignKeyFigure" accessor="/0/@figures.0/@descriptors.19/@accessors.0"/>
     <labels name="OpcionLabel" figure="OpcionFigure" accessor="/0/@figures.0/@descriptors.20/@accessors.0"/>
     <labels name="TareaSucesorExternalLabel" figure="TareaSucesorExternalLabelFigure" elementIcon="false"/>
+    <labels name="UsuarioTabla_accedidaExternalLabel" figure="UsuarioTabla_accedidaExternalLabelFigure" elementIcon="false"/>
+    <labels name="ServicioTabla_accedidaExternalLabel" figure="ServicioTabla_accedidaExternalLabelFigure" elementIcon="false"/>
+    <labels name="MensajeTabla_accedidaExternalLabel" figure="MensajeTabla_accedidaExternalLabelFigure" elementIcon="false"/>
+    <labels name="BDAtributo_seleccionadoExternalLabel" figure="BDAtributo_seleccionadoExternalLabelFigure" elementIcon="false"/>
+    <labels name="ForeignKeyReferencia_aExternalLabel" figure="ForeignKeyReferencia_aExternalLabelFigure" elementIcon="false"/>
   </gmfgraph:Canvas>
   <gmfgraph:Label name="InicioLabelFigure" text="Inicio"/>
   <gmfgraph:Label name="FinLabelFigure" text="Fin"/>

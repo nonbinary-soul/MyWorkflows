@@ -35,7 +35,14 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
+import proyectomm.Atributo;
+import proyectomm.ForeignKey;
+import proyectomm.Mensaje;
+import proyectomm.PrimaryKey;
+import proyectomm.Servicio;
+import proyectomm.Tabla;
 import proyectomm.Tarea;
+import proyectomm.Usuario;
 import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
@@ -324,9 +331,109 @@ public class ProyectommBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		}
 
 		/**
+		 * @generated
+		 */
+		public boolean canCreateUsuarioTabla_accedida_4002(Usuario source, Tabla target) {
+			if (source != null) {
+				if (source.getTabla_accedida() != null) {
+					return false;
+				}
+			}
+
+			return canExistUsuarioTabla_accedida_4002(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateServicioTabla_accedida_4003(Servicio source, Tabla target) {
+			if (source != null) {
+				if (source.getTabla_accedida() != null) {
+					return false;
+				}
+			}
+
+			return canExistServicioTabla_accedida_4003(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateMensajeTabla_accedida_4004(Mensaje source, Tabla target) {
+			if (source != null) {
+				if (source.getTabla_accedida() != null) {
+					return false;
+				}
+			}
+
+			return canExistMensajeTabla_accedida_4004(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateBDAtributo_seleccionado_4005(proyectomm.BD source, Atributo target) {
+			if (source != null) {
+				if (source.getAtributo_seleccionado() != null) {
+					return false;
+				}
+			}
+
+			return canExistBDAtributo_seleccionado_4005(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateForeignKeyReferencia_a_4006(ForeignKey source, PrimaryKey target) {
+			if (source != null) {
+				if (source.getReferencia_a() != null) {
+					return false;
+				}
+			}
+
+			return canExistForeignKeyReferencia_a_4006(source, target);
+		}
+
+		/**
 		* @generated
 		*/
 		public boolean canExistTareaSucesor_4001(Tarea source, Tarea target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistUsuarioTabla_accedida_4002(Usuario source, Tabla target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistServicioTabla_accedida_4003(Servicio source, Tabla target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistMensajeTabla_accedida_4004(Mensaje source, Tabla target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistBDAtributo_seleccionado_4005(proyectomm.BD source, Atributo target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistForeignKeyReferencia_a_4006(ForeignKey source, PrimaryKey target) {
 			return true;
 		}
 	}

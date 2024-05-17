@@ -136,6 +136,36 @@ public class ProyectommEditPartFactory implements EditPartFactory {
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);
 
+			case UsuarioTabla_accedidaEditPart.VISUAL_ID:
+				return new UsuarioTabla_accedidaEditPart(view);
+
+			case WrappingLabel2EditPart.VISUAL_ID:
+				return new WrappingLabel2EditPart(view);
+
+			case ServicioTabla_accedidaEditPart.VISUAL_ID:
+				return new ServicioTabla_accedidaEditPart(view);
+
+			case WrappingLabel3EditPart.VISUAL_ID:
+				return new WrappingLabel3EditPart(view);
+
+			case MensajeTabla_accedidaEditPart.VISUAL_ID:
+				return new MensajeTabla_accedidaEditPart(view);
+
+			case MensajeTabla_accedidaExternalLabelEditPart.VISUAL_ID:
+				return new MensajeTabla_accedidaExternalLabelEditPart(view);
+
+			case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+				return new BDAtributo_seleccionadoEditPart(view);
+
+			case BDAtributo_seleccionadoExternalLabelEditPart.VISUAL_ID:
+				return new BDAtributo_seleccionadoExternalLabelEditPart(view);
+
+			case ForeignKeyReferencia_aEditPart.VISUAL_ID:
+				return new ForeignKeyReferencia_aEditPart(view);
+
+			case ForeignKeyReferencia_aExternalLabelEditPart.VISUAL_ID:
+				return new ForeignKeyReferencia_aExternalLabelEditPart(view);
+
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

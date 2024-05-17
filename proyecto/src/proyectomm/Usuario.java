@@ -28,6 +28,7 @@ public interface Usuario extends Intermedia {
 	 * @see #setTabla_accedida(Tabla)
 	 * @see proyectomm.ProyectommPackage#getUsuario_Tabla_accedida()
 	 * @model required="true"
+	 *        annotation="gmf.link color='0,0,0' target.decoration='filledclosedarrow' style='dash' width='2'"
 	 * @generated
 	 */
 	Tabla getTabla_accedida();

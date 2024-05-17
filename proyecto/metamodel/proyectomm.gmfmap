@@ -377,12 +377,92 @@
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="proyectomm.gmftool#//@palette/@tools.1/@tools.0"/>
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.2"/>
     <diagramLink
         href="proyectomm.gmfgraph#TareaSucesor"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="proyectomm.ecore#//Tarea/sucesor"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#UsuarioTabla_accedidaExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.3"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#UsuarioTabla_accedida"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//Usuario/tabla_accedida"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#ServicioTabla_accedidaExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.4"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#ServicioTabla_accedida"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//Servicio/tabla_accedida"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#MensajeTabla_accedidaExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.5"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#MensajeTabla_accedida"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//Mensaje/tabla_accedida"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#BDAtributo_seleccionadoExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.0"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#BDAtributo_seleccionado"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//BD/atributo_seleccionado"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#ForeignKeyReferencia_aExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#ForeignKeyReferencia_a"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//ForeignKey/referencia_a"/>
   </links>
   <diagram>
     <diagramCanvas

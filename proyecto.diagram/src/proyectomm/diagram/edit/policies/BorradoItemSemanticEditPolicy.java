@@ -18,8 +18,11 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
+import proyectomm.diagram.edit.commands.BDAtributo_seleccionadoCreateCommand;
+import proyectomm.diagram.edit.commands.BDAtributo_seleccionadoReorientCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorCreateCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorReorientCommand;
+import proyectomm.diagram.edit.parts.BDAtributo_seleccionadoEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
@@ -62,6 +65,13 @@ public class BorradoItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
+			if (ProyectommVisualIDRegistry.getVisualID(outgoingLink) == BDAtributo_seleccionadoEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
 		}
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {
@@ -91,6 +101,9 @@ public class BorradoItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+			return getGEFWrapper(new BDAtributo_seleccionadoCreateCommand(req, req.getSource(), req.getTarget()));
+		}
 		return null;
 	}
 
@@ -100,6 +113,9 @@ public class BorradoItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
+		}
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+			return null;
 		}
 		return null;
 	}
@@ -114,6 +130,8 @@ public class BorradoItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		switch (getVisualID(req)) {
 		case TareaSucesorEditPart.VISUAL_ID:
 			return getGEFWrapper(new TareaSucesorReorientCommand(req));
+		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+			return getGEFWrapper(new BDAtributo_seleccionadoReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

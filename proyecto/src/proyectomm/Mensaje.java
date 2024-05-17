@@ -28,6 +28,7 @@ public interface Mensaje extends Intermedia {
 	 * @see #setTabla_accedida(Tabla)
 	 * @see proyectomm.ProyectommPackage#getMensaje_Tabla_accedida()
 	 * @model required="true"
+	 *        annotation="gmf.link color='0,0,0' label='Acceso a la tabla...' target.decoration='filledclosedarrow' style='dash' width='2'"
 	 * @generated
 	 */
 	Tabla getTabla_accedida();

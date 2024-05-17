@@ -11,11 +11,22 @@ import org.eclipse.gmf.runtime.common.core.command.ICompositeCommand;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
+import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
+import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
+import proyectomm.diagram.edit.commands.BDAtributo_seleccionadoCreateCommand;
+import proyectomm.diagram.edit.commands.BDAtributo_seleccionadoReorientCommand;
+import proyectomm.diagram.edit.commands.ForeignKeyReferencia_aCreateCommand;
+import proyectomm.diagram.edit.commands.ForeignKeyReferencia_aReorientCommand;
+import proyectomm.diagram.edit.parts.BDAtributo_seleccionadoEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyForeignKeyOpcionesCompartmentEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aEditPart;
 import proyectomm.diagram.edit.parts.OpcionEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
@@ -39,6 +50,26 @@ public class ForeignKeyItemSemanticEditPolicy extends ProyectommBaseItemSemantic
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
+		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
+			Edge incomingLink = (Edge) it.next();
+			if (ProyectommVisualIDRegistry.getVisualID(incomingLink) == BDAtributo_seleccionadoEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(incomingLink.getSource().getElement(), null,
+						incomingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
+		}
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+			Edge outgoingLink = (Edge) it.next();
+			if (ProyectommVisualIDRegistry.getVisualID(outgoingLink) == ForeignKeyReferencia_aEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
+		}
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {
 			// there are indirectly referenced children, need extra commands: false
@@ -75,6 +106,57 @@ public class ForeignKeyItemSemanticEditPolicy extends ProyectommBaseItemSemantic
 				break;
 			}
 		}
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateRelationshipCommand(CreateRelationshipRequest req) {
+		Command command = req.getTarget() == null ? getStartCreateRelationshipCommand(req)
+				: getCompleteCreateRelationshipCommand(req);
+		return command != null ? command : super.getCreateRelationshipCommand(req);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+			return null;
+		}
+		if (ProyectommElementTypes.ForeignKeyReferencia_a_4006 == req.getElementType()) {
+			return getGEFWrapper(new ForeignKeyReferencia_aCreateCommand(req, req.getSource(), req.getTarget()));
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+			return getGEFWrapper(new BDAtributo_seleccionadoCreateCommand(req, req.getSource(), req.getTarget()));
+		}
+		if (ProyectommElementTypes.ForeignKeyReferencia_a_4006 == req.getElementType()) {
+			return null;
+		}
+		return null;
+	}
+
+	/**
+	 * Returns command to reorient EReference based link. New link target or source
+	 * should be the domain model element associated with this node.
+	 * 
+	 * @generated
+	 */
+	protected Command getReorientReferenceRelationshipCommand(ReorientReferenceRelationshipRequest req) {
+		switch (getVisualID(req)) {
+		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
+			return getGEFWrapper(new BDAtributo_seleccionadoReorientCommand(req));
+		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
+			return getGEFWrapper(new ForeignKeyReferencia_aReorientCommand(req));
+		}
+		return super.getReorientReferenceRelationshipCommand(req);
 	}
 
 }
