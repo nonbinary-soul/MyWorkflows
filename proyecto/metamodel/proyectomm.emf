@@ -113,7 +113,7 @@ abstract class Mensaje extends Intermedia {
 	ref Tabla[1] tabla_accedida_por_mensaje;
 }
 
-@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/send-message.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/sent-message.svg", label.icon="false", label.placement="external")
 class Envio extends Mensaje {
 }
 
