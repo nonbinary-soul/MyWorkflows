@@ -11,6 +11,12 @@ import proyectomm.ProyectommFactory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Foreign Key</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link proyectomm.ForeignKey#P06_mismoTipoQuePK(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 mismo Tipo Que PK</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class ForeignKeyTest extends AtributoTest {
@@ -65,6 +71,19 @@ public class ForeignKeyTest extends AtributoTest {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link proyectomm.ForeignKey#P06_mismoTipoQuePK(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 mismo Tipo Que PK</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see proyectomm.ForeignKey#P06_mismoTipoQuePK(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testP06_mismoTipoQuePK__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //ForeignKeyTest

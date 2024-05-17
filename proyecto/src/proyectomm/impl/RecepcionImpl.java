@@ -119,12 +119,12 @@ public class RecepcionImpl extends MensajeImpl implements Recepcion {
 	 * @generated
 	 */
 	@Override
-	public boolean P06_mismaTablaQueEnvio(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		final String constraintName = "Recepcion::P06_mismaTablaQueEnvio";
+	public boolean P05_mismaTablaQueEnvio(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Recepcion::P05_mismaTablaQueEnvio";
 		try {
 			/**
 			 *
-			 * inv P06_mismaTablaQueEnvio:
+			 * inv P05_mismaTablaQueEnvio:
 			 *   let severity : Integer[1] = constraintName.getSeverity()
 			 *   in
 			 *     if severity <= 0
@@ -138,7 +138,7 @@ public class RecepcionImpl extends MensajeImpl implements Recepcion {
 			 */
 			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
 			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.RECEPCION___P05_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ProyectommTables.INT_0).booleanValue();
 			/*@NonInvalid*/ boolean local_0;
 			if (le) {
@@ -179,8 +179,8 @@ public class RecepcionImpl extends MensajeImpl implements Recepcion {
 		switch (operationID) {
 			case ProyectommPackage.RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP:
 				return R07_envioAsociado((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ProyectommPackage.RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP:
-				return P06_mismaTablaQueEnvio((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.RECEPCION___P05_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP:
+				return P05_mismaTablaQueEnvio((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

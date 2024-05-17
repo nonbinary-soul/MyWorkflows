@@ -72,7 +72,7 @@ public class AcceleoGenerateGraphicalSampleAction extends ActionDelegate impleme
 							URI modelURI = URI.createPlatformResourceURI(model.getFullPath().toString(), true);
 							IContainer targetFolder = null;
 							try {
-								IContainer target = model.getProject().getFolder("src-gen-graph");
+								IContainer target = model.getProject().getFolder("src-gen-workflow");
 								targetFolder = target;
 								GenerateAll generator = new GenerateAll(modelURI, targetFolder, getArguments());
 								generator.doGenerate(monitor);

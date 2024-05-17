@@ -72,20 +72,28 @@ public class ProyectommValidator extends EObjectValidator {
 	public static final int TABLA__P02_SOLO_UNA_CLAVE_PRIMARIA = 4;
 
 	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P07 solo Una Clave Foranea' of 'Tabla'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int TABLA__P07_SOLO_UNA_CLAVE_FORANEA = 5;
+
+	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P01 tiene Opciones' of 'Atributo'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ATRIBUTO__P01_TIENE_OPCIONES = 5;
+	public static final int ATRIBUTO__P01_TIENE_OPCIONES = 6;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P05 sin Espacios En Blanco' of 'Atributo'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P04 sin Espacios En Blanco' of 'Atributo'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ATRIBUTO__P05_SIN_ESPACIOS_EN_BLANCO = 6;
+	public static final int ATRIBUTO__P04_SIN_ESPACIOS_EN_BLANCO = 7;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R09 unidireccionalidad' of 'Tarea'.
@@ -93,7 +101,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R09_UNIDIRECCIONALIDAD = 7;
+	public static final int TAREA__R09_UNIDIRECCIONALIDAD = 8;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R06 no Reflexiva' of 'Tarea'.
@@ -101,7 +109,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R06_NO_REFLEXIVA = 8;
+	public static final int TAREA__R06_NO_REFLEXIVA = 9;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R08 Conexiones Entre Tareas' of 'Tarea'.
@@ -109,7 +117,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R08_CONEXIONES_ENTRE_TAREAS = 9;
+	public static final int TAREA__R08_CONEXIONES_ENTRE_TAREAS = 10;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R03 sin Predecesor' of 'Inicio'.
@@ -117,7 +125,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int INICIO__R03_SIN_PREDECESOR = 10;
+	public static final int INICIO__R03_SIN_PREDECESOR = 11;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R04 sin Sucesor' of 'Fin'.
@@ -125,7 +133,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int FIN__R04_SIN_SUCESOR = 11;
+	public static final int FIN__R04_SIN_SUCESOR = 12;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R07 envio Asociado' of 'Recepcion'.
@@ -133,23 +141,31 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int RECEPCION__R07_ENVIO_ASOCIADO = 12;
+	public static final int RECEPCION__R07_ENVIO_ASOCIADO = 13;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P06 misma Tabla Que Envio' of 'Recepcion'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P05 misma Tabla Que Envio' of 'Recepcion'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int RECEPCION__P06_MISMA_TABLA_QUE_ENVIO = 13;
+	public static final int RECEPCION__P05_MISMA_TABLA_QUE_ENVIO = 14;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P04 borrado Con Clave Primaria' of 'Borrado'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P03 borrado Con Clave Primaria' of 'Borrado'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int BORRADO__P04_BORRADO_CON_CLAVE_PRIMARIA = 14;
+	public static final int BORRADO__P03_BORRADO_CON_CLAVE_PRIMARIA = 15;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P06 mismo Tipo Que PK' of 'Foreign Key'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int FOREIGN_KEY__P06_MISMO_TIPO_QUE_PK = 16;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -157,7 +173,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 14;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 16;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -337,8 +353,19 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tabla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTabla_P07_soloUnaClaveForanea(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTabla_P02_soloUnaClavePrimaria(tabla, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * Validates the P07_soloUnaClaveForanea constraint of '<em>Tabla</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTabla_P07_soloUnaClaveForanea(Tabla tabla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return tabla.P07_soloUnaClaveForanea(diagnostics, context);
 	}
 
 	/**
@@ -366,19 +393,19 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(atributo, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(atributo, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(atributo, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAtributo_P05_sinEspaciosEnBlanco(atributo, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAtributo_P04_sinEspaciosEnBlanco(atributo, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P01_tieneOpciones(atributo, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the P05_sinEspaciosEnBlanco constraint of '<em>Atributo</em>'.
+	 * Validates the P04_sinEspaciosEnBlanco constraint of '<em>Atributo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateAtributo_P05_sinEspaciosEnBlanco(Atributo atributo, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return atributo.P05_sinEspaciosEnBlanco(diagnostics, context);
+	public boolean validateAtributo_P04_sinEspaciosEnBlanco(Atributo atributo, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return atributo.P04_sinEspaciosEnBlanco(diagnostics, context);
 	}
 
 	/**
@@ -629,19 +656,19 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateTarea_R08_ConexionesEntreTareas(recepcion, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTarea_R09_unidireccionalidad(recepcion, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTarea_R06_noReflexiva(recepcion, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRecepcion_P06_mismaTablaQueEnvio(recepcion, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRecepcion_P05_mismaTablaQueEnvio(recepcion, diagnostics, context);
 		if (result || diagnostics != null) result &= validateRecepcion_R07_envioAsociado(recepcion, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the P06_mismaTablaQueEnvio constraint of '<em>Recepcion</em>'.
+	 * Validates the P05_mismaTablaQueEnvio constraint of '<em>Recepcion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRecepcion_P06_mismaTablaQueEnvio(Recepcion recepcion, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return recepcion.P06_mismaTablaQueEnvio(diagnostics, context);
+	public boolean validateRecepcion_P05_mismaTablaQueEnvio(Recepcion recepcion, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return recepcion.P05_mismaTablaQueEnvio(diagnostics, context);
 	}
 
 	/**
@@ -672,18 +699,18 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateTarea_R08_ConexionesEntreTareas(borrado, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTarea_R09_unidireccionalidad(borrado, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTarea_R06_noReflexiva(borrado, diagnostics, context);
-		if (result || diagnostics != null) result &= validateBorrado_P04_borradoConClavePrimaria(borrado, diagnostics, context);
+		if (result || diagnostics != null) result &= validateBorrado_P03_borradoConClavePrimaria(borrado, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the P04_borradoConClavePrimaria constraint of '<em>Borrado</em>'.
+	 * Validates the P03_borradoConClavePrimaria constraint of '<em>Borrado</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBorrado_P04_borradoConClavePrimaria(Borrado borrado, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return borrado.P04_borradoConClavePrimaria(diagnostics, context);
+	public boolean validateBorrado_P03_borradoConClavePrimaria(Borrado borrado, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return borrado.P03_borradoConClavePrimaria(diagnostics, context);
 	}
 
 	/**
@@ -743,7 +770,7 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(primaryKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(primaryKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(primaryKey, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAtributo_P05_sinEspaciosEnBlanco(primaryKey, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAtributo_P04_sinEspaciosEnBlanco(primaryKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P01_tieneOpciones(primaryKey, diagnostics, context);
 		return result;
 	}
@@ -763,9 +790,20 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(foreignKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(foreignKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(foreignKey, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAtributo_P05_sinEspaciosEnBlanco(foreignKey, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAtributo_P04_sinEspaciosEnBlanco(foreignKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P01_tieneOpciones(foreignKey, diagnostics, context);
+		if (result || diagnostics != null) result &= validateForeignKey_P06_mismoTipoQuePK(foreignKey, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * Validates the P06_mismoTipoQuePK constraint of '<em>Foreign Key</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateForeignKey_P06_mismoTipoQuePK(ForeignKey foreignKey, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return foreignKey.P06_mismoTipoQuePK(diagnostics, context);
 	}
 
 	/**

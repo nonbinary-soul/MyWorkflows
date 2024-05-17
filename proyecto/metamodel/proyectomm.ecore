@@ -72,10 +72,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tabla">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="P02_soloUnaClavePrimaria"/>
+      <details key="constraints" value="P02_soloUnaClavePrimaria P07_soloUnaClaveForanea"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="P02_soloUnaClavePrimaria" value="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"/>
+      <details key="P02_soloUnaClavePrimaria" value="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() &lt;= 1"/>
+      <details key="P07_soloUnaClaveForanea" value="self.atributos->select(a | a.oclIsTypeOf(ForeignKey))->size() &lt;= 1"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
@@ -90,11 +91,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="P01_tieneOpciones P05_sinEspaciosEnBlanco"/>
+      <details key="constraints" value="P01_tieneOpciones P04_sinEspaciosEnBlanco"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="P01_tieneOpciones" value="if self.tipo = EAtributo::LIST then self.opciones->notEmpty() else self.opciones->isEmpty() endif"/>
-      <details key="P05_sinEspaciosEnBlanco" value="not self.nombre->includes(' ')"/>
+      <details key="P04_sinEspaciosEnBlanco" value="not self.nombre->includes(' ')"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre, tipo"/>
@@ -235,11 +236,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recepcion" eSuperTypes="#//Mensaje">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R07_envioAsociado P06_mismaTablaQueEnvio"/>
+      <details key="constraints" value="R07_envioAsociado P05_mismaTablaQueEnvio"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R07_envioAsociado" value="predecesor.oclIsTypeOf(Envio)"/>
-      <details key="P06_mismaTablaQueEnvio" value="self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida"/>
+      <details key="P05_mismaTablaQueEnvio" value="self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
@@ -251,10 +252,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Borrado" eSuperTypes="#//BD">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="P04_borradoConClavePrimaria"/>
+      <details key="constraints" value="P03_borradoConClavePrimaria"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="P04_borradoConClavePrimaria" value="&#xD;&#xA;&#x9;&#x9;        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"/>
+      <details key="P03_borradoConClavePrimaria" value="&#xD;&#xA;&#x9;&#x9;        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
@@ -293,6 +294,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="P06_mismoTipoQuePK"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="P06_mismoTipoQuePK" value="self.tipo = self.referencia_a.tipo"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia_a" lowerBound="1"
         eType="#//PrimaryKey">
       <eAnnotations source="gmf.link">

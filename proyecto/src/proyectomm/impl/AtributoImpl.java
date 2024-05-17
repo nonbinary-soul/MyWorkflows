@@ -262,12 +262,12 @@ public class AtributoImpl extends EObjectImpl implements Atributo {
 	 * @generated
 	 */
 	@Override
-	public boolean P05_sinEspaciosEnBlanco(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		final String constraintName = "Atributo::P05_sinEspaciosEnBlanco";
+	public boolean P04_sinEspaciosEnBlanco(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Atributo::P04_sinEspaciosEnBlanco";
 		try {
 			/**
 			 *
-			 * inv P05_sinEspaciosEnBlanco:
+			 * inv P04_sinEspaciosEnBlanco:
 			 *   let severity : Integer[1] = constraintName.getSeverity()
 			 *   in
 			 *     if severity <= 0
@@ -279,7 +279,7 @@ public class AtributoImpl extends EObjectImpl implements Atributo {
 			 *     endif
 			 */
 			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
-			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ProyectommTables.INT_0).booleanValue();
 			/*@NonInvalid*/ boolean local_0;
 			if (le) {
@@ -416,8 +416,8 @@ public class AtributoImpl extends EObjectImpl implements Atributo {
 		switch (operationID) {
 			case ProyectommPackage.ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP:
 				return P01_tieneOpciones((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ProyectommPackage.ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP:
-				return P05_sinEspaciosEnBlanco((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP:
+				return P04_sinEspaciosEnBlanco((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

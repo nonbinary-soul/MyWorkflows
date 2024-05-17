@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getAtributo()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P05_sinEspaciosEnBlanco'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P04_sinEspaciosEnBlanco'"
  *        annotation="gmf.node label='nombre, tipo' figure='rectangle' label.pattern='{0}:{1}'"
  * @generated
  */
@@ -103,6 +103,6 @@ public interface Atributo extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not self.nombre-&gt;includes(\' \')'"
 	 * @generated
 	 */
-	boolean P05_sinEspaciosEnBlanco(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean P04_sinEspaciosEnBlanco(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Atributo

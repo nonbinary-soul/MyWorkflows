@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getTabla()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P02_soloUnaClavePrimaria'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P07_soloUnaClaveForanea'"
  *        annotation="gmf.node label='nombre' figure='rectangle'"
  * @generated
  */
@@ -66,9 +66,17 @@ public interface Tabla extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey))-&gt;size() = 1'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(PrimaryKey))-&gt;size() &lt;= 1'"
 	 * @generated
 	 */
 	boolean P02_soloUnaClavePrimaria(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(ForeignKey))-&gt;size() &lt;= 1'"
+	 * @generated
+	 */
+	boolean P07_soloUnaClaveForanea(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Tabla

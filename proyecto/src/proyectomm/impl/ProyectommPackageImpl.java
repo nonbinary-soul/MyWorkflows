@@ -448,6 +448,16 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
+	public EOperation getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map() {
+		return tablaEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAtributo() {
 		return atributoEClass;
 	}
@@ -498,7 +508,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EOperation getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map() {
+	public EOperation getAtributo__P04_sinEspaciosEnBlanco__DiagnosticChain_Map() {
 		return atributoEClass.getEOperations().get(1);
 	}
 
@@ -738,7 +748,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EOperation getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map() {
+	public EOperation getRecepcion__P05_mismaTablaQueEnvio__DiagnosticChain_Map() {
 		return recepcionEClass.getEOperations().get(1);
 	}
 
@@ -758,7 +768,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EOperation getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map() {
+	public EOperation getBorrado__P03_borradoConClavePrimaria__DiagnosticChain_Map() {
 		return borradoEClass.getEOperations().get(0);
 	}
 
@@ -830,6 +840,16 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	@Override
 	public EReference getForeignKey_Referencia_a() {
 		return (EReference)foreignKeyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map() {
+		return foreignKeyEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -912,13 +932,14 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createEAttribute(tablaEClass, TABLA__NOMBRE);
 		createEReference(tablaEClass, TABLA__ATRIBUTOS);
 		createEOperation(tablaEClass, TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP);
+		createEOperation(tablaEClass, TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP);
 
 		atributoEClass = createEClass(ATRIBUTO);
 		createEAttribute(atributoEClass, ATRIBUTO__NOMBRE);
 		createEAttribute(atributoEClass, ATRIBUTO__TIPO);
 		createEReference(atributoEClass, ATRIBUTO__OPCIONES);
 		createEOperation(atributoEClass, ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP);
-		createEOperation(atributoEClass, ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(atributoEClass, ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP);
 
 		tareaEClass = createEClass(TAREA);
 		createEAttribute(tareaEClass, TAREA__NOMBRE);
@@ -951,10 +972,10 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 
 		recepcionEClass = createEClass(RECEPCION);
 		createEOperation(recepcionEClass, RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP);
-		createEOperation(recepcionEClass, RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(recepcionEClass, RECEPCION___P05_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP);
 
 		borradoEClass = createEClass(BORRADO);
-		createEOperation(borradoEClass, BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP);
+		createEOperation(borradoEClass, BORRADO___P03_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP);
 
 		lecturaEClass = createEClass(LECTURA);
 		createEReference(lecturaEClass, LECTURA__DATOS_ALEER);
@@ -966,6 +987,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 
 		foreignKeyEClass = createEClass(FOREIGN_KEY);
 		createEReference(foreignKeyEClass, FOREIGN_KEY__REFERENCIA_A);
+		createEOperation(foreignKeyEClass, FOREIGN_KEY___P06_MISMO_TIPO_QUE_PK__DIAGNOSTICCHAIN_MAP);
 
 		opcionEClass = createEClass(OPCION);
 		createEAttribute(opcionEClass, OPCION__NOMBRE);
@@ -1071,6 +1093,15 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P07_soloUnaClaveForanea", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 1, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAtributo_Tipo(), this.getEAtributo(), "tipo", null, 1, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1085,7 +1116,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P05_sinEspaciosEnBlanco", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAtributo__P04_sinEspaciosEnBlanco__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P04_sinEspaciosEnBlanco", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1174,7 +1205,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P06_mismaTablaQueEnvio", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getRecepcion__P05_mismaTablaQueEnvio__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P05_mismaTablaQueEnvio", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1185,7 +1216,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 
 		initEClass(borradoEClass, Borrado.class, "Borrado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P04_borradoConClavePrimaria", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getBorrado__P03_borradoConClavePrimaria__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P03_borradoConClavePrimaria", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1204,6 +1235,15 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 
 		initEClass(foreignKeyEClass, ForeignKey.class, "ForeignKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getForeignKey_Referencia_a(), this.getPrimaryKey(), null, "referencia_a", null, 1, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P06_mismoTipoQuePK", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(opcionEClass, Opcion.class, "Opcion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOpcion_Nombre(), ecorePackage.getEString(), "nombre", null, 1, 1, Opcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1266,13 +1306,13 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (tablaEClass,
 		   source,
 		   new String[] {
-			   "constraints", "P02_soloUnaClavePrimaria"
+			   "constraints", "P07_soloUnaClaveForanea"
 		   });
 		addAnnotation
 		  (atributoEClass,
 		   source,
 		   new String[] {
-			   "constraints", "P05_sinEspaciosEnBlanco"
+			   "constraints", "P04_sinEspaciosEnBlanco"
 		   });
 		addAnnotation
 		  (tareaEClass,
@@ -1296,13 +1336,19 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (recepcionEClass,
 		   source,
 		   new String[] {
-			   "constraints", "P06_mismaTablaQueEnvio"
+			   "constraints", "P05_mismaTablaQueEnvio"
 		   });
 		addAnnotation
 		  (borradoEClass,
 		   source,
 		   new String[] {
-			   "constraints", "P04_borradoConClavePrimaria"
+			   "constraints", "P03_borradoConClavePrimaria"
+		   });
+		addAnnotation
+		  (foreignKeyEClass,
+		   source,
+		   new String[] {
+			   "constraints", "P06_mismoTipoQuePK"
 		   });
 	}
 
@@ -1366,7 +1412,13 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1"
+			   "body", "self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() <= 1"
+		   });
+		addAnnotation
+		  (getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.atributos->select(a | a.oclIsTypeOf(ForeignKey))->size() <= 1"
 		   });
 		addAnnotation
 		  (getAtributo__P01_tieneOpciones__DiagnosticChain_Map(),
@@ -1375,7 +1427,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "body", "if self.tipo = EAtributo::LIST then self.opciones->notEmpty() else self.opciones->isEmpty() endif"
 		   });
 		addAnnotation
-		  (getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map(),
+		  (getAtributo__P04_sinEspaciosEnBlanco__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "not self.nombre->includes(\' \')"
@@ -1417,16 +1469,22 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "body", "predecesor.oclIsTypeOf(Envio)"
 		   });
 		addAnnotation
-		  (getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map(),
+		  (getRecepcion__P05_mismaTablaQueEnvio__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida"
 		   });
 		addAnnotation
-		  (getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map(),
+		  (getBorrado__P03_borradoConClavePrimaria__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "\r\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
+		   });
+		addAnnotation
+		  (getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.tipo = self.referencia_a.tipo"
 		   });
 	}
 

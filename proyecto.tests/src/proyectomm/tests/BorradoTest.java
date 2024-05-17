@@ -14,7 +14,7 @@ import proyectomm.ProyectommFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 borrado Con Clave Primaria</em>}</li>
+ *   <li>{@link proyectomm.Borrado#P03_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 borrado Con Clave Primaria</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -74,13 +74,13 @@ public class BorradoTest extends BDTest {
 	}
 
 	/**
-	 * Tests the '{@link proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 borrado Con Clave Primaria</em>}' operation.
+	 * Tests the '{@link proyectomm.Borrado#P03_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 borrado Con Clave Primaria</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see proyectomm.Borrado#P03_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	public void testP04_borradoConClavePrimaria__DiagnosticChain_Map() {
+	public void testP03_borradoConClavePrimaria__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

@@ -290,13 +290,22 @@ public interface ProyectommPackage extends EPackage {
 	int TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
+	 * The operation id for the '<em>P07 solo Una Clave Foranea</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Tabla</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLA_OPERATION_COUNT = 1;
+	int TABLA_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.
@@ -354,13 +363,13 @@ public interface ProyectommPackage extends EPackage {
 	int ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>P05 sin Espacios En Blanco</em>' operation.
+	 * The operation id for the '<em>P04 sin Espacios En Blanco</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = 1;
+	int ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -1281,13 +1290,13 @@ public interface ProyectommPackage extends EPackage {
 	int RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP = MENSAJE_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>P06 misma Tabla Que Envio</em>' operation.
+	 * The operation id for the '<em>P05 misma Tabla Que Envio</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP = MENSAJE_OPERATION_COUNT + 1;
+	int RECEPCION___P05_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP = MENSAJE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Recepcion</em>' class.
@@ -1508,13 +1517,13 @@ public interface ProyectommPackage extends EPackage {
 	int BORRADO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = BD___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>P04 borrado Con Clave Primaria</em>' operation.
+	 * The operation id for the '<em>P03 borrado Con Clave Primaria</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = BD_OPERATION_COUNT + 0;
+	int BORRADO___P03_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = BD_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Borrado</em>' class.
@@ -1699,13 +1708,13 @@ public interface ProyectommPackage extends EPackage {
 	int PRIMARY_KEY___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>P05 sin Espacios En Blanco</em>' operation.
+	 * The operation id for the '<em>P04 sin Espacios En Blanco</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMARY_KEY___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
+	int PRIMARY_KEY___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Primary Key</em>' class.
@@ -1781,13 +1790,22 @@ public interface ProyectommPackage extends EPackage {
 	int FOREIGN_KEY___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>P05 sin Espacios En Blanco</em>' operation.
+	 * The operation id for the '<em>P04 sin Espacios En Blanco</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
+	int FOREIGN_KEY___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>P06 mismo Tipo Que PK</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOREIGN_KEY___P06_MISMO_TIPO_QUE_PK__DIAGNOSTICCHAIN_MAP = ATRIBUTO_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Foreign Key</em>' class.
@@ -1796,7 +1814,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
+	int FOREIGN_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.OpcionImpl <em>Opcion</em>}' class.
@@ -2037,6 +2055,16 @@ public interface ProyectommPackage extends EPackage {
 	EOperation getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for the '{@link proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 solo Una Clave Foranea</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>P07 solo Una Clave Foranea</em>' operation.
+	 * @see proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link proyectomm.Atributo <em>Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2090,14 +2118,14 @@ public interface ProyectommPackage extends EPackage {
 	EOperation getAtributo__P01_tieneOpciones__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 sin Espacios En Blanco</em>}' operation.
+	 * Returns the meta object for the '{@link proyectomm.Atributo#P04_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 sin Espacios En Blanco</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P05 sin Espacios En Blanco</em>' operation.
-	 * @see proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>P04 sin Espacios En Blanco</em>' operation.
+	 * @see proyectomm.Atributo#P04_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map();
+	EOperation getAtributo__P04_sinEspaciosEnBlanco__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Tarea <em>Tarea</em>}'.
@@ -2338,14 +2366,14 @@ public interface ProyectommPackage extends EPackage {
 	EOperation getRecepcion__R07_envioAsociado__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 misma Tabla Que Envio</em>}' operation.
+	 * Returns the meta object for the '{@link proyectomm.Recepcion#P05_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 misma Tabla Que Envio</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P06 misma Tabla Que Envio</em>' operation.
-	 * @see proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>P05 misma Tabla Que Envio</em>' operation.
+	 * @see proyectomm.Recepcion#P05_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map();
+	EOperation getRecepcion__P05_mismaTablaQueEnvio__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Borrado <em>Borrado</em>}'.
@@ -2358,14 +2386,14 @@ public interface ProyectommPackage extends EPackage {
 	EClass getBorrado();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 borrado Con Clave Primaria</em>}' operation.
+	 * Returns the meta object for the '{@link proyectomm.Borrado#P03_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P03 borrado Con Clave Primaria</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P04 borrado Con Clave Primaria</em>' operation.
-	 * @see proyectomm.Borrado#P04_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>P03 borrado Con Clave Primaria</em>' operation.
+	 * @see proyectomm.Borrado#P03_borradoConClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map();
+	EOperation getBorrado__P03_borradoConClavePrimaria__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Lectura <em>Lectura</em>}'.
@@ -2439,6 +2467,16 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getForeignKey_Referencia_a();
+
+	/**
+	 * Returns the meta object for the '{@link proyectomm.ForeignKey#P06_mismoTipoQuePK(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 mismo Tipo Que PK</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>P06 mismo Tipo Que PK</em>' operation.
+	 * @see proyectomm.ForeignKey#P06_mismoTipoQuePK(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Opcion <em>Opcion</em>}'.
@@ -2647,6 +2685,14 @@ public interface ProyectommPackage extends EPackage {
 		EOperation TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
 
 		/**
+		 * The meta object literal for the '<em><b>P07 solo Una Clave Foranea</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2689,12 +2735,12 @@ public interface ProyectommPackage extends EPackage {
 		EOperation ATRIBUTO___P01_TIENE_OPCIONES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getAtributo__P01_tieneOpciones__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>P05 sin Espacios En Blanco</b></em>' operation.
+		 * The meta object literal for the '<em><b>P04 sin Espacios En Blanco</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ATRIBUTO___P05_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getAtributo__P05_sinEspaciosEnBlanco__DiagnosticChain_Map();
+		EOperation ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getAtributo__P04_sinEspaciosEnBlanco__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.TareaImpl <em>Tarea</em>}' class.
@@ -2899,12 +2945,12 @@ public interface ProyectommPackage extends EPackage {
 		EOperation RECEPCION___R07_ENVIO_ASOCIADO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRecepcion__R07_envioAsociado__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>P06 misma Tabla Que Envio</b></em>' operation.
+		 * The meta object literal for the '<em><b>P05 misma Tabla Que Envio</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RECEPCION___P06_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRecepcion__P06_mismaTablaQueEnvio__DiagnosticChain_Map();
+		EOperation RECEPCION___P05_MISMA_TABLA_QUE_ENVIO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRecepcion__P05_mismaTablaQueEnvio__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.BorradoImpl <em>Borrado</em>}' class.
@@ -2917,12 +2963,12 @@ public interface ProyectommPackage extends EPackage {
 		EClass BORRADO = eINSTANCE.getBorrado();
 
 		/**
-		 * The meta object literal for the '<em><b>P04 borrado Con Clave Primaria</b></em>' operation.
+		 * The meta object literal for the '<em><b>P03 borrado Con Clave Primaria</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map();
+		EOperation BORRADO___P03_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getBorrado__P03_borradoConClavePrimaria__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.LecturaImpl <em>Lectura</em>}' class.
@@ -2987,6 +3033,14 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FOREIGN_KEY__REFERENCIA_A = eINSTANCE.getForeignKey_Referencia_a();
+
+		/**
+		 * The meta object literal for the '<em><b>P06 mismo Tipo Que PK</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FOREIGN_KEY___P06_MISMO_TIPO_QUE_PK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.OpcionImpl <em>Opcion</em>}' class.

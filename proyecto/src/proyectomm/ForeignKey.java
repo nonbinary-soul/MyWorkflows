@@ -2,6 +2,9 @@
  */
 package proyectomm;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +19,7 @@ package proyectomm;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getForeignKey()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P06_mismoTipoQuePK'"
  * @generated
  */
 public interface ForeignKey extends Atributo {
@@ -42,5 +45,13 @@ public interface ForeignKey extends Atributo {
 	 * @generated
 	 */
 	void setReferencia_a(PrimaryKey value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.tipo = self.referencia_a.tipo'"
+	 * @generated
+	 */
+	boolean P06_mismoTipoQuePK(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // ForeignKey

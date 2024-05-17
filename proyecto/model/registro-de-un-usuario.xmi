@@ -42,6 +42,14 @@
           nombre="correo_electronico"
           tipo="TEXT"/>
     </tablas>
+    <tablas
+        nombre="blublu">
+      <atributos
+          xsi:type="proyectomm:ForeignKey"
+          nombre="bblb"
+          tipo="TEXT"
+          referencia_a="//@bases_de_datos.0/@tablas.0/@atributos.0"/>
+    </tablas>
   </bases_de_datos>
   <actores nombre="Cliente">
     <tareas
@@ -70,9 +78,6 @@
         id="20000"
         descripcion="envia cosas"
         tabla_accedida="//@bases_de_datos.0/@tablas.0"/>
-    <tareas
-        xsi:type="proyectomm:Fin"
-        predecesor="4000"/>
   </actores>
   <actores nombre="Pizzeria">
     <tareas
@@ -94,10 +99,13 @@
     <tareas
         xsi:type="proyectomm:Borrado"
         nombre="tareaBorrado"
-        sucesor="//@actores.0/@tareas.4"
+        sucesor="//@actores.1/@tareas.3"
         predecesor="3000"
         id="4000"
         descripcion="este es la descripcion de la tarea"
-        atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.4"/>
+        atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.0"/>
+    <tareas
+        xsi:type="proyectomm:Fin"
+        predecesor="4000"/>
   </actores>
 </proyectomm:ProcesoDeNegocio>

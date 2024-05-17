@@ -15,7 +15,7 @@ import proyectomm.Recepcion;
  * The following operations are tested:
  * <ul>
  *   <li>{@link proyectomm.Recepcion#R07_envioAsociado(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R07 envio Asociado</em>}</li>
- *   <li>{@link proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 misma Tabla Que Envio</em>}</li>
+ *   <li>{@link proyectomm.Recepcion#P05_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 misma Tabla Que Envio</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -88,13 +88,13 @@ public class RecepcionTest extends MensajeTest {
 	}
 
 	/**
-	 * Tests the '{@link proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 misma Tabla Que Envio</em>}' operation.
+	 * Tests the '{@link proyectomm.Recepcion#P05_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 misma Tabla Que Envio</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see proyectomm.Recepcion#P06_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see proyectomm.Recepcion#P05_mismaTablaQueEnvio(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	public void testP06_mismaTablaQueEnvio__DiagnosticChain_Map() {
+	public void testP05_mismaTablaQueEnvio__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

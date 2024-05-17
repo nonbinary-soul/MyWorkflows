@@ -17,7 +17,7 @@ import proyectomm.ProyectommFactory;
  * The following operations are tested:
  * <ul>
  *   <li>{@link proyectomm.Atributo#P01_tieneOpciones(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P01 tiene Opciones</em>}</li>
- *   <li>{@link proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 sin Espacios En Blanco</em>}</li>
+ *   <li>{@link proyectomm.Atributo#P04_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 sin Espacios En Blanco</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -107,13 +107,13 @@ public class AtributoTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P05 sin Espacios En Blanco</em>}' operation.
+	 * Tests the '{@link proyectomm.Atributo#P04_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P04 sin Espacios En Blanco</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see proyectomm.Atributo#P05_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see proyectomm.Atributo#P04_sinEspaciosEnBlanco(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	public void testP05_sinEspaciosEnBlanco__DiagnosticChain_Map() {
+	public void testP04_sinEspaciosEnBlanco__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

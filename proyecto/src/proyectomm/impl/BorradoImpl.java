@@ -65,12 +65,12 @@ public class BorradoImpl extends BDImpl implements Borrado {
 	 * @generated
 	 */
 	@Override
-	public boolean P04_borradoConClavePrimaria(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		final String constraintName = "Borrado::P04_borradoConClavePrimaria";
+	public boolean P03_borradoConClavePrimaria(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Borrado::P03_borradoConClavePrimaria";
 		try {
 			/**
 			 *
-			 * inv P04_borradoConClavePrimaria:
+			 * inv P03_borradoConClavePrimaria:
 			 *   let severity : Integer[1] = constraintName.getSeverity()
 			 *   in
 			 *     if severity <= 0
@@ -84,7 +84,7 @@ public class BorradoImpl extends BDImpl implements Borrado {
 			 */
 			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
 			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.BORRADO___P03_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ProyectommTables.INT_0).booleanValue();
 			/*@NonInvalid*/ boolean local_0;
 			if (le) {
@@ -113,8 +113,8 @@ public class BorradoImpl extends BDImpl implements Borrado {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ProyectommPackage.BORRADO___P04_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP:
-				return P04_borradoConClavePrimaria((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.BORRADO___P03_BORRADO_CON_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP:
+				return P03_borradoConClavePrimaria((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
