@@ -35,9 +35,9 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.ActionDelegate;
 
 /**
- * GraphicalSample code generation.
+ * Workflow code generation.
  */
-public class AcceleoGenerateGraphicalSampleAction extends ActionDelegate implements IActionDelegate {
+public class AcceleoGenerateWorkflowAction extends ActionDelegate implements IActionDelegate {
 	
 	/**
 	 * Selected model files.
@@ -72,7 +72,7 @@ public class AcceleoGenerateGraphicalSampleAction extends ActionDelegate impleme
 							URI modelURI = URI.createPlatformResourceURI(model.getFullPath().toString(), true);
 							IContainer targetFolder = null;
 							try {
-								IContainer target = model.getProject().getFolder("src-gen-workflow");
+								IContainer target = model.getProject().getFolder("workflow-webpage");
 								targetFolder = target;
 								GenerateAll generator = new GenerateAll(modelURI, targetFolder, getArguments());
 								generator.doGenerate(monitor);

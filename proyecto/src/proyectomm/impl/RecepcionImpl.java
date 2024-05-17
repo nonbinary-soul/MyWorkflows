@@ -130,8 +130,8 @@ public class RecepcionImpl extends MensajeImpl implements Recepcion {
 			 *     if severity <= 0
 			 *     then true
 			 *     else
-			 *       let result : Boolean[1] = self.tabla_accedida =
-			 *         self.predecesor.oclAsType(Envio).tabla_accedida
+			 *       let result : Boolean[1] = self.tabla_accedida_por_mensaje =
+			 *         self.predecesor.oclAsType(Envio).tabla_accedida_por_mensaje
 			 *       in
 			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
 			 *     endif
@@ -148,11 +148,11 @@ public class RecepcionImpl extends MensajeImpl implements Recepcion {
 				/*@Caught*/ Object CAUGHT_result;
 				try {
 					final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_proyectomm_c_c_Envio_0 = idResolver.getClass(ProyectommTables.CLSSid_Envio, null);
-					final /*@NonInvalid*/ Tabla tabla_accedida = this.getTabla_accedida();
+					final /*@NonInvalid*/ Tabla tabla_accedida_por_mensaje = this.getTabla_accedida_por_mensaje();
 					final /*@NonInvalid*/ Tarea predecesor = this.getPredecesor();
 					final /*@Thrown*/ Envio oclAsType = (Envio)OclAnyOclAsTypeOperation.INSTANCE.evaluate(executor, predecesor, TYP_proyectomm_c_c_Envio_0);
-					final /*@Thrown*/ Tabla tabla_accedida_0 = oclAsType.getTabla_accedida();
-					final /*@Thrown*/ boolean result = tabla_accedida.equals(tabla_accedida_0);
+					final /*@Thrown*/ Tabla tabla_accedida_por_mensaje_0 = oclAsType.getTabla_accedida_por_mensaje();
+					final /*@Thrown*/ boolean result = tabla_accedida_por_mensaje.equals(tabla_accedida_por_mensaje_0);
 					CAUGHT_result = result;
 				}
 				catch (Exception e) {

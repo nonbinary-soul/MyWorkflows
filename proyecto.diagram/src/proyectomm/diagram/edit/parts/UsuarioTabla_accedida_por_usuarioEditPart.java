@@ -15,22 +15,22 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import proyectomm.diagram.edit.policies.ServicioTabla_accedidaItemSemanticEditPolicy;
+import proyectomm.diagram.edit.policies.UsuarioTabla_accedida_por_usuarioItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class ServicioTabla_accedidaEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class UsuarioTabla_accedida_por_usuarioEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 4003;
+	public static final int VISUAL_ID = 4002;
 
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedidaEditPart(View view) {
+	public UsuarioTabla_accedida_por_usuarioEditPart(View view) {
 		super(view);
 	}
 
@@ -39,7 +39,7 @@ public class ServicioTabla_accedidaEditPart extends ConnectionNodeEditPart imple
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new ServicioTabla_accedidaItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new UsuarioTabla_accedida_por_usuarioItemSemanticEditPolicy());
 	}
 
 	/**
@@ -52,25 +52,25 @@ public class ServicioTabla_accedidaEditPart extends ConnectionNodeEditPart imple
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new ServicioTabla_accedidaFigure();
+		return new UsuarioTabla_accedida_por_usuarioFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedidaFigure getPrimaryShape() {
-		return (ServicioTabla_accedidaFigure) getFigure();
+	public UsuarioTabla_accedida_por_usuarioFigure getPrimaryShape() {
+		return (UsuarioTabla_accedida_por_usuarioFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ServicioTabla_accedidaFigure extends PolylineConnectionEx {
+	public class UsuarioTabla_accedida_por_usuarioFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public ServicioTabla_accedidaFigure() {
+		public UsuarioTabla_accedida_por_usuarioFigure() {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);

@@ -57,12 +57,13 @@ import proyectomm.diagram.providers.ProyectommParserProvider;
 /**
  * @generated
  */
-public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareEditPart {
+public class ServicioTabla_accedida_por_servicioExternalLabelEditPart extends LabelEditPart
+		implements ITextAwareEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 6002;
+	public static final int VISUAL_ID = 6003;
 
 	/**
 	* @generated
@@ -93,15 +94,15 @@ public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareE
 	* @generated
 	*/
 	static {
-		registerSnapBackPosition(
-				ProyectommVisualIDRegistry.getType(proyectomm.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID),
+		registerSnapBackPosition(ProyectommVisualIDRegistry.getType(
+				proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	* @generated
 	*/
-	public WrappingLabel2EditPart(View view) {
+	public ServicioTabla_accedida_por_servicioExternalLabelEditPart(View view) {
 		super(view);
 	}
 
@@ -309,7 +310,7 @@ public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareE
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.UsuarioTabla_accedida_4002,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;
@@ -592,7 +593,21 @@ public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareE
 	* @generated
 	*/
 	protected IFigure createFigurePrim() {
-		return new WrappingLabel();
+		return new ServicioTabla_accedida_por_servicioExternalLabelFigure();
+	}
+
+	/**
+	 * @generated
+	 */
+	public class ServicioTabla_accedida_por_servicioExternalLabelFigure extends WrappingLabel {
+
+		/**
+		 * @generated
+		 */
+		public ServicioTabla_accedida_por_servicioExternalLabelFigure() {
+			this.setText("Acceso a la tabla...");
+		}
+
 	}
 
 }

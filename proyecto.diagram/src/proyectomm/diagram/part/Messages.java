@@ -436,32 +436,32 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida4CreationTool_title;
+	public static String Tabla_accedida_por_mensaje4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida4CreationTool_desc;
+	public static String Tabla_accedida_por_mensaje4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida5CreationTool_title;
+	public static String Tabla_accedida_por_servicio5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida5CreationTool_desc;
+	public static String Tabla_accedida_por_servicio5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida6CreationTool_title;
+	public static String Tabla_accedida_por_usuario6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida6CreationTool_desc;
+	public static String Tabla_accedida_por_usuario6CreationTool_desc;
 
 	/**
 	* @generated
@@ -621,32 +621,32 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_UsuarioTabla_accedida_4002_target;
+	public static String NavigatorGroupName_UsuarioTabla_accedida_por_usuario_4002_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_UsuarioTabla_accedida_4002_source;
+	public static String NavigatorGroupName_UsuarioTabla_accedida_por_usuario_4002_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ServicioTabla_accedida_4003_target;
+	public static String NavigatorGroupName_ServicioTabla_accedida_por_servicio_4003_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ServicioTabla_accedida_4003_source;
+	public static String NavigatorGroupName_ServicioTabla_accedida_por_servicio_4003_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_MensajeTabla_accedida_4004_target;
+	public static String NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4004_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_MensajeTabla_accedida_4004_source;
+	public static String NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4004_source;
 
 	/**
 	* @generated

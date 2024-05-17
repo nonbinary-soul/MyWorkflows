@@ -43,25 +43,25 @@ public class MensajeItemProvider extends IntermediaItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTabla_accedidaPropertyDescriptor(object);
+			addTabla_accedida_por_mensajePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Tabla accedida feature.
+	 * This adds a property descriptor for the Tabla accedida por mensaje feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTabla_accedidaPropertyDescriptor(Object object) {
+	protected void addTabla_accedida_por_mensajePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Mensaje_tabla_accedida_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Mensaje_tabla_accedida_feature", "_UI_Mensaje_type"),
-				 ProyectommPackage.Literals.MENSAJE__TABLA_ACCEDIDA,
+				 getString("_UI_Mensaje_tabla_accedida_por_mensaje_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Mensaje_tabla_accedida_por_mensaje_feature", "_UI_Mensaje_type"),
+				 ProyectommPackage.Literals.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE,
 				 true,
 				 false,
 				 true,

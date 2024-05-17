@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.URI;
 
 
 /**
- * Main entry point of the 'GraphicalSample' generation module.
+ * Main entry point of the 'Workflow' generation module.
  */
 public class GenerateAll {
 

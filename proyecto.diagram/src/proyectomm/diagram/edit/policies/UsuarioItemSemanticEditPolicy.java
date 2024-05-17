@@ -20,10 +20,10 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import proyectomm.diagram.edit.commands.TareaSucesorCreateCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorReorientCommand;
-import proyectomm.diagram.edit.commands.UsuarioTabla_accedidaCreateCommand;
-import proyectomm.diagram.edit.commands.UsuarioTabla_accedidaReorientCommand;
+import proyectomm.diagram.edit.commands.UsuarioTabla_accedida_por_usuarioCreateCommand;
+import proyectomm.diagram.edit.commands.UsuarioTabla_accedida_por_usuarioReorientCommand;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
-import proyectomm.diagram.edit.parts.UsuarioTabla_accedidaEditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
 
@@ -65,7 +65,8 @@ public class UsuarioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (ProyectommVisualIDRegistry.getVisualID(outgoingLink) == UsuarioTabla_accedidaEditPart.VISUAL_ID) {
+			if (ProyectommVisualIDRegistry
+					.getVisualID(outgoingLink) == UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -101,8 +102,9 @@ public class UsuarioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.UsuarioTabla_accedida_4002 == req.getElementType()) {
-			return getGEFWrapper(new UsuarioTabla_accedidaCreateCommand(req, req.getSource(), req.getTarget()));
+		if (ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002 == req.getElementType()) {
+			return getGEFWrapper(
+					new UsuarioTabla_accedida_por_usuarioCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -114,7 +116,7 @@ public class UsuarioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.UsuarioTabla_accedida_4002 == req.getElementType()) {
+		if (ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -130,8 +132,8 @@ public class UsuarioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		switch (getVisualID(req)) {
 		case TareaSucesorEditPart.VISUAL_ID:
 			return getGEFWrapper(new TareaSucesorReorientCommand(req));
-		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
-			return getGEFWrapper(new UsuarioTabla_accedidaReorientCommand(req));
+		case UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID:
+			return getGEFWrapper(new UsuarioTabla_accedida_por_usuarioReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

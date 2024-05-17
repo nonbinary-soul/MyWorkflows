@@ -389,48 +389,48 @@
         xsi:type="gmfmap:DesignLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="proyectomm.gmfgraph#UsuarioTabla_accedidaExternalLabel"/>
-    </labelMappings>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="proyectomm.gmftool#//@palette/@tools.1/@tools.3"/>
-    <diagramLink
-        href="proyectomm.gmfgraph#UsuarioTabla_accedida"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="proyectomm.ecore#//Usuario/tabla_accedida"/>
-  </links>
-  <links>
-    <labelMappings
-        xsi:type="gmfmap:DesignLabelMapping"
-        readOnly="true">
-      <diagramLabel
-          href="proyectomm.gmfgraph#ServicioTabla_accedidaExternalLabel"/>
-    </labelMappings>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="proyectomm.gmftool#//@palette/@tools.1/@tools.4"/>
-    <diagramLink
-        href="proyectomm.gmfgraph#ServicioTabla_accedida"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="proyectomm.ecore#//Servicio/tabla_accedida"/>
-  </links>
-  <links>
-    <labelMappings
-        xsi:type="gmfmap:DesignLabelMapping"
-        readOnly="true">
-      <diagramLabel
-          href="proyectomm.gmfgraph#MensajeTabla_accedidaExternalLabel"/>
+          href="proyectomm.gmfgraph#UsuarioTabla_accedida_por_usuarioExternalLabel"/>
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
         href="proyectomm.gmftool#//@palette/@tools.1/@tools.5"/>
     <diagramLink
-        href="proyectomm.gmfgraph#MensajeTabla_accedida"/>
+        href="proyectomm.gmfgraph#UsuarioTabla_accedida_por_usuario"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="proyectomm.ecore#//Mensaje/tabla_accedida"/>
+        href="proyectomm.ecore#//Usuario/tabla_accedida_por_usuario"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#ServicioTabla_accedida_por_servicioExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.4"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#ServicioTabla_accedida_por_servicio"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//Servicio/tabla_accedida_por_servicio"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#MensajeTabla_accedida_por_mensajeExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.3"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#MensajeTabla_accedida_por_mensaje"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//Mensaje/tabla_accedida_por_mensaje"/>
   </links>
   <links>
     <labelMappings

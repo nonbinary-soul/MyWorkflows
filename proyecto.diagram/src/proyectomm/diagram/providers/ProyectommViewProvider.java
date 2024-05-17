@@ -69,8 +69,8 @@ import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aExternalLabelEditPart
 import proyectomm.diagram.edit.parts.InicioEditPart;
 import proyectomm.diagram.edit.parts.LecturaEditPart;
 import proyectomm.diagram.edit.parts.LecturaNombreEditPart;
-import proyectomm.diagram.edit.parts.MensajeTabla_accedidaEditPart;
-import proyectomm.diagram.edit.parts.MensajeTabla_accedidaExternalLabelEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.OpcionEditPart;
 import proyectomm.diagram.edit.parts.OpcionNombreEditPart;
 import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
@@ -81,16 +81,16 @@ import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.RecepcionNombreEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.ServicioNombreEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedidaEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaNombreEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
 import proyectomm.diagram.edit.parts.UsuarioNombreEditPart;
-import proyectomm.diagram.edit.parts.UsuarioTabla_accedidaEditPart;
-import proyectomm.diagram.edit.parts.WrappingLabel2EditPart;
-import proyectomm.diagram.edit.parts.WrappingLabel3EditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioEditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.WrappingLabelEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
@@ -303,12 +303,12 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 		switch (ProyectommVisualIDRegistry.getVisualID(elementTypeHint)) {
 		case TareaSucesorEditPart.VISUAL_ID:
 			return createTareaSucesor_4001(containerView, index, persisted, preferencesHint);
-		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
-			return createUsuarioTabla_accedida_4002(containerView, index, persisted, preferencesHint);
-		case ServicioTabla_accedidaEditPart.VISUAL_ID:
-			return createServicioTabla_accedida_4003(containerView, index, persisted, preferencesHint);
-		case MensajeTabla_accedidaEditPart.VISUAL_ID:
-			return createMensajeTabla_accedida_4004(containerView, index, persisted, preferencesHint);
+		case UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID:
+			return createUsuarioTabla_accedida_por_usuario_4002(containerView, index, persisted, preferencesHint);
+		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
+			return createServicioTabla_accedida_por_servicio_4003(containerView, index, persisted, preferencesHint);
+		case MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID:
+			return createMensajeTabla_accedida_por_mensaje_4004(containerView, index, persisted, preferencesHint);
 		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
 			return createBDAtributo_seleccionado_4005(containerView, index, persisted, preferencesHint);
 		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
@@ -948,7 +948,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 	/**
 	* @generated
 	*/
-	public Edge createUsuarioTabla_accedida_4002(View containerView, int index, boolean persisted,
+	public Edge createUsuarioTabla_accedida_por_usuario_4002(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -960,7 +960,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(ProyectommVisualIDRegistry.getType(UsuarioTabla_accedidaEditPart.VISUAL_ID));
+		edge.setType(ProyectommVisualIDRegistry.getType(UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
@@ -979,7 +979,8 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 		if (routing != null) {
 			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
 		}
-		Node label6002 = createLabel(edge, ProyectommVisualIDRegistry.getType(WrappingLabel2EditPart.VISUAL_ID));
+		Node label6002 = createLabel(edge,
+				ProyectommVisualIDRegistry.getType(UsuarioTabla_accedida_por_usuarioExternalLabelEditPart.VISUAL_ID));
 		label6002.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6002 = (Location) label6002.getLayoutConstraint();
@@ -991,7 +992,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 	/**
 	* @generated
 	*/
-	public Edge createServicioTabla_accedida_4003(View containerView, int index, boolean persisted,
+	public Edge createServicioTabla_accedida_por_servicio_4003(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -1003,7 +1004,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(ProyectommVisualIDRegistry.getType(ServicioTabla_accedidaEditPart.VISUAL_ID));
+		edge.setType(ProyectommVisualIDRegistry.getType(ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
@@ -1022,7 +1023,8 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 		if (routing != null) {
 			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
 		}
-		Node label6003 = createLabel(edge, ProyectommVisualIDRegistry.getType(WrappingLabel3EditPart.VISUAL_ID));
+		Node label6003 = createLabel(edge,
+				ProyectommVisualIDRegistry.getType(ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID));
 		label6003.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
 		label6003.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6003 = (Location) label6003.getLayoutConstraint();
@@ -1034,7 +1036,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 	/**
 	* @generated
 	*/
-	public Edge createMensajeTabla_accedida_4004(View containerView, int index, boolean persisted,
+	public Edge createMensajeTabla_accedida_por_mensaje_4004(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -1046,7 +1048,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(ProyectommVisualIDRegistry.getType(MensajeTabla_accedidaEditPart.VISUAL_ID));
+		edge.setType(ProyectommVisualIDRegistry.getType(MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
@@ -1066,7 +1068,7 @@ public class ProyectommViewProvider extends AbstractProvider implements IViewPro
 			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
 		}
 		Node label6004 = createLabel(edge,
-				ProyectommVisualIDRegistry.getType(MensajeTabla_accedidaExternalLabelEditPart.VISUAL_ID));
+				ProyectommVisualIDRegistry.getType(MensajeTabla_accedida_por_mensajeExternalLabelEditPart.VISUAL_ID));
 		label6004.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
 		label6004.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6004 = (Location) label6004.getLayoutConstraint();

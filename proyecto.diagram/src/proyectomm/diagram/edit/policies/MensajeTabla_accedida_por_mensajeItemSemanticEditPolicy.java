@@ -12,13 +12,13 @@ import proyectomm.diagram.providers.ProyectommElementTypes;
 /**
  * @generated
  */
-public class MensajeTabla_accedidaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditPolicy {
+public class MensajeTabla_accedida_por_mensajeItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public MensajeTabla_accedidaItemSemanticEditPolicy() {
-		super(ProyectommElementTypes.MensajeTabla_accedida_4004);
+	public MensajeTabla_accedida_por_mensajeItemSemanticEditPolicy() {
+		super(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004);
 	}
 
 	/**

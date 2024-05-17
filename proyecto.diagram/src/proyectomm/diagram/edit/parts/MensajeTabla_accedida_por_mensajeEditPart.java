@@ -15,12 +15,12 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import proyectomm.diagram.edit.policies.MensajeTabla_accedidaItemSemanticEditPolicy;
+import proyectomm.diagram.edit.policies.MensajeTabla_accedida_por_mensajeItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class MensajeTabla_accedidaEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class MensajeTabla_accedida_por_mensajeEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -30,7 +30,7 @@ public class MensajeTabla_accedidaEditPart extends ConnectionNodeEditPart implem
 	/**
 	* @generated
 	*/
-	public MensajeTabla_accedidaEditPart(View view) {
+	public MensajeTabla_accedida_por_mensajeEditPart(View view) {
 		super(view);
 	}
 
@@ -39,7 +39,7 @@ public class MensajeTabla_accedidaEditPart extends ConnectionNodeEditPart implem
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new MensajeTabla_accedidaItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new MensajeTabla_accedida_por_mensajeItemSemanticEditPolicy());
 	}
 
 	/**
@@ -52,25 +52,25 @@ public class MensajeTabla_accedidaEditPart extends ConnectionNodeEditPart implem
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new MensajeTabla_accedidaFigure();
+		return new MensajeTabla_accedida_por_mensajeFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public MensajeTabla_accedidaFigure getPrimaryShape() {
-		return (MensajeTabla_accedidaFigure) getFigure();
+	public MensajeTabla_accedida_por_mensajeFigure getPrimaryShape() {
+		return (MensajeTabla_accedida_por_mensajeFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class MensajeTabla_accedidaFigure extends PolylineConnectionEx {
+	public class MensajeTabla_accedida_por_mensajeFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public MensajeTabla_accedidaFigure() {
+		public MensajeTabla_accedida_por_mensajeFigure() {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);

@@ -36,8 +36,8 @@ import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aExternalLabelEditPart
 import proyectomm.diagram.edit.parts.InicioEditPart;
 import proyectomm.diagram.edit.parts.LecturaEditPart;
 import proyectomm.diagram.edit.parts.LecturaNombreEditPart;
-import proyectomm.diagram.edit.parts.MensajeTabla_accedidaEditPart;
-import proyectomm.diagram.edit.parts.MensajeTabla_accedidaExternalLabelEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeEditPart;
+import proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.OpcionEditPart;
 import proyectomm.diagram.edit.parts.OpcionNombreEditPart;
 import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
@@ -48,16 +48,16 @@ import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.RecepcionNombreEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.ServicioNombreEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedidaEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaNombreEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
 import proyectomm.diagram.edit.parts.UsuarioNombreEditPart;
-import proyectomm.diagram.edit.parts.UsuarioTabla_accedidaEditPart;
-import proyectomm.diagram.edit.parts.WrappingLabel2EditPart;
-import proyectomm.diagram.edit.parts.WrappingLabel3EditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioEditPart;
+import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
@@ -402,18 +402,18 @@ public class ProyectommVisualIDRegistry {
 				return true;
 			}
 			break;
-		case UsuarioTabla_accedidaEditPart.VISUAL_ID:
-			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
+		case UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID:
+			if (UsuarioTabla_accedida_por_usuarioExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case ServicioTabla_accedidaEditPart.VISUAL_ID:
-			if (WrappingLabel3EditPart.VISUAL_ID == nodeVisualID) {
+		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
+			if (ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case MensajeTabla_accedidaEditPart.VISUAL_ID:
-			if (MensajeTabla_accedidaExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+		case MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID:
+			if (MensajeTabla_accedida_por_mensajeExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

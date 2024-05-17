@@ -11,14 +11,14 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
-import proyectomm.Servicio;
+import proyectomm.Mensaje;
 import proyectomm.Tabla;
 import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class ServicioTabla_accedidaCreateCommand extends EditElementCommand {
+public class MensajeTabla_accedida_por_mensajeCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -33,7 +33,8 @@ public class ServicioTabla_accedidaCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedidaCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
+	public MensajeTabla_accedida_por_mensajeCreateCommand(CreateRelationshipRequest request, EObject source,
+			EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
@@ -46,7 +47,7 @@ public class ServicioTabla_accedidaCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Servicio) {
+		if (source != null && false == source instanceof Mensaje) {
 			return false;
 		}
 		if (target != null && false == target instanceof Tabla) {
@@ -57,7 +58,7 @@ public class ServicioTabla_accedidaCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateServicioTabla_accedida_4003(getSource(), getTarget());
+				.canCreateMensajeTabla_accedida_por_mensaje_4004(getSource(), getTarget());
 	}
 
 	/**
@@ -69,7 +70,7 @@ public class ServicioTabla_accedidaCreateCommand extends EditElementCommand {
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().setTabla_accedida(getTarget());
+			getSource().setTabla_accedida_por_mensaje(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 
@@ -85,8 +86,8 @@ public class ServicioTabla_accedidaCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected Servicio getSource() {
-		return (Servicio) source;
+	protected Mensaje getSource() {
+		return (Mensaje) source;
 	}
 
 	/**

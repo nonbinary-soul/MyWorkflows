@@ -19,7 +19,7 @@ import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 /**
  * @generated
  */
-public class UsuarioTabla_accedidaReorientCommand extends EditElementCommand {
+public class UsuarioTabla_accedida_por_usuarioReorientCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -44,7 +44,7 @@ public class UsuarioTabla_accedidaReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public UsuarioTabla_accedidaReorientCommand(ReorientReferenceRelationshipRequest request) {
+	public UsuarioTabla_accedida_por_usuarioReorientCommand(ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
 		referenceOwner = request.getReferenceOwner();
@@ -76,7 +76,7 @@ public class UsuarioTabla_accedidaReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistUsuarioTabla_accedida_4002(getNewSource(), getOldTarget());
+				.canExistUsuarioTabla_accedida_por_usuario_4002(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class UsuarioTabla_accedidaReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistUsuarioTabla_accedida_4002(getOldSource(), getNewTarget());
+				.canExistUsuarioTabla_accedida_por_usuario_4002(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -110,8 +110,8 @@ public class UsuarioTabla_accedidaReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().setTabla_accedida(null);
-		getNewSource().setTabla_accedida(getOldTarget());
+		getOldSource().setTabla_accedida_por_usuario(null);
+		getNewSource().setTabla_accedida_por_usuario(getOldTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
@@ -119,7 +119,7 @@ public class UsuarioTabla_accedidaReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getOldSource().setTabla_accedida(getNewTarget());
+		getOldSource().setTabla_accedida_por_usuario(getNewTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 

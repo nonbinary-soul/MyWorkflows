@@ -668,7 +668,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EReference getUsuario_Tabla_accedida() {
+	public EReference getUsuario_Tabla_accedida_por_usuario() {
 		return (EReference)usuarioEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -688,7 +688,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EReference getServicio_Tabla_accedida() {
+	public EReference getServicio_Tabla_accedida_por_servicio() {
 		return (EReference)servicioEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -708,7 +708,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EReference getMensaje_Tabla_accedida() {
+	public EReference getMensaje_Tabla_accedida_por_mensaje() {
 		return (EReference)mensajeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -960,13 +960,13 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createEAttribute(intermediaEClass, INTERMEDIA__DESCRIPCION);
 
 		usuarioEClass = createEClass(USUARIO);
-		createEReference(usuarioEClass, USUARIO__TABLA_ACCEDIDA);
+		createEReference(usuarioEClass, USUARIO__TABLA_ACCEDIDA_POR_USUARIO);
 
 		servicioEClass = createEClass(SERVICIO);
-		createEReference(servicioEClass, SERVICIO__TABLA_ACCEDIDA);
+		createEReference(servicioEClass, SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO);
 
 		mensajeEClass = createEClass(MENSAJE);
-		createEReference(mensajeEClass, MENSAJE__TABLA_ACCEDIDA);
+		createEReference(mensajeEClass, MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE);
 
 		envioEClass = createEClass(ENVIO);
 
@@ -1184,13 +1184,13 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		initEAttribute(getIntermedia_Descripcion(), ecorePackage.getEString(), "descripcion", null, 0, 1, Intermedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(usuarioEClass, Usuario.class, "Usuario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUsuario_Tabla_accedida(), this.getTabla(), null, "tabla_accedida", null, 1, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUsuario_Tabla_accedida_por_usuario(), this.getTabla(), null, "tabla_accedida_por_usuario", null, 1, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(servicioEClass, Servicio.class, "Servicio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getServicio_Tabla_accedida(), this.getTabla(), null, "tabla_accedida", null, 1, 1, Servicio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicio_Tabla_accedida_por_servicio(), this.getTabla(), null, "tabla_accedida_por_servicio", null, 1, 1, Servicio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mensajeEClass, Mensaje.class, "Mensaje", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMensaje_Tabla_accedida(), this.getTabla(), null, "tabla_accedida", null, 1, 1, Mensaje.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMensaje_Tabla_accedida_por_mensaje(), this.getTabla(), null, "tabla_accedida_por_mensaje", null, 1, 1, Mensaje.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(envioEClass, Envio.class, "Envio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1472,7 +1472,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getRecepcion__P05_mismaTablaQueEnvio__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida"
+			   "body", "self.tabla_accedida_por_mensaje = self.predecesor.oclAsType(Envio).tabla_accedida_por_mensaje"
 		   });
 		addAnnotation
 		  (getBorrado__P03_borradoConClavePrimaria__DiagnosticChain_Map(),
@@ -1666,25 +1666,27 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "width", "1"
 		   });
 		addAnnotation
-		  (getUsuario_Tabla_accedida(),
+		  (getUsuario_Tabla_accedida_por_usuario(),
 		   source,
 		   new String[] {
 			   "color", "0,0,0",
+			   "label", "Acceso a la tabla...",
 			   "target.decoration", "filledclosedarrow",
 			   "style", "dash",
 			   "width", "2"
 		   });
 		addAnnotation
-		  (getServicio_Tabla_accedida(),
+		  (getServicio_Tabla_accedida_por_servicio(),
 		   source,
 		   new String[] {
 			   "color", "0,0,0",
+			   "label", "Acceso a la tabla...",
 			   "target.decoration", "filledclosedarrow",
 			   "style", "dash",
 			   "width", "2"
 		   });
 		addAnnotation
-		  (getMensaje_Tabla_accedida(),
+		  (getMensaje_Tabla_accedida_por_mensaje(),
 		   source,
 		   new String[] {
 			   "color", "0,0,0",

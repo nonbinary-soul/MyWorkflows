@@ -57,12 +57,13 @@ import proyectomm.diagram.providers.ProyectommParserProvider;
 /**
  * @generated
  */
-public class WrappingLabel3EditPart extends LabelEditPart implements ITextAwareEditPart {
+public class UsuarioTabla_accedida_por_usuarioExternalLabelEditPart extends LabelEditPart
+		implements ITextAwareEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 6003;
+	public static final int VISUAL_ID = 6002;
 
 	/**
 	* @generated
@@ -94,14 +95,15 @@ public class WrappingLabel3EditPart extends LabelEditPart implements ITextAwareE
 	*/
 	static {
 		registerSnapBackPosition(
-				ProyectommVisualIDRegistry.getType(proyectomm.diagram.edit.parts.WrappingLabel3EditPart.VISUAL_ID),
+				ProyectommVisualIDRegistry.getType(
+						proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioExternalLabelEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	* @generated
 	*/
-	public WrappingLabel3EditPart(View view) {
+	public UsuarioTabla_accedida_por_usuarioExternalLabelEditPart(View view) {
 		super(view);
 	}
 
@@ -309,7 +311,7 @@ public class WrappingLabel3EditPart extends LabelEditPart implements ITextAwareE
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ServicioTabla_accedida_4003,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;
@@ -592,7 +594,21 @@ public class WrappingLabel3EditPart extends LabelEditPart implements ITextAwareE
 	* @generated
 	*/
 	protected IFigure createFigurePrim() {
-		return new WrappingLabel();
+		return new UsuarioTabla_accedida_por_usuarioExternalLabelFigure();
+	}
+
+	/**
+	 * @generated
+	 */
+	public class UsuarioTabla_accedida_por_usuarioExternalLabelFigure extends WrappingLabel {
+
+		/**
+		 * @generated
+		 */
+		public UsuarioTabla_accedida_por_usuarioExternalLabelFigure() {
+			this.setText("Acceso a la tabla...");
+		}
+
 	}
 
 }

@@ -43,25 +43,25 @@ public class UsuarioItemProvider extends IntermediaItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTabla_accedidaPropertyDescriptor(object);
+			addTabla_accedida_por_usuarioPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Tabla accedida feature.
+	 * This adds a property descriptor for the Tabla accedida por usuario feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTabla_accedidaPropertyDescriptor(Object object) {
+	protected void addTabla_accedida_por_usuarioPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Usuario_tabla_accedida_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Usuario_tabla_accedida_feature", "_UI_Usuario_type"),
-				 ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA,
+				 getString("_UI_Usuario_tabla_accedida_por_usuario_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Usuario_tabla_accedida_por_usuario_feature", "_UI_Usuario_type"),
+				 ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA_POR_USUARIO,
 				 true,
 				 false,
 				 true,

@@ -21,22 +21,21 @@ import proyectomm.Tabla;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link proyectomm.impl.MensajeImpl#getTabla_accedida <em>Tabla accedida</em>}</li>
+ *   <li>{@link proyectomm.impl.MensajeImpl#getTabla_accedida_por_mensaje <em>Tabla accedida por mensaje</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	/**
-	 * The cached value of the '{@link #getTabla_accedida() <em>Tabla accedida</em>}' reference.
+	 * The cached value of the '{@link #getTabla_accedida_por_mensaje() <em>Tabla accedida por mensaje</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTabla_accedida()
+	 * @see #getTabla_accedida_por_mensaje()
 	 * @generated
 	 * @ordered
 	 */
-	protected Tabla tabla_accedida;
-
+	protected Tabla tabla_accedida_por_mensaje;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,16 +61,16 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	 * @generated
 	 */
 	@Override
-	public Tabla getTabla_accedida() {
-		if (tabla_accedida != null && tabla_accedida.eIsProxy()) {
-			InternalEObject oldTabla_accedida = (InternalEObject)tabla_accedida;
-			tabla_accedida = (Tabla)eResolveProxy(oldTabla_accedida);
-			if (tabla_accedida != oldTabla_accedida) {
+	public Tabla getTabla_accedida_por_mensaje() {
+		if (tabla_accedida_por_mensaje != null && tabla_accedida_por_mensaje.eIsProxy()) {
+			InternalEObject oldTabla_accedida_por_mensaje = (InternalEObject)tabla_accedida_por_mensaje;
+			tabla_accedida_por_mensaje = (Tabla)eResolveProxy(oldTabla_accedida_por_mensaje);
+			if (tabla_accedida_por_mensaje != oldTabla_accedida_por_mensaje) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProyectommPackage.MENSAJE__TABLA_ACCEDIDA, oldTabla_accedida, tabla_accedida));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProyectommPackage.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE, oldTabla_accedida_por_mensaje, tabla_accedida_por_mensaje));
 			}
 		}
-		return tabla_accedida;
+		return tabla_accedida_por_mensaje;
 	}
 
 	/**
@@ -79,8 +78,8 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tabla basicGetTabla_accedida() {
-		return tabla_accedida;
+	public Tabla basicGetTabla_accedida_por_mensaje() {
+		return tabla_accedida_por_mensaje;
 	}
 
 	/**
@@ -89,11 +88,11 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	 * @generated
 	 */
 	@Override
-	public void setTabla_accedida(Tabla newTabla_accedida) {
-		Tabla oldTabla_accedida = tabla_accedida;
-		tabla_accedida = newTabla_accedida;
+	public void setTabla_accedida_por_mensaje(Tabla newTabla_accedida_por_mensaje) {
+		Tabla oldTabla_accedida_por_mensaje = tabla_accedida_por_mensaje;
+		tabla_accedida_por_mensaje = newTabla_accedida_por_mensaje;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.MENSAJE__TABLA_ACCEDIDA, oldTabla_accedida, tabla_accedida));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE, oldTabla_accedida_por_mensaje, tabla_accedida_por_mensaje));
 	}
 
 	/**
@@ -104,9 +103,9 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA:
-				if (resolve) return getTabla_accedida();
-				return basicGetTabla_accedida();
+			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE:
+				if (resolve) return getTabla_accedida_por_mensaje();
+				return basicGetTabla_accedida_por_mensaje();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,8 +118,8 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA:
-				setTabla_accedida((Tabla)newValue);
+			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE:
+				setTabla_accedida_por_mensaje((Tabla)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA:
-				setTabla_accedida((Tabla)null);
+			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE:
+				setTabla_accedida_por_mensaje((Tabla)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -149,8 +148,8 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA:
-				return tabla_accedida != null;
+			case ProyectommPackage.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE:
+				return tabla_accedida_por_mensaje != null;
 		}
 		return super.eIsSet(featureID);
 	}

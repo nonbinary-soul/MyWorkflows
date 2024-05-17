@@ -11,11 +11,11 @@
                <groupMarker name="acceleo"/> 
          </menu>
          <action
-               class="org.eclipse.acceleo.module.graphicalsample.ui.popupMenus.AcceleoGenerateGraphicalSampleAction"
+               class="org.eclipse.acceleo.module.graphicalsample.ui.popupMenus.AcceleoGenerateWorkflowAction"
                enablesFor="+"
-               id="org.eclipse.acceleo.module.graphicalsample.ui.popupMenus.acceleoGenerateGraphicalSampleAction"
+               id="org.eclipse.acceleo.module.graphicalsample.ui.popupMenus.acceleoGenerateWorkflowAction"
                icon="icons/default.gif"
-               label="Generate GraphicalSample"
+               label="Generate Workflow"
                menubarPath="org.eclipse.acceleo.module.menu/acceleo"/>
       </objectContribution>
    </extension>

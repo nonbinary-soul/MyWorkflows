@@ -10,7 +10,8 @@
       <!-- @generated proyectomm -->
       <package
             uri="http://www.example.org/proyectomm"
-            class="proyectomm.ProyectommPackage"/>
+            class="proyectomm.ProyectommPackage"
+            genModel="metamodel/proyectomm.genmodel"/>
    </extension>
 
 </plugin>

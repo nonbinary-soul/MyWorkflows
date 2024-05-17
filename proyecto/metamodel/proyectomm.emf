@@ -98,19 +98,19 @@ abstract class Intermedia extends Tarea {
 
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/form.svg", label.icon="false", label.placement="external")
 class Usuario extends Intermedia {
-	@gmf.link(color="0,0,0", target.decoration="filledclosedarrow", style="dash", width="2")
-	ref Tabla[1] tabla_accedida;
+	@gmf.link(color="0,0,0", label="Acceso a la tabla...", target.decoration="filledclosedarrow", style="dash", width="2")
+	ref Tabla[1] tabla_accedida_por_usuario;
 }
 
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/service.svg", label.icon="false", label.placement="external")
 class Servicio extends Intermedia {
-	@gmf.link(color="0,0,0", target.decoration="filledclosedarrow", style="dash", width="2")
-	ref Tabla[1] tabla_accedida;
+	@gmf.link(color="0,0,0", label="Acceso a la tabla...", target.decoration="filledclosedarrow", style="dash", width="2")
+	ref Tabla[1] tabla_accedida_por_servicio;
 }
 
 abstract class Mensaje extends Intermedia {
 	@gmf.link(color="0,0,0", label="Acceso a la tabla...", target.decoration="filledclosedarrow", style="dash", width="2")
-	ref Tabla[1] tabla_accedida;
+	ref Tabla[1] tabla_accedida_por_mensaje;
 }
 
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/send-message.svg", label.icon="false", label.placement="external")
@@ -118,7 +118,7 @@ class Envio extends Mensaje {
 }
 
 @Ecore(constraints="R07_envioAsociado P05_mismaTablaQueEnvio")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R07_envioAsociado="predecesor.oclIsTypeOf(Envio)", P05_mismaTablaQueEnvio="self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R07_envioAsociado="predecesor.oclIsTypeOf(Envio)", P05_mismaTablaQueEnvio="self.tabla_accedida_por_mensaje = self.predecesor.oclAsType(Envio).tabla_accedida_por_mensaje")
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/received-message.svg", label.icon="false", label.placement="external")
 class Recepcion extends Mensaje {
 }

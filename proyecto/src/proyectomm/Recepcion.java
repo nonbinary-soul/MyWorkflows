@@ -29,7 +29,7 @@ public interface Recepcion extends Mensaje {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.tabla_accedida_por_mensaje = self.predecesor.oclAsType(Envio).tabla_accedida_por_mensaje'"
 	 * @generated
 	 */
 	boolean P05_mismaTablaQueEnvio(DiagnosticChain diagnostics, Map<Object, Object> context);

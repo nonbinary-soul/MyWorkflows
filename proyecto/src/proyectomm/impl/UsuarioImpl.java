@@ -21,22 +21,21 @@ import proyectomm.Usuario;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link proyectomm.impl.UsuarioImpl#getTabla_accedida <em>Tabla accedida</em>}</li>
+ *   <li>{@link proyectomm.impl.UsuarioImpl#getTabla_accedida_por_usuario <em>Tabla accedida por usuario</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	/**
-	 * The cached value of the '{@link #getTabla_accedida() <em>Tabla accedida</em>}' reference.
+	 * The cached value of the '{@link #getTabla_accedida_por_usuario() <em>Tabla accedida por usuario</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTabla_accedida()
+	 * @see #getTabla_accedida_por_usuario()
 	 * @generated
 	 * @ordered
 	 */
-	protected Tabla tabla_accedida;
-
+	protected Tabla tabla_accedida_por_usuario;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,16 +61,16 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	 * @generated
 	 */
 	@Override
-	public Tabla getTabla_accedida() {
-		if (tabla_accedida != null && tabla_accedida.eIsProxy()) {
-			InternalEObject oldTabla_accedida = (InternalEObject)tabla_accedida;
-			tabla_accedida = (Tabla)eResolveProxy(oldTabla_accedida);
-			if (tabla_accedida != oldTabla_accedida) {
+	public Tabla getTabla_accedida_por_usuario() {
+		if (tabla_accedida_por_usuario != null && tabla_accedida_por_usuario.eIsProxy()) {
+			InternalEObject oldTabla_accedida_por_usuario = (InternalEObject)tabla_accedida_por_usuario;
+			tabla_accedida_por_usuario = (Tabla)eResolveProxy(oldTabla_accedida_por_usuario);
+			if (tabla_accedida_por_usuario != oldTabla_accedida_por_usuario) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProyectommPackage.USUARIO__TABLA_ACCEDIDA, oldTabla_accedida, tabla_accedida));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProyectommPackage.USUARIO__TABLA_ACCEDIDA_POR_USUARIO, oldTabla_accedida_por_usuario, tabla_accedida_por_usuario));
 			}
 		}
-		return tabla_accedida;
+		return tabla_accedida_por_usuario;
 	}
 
 	/**
@@ -79,8 +78,8 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tabla basicGetTabla_accedida() {
-		return tabla_accedida;
+	public Tabla basicGetTabla_accedida_por_usuario() {
+		return tabla_accedida_por_usuario;
 	}
 
 	/**
@@ -89,11 +88,11 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	 * @generated
 	 */
 	@Override
-	public void setTabla_accedida(Tabla newTabla_accedida) {
-		Tabla oldTabla_accedida = tabla_accedida;
-		tabla_accedida = newTabla_accedida;
+	public void setTabla_accedida_por_usuario(Tabla newTabla_accedida_por_usuario) {
+		Tabla oldTabla_accedida_por_usuario = tabla_accedida_por_usuario;
+		tabla_accedida_por_usuario = newTabla_accedida_por_usuario;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.USUARIO__TABLA_ACCEDIDA, oldTabla_accedida, tabla_accedida));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.USUARIO__TABLA_ACCEDIDA_POR_USUARIO, oldTabla_accedida_por_usuario, tabla_accedida_por_usuario));
 	}
 
 	/**
@@ -104,9 +103,9 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA:
-				if (resolve) return getTabla_accedida();
-				return basicGetTabla_accedida();
+			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA_POR_USUARIO:
+				if (resolve) return getTabla_accedida_por_usuario();
+				return basicGetTabla_accedida_por_usuario();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,8 +118,8 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA:
-				setTabla_accedida((Tabla)newValue);
+			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA_POR_USUARIO:
+				setTabla_accedida_por_usuario((Tabla)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA:
-				setTabla_accedida((Tabla)null);
+			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA_POR_USUARIO:
+				setTabla_accedida_por_usuario((Tabla)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -149,8 +148,8 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA:
-				return tabla_accedida != null;
+			case ProyectommPackage.USUARIO__TABLA_ACCEDIDA_POR_USUARIO:
+				return tabla_accedida_por_usuario != null;
 		}
 		return super.eIsSet(featureID);
 	}

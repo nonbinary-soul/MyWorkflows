@@ -34,9 +34,9 @@ public class ProyectommModelingAssistantProviderOfTablaEditPart extends Proyecto
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(TablaEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(ProyectommElementTypes.UsuarioTabla_accedida_4002);
-		types.add(ProyectommElementTypes.ServicioTabla_accedida_4003);
-		types.add(ProyectommElementTypes.MensajeTabla_accedida_4004);
+		types.add(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002);
+		types.add(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003);
+		types.add(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004);
 		return types;
 	}
 
@@ -55,11 +55,11 @@ public class ProyectommModelingAssistantProviderOfTablaEditPart extends Proyecto
 	*/
 	public List<IElementType> doGetTypesForSource(TablaEditPart target, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == ProyectommElementTypes.UsuarioTabla_accedida_4002) {
+		if (relationshipType == ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002) {
 			types.add(ProyectommElementTypes.Usuario_3010);
-		} else if (relationshipType == ProyectommElementTypes.ServicioTabla_accedida_4003) {
+		} else if (relationshipType == ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003) {
 			types.add(ProyectommElementTypes.Servicio_3011);
-		} else if (relationshipType == ProyectommElementTypes.MensajeTabla_accedida_4004) {
+		} else if (relationshipType == ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004) {
 			types.add(ProyectommElementTypes.Envio_3006);
 			types.add(ProyectommElementTypes.Recepcion_3007);
 		}

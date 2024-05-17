@@ -2,9 +2,9 @@
  *************************************************************************
  * This code is 100% auto-generated
  * from:
- *   /proyecto-dmss/MyWorkflows/proyecto/metamodel/proyectomm.ecore
+ *   /proyecto/metamodel/proyectomm.ecore
  * using:
- *   /proyecto-dmss/MyWorkflows/proyecto/metamodel/proyectomm.genmodel
+ *   /proyecto/metamodel/proyectomm.genmodel
  *   org.eclipse.ocl.examples.codegen.oclinecore.OCLinEcoreTables
  *
  * Do not edit it.
@@ -417,7 +417,7 @@ public class ProyectommTables extends AbstractTables
 
 		public static final ExecutorProperty _Lectura__datos_a_leer = new EcoreExecutorProperty(ProyectommPackage.Literals.LECTURA__DATOS_ALEER, Types._Lectura, 0);
 
-		public static final ExecutorProperty _Mensaje__tabla_accedida = new EcoreExecutorProperty(ProyectommPackage.Literals.MENSAJE__TABLA_ACCEDIDA, Types._Mensaje, 0);
+		public static final ExecutorProperty _Mensaje__tabla_accedida_por_mensaje = new EcoreExecutorProperty(ProyectommPackage.Literals.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE, Types._Mensaje, 0);
 
 		public static final ExecutorProperty _Opcion__nombre = new EcoreExecutorProperty(ProyectommPackage.Literals.OPCION__NOMBRE, Types._Opcion, 0);
 		public static final ExecutorProperty _Opcion__Atributo__opciones = new ExecutorPropertyWithImplementation("Atributo", Types._Opcion, 1, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.ATRIBUTO__OPCIONES));
@@ -428,22 +428,22 @@ public class ProyectommTables extends AbstractTables
 		public static final ExecutorProperty _ProcesoDeNegocio__bases_de_datos = new EcoreExecutorProperty(ProyectommPackage.Literals.PROCESO_DE_NEGOCIO__BASES_DE_DATOS, Types._ProcesoDeNegocio, 1);
 		public static final ExecutorProperty _ProcesoDeNegocio__nombre = new EcoreExecutorProperty(ProyectommPackage.Literals.PROCESO_DE_NEGOCIO__NOMBRE, Types._ProcesoDeNegocio, 2);
 
-		public static final ExecutorProperty _Servicio__tabla_accedida = new EcoreExecutorProperty(ProyectommPackage.Literals.SERVICIO__TABLA_ACCEDIDA, Types._Servicio, 0);
+		public static final ExecutorProperty _Servicio__tabla_accedida_por_servicio = new EcoreExecutorProperty(ProyectommPackage.Literals.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO, Types._Servicio, 0);
 
 		public static final ExecutorProperty _Tabla__atributos = new EcoreExecutorProperty(ProyectommPackage.Literals.TABLA__ATRIBUTOS, Types._Tabla, 0);
 		public static final ExecutorProperty _Tabla__nombre = new EcoreExecutorProperty(ProyectommPackage.Literals.TABLA__NOMBRE, Types._Tabla, 1);
 		public static final ExecutorProperty _Tabla__BaseDeDatos__tablas = new ExecutorPropertyWithImplementation("BaseDeDatos", Types._Tabla, 2, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.BASE_DE_DATOS__TABLAS));
 		public static final ExecutorProperty _Tabla__Lectura__datos_a_leer = new ExecutorPropertyWithImplementation("Lectura", Types._Tabla, 3, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.LECTURA__DATOS_ALEER));
-		public static final ExecutorProperty _Tabla__Mensaje__tabla_accedida = new ExecutorPropertyWithImplementation("Mensaje", Types._Tabla, 4, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.MENSAJE__TABLA_ACCEDIDA));
-		public static final ExecutorProperty _Tabla__Servicio__tabla_accedida = new ExecutorPropertyWithImplementation("Servicio", Types._Tabla, 5, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.SERVICIO__TABLA_ACCEDIDA));
-		public static final ExecutorProperty _Tabla__Usuario__tabla_accedida = new ExecutorPropertyWithImplementation("Usuario", Types._Tabla, 6, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA));
+		public static final ExecutorProperty _Tabla__Mensaje__tabla_accedida_por_mensaje = new ExecutorPropertyWithImplementation("Mensaje", Types._Tabla, 4, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE));
+		public static final ExecutorProperty _Tabla__Servicio__tabla_accedida_por_servicio = new ExecutorPropertyWithImplementation("Servicio", Types._Tabla, 5, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO));
+		public static final ExecutorProperty _Tabla__Usuario__tabla_accedida_por_usuario = new ExecutorPropertyWithImplementation("Usuario", Types._Tabla, 6, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA_POR_USUARIO));
 
 		public static final ExecutorProperty _Tarea__nombre = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__NOMBRE, Types._Tarea, 0);
 		public static final ExecutorProperty _Tarea__predecesor = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__PREDECESOR, Types._Tarea, 1);
 		public static final ExecutorProperty _Tarea__sucesor = new EcoreExecutorProperty(ProyectommPackage.Literals.TAREA__SUCESOR, Types._Tarea, 2);
 		public static final ExecutorProperty _Tarea__Actor__tareas = new ExecutorPropertyWithImplementation("Actor", Types._Tarea, 3, new EcoreLibraryOppositeProperty(ProyectommPackage.Literals.ACTOR__TAREAS));
 
-		public static final ExecutorProperty _Usuario__tabla_accedida = new EcoreExecutorProperty(ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA, Types._Usuario, 0);
+		public static final ExecutorProperty _Usuario__tabla_accedida_por_usuario = new EcoreExecutorProperty(ProyectommPackage.Literals.USUARIO__TABLA_ACCEDIDA_POR_USUARIO, Types._Usuario, 0);
 		static {
 			Init.initEnd();
 		}
@@ -1512,7 +1512,7 @@ public class ProyectommTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
 			ProyectommTables.Properties._Tarea__sucesor,
-			ProyectommTables.Properties._Mensaje__tabla_accedida
+			ProyectommTables.Properties._Mensaje__tabla_accedida_por_mensaje
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Fin = {
@@ -1570,7 +1570,7 @@ public class ProyectommTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
 			ProyectommTables.Properties._Tarea__sucesor,
-			ProyectommTables.Properties._Mensaje__tabla_accedida
+			ProyectommTables.Properties._Mensaje__tabla_accedida_por_mensaje
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Opcion = {
@@ -1603,7 +1603,7 @@ public class ProyectommTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
 			ProyectommTables.Properties._Tarea__sucesor,
-			ProyectommTables.Properties._Mensaje__tabla_accedida
+			ProyectommTables.Properties._Mensaje__tabla_accedida_por_mensaje
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Servicio = {
@@ -1614,7 +1614,7 @@ public class ProyectommTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
 			ProyectommTables.Properties._Tarea__sucesor,
-			ProyectommTables.Properties._Servicio__tabla_accedida
+			ProyectommTables.Properties._Servicio__tabla_accedida_por_servicio
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Tabla = {
@@ -1640,7 +1640,7 @@ public class ProyectommTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			ProyectommTables.Properties._Tarea__predecesor,
 			ProyectommTables.Properties._Tarea__sucesor,
-			ProyectommTables.Properties._Usuario__tabla_accedida
+			ProyectommTables.Properties._Usuario__tabla_accedida_por_usuario
 		};
 
 		/**

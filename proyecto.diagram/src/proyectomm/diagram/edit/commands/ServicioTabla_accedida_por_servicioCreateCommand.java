@@ -11,14 +11,14 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
+import proyectomm.Servicio;
 import proyectomm.Tabla;
-import proyectomm.Usuario;
 import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class UsuarioTabla_accedidaCreateCommand extends EditElementCommand {
+public class ServicioTabla_accedida_por_servicioCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -33,7 +33,8 @@ public class UsuarioTabla_accedidaCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public UsuarioTabla_accedidaCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
+	public ServicioTabla_accedida_por_servicioCreateCommand(CreateRelationshipRequest request, EObject source,
+			EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
@@ -46,7 +47,7 @@ public class UsuarioTabla_accedidaCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Usuario) {
+		if (source != null && false == source instanceof Servicio) {
 			return false;
 		}
 		if (target != null && false == target instanceof Tabla) {
@@ -57,7 +58,7 @@ public class UsuarioTabla_accedidaCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateUsuarioTabla_accedida_4002(getSource(), getTarget());
+				.canCreateServicioTabla_accedida_por_servicio_4003(getSource(), getTarget());
 	}
 
 	/**
@@ -69,7 +70,7 @@ public class UsuarioTabla_accedidaCreateCommand extends EditElementCommand {
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().setTabla_accedida(getTarget());
+			getSource().setTabla_accedida_por_servicio(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 
@@ -85,8 +86,8 @@ public class UsuarioTabla_accedidaCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected Usuario getSource() {
-		return (Usuario) source;
+	protected Servicio getSource() {
+		return (Servicio) source;
 	}
 
 	/**

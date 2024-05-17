@@ -48,13 +48,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proyectomm.ecore#//Intermedia/descripcion"/>
     </genClasses>
     <genClasses ecoreClass="proyectomm.ecore#//Usuario">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Usuario/tabla_accedida"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Usuario/tabla_accedida_por_usuario"/>
     </genClasses>
     <genClasses ecoreClass="proyectomm.ecore#//Servicio">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Servicio/tabla_accedida"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Servicio/tabla_accedida_por_servicio"/>
     </genClasses>
     <genClasses image="false" ecoreClass="proyectomm.ecore#//Mensaje">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Mensaje/tabla_accedida"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Mensaje/tabla_accedida_por_mensaje"/>
     </genClasses>
     <genClasses ecoreClass="proyectomm.ecore#//Envio"/>
     <genClasses ecoreClass="proyectomm.ecore#//Recepcion"/>

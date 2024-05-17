@@ -63,9 +63,9 @@ public class ProyectommPaletteFactory {
 		paletteContainer.add(createAtributo_seleccionado1CreationTool());
 		paletteContainer.add(createReferencia_a2CreationTool());
 		paletteContainer.add(createSucesor3CreationTool());
-		paletteContainer.add(createTabla_accedida4CreationTool());
-		paletteContainer.add(createTabla_accedida5CreationTool());
-		paletteContainer.add(createTabla_accedida6CreationTool());
+		paletteContainer.add(createTabla_accedida_por_mensaje4CreationTool());
+		paletteContainer.add(createTabla_accedida_por_servicio5CreationTool());
+		paletteContainer.add(createTabla_accedida_por_usuario6CreationTool());
 		return paletteContainer;
 	}
 
@@ -297,13 +297,13 @@ public class ProyectommPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTabla_accedida4CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida4CreationTool_title,
-				Messages.Tabla_accedida4CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.UsuarioTabla_accedida_4002));
-		entry.setId("createTabla_accedida4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(
-				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.UsuarioTabla_accedida_4002));
+	private ToolEntry createTabla_accedida_por_mensaje4CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_mensaje4CreationTool_title,
+				Messages.Tabla_accedida_por_mensaje4CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004));
+		entry.setId("createTabla_accedida_por_mensaje4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes
+				.getImageDescriptor(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -311,13 +311,13 @@ public class ProyectommPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTabla_accedida5CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida5CreationTool_title,
-				Messages.Tabla_accedida5CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.ServicioTabla_accedida_4003));
-		entry.setId("createTabla_accedida5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(
-				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.ServicioTabla_accedida_4003));
+	private ToolEntry createTabla_accedida_por_servicio5CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_servicio5CreationTool_title,
+				Messages.Tabla_accedida_por_servicio5CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003));
+		entry.setId("createTabla_accedida_por_servicio5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes
+				.getImageDescriptor(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -325,13 +325,13 @@ public class ProyectommPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTabla_accedida6CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida6CreationTool_title,
-				Messages.Tabla_accedida6CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.MensajeTabla_accedida_4004));
-		entry.setId("createTabla_accedida6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(
-				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.MensajeTabla_accedida_4004));
+	private ToolEntry createTabla_accedida_por_usuario6CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_usuario6CreationTool_title,
+				Messages.Tabla_accedida_por_usuario6CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002));
+		entry.setId("createTabla_accedida_por_usuario6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(ProyectommElementTypes
+				.getImageDescriptor(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

@@ -57,7 +57,8 @@ import proyectomm.diagram.providers.ProyectommParserProvider;
 /**
  * @generated
  */
-public class MensajeTabla_accedidaExternalLabelEditPart extends LabelEditPart implements ITextAwareEditPart {
+public class MensajeTabla_accedida_por_mensajeExternalLabelEditPart extends LabelEditPart
+		implements ITextAwareEditPart {
 
 	/**
 	* @generated
@@ -94,15 +95,15 @@ public class MensajeTabla_accedidaExternalLabelEditPart extends LabelEditPart im
 	*/
 	static {
 		registerSnapBackPosition(
-				ProyectommVisualIDRegistry
-						.getType(proyectomm.diagram.edit.parts.MensajeTabla_accedidaExternalLabelEditPart.VISUAL_ID),
+				ProyectommVisualIDRegistry.getType(
+						proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeExternalLabelEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	* @generated
 	*/
-	public MensajeTabla_accedidaExternalLabelEditPart(View view) {
+	public MensajeTabla_accedida_por_mensajeExternalLabelEditPart(View view) {
 		super(view);
 	}
 
@@ -310,7 +311,7 @@ public class MensajeTabla_accedidaExternalLabelEditPart extends LabelEditPart im
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.MensajeTabla_accedida_4004,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;
@@ -593,18 +594,18 @@ public class MensajeTabla_accedidaExternalLabelEditPart extends LabelEditPart im
 	* @generated
 	*/
 	protected IFigure createFigurePrim() {
-		return new MensajeTabla_accedidaExternalLabelFigure();
+		return new MensajeTabla_accedida_por_mensajeExternalLabelFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class MensajeTabla_accedidaExternalLabelFigure extends WrappingLabel {
+	public class MensajeTabla_accedida_por_mensajeExternalLabelFigure extends WrappingLabel {
 
 		/**
 		 * @generated
 		 */
-		public MensajeTabla_accedidaExternalLabelFigure() {
+		public MensajeTabla_accedida_por_mensajeExternalLabelFigure() {
 			this.setText("Acceso a la tabla...");
 		}
 

@@ -136,23 +136,23 @@ public class ProyectommEditPartFactory implements EditPartFactory {
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);
 
-			case UsuarioTabla_accedidaEditPart.VISUAL_ID:
-				return new UsuarioTabla_accedidaEditPart(view);
+			case UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID:
+				return new UsuarioTabla_accedida_por_usuarioEditPart(view);
 
-			case WrappingLabel2EditPart.VISUAL_ID:
-				return new WrappingLabel2EditPart(view);
+			case UsuarioTabla_accedida_por_usuarioExternalLabelEditPart.VISUAL_ID:
+				return new UsuarioTabla_accedida_por_usuarioExternalLabelEditPart(view);
 
-			case ServicioTabla_accedidaEditPart.VISUAL_ID:
-				return new ServicioTabla_accedidaEditPart(view);
+			case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
+				return new ServicioTabla_accedida_por_servicioEditPart(view);
 
-			case WrappingLabel3EditPart.VISUAL_ID:
-				return new WrappingLabel3EditPart(view);
+			case ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID:
+				return new ServicioTabla_accedida_por_servicioExternalLabelEditPart(view);
 
-			case MensajeTabla_accedidaEditPart.VISUAL_ID:
-				return new MensajeTabla_accedidaEditPart(view);
+			case MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID:
+				return new MensajeTabla_accedida_por_mensajeEditPart(view);
 
-			case MensajeTabla_accedidaExternalLabelEditPart.VISUAL_ID:
-				return new MensajeTabla_accedidaExternalLabelEditPart(view);
+			case MensajeTabla_accedida_por_mensajeExternalLabelEditPart.VISUAL_ID:
+				return new MensajeTabla_accedida_por_mensajeExternalLabelEditPart(view);
 
 			case BDAtributo_seleccionadoEditPart.VISUAL_ID:
 				return new BDAtributo_seleccionadoEditPart(view);

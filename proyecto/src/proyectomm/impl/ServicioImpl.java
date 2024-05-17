@@ -21,22 +21,21 @@ import proyectomm.Tabla;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link proyectomm.impl.ServicioImpl#getTabla_accedida <em>Tabla accedida</em>}</li>
+ *   <li>{@link proyectomm.impl.ServicioImpl#getTabla_accedida_por_servicio <em>Tabla accedida por servicio</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ServicioImpl extends IntermediaImpl implements Servicio {
 	/**
-	 * The cached value of the '{@link #getTabla_accedida() <em>Tabla accedida</em>}' reference.
+	 * The cached value of the '{@link #getTabla_accedida_por_servicio() <em>Tabla accedida por servicio</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTabla_accedida()
+	 * @see #getTabla_accedida_por_servicio()
 	 * @generated
 	 * @ordered
 	 */
-	protected Tabla tabla_accedida;
-
+	protected Tabla tabla_accedida_por_servicio;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,16 +61,16 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	 * @generated
 	 */
 	@Override
-	public Tabla getTabla_accedida() {
-		if (tabla_accedida != null && tabla_accedida.eIsProxy()) {
-			InternalEObject oldTabla_accedida = (InternalEObject)tabla_accedida;
-			tabla_accedida = (Tabla)eResolveProxy(oldTabla_accedida);
-			if (tabla_accedida != oldTabla_accedida) {
+	public Tabla getTabla_accedida_por_servicio() {
+		if (tabla_accedida_por_servicio != null && tabla_accedida_por_servicio.eIsProxy()) {
+			InternalEObject oldTabla_accedida_por_servicio = (InternalEObject)tabla_accedida_por_servicio;
+			tabla_accedida_por_servicio = (Tabla)eResolveProxy(oldTabla_accedida_por_servicio);
+			if (tabla_accedida_por_servicio != oldTabla_accedida_por_servicio) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProyectommPackage.SERVICIO__TABLA_ACCEDIDA, oldTabla_accedida, tabla_accedida));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProyectommPackage.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO, oldTabla_accedida_por_servicio, tabla_accedida_por_servicio));
 			}
 		}
-		return tabla_accedida;
+		return tabla_accedida_por_servicio;
 	}
 
 	/**
@@ -79,8 +78,8 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tabla basicGetTabla_accedida() {
-		return tabla_accedida;
+	public Tabla basicGetTabla_accedida_por_servicio() {
+		return tabla_accedida_por_servicio;
 	}
 
 	/**
@@ -89,11 +88,11 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	 * @generated
 	 */
 	@Override
-	public void setTabla_accedida(Tabla newTabla_accedida) {
-		Tabla oldTabla_accedida = tabla_accedida;
-		tabla_accedida = newTabla_accedida;
+	public void setTabla_accedida_por_servicio(Tabla newTabla_accedida_por_servicio) {
+		Tabla oldTabla_accedida_por_servicio = tabla_accedida_por_servicio;
+		tabla_accedida_por_servicio = newTabla_accedida_por_servicio;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.SERVICIO__TABLA_ACCEDIDA, oldTabla_accedida, tabla_accedida));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProyectommPackage.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO, oldTabla_accedida_por_servicio, tabla_accedida_por_servicio));
 	}
 
 	/**
@@ -104,9 +103,9 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA:
-				if (resolve) return getTabla_accedida();
-				return basicGetTabla_accedida();
+			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO:
+				if (resolve) return getTabla_accedida_por_servicio();
+				return basicGetTabla_accedida_por_servicio();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,8 +118,8 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA:
-				setTabla_accedida((Tabla)newValue);
+			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO:
+				setTabla_accedida_por_servicio((Tabla)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA:
-				setTabla_accedida((Tabla)null);
+			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO:
+				setTabla_accedida_por_servicio((Tabla)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -149,8 +148,8 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA:
-				return tabla_accedida != null;
+			case ProyectommPackage.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO:
+				return tabla_accedida_por_servicio != null;
 		}
 		return super.eIsSet(featureID);
 	}

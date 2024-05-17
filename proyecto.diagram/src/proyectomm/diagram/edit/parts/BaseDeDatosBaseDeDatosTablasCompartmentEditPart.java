@@ -102,9 +102,9 @@ public class BaseDeDatosBaseDeDatosTablasCompartmentEditPart extends ShapeCompar
 				for (Object type : ((CreateUnspecifiedTypeConnectionRequest) request).getElementTypes()) {
 					if (type instanceof IElementType) {
 						IElementType elementType = (IElementType) type;
-						if (elementType.equals(ProyectommElementTypes.UsuarioTabla_accedida_4002)
-								|| elementType.equals(ProyectommElementTypes.ServicioTabla_accedida_4003)
-								|| elementType.equals(ProyectommElementTypes.MensajeTabla_accedida_4004))
+						if (elementType.equals(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002)
+								|| elementType.equals(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003)
+								|| elementType.equals(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004))
 							return super.getTargetEditPart(request);
 					}
 				}

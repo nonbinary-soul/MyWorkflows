@@ -18,11 +18,11 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
-import proyectomm.diagram.edit.commands.ServicioTabla_accedidaCreateCommand;
-import proyectomm.diagram.edit.commands.ServicioTabla_accedidaReorientCommand;
+import proyectomm.diagram.edit.commands.ServicioTabla_accedida_por_servicioCreateCommand;
+import proyectomm.diagram.edit.commands.ServicioTabla_accedida_por_servicioReorientCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorCreateCommand;
 import proyectomm.diagram.edit.commands.TareaSucesorReorientCommand;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedidaEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
@@ -65,7 +65,8 @@ public class ServicioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEd
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (ProyectommVisualIDRegistry.getVisualID(outgoingLink) == ServicioTabla_accedidaEditPart.VISUAL_ID) {
+			if (ProyectommVisualIDRegistry
+					.getVisualID(outgoingLink) == ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -101,8 +102,9 @@ public class ServicioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEd
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.ServicioTabla_accedida_4003 == req.getElementType()) {
-			return getGEFWrapper(new ServicioTabla_accedidaCreateCommand(req, req.getSource(), req.getTarget()));
+		if (ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003 == req.getElementType()) {
+			return getGEFWrapper(
+					new ServicioTabla_accedida_por_servicioCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -114,7 +116,7 @@ public class ServicioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEd
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.ServicioTabla_accedida_4003 == req.getElementType()) {
+		if (ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -130,8 +132,8 @@ public class ServicioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEd
 		switch (getVisualID(req)) {
 		case TareaSucesorEditPart.VISUAL_ID:
 			return getGEFWrapper(new TareaSucesorReorientCommand(req));
-		case ServicioTabla_accedidaEditPart.VISUAL_ID:
-			return getGEFWrapper(new ServicioTabla_accedidaReorientCommand(req));
+		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
+			return getGEFWrapper(new ServicioTabla_accedida_por_servicioReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

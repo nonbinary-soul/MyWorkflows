@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Acceleo GraphicalSample Module IDE Plug-in
+Bundle-Name: Acceleo Workflow Module IDE Plug-in
 Bundle-SymbolicName: org.eclipse.acceleo.module.graphicalsample.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.acceleo.module.graphicalsample.ui.Activator

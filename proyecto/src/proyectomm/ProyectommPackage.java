@@ -800,13 +800,13 @@ public interface ProyectommPackage extends EPackage {
 	int USUARIO__DESCRIPCION = INTERMEDIA__DESCRIPCION;
 
 	/**
-	 * The feature id for the '<em><b>Tabla accedida</b></em>' reference.
+	 * The feature id for the '<em><b>Tabla accedida por usuario</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__TABLA_ACCEDIDA = INTERMEDIA_FEATURE_COUNT + 0;
+	int USUARIO__TABLA_ACCEDIDA_POR_USUARIO = INTERMEDIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Usuario</em>' class.
@@ -909,13 +909,13 @@ public interface ProyectommPackage extends EPackage {
 	int SERVICIO__DESCRIPCION = INTERMEDIA__DESCRIPCION;
 
 	/**
-	 * The feature id for the '<em><b>Tabla accedida</b></em>' reference.
+	 * The feature id for the '<em><b>Tabla accedida por servicio</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO__TABLA_ACCEDIDA = INTERMEDIA_FEATURE_COUNT + 0;
+	int SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO = INTERMEDIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Servicio</em>' class.
@@ -1018,13 +1018,13 @@ public interface ProyectommPackage extends EPackage {
 	int MENSAJE__DESCRIPCION = INTERMEDIA__DESCRIPCION;
 
 	/**
-	 * The feature id for the '<em><b>Tabla accedida</b></em>' reference.
+	 * The feature id for the '<em><b>Tabla accedida por mensaje</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MENSAJE__TABLA_ACCEDIDA = INTERMEDIA_FEATURE_COUNT + 0;
+	int MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE = INTERMEDIA_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Mensaje</em>' class.
@@ -1127,13 +1127,13 @@ public interface ProyectommPackage extends EPackage {
 	int ENVIO__DESCRIPCION = MENSAJE__DESCRIPCION;
 
 	/**
-	 * The feature id for the '<em><b>Tabla accedida</b></em>' reference.
+	 * The feature id for the '<em><b>Tabla accedida por mensaje</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIO__TABLA_ACCEDIDA = MENSAJE__TABLA_ACCEDIDA;
+	int ENVIO__TABLA_ACCEDIDA_POR_MENSAJE = MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE;
 
 	/**
 	 * The number of structural features of the '<em>Envio</em>' class.
@@ -1236,13 +1236,13 @@ public interface ProyectommPackage extends EPackage {
 	int RECEPCION__DESCRIPCION = MENSAJE__DESCRIPCION;
 
 	/**
-	 * The feature id for the '<em><b>Tabla accedida</b></em>' reference.
+	 * The feature id for the '<em><b>Tabla accedida por mensaje</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPCION__TABLA_ACCEDIDA = MENSAJE__TABLA_ACCEDIDA;
+	int RECEPCION__TABLA_ACCEDIDA_POR_MENSAJE = MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE;
 
 	/**
 	 * The number of structural features of the '<em>Recepcion</em>' class.
@@ -2283,15 +2283,15 @@ public interface ProyectommPackage extends EPackage {
 	EClass getUsuario();
 
 	/**
-	 * Returns the meta object for the reference '{@link proyectomm.Usuario#getTabla_accedida <em>Tabla accedida</em>}'.
+	 * Returns the meta object for the reference '{@link proyectomm.Usuario#getTabla_accedida_por_usuario <em>Tabla accedida por usuario</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tabla accedida</em>'.
-	 * @see proyectomm.Usuario#getTabla_accedida()
+	 * @return the meta object for the reference '<em>Tabla accedida por usuario</em>'.
+	 * @see proyectomm.Usuario#getTabla_accedida_por_usuario()
 	 * @see #getUsuario()
 	 * @generated
 	 */
-	EReference getUsuario_Tabla_accedida();
+	EReference getUsuario_Tabla_accedida_por_usuario();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Servicio <em>Servicio</em>}'.
@@ -2304,15 +2304,15 @@ public interface ProyectommPackage extends EPackage {
 	EClass getServicio();
 
 	/**
-	 * Returns the meta object for the reference '{@link proyectomm.Servicio#getTabla_accedida <em>Tabla accedida</em>}'.
+	 * Returns the meta object for the reference '{@link proyectomm.Servicio#getTabla_accedida_por_servicio <em>Tabla accedida por servicio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tabla accedida</em>'.
-	 * @see proyectomm.Servicio#getTabla_accedida()
+	 * @return the meta object for the reference '<em>Tabla accedida por servicio</em>'.
+	 * @see proyectomm.Servicio#getTabla_accedida_por_servicio()
 	 * @see #getServicio()
 	 * @generated
 	 */
-	EReference getServicio_Tabla_accedida();
+	EReference getServicio_Tabla_accedida_por_servicio();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Mensaje <em>Mensaje</em>}'.
@@ -2325,15 +2325,15 @@ public interface ProyectommPackage extends EPackage {
 	EClass getMensaje();
 
 	/**
-	 * Returns the meta object for the reference '{@link proyectomm.Mensaje#getTabla_accedida <em>Tabla accedida</em>}'.
+	 * Returns the meta object for the reference '{@link proyectomm.Mensaje#getTabla_accedida_por_mensaje <em>Tabla accedida por mensaje</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tabla accedida</em>'.
-	 * @see proyectomm.Mensaje#getTabla_accedida()
+	 * @return the meta object for the reference '<em>Tabla accedida por mensaje</em>'.
+	 * @see proyectomm.Mensaje#getTabla_accedida_por_mensaje()
 	 * @see #getMensaje()
 	 * @generated
 	 */
-	EReference getMensaje_Tabla_accedida();
+	EReference getMensaje_Tabla_accedida_por_mensaje();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Envio <em>Envio</em>}'.
@@ -2873,12 +2873,12 @@ public interface ProyectommPackage extends EPackage {
 		EClass USUARIO = eINSTANCE.getUsuario();
 
 		/**
-		 * The meta object literal for the '<em><b>Tabla accedida</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tabla accedida por usuario</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USUARIO__TABLA_ACCEDIDA = eINSTANCE.getUsuario_Tabla_accedida();
+		EReference USUARIO__TABLA_ACCEDIDA_POR_USUARIO = eINSTANCE.getUsuario_Tabla_accedida_por_usuario();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.ServicioImpl <em>Servicio</em>}' class.
@@ -2891,12 +2891,12 @@ public interface ProyectommPackage extends EPackage {
 		EClass SERVICIO = eINSTANCE.getServicio();
 
 		/**
-		 * The meta object literal for the '<em><b>Tabla accedida</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tabla accedida por servicio</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICIO__TABLA_ACCEDIDA = eINSTANCE.getServicio_Tabla_accedida();
+		EReference SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO = eINSTANCE.getServicio_Tabla_accedida_por_servicio();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.MensajeImpl <em>Mensaje</em>}' class.
@@ -2909,12 +2909,12 @@ public interface ProyectommPackage extends EPackage {
 		EClass MENSAJE = eINSTANCE.getMensaje();
 
 		/**
-		 * The meta object literal for the '<em><b>Tabla accedida</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tabla accedida por mensaje</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MENSAJE__TABLA_ACCEDIDA = eINSTANCE.getMensaje_Tabla_accedida();
+		EReference MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE = eINSTANCE.getMensaje_Tabla_accedida_por_mensaje();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.EnvioImpl <em>Envio</em>}' class.

@@ -209,29 +209,29 @@
       <descriptors name="TareaSucesorExternalLabelFigure">
         <actualFigure xsi:type="gmfgraph:Label" name="TareaSucesorExternalLabel"/>
       </descriptors>
-      <descriptors name="UsuarioTabla_accedidaFigure">
-        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UsuarioTabla_accedidaFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.1">
+      <descriptors name="UsuarioTabla_accedida_por_usuarioFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="UsuarioTabla_accedida_por_usuarioFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.1">
           <foregroundColor xsi:type="gmfgraph:RGBColor"/>
         </actualFigure>
       </descriptors>
-      <descriptors name="UsuarioTabla_accedidaExternalLabelFigure">
-        <actualFigure xsi:type="gmfgraph:Label" name="UsuarioTabla_accedidaExternalLabel"/>
+      <descriptors name="UsuarioTabla_accedida_por_usuarioExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="UsuarioTabla_accedida_por_usuarioExternalLabel" text="Acceso a la tabla..."/>
       </descriptors>
-      <descriptors name="ServicioTabla_accedidaFigure">
-        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ServicioTabla_accedidaFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.2">
+      <descriptors name="ServicioTabla_accedida_por_servicioFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ServicioTabla_accedida_por_servicioFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.2">
           <foregroundColor xsi:type="gmfgraph:RGBColor"/>
         </actualFigure>
       </descriptors>
-      <descriptors name="ServicioTabla_accedidaExternalLabelFigure">
-        <actualFigure xsi:type="gmfgraph:Label" name="ServicioTabla_accedidaExternalLabel"/>
+      <descriptors name="ServicioTabla_accedida_por_servicioExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="ServicioTabla_accedida_por_servicioExternalLabel" text="Acceso a la tabla..."/>
       </descriptors>
-      <descriptors name="MensajeTabla_accedidaFigure">
-        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MensajeTabla_accedidaFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.3">
+      <descriptors name="MensajeTabla_accedida_por_mensajeFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MensajeTabla_accedida_por_mensajeFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.3">
           <foregroundColor xsi:type="gmfgraph:RGBColor"/>
         </actualFigure>
       </descriptors>
-      <descriptors name="MensajeTabla_accedidaExternalLabelFigure">
-        <actualFigure xsi:type="gmfgraph:Label" name="MensajeTabla_accedidaExternalLabel" text="Acceso a la tabla..."/>
+      <descriptors name="MensajeTabla_accedida_por_mensajeExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="MensajeTabla_accedida_por_mensajeExternalLabel" text="Acceso a la tabla..."/>
       </descriptors>
       <descriptors name="BDAtributo_seleccionadoFigure">
         <actualFigure xsi:type="gmfgraph:PolylineConnection" name="BDAtributo_seleccionadoFigure" lineWidth="2" lineKind="LINE_DASH" targetDecoration="/0/@figures.0/@figures.4">
@@ -266,9 +266,9 @@
     <nodes name="ForeignKey" figure="ForeignKeyFigure"/>
     <nodes name="Opcion" figure="OpcionFigure"/>
     <connections name="TareaSucesor" figure="TareaSucesorFigure"/>
-    <connections name="UsuarioTabla_accedida" figure="UsuarioTabla_accedidaFigure"/>
-    <connections name="ServicioTabla_accedida" figure="ServicioTabla_accedidaFigure"/>
-    <connections name="MensajeTabla_accedida" figure="MensajeTabla_accedidaFigure"/>
+    <connections name="UsuarioTabla_accedida_por_usuario" figure="UsuarioTabla_accedida_por_usuarioFigure"/>
+    <connections name="ServicioTabla_accedida_por_servicio" figure="ServicioTabla_accedida_por_servicioFigure"/>
+    <connections name="MensajeTabla_accedida_por_mensaje" figure="MensajeTabla_accedida_por_mensajeFigure"/>
     <connections name="BDAtributo_seleccionado" figure="BDAtributo_seleccionadoFigure"/>
     <connections name="ForeignKeyReferencia_a" figure="ForeignKeyReferencia_aFigure"/>
     <compartments name="ActorTareasCompartment" figure="ActorFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.0/@accessors.1"/>
@@ -291,9 +291,9 @@
     <labels name="ForeignKeyLabel" figure="ForeignKeyFigure" accessor="/0/@figures.0/@descriptors.19/@accessors.0"/>
     <labels name="OpcionLabel" figure="OpcionFigure" accessor="/0/@figures.0/@descriptors.20/@accessors.0"/>
     <labels name="TareaSucesorExternalLabel" figure="TareaSucesorExternalLabelFigure" elementIcon="false"/>
-    <labels name="UsuarioTabla_accedidaExternalLabel" figure="UsuarioTabla_accedidaExternalLabelFigure" elementIcon="false"/>
-    <labels name="ServicioTabla_accedidaExternalLabel" figure="ServicioTabla_accedidaExternalLabelFigure" elementIcon="false"/>
-    <labels name="MensajeTabla_accedidaExternalLabel" figure="MensajeTabla_accedidaExternalLabelFigure" elementIcon="false"/>
+    <labels name="UsuarioTabla_accedida_por_usuarioExternalLabel" figure="UsuarioTabla_accedida_por_usuarioExternalLabelFigure" elementIcon="false"/>
+    <labels name="ServicioTabla_accedida_por_servicioExternalLabel" figure="ServicioTabla_accedida_por_servicioExternalLabelFigure" elementIcon="false"/>
+    <labels name="MensajeTabla_accedida_por_mensajeExternalLabel" figure="MensajeTabla_accedida_por_mensajeExternalLabelFigure" elementIcon="false"/>
     <labels name="BDAtributo_seleccionadoExternalLabel" figure="BDAtributo_seleccionadoExternalLabelFigure" elementIcon="false"/>
     <labels name="ForeignKeyReferencia_aExternalLabel" figure="ForeignKeyReferencia_aExternalLabelFigure" elementIcon="false"/>
   </gmfgraph:Canvas>

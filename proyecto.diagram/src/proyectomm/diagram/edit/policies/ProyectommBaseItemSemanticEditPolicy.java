@@ -333,40 +333,40 @@ public class ProyectommBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateUsuarioTabla_accedida_4002(Usuario source, Tabla target) {
+		public boolean canCreateUsuarioTabla_accedida_por_usuario_4002(Usuario source, Tabla target) {
 			if (source != null) {
-				if (source.getTabla_accedida() != null) {
+				if (source.getTabla_accedida_por_usuario() != null) {
 					return false;
 				}
 			}
 
-			return canExistUsuarioTabla_accedida_4002(source, target);
+			return canExistUsuarioTabla_accedida_por_usuario_4002(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateServicioTabla_accedida_4003(Servicio source, Tabla target) {
+		public boolean canCreateServicioTabla_accedida_por_servicio_4003(Servicio source, Tabla target) {
 			if (source != null) {
-				if (source.getTabla_accedida() != null) {
+				if (source.getTabla_accedida_por_servicio() != null) {
 					return false;
 				}
 			}
 
-			return canExistServicioTabla_accedida_4003(source, target);
+			return canExistServicioTabla_accedida_por_servicio_4003(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMensajeTabla_accedida_4004(Mensaje source, Tabla target) {
+		public boolean canCreateMensajeTabla_accedida_por_mensaje_4004(Mensaje source, Tabla target) {
 			if (source != null) {
-				if (source.getTabla_accedida() != null) {
+				if (source.getTabla_accedida_por_mensaje() != null) {
 					return false;
 				}
 			}
 
-			return canExistMensajeTabla_accedida_4004(source, target);
+			return canExistMensajeTabla_accedida_por_mensaje_4004(source, target);
 		}
 
 		/**
@@ -405,21 +405,21 @@ public class ProyectommBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
-		public boolean canExistUsuarioTabla_accedida_4002(Usuario source, Tabla target) {
+		public boolean canExistUsuarioTabla_accedida_por_usuario_4002(Usuario source, Tabla target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistServicioTabla_accedida_4003(Servicio source, Tabla target) {
+		public boolean canExistServicioTabla_accedida_por_servicio_4003(Servicio source, Tabla target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistMensajeTabla_accedida_4004(Mensaje source, Tabla target) {
+		public boolean canExistMensajeTabla_accedida_por_mensaje_4004(Mensaje source, Tabla target) {
 			return true;
 		}
 

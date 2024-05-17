@@ -571,8 +571,8 @@
       </metamodel>
       <metamodel nsURI="http://www.example.org/proyectomm">
          <specializationType
-               id="proyecto.diagram.UsuarioTabla_accedida_4002"
-               name="%metatype.name.UsuarioTabla_accedida_4002"
+               id="proyecto.diagram.UsuarioTabla_accedida_por_usuario_4002"
+               name="%metatype.name.UsuarioTabla_accedida_por_usuario_4002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4002"/>
@@ -580,8 +580,8 @@
       </metamodel>
       <metamodel nsURI="http://www.example.org/proyectomm">
          <specializationType
-               id="proyecto.diagram.ServicioTabla_accedida_4003"
-               name="%metatype.name.ServicioTabla_accedida_4003"
+               id="proyecto.diagram.ServicioTabla_accedida_por_servicio_4003"
+               name="%metatype.name.ServicioTabla_accedida_por_servicio_4003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4003"/>
@@ -589,8 +589,8 @@
       </metamodel>
       <metamodel nsURI="http://www.example.org/proyectomm">
          <specializationType
-               id="proyecto.diagram.MensajeTabla_accedida_4004"
-               name="%metatype.name.MensajeTabla_accedida_4004"
+               id="proyecto.diagram.MensajeTabla_accedida_por_mensaje_4004"
+               name="%metatype.name.MensajeTabla_accedida_por_mensaje_4004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4004"/>
@@ -643,9 +643,9 @@
          <elementType ref="proyecto.diagram.Inicio_3012"/>
          <elementType ref="proyecto.diagram.Fin_3013"/>
          <elementType ref="proyecto.diagram.TareaSucesor_4001"/>
-         <elementType ref="proyecto.diagram.UsuarioTabla_accedida_4002"/>
-         <elementType ref="proyecto.diagram.ServicioTabla_accedida_4003"/>
-         <elementType ref="proyecto.diagram.MensajeTabla_accedida_4004"/>
+         <elementType ref="proyecto.diagram.UsuarioTabla_accedida_por_usuario_4002"/>
+         <elementType ref="proyecto.diagram.ServicioTabla_accedida_por_servicio_4003"/>
+         <elementType ref="proyecto.diagram.MensajeTabla_accedida_por_mensaje_4004"/>
          <elementType ref="proyecto.diagram.BDAtributo_seleccionado_4005"/>
          <elementType ref="proyecto.diagram.ForeignKeyReferencia_a_4006"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
