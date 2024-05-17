@@ -3,12 +3,9 @@
  */
 package proyectomm.diagram.edit.parts;
 
-import java.util.Collections;
-import java.util.List;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.PositionConstants;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
@@ -16,31 +13,29 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
-import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
-import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 import proyectomm.diagram.edit.policies.ActorItemSemanticEditPolicy;
+import proyectomm.diagram.edit.policies.OpenDiagramEditPolicy;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
 /**
  * @generated
  */
-public class ActorEditPart extends AbstractBorderedShapeEditPart {
+public class ActorEditPart extends ShapeNodeEditPart {
 
 	/**
 	* @generated
@@ -71,7 +66,7 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new ActorItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(EditPolicyRoles.OPEN_ROLE, new OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -82,18 +77,6 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				View childView = (View) child.getModel();
-				switch (ProyectommVisualIDRegistry.getVisualID(childView)) {
-				case ActorNombreEditPart.VISUAL_ID:
-					return new BorderItemSelectionEditPolicy() {
-
-						protected List createSelectionHandles() {
-							MoveHandle mh = new MoveHandle((GraphicalEditPart) getHost());
-							mh.setBorder(null);
-							return Collections.singletonList(mh);
-						}
-					};
-				}
 				EditPolicy result = child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
 					result = new NonResizableEditPolicy();
@@ -129,14 +112,63 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	* @generated
 	*/
-	protected void addBorderItem(IFigure borderItemContainer, IBorderItemEditPart borderItemEditPart) {
-		if (borderItemEditPart instanceof ActorNombreEditPart) {
-			BorderItemLocator locator = new BorderItemLocator(getMainFigure(), PositionConstants.SOUTH);
-			locator.setBorderItemOffset(new Dimension(-20, -20));
-			borderItemContainer.add(borderItemEditPart.getFigure(), locator);
-		} else {
-			super.addBorderItem(borderItemContainer, borderItemEditPart);
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof ActorNombreEditPart) {
+			((ActorNombreEditPart) childEditPart).setLabel(getPrimaryShape().getFigureActorLabelFigure());
+			return true;
 		}
+		if (childEditPart instanceof ActorActorTareasCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getActorTareasCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((ActorActorTareasCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	* @generated
+	*/
+	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof ActorNombreEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof ActorActorTareasCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getActorTareasCompartmentFigure();
+			pane.remove(((ActorActorTareasCompartmentEditPart) childEditPart).getFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	* @generated
+	*/
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	* @generated
+	*/
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	* @generated
+	*/
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof ActorActorTareasCompartmentEditPart) {
+			return getPrimaryShape().getActorTareasCompartmentFigure();
+		}
+		return getContentPane();
 	}
 
 	/**
@@ -155,7 +187,7 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 	* 
 	* @generated
 	*/
-	protected NodeFigure createMainFigure() {
+	protected NodeFigure createNodeFigure() {
 		NodeFigure figure = createNodePlate();
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
@@ -171,6 +203,11 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 	* @generated
 	*/
 	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(5);
+			nodeShape.setLayoutManager(layout);
+		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -242,17 +279,66 @@ public class ActorEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public class ActorFigure extends SVGFigure {
+	public class ActorFigure extends RectangleFigure {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureActorLabelFigure;
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fActorTareasCompartmentFigure;
 
 		/**
 		 * @generated
 		 */
 		public ActorFigure() {
-			this.setURI("platform:/plugin/proyecto/icons/actor.svg");
+			this.setBackgroundColor(THIS_BACK);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureActorLabelFigure = new WrappingLabel();
+
+			fFigureActorLabelFigure.setText("Actor");
+			fFigureActorLabelFigure.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
+
+			this.add(fFigureActorLabelFigure);
+
+			fActorTareasCompartmentFigure = new RectangleFigure();
+
+			fActorTareasCompartmentFigure.setOutline(false);
+
+			this.add(fActorTareasCompartmentFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureActorLabelFigure() {
+			return fFigureActorLabelFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getActorTareasCompartmentFigure() {
+			return fActorTareasCompartmentFigure;
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color THIS_BACK = new Color(null, 253, 254, 230);
 
 }

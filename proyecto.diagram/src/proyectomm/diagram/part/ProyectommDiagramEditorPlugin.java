@@ -22,6 +22,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
+import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 import proyectomm.diagram.providers.ElementInitializers;
 import proyectomm.provider.ProyectommItemProviderAdapterFactory;
 
@@ -63,6 +64,11 @@ public class ProyectommDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	* @generated
 	*/
+	private ProyectommBaseItemSemanticEditPolicy.LinkConstraints linkConstraints;
+
+	/**
+	* @generated
+	*/
 	private ElementInitializers initializers;
 
 	/**
@@ -88,6 +94,7 @@ public class ProyectommDiagramEditorPlugin extends AbstractUIPlugin {
 	public void stop(BundleContext context) throws Exception {
 		adapterFactory.dispose();
 		adapterFactory = null;
+		linkConstraints = null;
 		initializers = null;
 		instance = null;
 		super.stop(context);
@@ -201,6 +208,20 @@ public class ProyectommDiagramEditorPlugin extends AbstractUIPlugin {
 			documentProvider = new ProyectommDocumentProvider();
 		}
 		return documentProvider;
+	}
+
+	/**
+	* @generated
+	*/
+	public ProyectommBaseItemSemanticEditPolicy.LinkConstraints getLinkConstraints() {
+		return linkConstraints;
+	}
+
+	/**
+	* @generated
+	*/
+	public void setLinkConstraints(ProyectommBaseItemSemanticEditPolicy.LinkConstraints lc) {
+		this.linkConstraints = lc;
 	}
 
 	/**

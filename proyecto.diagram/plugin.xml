@@ -258,7 +258,8 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Proyectomm"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
       </viewProvider>
    </extension>
 
@@ -270,16 +271,16 @@
             <method name="getType()" value="Proyectomm"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,3001"/>
+            <method name="getType()" value="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value=""/>
+            <method name="getType()" value="4001"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5002,5003,5001"/>
+            <method name="getType()" value="5006,5013,5005,5002,5001,5003,5004,5007,5008,5009,5010,5011,5012"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7001"/>
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -307,6 +308,66 @@
          <Priority name="Lowest"/>
          <object class="proyectomm.diagram.edit.parts.TablaEditPart" id="Tabla_3001"/>
          <context elements="Tabla_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfPrimaryKeyEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.PrimaryKeyEditPart" id="PrimaryKey_3002"/>
+         <context elements="PrimaryKey_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfOpcionEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.OpcionEditPart" id="Opcion_3003"/>
+         <context elements="Opcion_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfForeignKeyEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.ForeignKeyEditPart" id="ForeignKey_3004"/>
+         <context elements="ForeignKey_3004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfAtributoEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.AtributoEditPart" id="Atributo_3005"/>
+         <context elements="Atributo_3005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfEnvioEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.EnvioEditPart" id="Envio_3006"/>
+         <context elements="Envio_3006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfRecepcionEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.RecepcionEditPart" id="Recepcion_3007"/>
+         <context elements="Recepcion_3007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfBorradoEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.BorradoEditPart" id="Borrado_3008"/>
+         <context elements="Borrado_3008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfLecturaEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.LecturaEditPart" id="Lectura_3009"/>
+         <context elements="Lectura_3009"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfUsuarioEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.UsuarioEditPart" id="Usuario_3010"/>
+         <context elements="Usuario_3010"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfServicioEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.ServicioEditPart" id="Servicio_3011"/>
+         <context elements="Servicio_3011"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfInicioEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.InicioEditPart" id="Inicio_3012"/>
+         <context elements="Inicio_3012"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="proyectomm.diagram.providers.assistants.ProyectommModelingAssistantProviderOfFinEditPart">
+         <Priority name="Lowest"/>
+         <object class="proyectomm.diagram.edit.parts.FinEditPart" id="Fin_3013"/>
+         <context elements="Fin_3013"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -379,6 +440,135 @@
             <param name="semanticHint" value="3001"/>
          </metamodelType>
       </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.PrimaryKey_3002"
+               name="%metatype.name.PrimaryKey_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PrimaryKey"
+               edithelper="proyectomm.diagram.edit.helpers.PrimaryKeyEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Opcion_3003"
+               name="%metatype.name.Opcion_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Opcion"
+               edithelper="proyectomm.diagram.edit.helpers.OpcionEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.ForeignKey_3004"
+               name="%metatype.name.ForeignKey_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ForeignKey"
+               edithelper="proyectomm.diagram.edit.helpers.ForeignKeyEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Atributo_3005"
+               name="%metatype.name.Atributo_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Atributo"
+               edithelper="proyectomm.diagram.edit.helpers.AtributoEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Envio_3006"
+               name="%metatype.name.Envio_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Envio"
+               edithelper="proyectomm.diagram.edit.helpers.EnvioEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Recepcion_3007"
+               name="%metatype.name.Recepcion_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Recepcion"
+               edithelper="proyectomm.diagram.edit.helpers.RecepcionEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Borrado_3008"
+               name="%metatype.name.Borrado_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Borrado"
+               edithelper="proyectomm.diagram.edit.helpers.BorradoEditHelper">
+            <param name="semanticHint" value="3008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Lectura_3009"
+               name="%metatype.name.Lectura_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Lectura"
+               edithelper="proyectomm.diagram.edit.helpers.LecturaEditHelper">
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Usuario_3010"
+               name="%metatype.name.Usuario_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Usuario"
+               edithelper="proyectomm.diagram.edit.helpers.UsuarioEditHelper">
+            <param name="semanticHint" value="3010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Servicio_3011"
+               name="%metatype.name.Servicio_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Servicio"
+               edithelper="proyectomm.diagram.edit.helpers.ServicioEditHelper">
+            <param name="semanticHint" value="3011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Inicio_3012"
+               name="%metatype.name.Inicio_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Inicio"
+               edithelper="proyectomm.diagram.edit.helpers.InicioEditHelper">
+            <param name="semanticHint" value="3012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <metamodelType
+               id="proyecto.diagram.Fin_3013"
+               name="%metatype.name.Fin_3013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Fin"
+               edithelper="proyectomm.diagram.edit.helpers.FinEditHelper">
+            <param name="semanticHint" value="3013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org/proyectomm">
+         <specializationType
+               id="proyecto.diagram.TareaSucesor_4001"
+               name="%metatype.name.TareaSucesor_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -395,6 +585,19 @@
          <elementType ref="proyecto.diagram.BaseDeDatos_2001"/>
          <elementType ref="proyecto.diagram.Actor_2002"/>
          <elementType ref="proyecto.diagram.Tabla_3001"/>
+         <elementType ref="proyecto.diagram.PrimaryKey_3002"/>
+         <elementType ref="proyecto.diagram.Opcion_3003"/>
+         <elementType ref="proyecto.diagram.ForeignKey_3004"/>
+         <elementType ref="proyecto.diagram.Atributo_3005"/>
+         <elementType ref="proyecto.diagram.Envio_3006"/>
+         <elementType ref="proyecto.diagram.Recepcion_3007"/>
+         <elementType ref="proyecto.diagram.Borrado_3008"/>
+         <elementType ref="proyecto.diagram.Lectura_3009"/>
+         <elementType ref="proyecto.diagram.Usuario_3010"/>
+         <elementType ref="proyecto.diagram.Servicio_3011"/>
+         <elementType ref="proyecto.diagram.Inicio_3012"/>
+         <elementType ref="proyecto.diagram.Fin_3013"/>
+         <elementType ref="proyecto.diagram.TareaSucesor_4001"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

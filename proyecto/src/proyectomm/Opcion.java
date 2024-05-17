@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getOpcion()
- * @model
+ * @model annotation="gmf.node label='nombre' figure='rectangle'"
  * @generated
  */
 public interface Opcion extends EObject {

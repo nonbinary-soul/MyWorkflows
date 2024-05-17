@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getBaseDeDatos()
- * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/database.svg' label.icon='false' label.placement='external'"
+ * @model annotation="gmf.node label='nombre' figure='rectangle' color='230,255,208'"
  * @generated
  */
 public interface BaseDeDatos extends EObject {
@@ -54,7 +54,7 @@ public interface BaseDeDatos extends EObject {
 	 * @return the value of the '<em>Tablas</em>' containment reference list.
 	 * @see proyectomm.ProyectommPackage#getBaseDeDatos_Tablas()
 	 * @model containment="true" required="true"
-	 *        annotation="gmf.compartment foo='bar'"
+	 *        annotation="gmf.compartment"
 	 * @generated
 	 */
 	EList<Tabla> getTablas();

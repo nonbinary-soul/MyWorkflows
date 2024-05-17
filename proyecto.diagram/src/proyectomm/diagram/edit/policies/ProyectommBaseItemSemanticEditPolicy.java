@@ -35,6 +35,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
+import proyectomm.Tarea;
+import proyectomm.diagram.part.ProyectommDiagramEditorPlugin;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 import proyectomm.diagram.providers.ProyectommElementTypes;
 
@@ -279,6 +281,53 @@ public class ProyectommBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				continue;
 			}
 			cmd.add(new DeleteCommand(getEditingDomain(), nextView));
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	public static LinkConstraints getLinkConstraints() {
+		LinkConstraints cached = ProyectommDiagramEditorPlugin.getInstance().getLinkConstraints();
+		if (cached == null) {
+			ProyectommDiagramEditorPlugin.getInstance().setLinkConstraints(cached = new LinkConstraints());
+		}
+		return cached;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static class LinkConstraints {
+
+		/**
+		* @generated
+		*/
+		LinkConstraints() {
+			// use static method #getLinkConstraints() to access instance
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateTareaSucesor_4001(Tarea source, Tarea target) {
+			if (source != null) {
+				if (source.getSucesor() != null) {
+					return false;
+				}
+			}
+			if (target != null && (target.getPredecesor() != null)) {
+				return false;
+			}
+
+			return canExistTareaSucesor_4001(source, target);
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistTareaSucesor_4001(Tarea source, Tarea target) {
+			return true;
 		}
 	}
 

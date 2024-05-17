@@ -14,13 +14,14 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *
  * @see proyectomm.ProyectommPackage#getBorrado()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P04_borradoConClavePrimaria'"
+ *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/delete.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Borrado extends BD {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\r\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)'"
 	 * @generated
 	 */
 	boolean P04_borradoConClavePrimaria(DiagnosticChain diagnostics, Map<Object, Object> context);

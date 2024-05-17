@@ -16,34 +16,38 @@ class ProcesoDeNegocio {
 
 @Ecore(constraints="R05_minTareaIntermedia")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R05_minTareaIntermedia="tareas->select(oclIsKindOf(Intermedia))->size() > 0")
-@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/actor.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="rectangle", color="253,254,230")
 class Actor {
 	attr String[1] nombre;
+	@gmf.compartment
 	val Tarea[*] tareas;
 	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.tareas->size()")
 	volatile transient derived attr int[1] num_tareas;
 }
 
-@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/database.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="rectangle", color="230,255,208")
 class BaseDeDatos {
 	attr String[1] nombre;
-	@gmf.compartment(foo="bar")
+	@gmf.compartment
 	val Tabla[+] tablas;
 }
 
 @Ecore(constraints="P02_soloUnaClavePrimaria")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P02_soloUnaClavePrimaria="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() = 1")
-@gmf.node(label="nombre",figure="svg", svg.uri="platform:/plugin/proyecto/icons/table.svg", label.icon="false", label.placement="external")
+@gmf.node(label="nombre", figure="rectangle")
 class Tabla {
 	attr String[1] nombre;
+	@gmf.compartment
 	val Atributo[+] atributos;
 }
 
 @Ecore(constraints="P01_tieneOpciones P05_sinEspaciosEnBlanco")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P01_tieneOpciones="if self.tipo = EAtributo::LIST then self.opciones->notEmpty() else self.opciones->isEmpty() endif", P05_sinEspaciosEnBlanco="not self.nombre->includes(' ')")
+@gmf.node(label="nombre, tipo", figure="rectangle", label.pattern="{0}:{1}")
 class Atributo {
 	attr String[1] nombre;
 	attr EAtributo[1] tipo;
+	@gmf.compartment
 	val Opcion[*] opciones;
 }
 
@@ -59,7 +63,7 @@ enum EAtributo {
 @Ecore(constraints="R06_noReflexiva R08_ConexionesEntreTareas R09_unidireccionalidad")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R06_noReflexiva="sucesor <> self", R08_ConexionesEntreTareas="
 		  if self.oclIsTypeOf(Envio) then
-		    -- Se eval�a que Envio y Recepcion sean de distinto actor
+		    -- Se evalua que Envio y Recepcion sean de distinto actor
 		    self.oclContainer() <> self.sucesor.oclContainer() 
 		  else
 		    -- El resto de conexiones deben ser del mismo actor
@@ -67,19 +71,23 @@ enum EAtributo {
 		    self.sucesor.oclContainer() = self.oclContainer()
 		  endif", R09_unidireccionalidad="
 		self.predecesor->size() <= 1 and self.sucesor->size() <= 1")
+
 abstract class Tarea {
 	attr String nombre;
+	@gmf.link(source="predecesor", target="sucessor", style="dot", width="2")
 	ref Tarea#predecesor sucesor;
 	ref Tarea#sucesor predecesor;
 }
 
 @Ecore(constraints="R03_sinPredecesor")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R03_sinPredecesor="predecesor = null")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/start.svg", label.icon="false", label.placement="none")
 class Inicio extends Tarea {
 }
 
 @Ecore(constraints="R04_sinSucesor")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R04_sinSucesor="sucesor = null")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/finish.svg", label.icon="false", label.placement="none")
 class Fin extends Tarea {
 }
 
@@ -88,10 +96,12 @@ abstract class Intermedia extends Tarea {
 	attr String descripcion;
 }
 
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/form.svg", label.icon="false", label.placement="external")
 class Usuario extends Intermedia {
 	ref Tabla[1] tabla_accedida;
 }
 
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/service.svg", label.icon="false", label.placement="external")
 class Servicio extends Intermedia {
 	ref Tabla[1] tabla_accedida;
 }
@@ -100,22 +110,25 @@ abstract class Mensaje extends Intermedia {
 	ref Tabla[1] tabla_accedida;
 }
 
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/send-message.svg", label.icon="false", label.placement="external")
 class Envio extends Mensaje {
 }
 
 @Ecore(constraints="R07_envioAsociado P06_mismaTablaQueEnvio")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R07_envioAsociado="predecesor.oclIsTypeOf(Envio)", P06_mismaTablaQueEnvio="self.tabla_accedida = self.predecesor.oclAsType(Envio).tabla_accedida")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/received-message.svg", label.icon="false", label.placement="external")
 class Recepcion extends Mensaje {
 }
 
 @Ecore(constraints="P04_borradoConClavePrimaria")
 @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P04_borradoConClavePrimaria="
 		        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)")
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/delete.svg", label.icon="false", label.placement="external")
 class Borrado extends BD {
 }
 
+@gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/read.svg", label.icon="false", label.placement="external")
 class Lectura extends BD {
-
 	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.atributo_seleccionado.oclContainer().oclAsType(Tabla)")
 	volatile transient derived ref Tabla[1] datos_a_leer;
 }
@@ -131,6 +144,7 @@ class ForeignKey extends Atributo {
 	ref PrimaryKey[1] referencia_a;
 }
 
+@gmf.node(label="nombre", figure="rectangle")
 class Opcion {
 	attr String[1] nombre;
 }

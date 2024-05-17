@@ -7,67 +7,319 @@
     <containsShortcutsTo>proyectomm</containsShortcutsTo>
     <shortcutsProvidedFor>proyectomm</shortcutsProvidedFor>
     <domainDiagramElement href="proyectomm.genmodel#//proyectomm/ProcesoDeNegocio"/>
-    <childNodes visualID="3001" editPartClassName="TablaEditPart" itemSemanticEditPolicyClassName="TablaItemSemanticEditPolicy" canonicalEditPolicyClassName="TablaCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TablaGraphicalNodeEditPolicy" createCommandClassName="TablaCreateCommand" containers="//@diagram/@compartments.0">
+    <childNodes visualID="3001" editPartClassName="TablaEditPart" itemSemanticEditPolicyClassName="TablaItemSemanticEditPolicy" canonicalEditPolicyClassName="TablaCanonicalEditPolicy" compartments="//@diagram/@compartments.1" graphicalNodeEditPolicyClassName="TablaGraphicalNodeEditPolicy" createCommandClassName="TablaCreateCommand" containers="//@diagram/@compartments.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TablaEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TablaFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TablaFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TablaFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/table.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TablaFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TablaFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTablaLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fTablaAtributosCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TablaFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTablaLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTablaLabelFigure.setText(&quot;Tabla&quot;);&#xA;fFigureTablaLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureTablaLabelFigure);&#xA;&#xA;&#xA;&#xA;fTablaAtributosCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fTablaAtributosCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fTablaAtributosCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTablaLabelFigure() {&#xA;&#x9;&#x9;return fFigureTablaLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getTablaAtributosCompartmentFigure() {&#xA;&#x9;&#x9;return fTablaAtributosCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
       <modelFacet>
         <metaClass href="proyectomm.genmodel#//proyectomm/Tabla"/>
         <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/BaseDeDatos/tablas"/>
         <childMetaFeature href="proyectomm.genmodel#//proyectomm/BaseDeDatos/tablas"/>
       </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5001" editPartClassName="TablaNombreEditPart" itemSemanticEditPolicyClassName="TablaNombreItemSemanticEditPolicy">
+      <labels visualID="5005" editPartClassName="TablaNombreEditPart" itemSemanticEditPolicyClassName="TablaNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TablaLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TablaLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TablaLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Tabla&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTablaLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="proyectomm.genmodel#//proyectomm/Tabla/nombre"/>
         </modelFacet>
       </labels>
     </childNodes>
+    <childNodes visualID="3002" editPartClassName="PrimaryKeyEditPart" itemSemanticEditPolicyClassName="PrimaryKeyItemSemanticEditPolicy" canonicalEditPolicyClassName="PrimaryKeyCanonicalEditPolicy" compartments="//@diagram/@compartments.2" graphicalNodeEditPolicyClassName="PrimaryKeyGraphicalNodeEditPolicy" createCommandClassName="PrimaryKeyCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PrimaryKeyEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PrimaryKeyFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PrimaryKeyFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePrimaryKeyLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fPrimaryKeyOpcionesCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PrimaryKeyFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePrimaryKeyLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePrimaryKeyLabelFigure.setText(&quot;PrimaryKey&quot;);&#xA;fFigurePrimaryKeyLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigurePrimaryKeyLabelFigure);&#xA;&#xA;&#xA;&#xA;fPrimaryKeyOpcionesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fPrimaryKeyOpcionesCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fPrimaryKeyOpcionesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePrimaryKeyLabelFigure() {&#xA;&#x9;&#x9;return fFigurePrimaryKeyLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getPrimaryKeyOpcionesCompartmentFigure() {&#xA;&#x9;&#x9;return fPrimaryKeyOpcionesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/PrimaryKey"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Tabla/atributos"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Tabla/atributos"/>
+      </modelFacet>
+      <labels visualID="5002" editPartClassName="PrimaryKeyNombreTipoEditPart" itemSemanticEditPolicyClassName="PrimaryKeyNombreTipoItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigurePrimaryKeyLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}:{1}" editorPattern="{0}:{1}" editPattern="{0}:{1}">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Atributo/nombre"/>
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Atributo/tipo"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3003" editPartClassName="OpcionEditPart" itemSemanticEditPolicyClassName="OpcionItemSemanticEditPolicy" canonicalEditPolicyClassName="OpcionCanonicalEditPolicy" graphicalNodeEditPolicyClassName="OpcionGraphicalNodeEditPolicy" createCommandClassName="OpcionCreateCommand" containers="//@diagram/@compartments.2 //@diagram/@compartments.3 //@diagram/@compartments.4">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="OpcionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="OpcionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class OpcionFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureOpcionLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public OpcionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureOpcionLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureOpcionLabelFigure.setText(&quot;Opcion&quot;);&#xA;&#xA;this.add(fFigureOpcionLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureOpcionLabelFigure() {&#xA;&#x9;&#x9;return fFigureOpcionLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Opcion"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Atributo/opciones"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Atributo/opciones"/>
+      </modelFacet>
+      <labels visualID="5001" editPartClassName="OpcionNombreEditPart" itemSemanticEditPolicyClassName="OpcionNombreItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureOpcionLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Opcion/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3004" editPartClassName="ForeignKeyEditPart" itemSemanticEditPolicyClassName="ForeignKeyItemSemanticEditPolicy" canonicalEditPolicyClassName="ForeignKeyCanonicalEditPolicy" compartments="//@diagram/@compartments.3" graphicalNodeEditPolicyClassName="ForeignKeyGraphicalNodeEditPolicy" createCommandClassName="ForeignKeyCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ForeignKeyEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ForeignKeyFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ForeignKeyFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureForeignKeyLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fForeignKeyOpcionesCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ForeignKeyFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureForeignKeyLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureForeignKeyLabelFigure.setText(&quot;ForeignKey&quot;);&#xA;fFigureForeignKeyLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureForeignKeyLabelFigure);&#xA;&#xA;&#xA;&#xA;fForeignKeyOpcionesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fForeignKeyOpcionesCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fForeignKeyOpcionesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureForeignKeyLabelFigure() {&#xA;&#x9;&#x9;return fFigureForeignKeyLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getForeignKeyOpcionesCompartmentFigure() {&#xA;&#x9;&#x9;return fForeignKeyOpcionesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/ForeignKey"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Tabla/atributos"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Tabla/atributos"/>
+      </modelFacet>
+      <labels visualID="5003" editPartClassName="ForeignKeyNombreTipoEditPart" itemSemanticEditPolicyClassName="ForeignKeyNombreTipoItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureForeignKeyLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}:{1}" editorPattern="{0}:{1}" editPattern="{0}:{1}">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Atributo/nombre"/>
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Atributo/tipo"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3005" editPartClassName="AtributoEditPart" itemSemanticEditPolicyClassName="AtributoItemSemanticEditPolicy" canonicalEditPolicyClassName="AtributoCanonicalEditPolicy" compartments="//@diagram/@compartments.4" graphicalNodeEditPolicyClassName="AtributoGraphicalNodeEditPolicy" createCommandClassName="AtributoCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="AtributoEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="AtributoFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class AtributoFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureAtributoLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fAtributoOpcionesCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public AtributoFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureAtributoLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureAtributoLabelFigure.setText(&quot;Atributo&quot;);&#xA;fFigureAtributoLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureAtributoLabelFigure);&#xA;&#xA;&#xA;&#xA;fAtributoOpcionesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fAtributoOpcionesCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fAtributoOpcionesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureAtributoLabelFigure() {&#xA;&#x9;&#x9;return fFigureAtributoLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getAtributoOpcionesCompartmentFigure() {&#xA;&#x9;&#x9;return fAtributoOpcionesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Atributo"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Tabla/atributos"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Tabla/atributos"/>
+      </modelFacet>
+      <labels visualID="5004" editPartClassName="AtributoNombreTipoEditPart" itemSemanticEditPolicyClassName="AtributoNombreTipoItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureAtributoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}:{1}" editorPattern="{0}:{1}" editPattern="{0}:{1}">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Atributo/nombre"/>
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Atributo/tipo"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3006" editPartClassName="EnvioEditPart" itemSemanticEditPolicyClassName="EnvioItemSemanticEditPolicy" canonicalEditPolicyClassName="EnvioCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EnvioGraphicalNodeEditPolicy" createCommandClassName="EnvioCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EnvioEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EnvioFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EnvioFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EnvioFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/send-message.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Envio"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5007" editPartClassName="EnvioNombreEditPart" itemSemanticEditPolicyClassName="EnvioNombreItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EnvioLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EnvioLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EnvioLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Envio&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Tarea/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3007" editPartClassName="RecepcionEditPart" itemSemanticEditPolicyClassName="RecepcionItemSemanticEditPolicy" canonicalEditPolicyClassName="RecepcionCanonicalEditPolicy" graphicalNodeEditPolicyClassName="RecepcionGraphicalNodeEditPolicy" createCommandClassName="RecepcionCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="RecepcionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="RecepcionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RecepcionFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RecepcionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/received-message.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Recepcion"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5008" editPartClassName="RecepcionNombreEditPart" itemSemanticEditPolicyClassName="RecepcionNombreItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="RecepcionLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RecepcionLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RecepcionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Recepcion&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Tarea/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3008" editPartClassName="BorradoEditPart" itemSemanticEditPolicyClassName="BorradoItemSemanticEditPolicy" canonicalEditPolicyClassName="BorradoCanonicalEditPolicy" graphicalNodeEditPolicyClassName="BorradoGraphicalNodeEditPolicy" createCommandClassName="BorradoCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="BorradoEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BorradoFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BorradoFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BorradoFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/delete.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Borrado"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5009" editPartClassName="BorradoNombreEditPart" itemSemanticEditPolicyClassName="BorradoNombreItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BorradoLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BorradoLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BorradoLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Borrado&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Tarea/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3009" editPartClassName="LecturaEditPart" itemSemanticEditPolicyClassName="LecturaItemSemanticEditPolicy" canonicalEditPolicyClassName="LecturaCanonicalEditPolicy" graphicalNodeEditPolicyClassName="LecturaGraphicalNodeEditPolicy" createCommandClassName="LecturaCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="LecturaEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="LecturaFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class LecturaFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public LecturaFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/read.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Lectura"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5010" editPartClassName="LecturaNombreEditPart" itemSemanticEditPolicyClassName="LecturaNombreItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="LecturaLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class LecturaLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public LecturaLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Lectura&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Tarea/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3010" editPartClassName="UsuarioEditPart" itemSemanticEditPolicyClassName="UsuarioItemSemanticEditPolicy" canonicalEditPolicyClassName="UsuarioCanonicalEditPolicy" graphicalNodeEditPolicyClassName="UsuarioGraphicalNodeEditPolicy" createCommandClassName="UsuarioCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="UsuarioEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="UsuarioFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class UsuarioFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public UsuarioFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/form.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Usuario"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5011" editPartClassName="UsuarioNombreEditPart" itemSemanticEditPolicyClassName="UsuarioNombreItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="UsuarioLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class UsuarioLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public UsuarioLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Usuario&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Tarea/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3011" editPartClassName="ServicioEditPart" itemSemanticEditPolicyClassName="ServicioItemSemanticEditPolicy" canonicalEditPolicyClassName="ServicioCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ServicioGraphicalNodeEditPolicy" createCommandClassName="ServicioCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ServicioEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ServicioFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ServicioFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ServicioFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/service.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Servicio"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5012" editPartClassName="ServicioNombreEditPart" itemSemanticEditPolicyClassName="ServicioNombreItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ServicioLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ServicioLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ServicioLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Servicio&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="proyectomm.genmodel#//proyectomm/Tarea/nombre"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3012" editPartClassName="InicioEditPart" itemSemanticEditPolicyClassName="InicioItemSemanticEditPolicy" canonicalEditPolicyClassName="InicioCanonicalEditPolicy" graphicalNodeEditPolicyClassName="InicioGraphicalNodeEditPolicy" createCommandClassName="InicioCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="InicioEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="InicioFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InicioFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InicioFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/start.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Inicio"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3013" editPartClassName="FinEditPart" itemSemanticEditPolicyClassName="FinItemSemanticEditPolicy" canonicalEditPolicyClassName="FinCanonicalEditPolicy" graphicalNodeEditPolicyClassName="FinGraphicalNodeEditPolicy" createCommandClassName="FinCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="FinEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="FinFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FinFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FinFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/finish.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="proyectomm.genmodel#//proyectomm/Fin"/>
+        <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+        <childMetaFeature href="proyectomm.genmodel#//proyectomm/Actor/tareas"/>
+      </modelFacet>
+    </childNodes>
     <topLevelNodes visualID="2001" editPartClassName="BaseDeDatosEditPart" itemSemanticEditPolicyClassName="BaseDeDatosItemSemanticEditPolicy" canonicalEditPolicyClassName="BaseDeDatosCanonicalEditPolicy" compartments="//@diagram/@compartments.0" graphicalNodeEditPolicyClassName="BaseDeDatosGraphicalNodeEditPolicy" createCommandClassName="BaseDeDatosCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="BaseDeDatosEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BaseDeDatosFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BaseDeDatosFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fBaseDeDatosTablasCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BaseDeDatosFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/database.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fBaseDeDatosTablasCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fBaseDeDatosTablasCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fBaseDeDatosTablasCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getBaseDeDatosTablasCompartmentFigure() {&#xA;&#x9;&#x9;return fBaseDeDatosTablasCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BaseDeDatosFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BaseDeDatosFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBaseDeDatosLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fBaseDeDatosTablasCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BaseDeDatosFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureBaseDeDatosLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureBaseDeDatosLabelFigure.setText(&quot;BaseDeDatos&quot;);&#xA;fFigureBaseDeDatosLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureBaseDeDatosLabelFigure);&#xA;&#xA;&#xA;&#xA;fBaseDeDatosTablasCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fBaseDeDatosTablasCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fBaseDeDatosTablasCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBaseDeDatosLabelFigure() {&#xA;&#x9;&#x9;return fFigureBaseDeDatosLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getBaseDeDatosTablasCompartmentFigure() {&#xA;&#x9;&#x9;return fBaseDeDatosTablasCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 230, 255, 208);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+      </viewmap>
       <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
       <modelFacet>
         <metaClass href="proyectomm.genmodel#//proyectomm/BaseDeDatos"/>
         <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/ProcesoDeNegocio/bases_de_datos"/>
         <childMetaFeature href="proyectomm.genmodel#//proyectomm/ProcesoDeNegocio/bases_de_datos"/>
       </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5002" editPartClassName="BaseDeDatosNombreEditPart" itemSemanticEditPolicyClassName="BaseDeDatosNombreItemSemanticEditPolicy">
+      <labels visualID="5006" editPartClassName="BaseDeDatosNombreEditPart" itemSemanticEditPolicyClassName="BaseDeDatosNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BaseDeDatosLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BaseDeDatosLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BaseDeDatosLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;BaseDeDatos&quot;);&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureBaseDeDatosLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="proyectomm.genmodel#//proyectomm/BaseDeDatos/nombre"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2002" editPartClassName="ActorEditPart" itemSemanticEditPolicyClassName="ActorItemSemanticEditPolicy" canonicalEditPolicyClassName="ActorCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ActorGraphicalNodeEditPolicy" createCommandClassName="ActorCreateCommand">
+    <topLevelNodes visualID="2002" editPartClassName="ActorEditPart" itemSemanticEditPolicyClassName="ActorItemSemanticEditPolicy" canonicalEditPolicyClassName="ActorCanonicalEditPolicy" compartments="//@diagram/@compartments.5" graphicalNodeEditPolicyClassName="ActorGraphicalNodeEditPolicy" createCommandClassName="ActorCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ActorEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ActorFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ActorFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ActorFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/proyecto/icons/actor.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ActorFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ActorFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureActorLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fActorTareasCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ActorFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureActorLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureActorLabelFigure.setText(&quot;Actor&quot;);&#xA;fFigureActorLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureActorLabelFigure);&#xA;&#xA;&#xA;&#xA;fActorTareasCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fActorTareasCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fActorTareasCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureActorLabelFigure() {&#xA;&#x9;&#x9;return fFigureActorLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getActorTareasCompartmentFigure() {&#xA;&#x9;&#x9;return fActorTareasCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 253, 254, 230);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+      </viewmap>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
       <modelFacet>
         <metaClass href="proyectomm.genmodel#//proyectomm/Actor"/>
         <containmentMetaFeature href="proyectomm.genmodel#//proyectomm/ProcesoDeNegocio/actores"/>
         <childMetaFeature href="proyectomm.genmodel#//proyectomm/ProcesoDeNegocio/actores"/>
       </modelFacet>
-      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5003" editPartClassName="ActorNombreEditPart" itemSemanticEditPolicyClassName="ActorNombreItemSemanticEditPolicy">
+      <labels visualID="5013" editPartClassName="ActorNombreEditPart" itemSemanticEditPolicyClassName="ActorNombreItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ActorLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ActorLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ActorLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Actor&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureActorLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="proyectomm.genmodel#//proyectomm/Actor/nombre"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
+    <links visualID="4001" editPartClassName="TareaSucesorEditPart" itemSemanticEditPolicyClassName="TareaSucesorItemSemanticEditPolicy" createCommandClassName="TareaSucesorCreateCommand" reorientCommandClassName="TareaSucesorReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TareaSucesorFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TareaSucesorFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TareaSucesorFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="proyectomm.genmodel#//proyectomm/Tarea/sucesor"/>
+      </modelFacet>
+      <labels visualID="6001" editPartClassName="WrappingLabelEditPart" itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy" readOnly="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:DesignLabelModelFacet" parser="//@labelParsers/@implementations.1"/>
+      </labels>
+    </links>
     <compartments visualID="7001" editPartClassName="BaseDeDatosBaseDeDatosTablasCompartmentEditPart" itemSemanticEditPolicyClassName="BaseDeDatosBaseDeDatosTablasCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="BaseDeDatosBaseDeDatosTablasCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0" title="BaseDeDatosTablasCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.0" listLayout="false">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getBaseDeDatosTablasCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
+    <compartments visualID="7002" editPartClassName="TablaTablaAtributosCompartmentEditPart" itemSemanticEditPolicyClassName="TablaTablaAtributosCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="TablaTablaAtributosCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.3 //@diagram/@childNodes.4" title="TablaAtributosCompartment" needsTitle="false" node="//@diagram/@childNodes.0" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getTablaAtributosCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7003" editPartClassName="PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart" itemSemanticEditPolicyClassName="PrimaryKeyPrimaryKeyOpcionesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="PrimaryKeyPrimaryKeyOpcionesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.2" title="PrimaryKeyOpcionesCompartment" needsTitle="false" node="//@diagram/@childNodes.1" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getPrimaryKeyOpcionesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7004" editPartClassName="ForeignKeyForeignKeyOpcionesCompartmentEditPart" itemSemanticEditPolicyClassName="ForeignKeyForeignKeyOpcionesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="ForeignKeyForeignKeyOpcionesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.2" title="ForeignKeyOpcionesCompartment" needsTitle="false" node="//@diagram/@childNodes.3" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getForeignKeyOpcionesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7005" editPartClassName="AtributoAtributoOpcionesCompartmentEditPart" itemSemanticEditPolicyClassName="AtributoAtributoOpcionesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="AtributoAtributoOpcionesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.2" title="AtributoOpcionesCompartment" needsTitle="false" node="//@diagram/@childNodes.4" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getAtributoOpcionesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7006" editPartClassName="ActorActorTareasCompartmentEditPart" itemSemanticEditPolicyClassName="ActorActorTareasCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="ActorActorTareasCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.5 //@diagram/@childNodes.6 //@diagram/@childNodes.7 //@diagram/@childNodes.8 //@diagram/@childNodes.9 //@diagram/@childNodes.10 //@diagram/@childNodes.11 //@diagram/@childNodes.12" title="ActorTareasCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.1" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getActorTareasCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
     <palette>
       <groups title="Objects" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="Actor" description="Create new Actor" genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Atributo" description="Create new Atributo" genNodes="//@diagram/@childNodes.4"/>
         <entries xsi:type="gmfgen:ToolEntry" title="BaseDeDatos" description="Create new BaseDeDatos" genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Borrado" description="Create new Borrado" genNodes="//@diagram/@childNodes.7"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Envio" description="Create new Envio" genNodes="//@diagram/@childNodes.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Fin" description="Create new Fin" genNodes="//@diagram/@childNodes.12"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="ForeignKey" description="Create new ForeignKey" genNodes="//@diagram/@childNodes.3"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Inicio" description="Create new Inicio" genNodes="//@diagram/@childNodes.11"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Lectura" description="Create new Lectura" genNodes="//@diagram/@childNodes.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Opcion" description="Create new Opcion" genNodes="//@diagram/@childNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="PrimaryKey" description="Create new PrimaryKey" genNodes="//@diagram/@childNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Recepcion" description="Create new Recepcion" genNodes="//@diagram/@childNodes.6"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Servicio" description="Create new Servicio" genNodes="//@diagram/@childNodes.10"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Tabla" description="Create new Tabla" genNodes="//@diagram/@childNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Usuario" description="Create new Usuario" genNodes="//@diagram/@childNodes.9"/>
+      </groups>
+      <groups title="Connections" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Sucesor" description="Create new Sucesor" genLinks="//@diagram/@links.0"/>
       </groups>
     </palette>
     <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="proyecto.diagram.general" name="Proyectomm Diagram">
@@ -86,9 +338,56 @@
   <editor/>
   <navigator>
     <childReferences child="//@diagram"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@childNodes.2"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@childNodes.1"/>
+    <childReferences parent="//@diagram/@childNodes.3" child="//@diagram/@childNodes.2"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@childNodes.3"/>
+    <childReferences parent="//@diagram/@childNodes.4" child="//@diagram/@childNodes.2"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@childNodes.4"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.0"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.0"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.5"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.6"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.7"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.8"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.9"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.10"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.11"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.12"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.5" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.6" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.6" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.7" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.7" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.8" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.8" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.9" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.9" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.10" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.10" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.11" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.11" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.12" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.12" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.5" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.6" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.6" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.7" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.7" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.8" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.8" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.9" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.9" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.10" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.10" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.11" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.11" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.12" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.12" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
   </navigator>
   <diagramUpdater/>
   <propertySheet>
@@ -104,7 +403,8 @@
   </propertySheet>
   <domainGenModel href="proyectomm.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.3/@labels.0/@modelFacet //@diagram/@childNodes.4/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.5/@labels.0/@modelFacet //@diagram/@childNodes.6/@labels.0/@modelFacet //@diagram/@childNodes.7/@labels.0/@modelFacet //@diagram/@childNodes.8/@labels.0/@modelFacet //@diagram/@childNodes.9/@labels.0/@modelFacet //@diagram/@childNodes.10/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:ExternalParser" uses="//@diagram/@links.0/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

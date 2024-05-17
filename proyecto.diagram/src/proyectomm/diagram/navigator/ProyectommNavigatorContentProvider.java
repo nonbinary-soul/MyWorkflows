@@ -28,11 +28,30 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
 
+import proyectomm.diagram.edit.parts.ActorActorTareasCompartmentEditPart;
 import proyectomm.diagram.edit.parts.ActorEditPart;
+import proyectomm.diagram.edit.parts.AtributoAtributoOpcionesCompartmentEditPart;
+import proyectomm.diagram.edit.parts.AtributoEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosBaseDeDatosTablasCompartmentEditPart;
 import proyectomm.diagram.edit.parts.BaseDeDatosEditPart;
+import proyectomm.diagram.edit.parts.BorradoEditPart;
+import proyectomm.diagram.edit.parts.EnvioEditPart;
+import proyectomm.diagram.edit.parts.FinEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
+import proyectomm.diagram.edit.parts.ForeignKeyForeignKeyOpcionesCompartmentEditPart;
+import proyectomm.diagram.edit.parts.InicioEditPart;
+import proyectomm.diagram.edit.parts.LecturaEditPart;
+import proyectomm.diagram.edit.parts.OpcionEditPart;
+import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
+import proyectomm.diagram.edit.parts.PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
+import proyectomm.diagram.edit.parts.RecepcionEditPart;
+import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
+import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
+import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
+import proyectomm.diagram.edit.parts.UsuarioEditPart;
+import proyectomm.diagram.part.Messages;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
 
 /**
@@ -231,6 +250,9 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
 			result.addAll(getForeignShortcuts((Diagram) view, parentElement));
 			Diagram sv = (Diagram) view;
+			ProyectommNavigatorGroup links = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_ProcesoDeNegocio_1000_links, "icons/linksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					ProyectommVisualIDRegistry.getType(BaseDeDatosEditPart.VISUAL_ID));
@@ -238,6 +260,12 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					ProyectommVisualIDRegistry.getType(ActorEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
+			}
 			return result.toArray();
 		}
 
@@ -250,6 +278,378 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			connectedViews = getChildrenByType(connectedViews,
 					ProyectommVisualIDRegistry.getType(TablaEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			return result.toArray();
+		}
+
+		case ActorEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(EnvioEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(RecepcionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(BorradoEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(LecturaEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(UsuarioEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(ServicioEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(InicioEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ActorActorTareasCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(FinEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			return result.toArray();
+		}
+
+		case TablaEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TablaTablaAtributosCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(PrimaryKeyEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TablaTablaAtributosCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(ForeignKeyEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TablaTablaAtributosCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(AtributoEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			return result.toArray();
+		}
+
+		case PrimaryKeyEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(OpcionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			return result.toArray();
+		}
+
+		case ForeignKeyEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ForeignKeyForeignKeyOpcionesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(OpcionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			return result.toArray();
+		}
+
+		case AtributoEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(AtributoAtributoOpcionesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					ProyectommVisualIDRegistry.getType(OpcionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			return result.toArray();
+		}
+
+		case EnvioEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Envio_3006_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Envio_3006_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case RecepcionEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Recepcion_3007_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Recepcion_3007_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case BorradoEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Borrado_3008_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Borrado_3008_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case LecturaEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Lectura_3009_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Lectura_3009_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case UsuarioEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Usuario_3010_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Usuario_3010_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case ServicioEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Servicio_3011_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Servicio_3011_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case InicioEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Inicio_3012_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Inicio_3012_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case FinEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ProyectommNavigatorGroup incominglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Fin_3013_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup outgoinglinks = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_Fin_3013_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case TareaSucesorEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			ProyectommNavigatorGroup target = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_TareaSucesor_4001_target, "icons/linkTargetNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			ProyectommNavigatorGroup source = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_TareaSucesor_4001_source, "icons/linkSourceNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(EnvioEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(RecepcionEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(BorradoEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(LecturaEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(UsuarioEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ServicioEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(InicioEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(FinEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(EnvioEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(RecepcionEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(BorradoEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(LecturaEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(UsuarioEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ServicioEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(InicioEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(FinEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
 			return result.toArray();
 		}
 		}

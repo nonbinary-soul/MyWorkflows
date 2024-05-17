@@ -251,6 +251,11 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String Connections2Group_title;
+
+	/**
+	* @generated
+	*/
 	public static String Actor1CreationTool_title;
 
 	/**
@@ -261,22 +266,152 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String BaseDeDatos2CreationTool_title;
+	public static String Atributo2CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String BaseDeDatos2CreationTool_desc;
+	public static String Atributo2CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla3CreationTool_title;
+	public static String BaseDeDatos3CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla3CreationTool_desc;
+	public static String BaseDeDatos3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Borrado4CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Borrado4CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Envio5CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Envio5CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Fin6CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Fin6CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String ForeignKey7CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String ForeignKey7CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Inicio8CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Inicio8CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Lectura9CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Lectura9CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Opcion10CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Opcion10CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String PrimaryKey11CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String PrimaryKey11CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Recepcion12CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Recepcion12CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Servicio13CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Servicio13CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla14CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla14CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Usuario15CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Usuario15CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Sucesor1CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Sucesor1CreationTool_desc;
 
 	/**
 	* @generated
@@ -286,7 +421,127 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String TablaTablaAtributosCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String PrimaryKeyPrimaryKeyOpcionesCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String ForeignKeyForeignKeyOpcionesCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String AtributoAtributoOpcionesCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String ActorActorTareasCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
 	public static String CommandName_OpenDiagram;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ProcesoDeNegocio_1000_links;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Envio_3006_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Envio_3006_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Recepcion_3007_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Recepcion_3007_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Borrado_3008_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Borrado_3008_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Lectura_3009_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Lectura_3009_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Usuario_3010_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Usuario_3010_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Servicio_3011_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Servicio_3011_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Inicio_3012_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Inicio_3012_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Fin_3013_incominglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_Fin_3013_outgoinglinks;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_TareaSucesor_4001_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_TareaSucesor_4001_source;
 
 	/**
 	* @generated

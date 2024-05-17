@@ -1233,6 +1233,8 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createGmf_2Annotations();
 		// gmf.compartment
 		createGmf_3Annotations();
+		// gmf.link
+		createGmf_4Annotations();
 	}
 
 	/**
@@ -1382,7 +1384,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTarea__R09_unidireccionalidad__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\tself.predecesor->size() <= 1 and self.sucesor->size() <= 1"
+			   "body", "\r\n\t\tself.predecesor->size() <= 1 and self.sucesor->size() <= 1"
 		   });
 		addAnnotation
 		  (getTarea__R06_noReflexiva__DiagnosticChain_Map(),
@@ -1394,7 +1396,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getTarea__R08_ConexionesEntreTareas__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t  if self.oclIsTypeOf(Envio) then\n\t\t    -- Se eval\u00ef\u00bf\u00bda que Envio y Recepcion sean de distinto actor\n\t\t    self.oclContainer() <> self.sucesor.oclContainer() \n\t\t  else\n\t\t    -- El resto de conexiones deben ser del mismo actor\n\t\t    self.sucesor->isEmpty() or\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\n\t\t  endif"
+			   "body", "\r\n\t\t  if self.oclIsTypeOf(Envio) then\r\n\t\t    -- Se evalua que Envio y Recepcion sean de distinto actor\r\n\t\t    self.oclContainer() <> self.sucesor.oclContainer() \r\n\t\t  else\r\n\t\t    -- El resto de conexiones deben ser del mismo actor\r\n\t\t    self.sucesor->isEmpty() or\r\n\t\t    self.sucesor.oclContainer() = self.oclContainer()\r\n\t\t  endif"
 		   });
 		addAnnotation
 		  (getInicio__R03_sinPredecesor__DiagnosticChain_Map(),
@@ -1424,7 +1426,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (getBorrado__P04_borradoConClavePrimaria__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
+			   "body", "\r\n\t\t        self.atributo_seleccionado.oclIsTypeOf(PrimaryKey)"
 		   });
 	}
 
@@ -1441,30 +1443,118 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		   source,
 		   new String[] {
 			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/actor.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
+			   "figure", "rectangle",
+			   "color", "253,254,230"
 		   });
 		addAnnotation
 		  (baseDeDatosEClass,
 		   source,
 		   new String[] {
 			   "label", "nombre",
-			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/database.svg",
-			   "label.icon", "false",
-			   "label.placement", "external"
+			   "figure", "rectangle",
+			   "color", "230,255,208"
 		   });
 		addAnnotation
 		  (tablaEClass,
 		   source,
 		   new String[] {
 			   "label", "nombre",
+			   "figure", "rectangle"
+		   });
+		addAnnotation
+		  (atributoEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre, tipo",
+			   "figure", "rectangle",
+			   "label.pattern", "{0}:{1}"
+		   });
+		addAnnotation
+		  (inicioEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
 			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/table.svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/start.svg",
+			   "label.icon", "false",
+			   "label.placement", "none"
+		   });
+		addAnnotation
+		  (finEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/finish.svg",
+			   "label.icon", "false",
+			   "label.placement", "none"
+		   });
+		addAnnotation
+		  (usuarioEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/form.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (servicioEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/service.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (envioEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/send-message.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (recepcionEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/received-message.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (borradoEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/delete.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (lecturaEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/read.svg",
+			   "label.icon", "false",
+			   "label.placement", "external"
+		   });
+		addAnnotation
+		  (opcionEClass,
+		   source,
+		   new String[] {
+			   "label", "nombre",
+			   "figure", "rectangle"
 		   });
 	}
 
@@ -1477,10 +1567,43 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	protected void createGmf_3Annotations() {
 		String source = "gmf.compartment";
 		addAnnotation
+		  (getActor_Tareas(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
 		  (getBaseDeDatos_Tablas(),
 		   source,
 		   new String[] {
-			   "foo", "bar"
+		   });
+		addAnnotation
+		  (getTabla_Atributos(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getAtributo_Opciones(),
+		   source,
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.link</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_4Annotations() {
+		String source = "gmf.link";
+		addAnnotation
+		  (getTarea_Sucesor(),
+		   source,
+		   new String[] {
+			   "source", "predecesor",
+			   "target", "sucessor",
+			   "style", "dot",
+			   "width", "2"
 		   });
 	}
 
