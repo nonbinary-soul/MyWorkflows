@@ -2,9 +2,9 @@
  *************************************************************************
  * This code is 100% auto-generated
  * from:
- *   /proyecto/metamodel/proyectomm.ecore
+ *   /proyecto-dmss/MyWorkflows/proyecto/metamodel/proyectomm.ecore
  * using:
- *   /proyecto/metamodel/proyectomm.genmodel
+ *   /proyecto-dmss/MyWorkflows/proyecto/metamodel/proyectomm.genmodel
  *   org.eclipse.ocl.examples.codegen.oclinecore.OCLinEcoreTables
  *
  * Do not edit it.

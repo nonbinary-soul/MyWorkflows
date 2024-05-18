@@ -858,6 +858,16 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
+	public EOperation getForeignKey__P07_PKEnOtraTabla__DiagnosticChain_Map() {
+		return foreignKeyEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getOpcion() {
 		return opcionEClass;
 	}
@@ -988,6 +998,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		foreignKeyEClass = createEClass(FOREIGN_KEY);
 		createEReference(foreignKeyEClass, FOREIGN_KEY__REFERENCIA_A);
 		createEOperation(foreignKeyEClass, FOREIGN_KEY___P06_MISMO_TIPO_QUE_PK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(foreignKeyEClass, FOREIGN_KEY___P07_PK_EN_OTRA_TABLA__DIAGNOSTICCHAIN_MAP);
 
 		opcionEClass = createEClass(OPCION);
 		createEAttribute(opcionEClass, OPCION__NOMBRE);
@@ -1245,6 +1256,15 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getForeignKey__P07_PKEnOtraTabla__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "P07_PKEnOtraTabla", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(opcionEClass, Opcion.class, "Opcion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOpcion_Nombre(), ecorePackage.getEString(), "nombre", null, 1, 1, Opcion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1348,7 +1368,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		  (foreignKeyEClass,
 		   source,
 		   new String[] {
-			   "constraints", "P06_mismoTipoQuePK"
+			   "constraints", "P07_PKEnOtraTabla"
 		   });
 	}
 
@@ -1486,6 +1506,12 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		   new String[] {
 			   "body", "self.tipo = self.referencia_a.tipo"
 		   });
+		addAnnotation
+		  (getForeignKey__P07_PKEnOtraTabla__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.oclContainer().oclAsType(Tabla) <> self.referencia_a.oclContainer().oclAsType(Tabla)"
+		   });
 	}
 
 	/**
@@ -1573,7 +1599,7 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		   new String[] {
 			   "label", "nombre",
 			   "figure", "svg",
-			   "svg.uri", "platform:/plugin/proyecto/icons/send-message.svg",
+			   "svg.uri", "platform:/plugin/proyecto/icons/sent-message.svg",
 			   "label.icon", "false",
 			   "label.placement", "external"
 		   });

@@ -168,12 +168,20 @@ public class ProyectommValidator extends EObjectValidator {
 	public static final int FOREIGN_KEY__P06_MISMO_TIPO_QUE_PK = 16;
 
 	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P07 PK En Otra Tabla' of 'Foreign Key'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int FOREIGN_KEY__P07_PK_EN_OTRA_TABLA = 17;
+
+	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 16;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 17;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -792,8 +800,19 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(foreignKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P04_sinEspaciosEnBlanco(foreignKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P01_tieneOpciones(foreignKey, diagnostics, context);
+		if (result || diagnostics != null) result &= validateForeignKey_P07_PKEnOtraTabla(foreignKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateForeignKey_P06_mismoTipoQuePK(foreignKey, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * Validates the P07_PKEnOtraTabla constraint of '<em>Foreign Key</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateForeignKey_P07_PKEnOtraTabla(ForeignKey foreignKey, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return foreignKey.P07_PKEnOtraTabla(diagnostics, context);
 	}
 
 	/**

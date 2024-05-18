@@ -234,7 +234,7 @@ public class EnvioEditPart extends AbstractBorderedShapeEditPart {
 		 * @generated
 		 */
 		public EnvioFigure() {
-			this.setURI("platform:/plugin/proyecto/icons/send-message.svg");
+			this.setURI("platform:/plugin/proyecto/icons/sent-message.svg");
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 		}

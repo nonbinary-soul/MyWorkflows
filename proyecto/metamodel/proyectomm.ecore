@@ -231,7 +231,7 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
       <details key="figure" value="svg"/>
-      <details key="svg.uri" value="platform:/plugin/proyecto/icons/send-message.svg"/>
+      <details key="svg.uri" value="platform:/plugin/proyecto/icons/sent-message.svg"/>
       <details key="label.icon" value="false"/>
       <details key="label.placement" value="external"/>
     </eAnnotations>
@@ -297,10 +297,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="P06_mismoTipoQuePK"/>
+      <details key="constraints" value="P06_mismoTipoQuePK P07_PKEnOtraTabla"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="P06_mismoTipoQuePK" value="self.tipo = self.referencia_a.tipo"/>
+      <details key="P07_PKEnOtraTabla" value="self.oclContainer().oclAsType(Tabla) &lt;> self.referencia_a.oclContainer().oclAsType(Tabla)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="referencia_a" lowerBound="1"
         eType="#//PrimaryKey">

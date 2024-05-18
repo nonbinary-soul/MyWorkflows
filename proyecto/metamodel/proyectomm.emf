@@ -144,8 +144,8 @@ abstract class BD extends Intermedia {
 class PrimaryKey extends Atributo {
 }
 
-@Ecore(constraints="P06_mismoTipoQuePK")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P06_mismoTipoQuePK="self.tipo = self.referencia_a.tipo")
+@Ecore(constraints="P06_mismoTipoQuePK P07_PKEnOtraTabla")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P06_mismoTipoQuePK="self.tipo = self.referencia_a.tipo", P07_PKEnOtraTabla="self.oclContainer().oclAsType(Tabla) <> self.referencia_a.oclContainer().oclAsType(Tabla)")
 class ForeignKey extends Atributo {
 	@gmf.link(color="0,0,0", label="Referencia a...", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref PrimaryKey[1] referencia_a;

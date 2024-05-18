@@ -36,6 +36,7 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	 * @ordered
 	 */
 	protected Tabla tabla_accedida_por_servicio;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

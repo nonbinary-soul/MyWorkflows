@@ -127,7 +127,7 @@
         <actualFigure xsi:type="gmfgraph:Label" name="ServicioLabelFigure" text="Servicio"/>
       </descriptors>
       <descriptors name="EnvioFigure">
-        <actualFigure xsi:type="gmfgraph:SVGFigure" name="EnvioFigure" documentURI="platform:/plugin/proyecto/icons/send-message.svg">
+        <actualFigure xsi:type="gmfgraph:SVGFigure" name="EnvioFigure" documentURI="platform:/plugin/proyecto/icons/sent-message.svg">
           <border xsi:type="gmfgraph:MarginBorder">
             <insets top="5" left="5" bottom="5" right="5"/>
           </border>

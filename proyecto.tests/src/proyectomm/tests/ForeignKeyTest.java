@@ -15,6 +15,7 @@ import proyectomm.ProyectommFactory;
  * The following operations are tested:
  * <ul>
  *   <li>{@link proyectomm.ForeignKey#P06_mismoTipoQuePK(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P06 mismo Tipo Que PK</em>}</li>
+ *   <li>{@link proyectomm.ForeignKey#P07_PKEnOtraTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 PK En Otra Tabla</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -81,6 +82,19 @@ public class ForeignKeyTest extends AtributoTest {
 	 * @generated
 	 */
 	public void testP06_mismoTipoQuePK__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link proyectomm.ForeignKey#P07_PKEnOtraTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 PK En Otra Tabla</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see proyectomm.ForeignKey#P07_PKEnOtraTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testP07_PKEnOtraTabla__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

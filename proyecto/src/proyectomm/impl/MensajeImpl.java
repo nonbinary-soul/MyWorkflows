@@ -36,6 +36,7 @@ public abstract class MensajeImpl extends IntermediaImpl implements Mensaje {
 	 * @ordered
 	 */
 	protected Tabla tabla_accedida_por_mensaje;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

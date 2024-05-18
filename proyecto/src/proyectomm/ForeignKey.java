@@ -3,8 +3,8 @@
 package proyectomm;
 
 import java.util.Map;
-import org.eclipse.emf.common.util.DiagnosticChain;
 
+import org.eclipse.emf.common.util.DiagnosticChain;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getForeignKey()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P06_mismoTipoQuePK'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P07_PKEnOtraTabla'"
  * @generated
  */
 public interface ForeignKey extends Atributo {
@@ -53,5 +53,13 @@ public interface ForeignKey extends Atributo {
 	 * @generated
 	 */
 	boolean P06_mismoTipoQuePK(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.oclContainer().oclAsType(Tabla) &lt;&gt; self.referencia_a.oclContainer().oclAsType(Tabla)'"
+	 * @generated
+	 */
+	boolean P07_PKEnOtraTabla(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // ForeignKey

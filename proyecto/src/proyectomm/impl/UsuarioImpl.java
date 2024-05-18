@@ -36,6 +36,7 @@ public class UsuarioImpl extends IntermediaImpl implements Usuario {
 	 * @ordered
 	 */
 	protected Tabla tabla_accedida_por_usuario;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

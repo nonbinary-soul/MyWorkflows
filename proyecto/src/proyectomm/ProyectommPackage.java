@@ -1808,13 +1808,22 @@ public interface ProyectommPackage extends EPackage {
 	int FOREIGN_KEY___P06_MISMO_TIPO_QUE_PK__DIAGNOSTICCHAIN_MAP = ATRIBUTO_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>P07 PK En Otra Tabla</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOREIGN_KEY___P07_PK_EN_OTRA_TABLA__DIAGNOSTICCHAIN_MAP = ATRIBUTO_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Foreign Key</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 1;
+	int FOREIGN_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.OpcionImpl <em>Opcion</em>}' class.
@@ -2479,6 +2488,16 @@ public interface ProyectommPackage extends EPackage {
 	EOperation getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for the '{@link proyectomm.ForeignKey#P07_PKEnOtraTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 PK En Otra Tabla</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>P07 PK En Otra Tabla</em>' operation.
+	 * @see proyectomm.ForeignKey#P07_PKEnOtraTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getForeignKey__P07_PKEnOtraTabla__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link proyectomm.Opcion <em>Opcion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3041,6 +3060,14 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation FOREIGN_KEY___P06_MISMO_TIPO_QUE_PK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getForeignKey__P06_mismoTipoQuePK__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>P07 PK En Otra Tabla</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FOREIGN_KEY___P07_PK_EN_OTRA_TABLA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getForeignKey__P07_PKEnOtraTabla__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.OpcionImpl <em>Opcion</em>}' class.
