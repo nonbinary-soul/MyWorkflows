@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectomm:ProcesoDeNegocio xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:proyectomm="http://www.example.org/proyectomm" nombre="Consultar pedido">
+  <bases_de_datos nombre="Pizzeria_db">
+    <tablas nombre="tabla_pedidos">
+      <atributos xsi:type="proyectomm:ForeignKey" nombre="dni_cliente" referencia_a="//@bases_de_datos.0/@tablas.1/@atributos.0"/>
+      <atributos nombre="pizza_seleccionada" tipo="TEXT"/>
+      <atributos nombre="pizzas_disponibles" tipo="LIST">
+        <opciones nombre="Bacon queso"/>
+        <opciones nombre="Cuatro quesos"/>
+        <opciones nombre="Margarita"/>
+        <opciones nombre="Barbacoa"/>
+        <opciones nombre="Carbonara"/>
+      </atributos>
+      <atributos nombre="precio_total" tipo="REAL"/>
+      <atributos xsi:type="proyectomm:PrimaryKey" nombre="numero_pedido"/>
+    </tablas>
+    <tablas nombre="tabla_clientes">
+      <atributos xsi:type="proyectomm:PrimaryKey" nombre="DNI"/>
+      <atributos nombre="nombre" tipo="TEXT"/>
+      <atributos nombre="direccion" tipo="TEXT"/>
+      <atributos nombre="telefono"/>
+      <atributos nombre="email" tipo="TEXT"/>
+      <atributos nombre="vive_en_caceres" tipo="BOOLEAN"/>
+    </tablas>
+  </bases_de_datos>
+  <actores nombre="Cliente">
+    <tareas xsi:type="proyectomm:Inicio" nombre="Inicio" sucesor="//@actores.0/@tareas.2"/>
+    <tareas xsi:type="proyectomm:Fin" nombre="Fin" predecesor="//@actores.0/@tareas.2"/>
+    <tareas xsi:type="proyectomm:Lectura" nombre="Consulta de mi pedido" sucesor="//@actores.0/@tareas.1" predecesor="//@actores.0/@tareas.0" atributo_seleccionado="//@bases_de_datos.0/@tablas.0/@atributos.4"/>
+  </actores>
+</proyectomm:ProcesoDeNegocio>

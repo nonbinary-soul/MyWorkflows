@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectomm:ProcesoDeNegocio xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:proyectomm="http://www.example.org/proyectomm" nombre="Pedido de una pizza de un usuario registrado">
+  <bases_de_datos nombre="Pizzeria_db">
+    <tablas nombre="tabla_clientes">
+      <atributos xsi:type="proyectomm:PrimaryKey" nombre="DNI"/>
+      <atributos nombre="nombre" tipo="TEXT"/>
+      <atributos nombre="direccion" tipo="TEXT"/>
+      <atributos nombre="telefono"/>
+      <atributos nombre="email" tipo="TEXT"/>
+      <atributos nombre="vive_en_caceres" tipo="BOOLEAN"/>
+    </tablas>
+    <tablas nombre="tabla_pedidos">
+      <atributos xsi:type="proyectomm:ForeignKey" nombre="dni_cliente" referencia_a="//@bases_de_datos.0/@tablas.0/@atributos.0"/>
+      <atributos nombre="pizza_seleccionada" tipo="TEXT"/>
+      <atributos nombre="precio_total" tipo="REAL"/>
+      <atributos nombre="pizzas_disponibles" tipo="LIST">
+        <opciones nombre="Margarita"/>
+        <opciones nombre="Barbacoa"/>
+        <opciones nombre="Cuatro quesos"/>
+        <opciones nombre="Bacon queso"/>
+        <opciones nombre="Carbonara"/>
+      </atributos>
+      <atributos xsi:type="proyectomm:PrimaryKey" nombre="numero_pedido"/>
+    </tablas>
+    <tablas nombre="tabla_estados">
+      <atributos xsi:type="proyectomm:PrimaryKey" nombre="numero_de_registro"/>
+      <atributos xsi:type="proyectomm:ForeignKey" nombre="numero_pedido" referencia_a="//@bases_de_datos.0/@tablas.1/@atributos.4"/>
+      <atributos nombre="timestamp" tipo="DATE"/>
+      <atributos nombre="estado" tipo="BOOLEAN"/>
+      <atributos nombre="URL" tipo="TEXT"/>
+    </tablas>
+    <tablas nombre="tabla_valoraciones">
+      <atributos xsi:type="proyectomm:PrimaryKey" nombre="numero_de_valoracion"/>
+      <atributos xsi:type="proyectomm:ForeignKey" nombre="numero_pedido" referencia_a="//@bases_de_datos.0/@tablas.1/@atributos.4"/>
+      <atributos nombre="valoracion"/>
+    </tablas>
+  </bases_de_datos>
+  <actores nombre="Cliente">
+    <tareas xsi:type="proyectomm:Inicio" sucesor="//@actores.0/@tareas.1"/>
+    <tareas xsi:type="proyectomm:Usuario" nombre="Realizar pedido de una pizza" sucesor="//@actores.0/@tareas.2" predecesor="//@actores.0/@tareas.0" tabla_accedida_por_usuario="//@bases_de_datos.0/@tablas.1"/>
+    <tareas xsi:type="proyectomm:Envio" nombre="Enviar datos del pedido" sucesor="//@actores.1/@tareas.0" predecesor="//@actores.0/@tareas.1" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.1"/>
+    <tareas xsi:type="proyectomm:Recepcion" nombre="Recibir la pizza" sucesor="//@actores.0/@tareas.4" predecesor="//@actores.1/@tareas.2" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.2"/>
+    <tareas xsi:type="proyectomm:Usuario" nombre="Rellenar formulario de satisfacción" sucesor="//@actores.0/@tareas.5" predecesor="//@actores.0/@tareas.3" tabla_accedida_por_usuario="//@bases_de_datos.0/@tablas.3"/>
+    <tareas xsi:type="proyectomm:Fin" predecesor="//@actores.0/@tareas.4"/>
+  </actores>
+  <actores nombre="Pizzeria">
+    <tareas xsi:type="proyectomm:Recepcion" nombre="Recibir datos del pedido" sucesor="//@actores.1/@tareas.1" predecesor="//@actores.0/@tareas.2" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.1"/>
+    <tareas xsi:type="proyectomm:Servicio" nombre="Cocinar la pizza indicada" sucesor="//@actores.1/@tareas.2" predecesor="//@actores.1/@tareas.0" tabla_entrada_servicio="//@bases_de_datos.0/@tablas.1" tabla_salida_servicio="//@bases_de_datos.0/@tablas.2"/>
+    <tareas xsi:type="proyectomm:Envio" nombre="Notificar de pizza en camino" sucesor="//@actores.0/@tareas.3" predecesor="//@actores.1/@tareas.1" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.2"/>
+  </actores>
+</proyectomm:ProcesoDeNegocio>
