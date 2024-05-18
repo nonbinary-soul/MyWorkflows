@@ -34,7 +34,7 @@ public class ProyectommModelingAssistantProviderOfAtributoEditPart extends Proye
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(AtributoEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+		types.add(ProyectommElementTypes.BDAtributo_seleccionado_4006);
 		return types;
 	}
 
@@ -53,7 +53,7 @@ public class ProyectommModelingAssistantProviderOfAtributoEditPart extends Proye
 	*/
 	public List<IElementType> doGetTypesForSource(AtributoEditPart target, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == ProyectommElementTypes.BDAtributo_seleccionado_4005) {
+		if (relationshipType == ProyectommElementTypes.BDAtributo_seleccionado_4006) {
 			types.add(ProyectommElementTypes.Borrado_3008);
 			types.add(ProyectommElementTypes.Lectura_3009);
 		}

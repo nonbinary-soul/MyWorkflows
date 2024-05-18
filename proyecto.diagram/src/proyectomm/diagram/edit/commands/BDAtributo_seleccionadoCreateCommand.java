@@ -56,7 +56,7 @@ public class BDAtributo_seleccionadoCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateBDAtributo_seleccionado_4005(getSource(), getTarget());
+				.canCreateBDAtributo_seleccionado_4006(getSource(), getTarget());
 	}
 
 	/**

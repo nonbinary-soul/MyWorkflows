@@ -57,8 +57,7 @@ import proyectomm.diagram.providers.ProyectommParserProvider;
 /**
  * @generated
  */
-public class ServicioTabla_accedida_por_servicioExternalLabelEditPart extends LabelEditPart
-		implements ITextAwareEditPart {
+public class ServicioTabla_entrada_servicioExternalLabelEditPart extends LabelEditPart implements ITextAwareEditPart {
 
 	/**
 	* @generated
@@ -94,15 +93,16 @@ public class ServicioTabla_accedida_por_servicioExternalLabelEditPart extends La
 	* @generated
 	*/
 	static {
-		registerSnapBackPosition(ProyectommVisualIDRegistry.getType(
-				proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID),
+		registerSnapBackPosition(
+				ProyectommVisualIDRegistry.getType(
+						proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioExternalLabelEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedida_por_servicioExternalLabelEditPart(View view) {
+	public ServicioTabla_entrada_servicioExternalLabelEditPart(View view) {
 		super(view);
 	}
 
@@ -310,7 +310,7 @@ public class ServicioTabla_accedida_por_servicioExternalLabelEditPart extends La
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ServicioTabla_entrada_servicio_4003,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;
@@ -593,19 +593,19 @@ public class ServicioTabla_accedida_por_servicioExternalLabelEditPart extends La
 	* @generated
 	*/
 	protected IFigure createFigurePrim() {
-		return new ServicioTabla_accedida_por_servicioExternalLabelFigure();
+		return new ServicioTabla_entrada_servicioExternalLabelFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ServicioTabla_accedida_por_servicioExternalLabelFigure extends WrappingLabel {
+	public class ServicioTabla_entrada_servicioExternalLabelFigure extends WrappingLabel {
 
 		/**
 		 * @generated
 		 */
-		public ServicioTabla_accedida_por_servicioExternalLabelFigure() {
-			this.setText("Acceso a la tabla...");
+		public ServicioTabla_entrada_servicioExternalLabelFigure() {
+			this.setText("Acceso a la tabla de entrada...");
 		}
 
 	}

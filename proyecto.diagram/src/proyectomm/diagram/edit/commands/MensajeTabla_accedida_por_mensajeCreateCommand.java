@@ -58,7 +58,7 @@ public class MensajeTabla_accedida_por_mensajeCreateCommand extends EditElementC
 		}
 		// target may be null here but it's possible to check constraint
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateMensajeTabla_accedida_por_mensaje_4004(getSource(), getTarget());
+				.canCreateMensajeTabla_accedida_por_mensaje_4005(getSource(), getTarget());
 	}
 
 	/**

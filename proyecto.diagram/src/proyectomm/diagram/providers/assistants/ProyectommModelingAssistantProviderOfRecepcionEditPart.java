@@ -44,7 +44,7 @@ public class ProyectommModelingAssistantProviderOfRecepcionEditPart extends Proy
 	public List<IElementType> doGetRelTypesOnSource(RecepcionEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(ProyectommElementTypes.TareaSucesor_4001);
-		types.add(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004);
+		types.add(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005);
 		return types;
 	}
 
@@ -90,7 +90,7 @@ public class ProyectommModelingAssistantProviderOfRecepcionEditPart extends Proy
 			types.add(ProyectommElementTypes.TareaSucesor_4001);
 		}
 		if (targetEditPart instanceof TablaEditPart) {
-			types.add(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004);
+			types.add(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005);
 		}
 		return types;
 	}
@@ -119,7 +119,7 @@ public class ProyectommModelingAssistantProviderOfRecepcionEditPart extends Proy
 			types.add(ProyectommElementTypes.Servicio_3011);
 			types.add(ProyectommElementTypes.Inicio_3012);
 			types.add(ProyectommElementTypes.Fin_3013);
-		} else if (relationshipType == ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004) {
+		} else if (relationshipType == ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005) {
 			types.add(ProyectommElementTypes.Tabla_3001);
 		}
 		return types;

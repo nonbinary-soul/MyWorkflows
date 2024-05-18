@@ -108,7 +108,7 @@ public class AtributoItemSemanticEditPolicy extends ProyectommBaseItemSemanticEd
 	 * @generated
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4006 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -118,7 +118,7 @@ public class AtributoItemSemanticEditPolicy extends ProyectommBaseItemSemanticEd
 	 * @generated
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4006 == req.getElementType()) {
 			return getGEFWrapper(new BDAtributo_seleccionadoCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;

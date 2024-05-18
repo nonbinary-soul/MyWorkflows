@@ -688,8 +688,18 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 	 * @generated
 	 */
 	@Override
-	public EReference getServicio_Tabla_accedida_por_servicio() {
+	public EReference getServicio_Tabla_entrada_servicio() {
 		return (EReference)servicioEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getServicio_Tabla_salida_servicio() {
+		return (EReference)servicioEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -973,7 +983,8 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		createEReference(usuarioEClass, USUARIO__TABLA_ACCEDIDA_POR_USUARIO);
 
 		servicioEClass = createEClass(SERVICIO);
-		createEReference(servicioEClass, SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO);
+		createEReference(servicioEClass, SERVICIO__TABLA_ENTRADA_SERVICIO);
+		createEReference(servicioEClass, SERVICIO__TABLA_SALIDA_SERVICIO);
 
 		mensajeEClass = createEClass(MENSAJE);
 		createEReference(mensajeEClass, MENSAJE__TABLA_ACCEDIDA_POR_MENSAJE);
@@ -1198,7 +1209,8 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 		initEReference(getUsuario_Tabla_accedida_por_usuario(), this.getTabla(), null, "tabla_accedida_por_usuario", null, 1, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(servicioEClass, Servicio.class, "Servicio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getServicio_Tabla_accedida_por_servicio(), this.getTabla(), null, "tabla_accedida_por_servicio", null, 1, 1, Servicio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicio_Tabla_entrada_servicio(), this.getTabla(), null, "tabla_entrada_servicio", null, 1, 1, Servicio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicio_Tabla_salida_servicio(), this.getTabla(), null, "tabla_salida_servicio", null, 0, 1, Servicio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mensajeEClass, Mensaje.class, "Mensaje", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMensaje_Tabla_accedida_por_mensaje(), this.getTabla(), null, "tabla_accedida_por_mensaje", null, 1, 1, Mensaje.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1702,11 +1714,21 @@ public class ProyectommPackageImpl extends EPackageImpl implements ProyectommPac
 			   "width", "2"
 		   });
 		addAnnotation
-		  (getServicio_Tabla_accedida_por_servicio(),
+		  (getServicio_Tabla_entrada_servicio(),
 		   source,
 		   new String[] {
 			   "color", "0,0,0",
-			   "label", "Acceso a la tabla...",
+			   "label", "Acceso a la tabla de entrada...",
+			   "target.decoration", "filledclosedarrow",
+			   "style", "dash",
+			   "width", "2"
+		   });
+		addAnnotation
+		  (getServicio_Tabla_salida_servicio(),
+		   source,
+		   new String[] {
+			   "color", "153,153,0",
+			   "label", "Acceso a la tabla de salida...",
 			   "target.decoration", "filledclosedarrow",
 			   "style", "dash",
 			   "width", "2"

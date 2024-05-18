@@ -188,8 +188,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Tabla_accedida_por_servicio"
-          description="Create new Tabla_accedida_por_servicio">
+          title="Tabla_accedida_por_usuario"
+          description="Create new Tabla_accedida_por_usuario">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -197,8 +197,17 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Tabla_accedida_por_usuario"
-          description="Create new Tabla_accedida_por_usuario">
+          title="Tabla_entrada_servicio"
+          description="Create new Tabla_entrada_servicio">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Tabla_salida_servicio"
+          description="Create new Tabla_salida_servicio">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

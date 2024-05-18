@@ -46,7 +46,7 @@ public class ProyectommModelingAssistantProviderOfBorradoEditPart extends Proyec
 	public List<IElementType> doGetRelTypesOnSource(BorradoEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(ProyectommElementTypes.TareaSucesor_4001);
-		types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+		types.add(ProyectommElementTypes.BDAtributo_seleccionado_4006);
 		return types;
 	}
 
@@ -92,13 +92,13 @@ public class ProyectommModelingAssistantProviderOfBorradoEditPart extends Proyec
 			types.add(ProyectommElementTypes.TareaSucesor_4001);
 		}
 		if (targetEditPart instanceof PrimaryKeyEditPart) {
-			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4006);
 		}
 		if (targetEditPart instanceof ForeignKeyEditPart) {
-			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4006);
 		}
 		if (targetEditPart instanceof AtributoEditPart) {
-			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4005);
+			types.add(ProyectommElementTypes.BDAtributo_seleccionado_4006);
 		}
 		return types;
 	}
@@ -127,7 +127,7 @@ public class ProyectommModelingAssistantProviderOfBorradoEditPart extends Proyec
 			types.add(ProyectommElementTypes.Servicio_3011);
 			types.add(ProyectommElementTypes.Inicio_3012);
 			types.add(ProyectommElementTypes.Fin_3013);
-		} else if (relationshipType == ProyectommElementTypes.BDAtributo_seleccionado_4005) {
+		} else if (relationshipType == ProyectommElementTypes.BDAtributo_seleccionado_4006) {
 			types.add(ProyectommElementTypes.PrimaryKey_3002);
 			types.add(ProyectommElementTypes.ForeignKey_3004);
 			types.add(ProyectommElementTypes.Atributo_3005);

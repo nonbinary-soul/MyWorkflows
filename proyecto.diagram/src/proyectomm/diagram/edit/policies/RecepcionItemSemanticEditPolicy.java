@@ -102,7 +102,7 @@ public class RecepcionItemSemanticEditPolicy extends ProyectommBaseItemSemanticE
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004 == req.getElementType()) {
+		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005 == req.getElementType()) {
 			return getGEFWrapper(
 					new MensajeTabla_accedida_por_mensajeCreateCommand(req, req.getSource(), req.getTarget()));
 		}
@@ -116,7 +116,7 @@ public class RecepcionItemSemanticEditPolicy extends ProyectommBaseItemSemanticE
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004 == req.getElementType()) {
+		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005 == req.getElementType()) {
 			return null;
 		}
 		return null;

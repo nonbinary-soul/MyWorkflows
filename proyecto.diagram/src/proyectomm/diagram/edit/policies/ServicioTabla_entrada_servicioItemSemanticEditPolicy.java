@@ -12,13 +12,13 @@ import proyectomm.diagram.providers.ProyectommElementTypes;
 /**
  * @generated
  */
-public class ServicioTabla_accedida_por_servicioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditPolicy {
+public class ServicioTabla_entrada_servicioItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedida_por_servicioItemSemanticEditPolicy() {
-		super(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003);
+	public ServicioTabla_entrada_servicioItemSemanticEditPolicy() {
+		super(ProyectommElementTypes.ServicioTabla_entrada_servicio_4003);
 	}
 
 	/**

@@ -11,14 +11,14 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
-import proyectomm.ForeignKey;
-import proyectomm.PrimaryKey;
+import proyectomm.Servicio;
+import proyectomm.Tabla;
 import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class ForeignKeyReferencia_aCreateCommand extends EditElementCommand {
+public class ServicioTabla_entrada_servicioCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -33,7 +33,8 @@ public class ForeignKeyReferencia_aCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public ForeignKeyReferencia_aCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
+	public ServicioTabla_entrada_servicioCreateCommand(CreateRelationshipRequest request, EObject source,
+			EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
@@ -46,10 +47,10 @@ public class ForeignKeyReferencia_aCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof ForeignKey) {
+		if (source != null && false == source instanceof Servicio) {
 			return false;
 		}
-		if (target != null && false == target instanceof PrimaryKey) {
+		if (target != null && false == target instanceof Tabla) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -57,7 +58,7 @@ public class ForeignKeyReferencia_aCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateForeignKeyReferencia_a_4007(getSource(), getTarget());
+				.canCreateServicioTabla_entrada_servicio_4003(getSource(), getTarget());
 	}
 
 	/**
@@ -69,7 +70,7 @@ public class ForeignKeyReferencia_aCreateCommand extends EditElementCommand {
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().setReferencia_a(getTarget());
+			getSource().setTabla_entrada_servicio(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 
@@ -85,14 +86,14 @@ public class ForeignKeyReferencia_aCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected ForeignKey getSource() {
-		return (ForeignKey) source;
+	protected Servicio getSource() {
+		return (Servicio) source;
 	}
 
 	/**
 	* @generated
 	*/
-	protected PrimaryKey getTarget() {
-		return (PrimaryKey) target;
+	protected Tabla getTarget() {
+		return (Tabla) target;
 	}
 }

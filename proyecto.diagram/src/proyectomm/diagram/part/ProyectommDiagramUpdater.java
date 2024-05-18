@@ -57,7 +57,8 @@ import proyectomm.diagram.edit.parts.PrimaryKeyPrimaryKeyOpcionesCompartmentEdit
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
@@ -479,7 +480,7 @@ public class ProyectommDiagramUpdater {
 	public static List<ProyectommLinkDescriptor> getForeignKey_3004ContainedLinks(View view) {
 		ForeignKey modelElement = (ForeignKey) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_ForeignKey_Referencia_a_4006(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_ForeignKey_Referencia_a_4007(modelElement));
 		return result;
 	}
 
@@ -497,7 +498,7 @@ public class ProyectommDiagramUpdater {
 		Envio modelElement = (Envio) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(modelElement));
 		return result;
 	}
 
@@ -508,7 +509,7 @@ public class ProyectommDiagramUpdater {
 		Recepcion modelElement = (Recepcion) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(modelElement));
 		return result;
 	}
 
@@ -519,7 +520,7 @@ public class ProyectommDiagramUpdater {
 		Borrado modelElement = (Borrado) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement));
 		return result;
 	}
 
@@ -530,7 +531,7 @@ public class ProyectommDiagramUpdater {
 		Lectura modelElement = (Lectura) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement));
 		return result;
 	}
 
@@ -552,7 +553,8 @@ public class ProyectommDiagramUpdater {
 		Servicio modelElement = (Servicio) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Servicio_Tabla_accedida_por_servicio_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Servicio_Tabla_entrada_servicio_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Servicio_Tabla_salida_servicio_4004(modelElement));
 		return result;
 	}
 
@@ -600,9 +602,11 @@ public class ProyectommDiagramUpdater {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getIncomingFeatureModelFacetLinks_Usuario_Tabla_accedida_por_usuario_4002(modelElement,
 				crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_Servicio_Tabla_accedida_por_servicio_4003(modelElement,
-				crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(modelElement,
+		result.addAll(
+				getIncomingFeatureModelFacetLinks_Servicio_Tabla_entrada_servicio_4003(modelElement, crossReferences));
+		result.addAll(
+				getIncomingFeatureModelFacetLinks_Servicio_Tabla_salida_servicio_4004(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(modelElement,
 				crossReferences));
 		return result;
 	}
@@ -615,8 +619,8 @@ public class ProyectommDiagramUpdater {
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_ForeignKey_Referencia_a_4006(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_ForeignKey_Referencia_a_4007(modelElement, crossReferences));
 		return result;
 	}
 
@@ -635,7 +639,7 @@ public class ProyectommDiagramUpdater {
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement, crossReferences));
 		return result;
 	}
 
@@ -647,7 +651,7 @@ public class ProyectommDiagramUpdater {
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement, crossReferences));
 		return result;
 	}
 
@@ -788,7 +792,7 @@ public class ProyectommDiagramUpdater {
 	public static List<ProyectommLinkDescriptor> getForeignKey_3004OutgoingLinks(View view) {
 		ForeignKey modelElement = (ForeignKey) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_ForeignKey_Referencia_a_4006(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_ForeignKey_Referencia_a_4007(modelElement));
 		return result;
 	}
 
@@ -806,7 +810,7 @@ public class ProyectommDiagramUpdater {
 		Envio modelElement = (Envio) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(modelElement));
 		return result;
 	}
 
@@ -817,7 +821,7 @@ public class ProyectommDiagramUpdater {
 		Recepcion modelElement = (Recepcion) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(modelElement));
 		return result;
 	}
 
@@ -828,7 +832,7 @@ public class ProyectommDiagramUpdater {
 		Borrado modelElement = (Borrado) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement));
 		return result;
 	}
 
@@ -839,7 +843,7 @@ public class ProyectommDiagramUpdater {
 		Lectura modelElement = (Lectura) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(modelElement));
 		return result;
 	}
 
@@ -861,7 +865,8 @@ public class ProyectommDiagramUpdater {
 		Servicio modelElement = (Servicio) view.getElement();
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Tarea_Sucesor_4001(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Servicio_Tabla_accedida_por_servicio_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Servicio_Tabla_entrada_servicio_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Servicio_Tabla_salida_servicio_4004(modelElement));
 		return result;
 	}
 
@@ -922,16 +927,15 @@ public class ProyectommDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_Servicio_Tabla_accedida_por_servicio_4003(
+	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_Servicio_Tabla_entrada_servicio_4003(
 			Tabla target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() == ProyectommPackage.eINSTANCE
-					.getServicio_Tabla_accedida_por_servicio()) {
+			if (setting.getEStructuralFeature() == ProyectommPackage.eINSTANCE.getServicio_Tabla_entrada_servicio()) {
 				result.add(new ProyectommLinkDescriptor(setting.getEObject(), target,
-						ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003,
-						ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID));
+						ProyectommElementTypes.ServicioTabla_entrada_servicio_4003,
+						ServicioTabla_entrada_servicioEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -940,7 +944,24 @@ public class ProyectommDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(
+	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_Servicio_Tabla_salida_servicio_4004(
+			Tabla target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() == ProyectommPackage.eINSTANCE.getServicio_Tabla_salida_servicio()) {
+				result.add(new ProyectommLinkDescriptor(setting.getEObject(), target,
+						ProyectommElementTypes.ServicioTabla_salida_servicio_4004,
+						ServicioTabla_salida_servicioEditPart.VISUAL_ID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(
 			Tabla target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
@@ -948,7 +969,7 @@ public class ProyectommDiagramUpdater {
 			if (setting.getEStructuralFeature() == ProyectommPackage.eINSTANCE
 					.getMensaje_Tabla_accedida_por_mensaje()) {
 				result.add(new ProyectommLinkDescriptor(setting.getEObject(), target,
-						ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004,
+						ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005,
 						MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID));
 			}
 		}
@@ -958,14 +979,14 @@ public class ProyectommDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(
+	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(
 			Atributo target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() == ProyectommPackage.eINSTANCE.getBD_Atributo_seleccionado()) {
 				result.add(new ProyectommLinkDescriptor(setting.getEObject(), target,
-						ProyectommElementTypes.BDAtributo_seleccionado_4005,
+						ProyectommElementTypes.BDAtributo_seleccionado_4006,
 						BDAtributo_seleccionadoEditPart.VISUAL_ID));
 			}
 		}
@@ -975,14 +996,14 @@ public class ProyectommDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_ForeignKey_Referencia_a_4006(
+	private static Collection<ProyectommLinkDescriptor> getIncomingFeatureModelFacetLinks_ForeignKey_Referencia_a_4007(
 			PrimaryKey target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() == ProyectommPackage.eINSTANCE.getForeignKey_Referencia_a()) {
 				result.add(new ProyectommLinkDescriptor(setting.getEObject(), target,
-						ProyectommElementTypes.ForeignKeyReferencia_a_4006, ForeignKeyReferencia_aEditPart.VISUAL_ID));
+						ProyectommElementTypes.ForeignKeyReferencia_a_4007, ForeignKeyReferencia_aEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -1022,23 +1043,39 @@ public class ProyectommDiagramUpdater {
 	/**
 	* @generated
 	*/
-	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_Servicio_Tabla_accedida_por_servicio_4003(
+	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_Servicio_Tabla_entrada_servicio_4003(
 			Servicio source) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
-		Tabla destination = source.getTabla_accedida_por_servicio();
+		Tabla destination = source.getTabla_entrada_servicio();
 		if (destination == null) {
 			return result;
 		}
 		result.add(new ProyectommLinkDescriptor(source, destination,
-				ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003,
-				ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID));
+				ProyectommElementTypes.ServicioTabla_entrada_servicio_4003,
+				ServicioTabla_entrada_servicioEditPart.VISUAL_ID));
 		return result;
 	}
 
 	/**
 	* @generated
 	*/
-	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4004(
+	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_Servicio_Tabla_salida_servicio_4004(
+			Servicio source) {
+		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
+		Tabla destination = source.getTabla_salida_servicio();
+		if (destination == null) {
+			return result;
+		}
+		result.add(new ProyectommLinkDescriptor(source, destination,
+				ProyectommElementTypes.ServicioTabla_salida_servicio_4004,
+				ServicioTabla_salida_servicioEditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_Mensaje_Tabla_accedida_por_mensaje_4005(
 			Mensaje source) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		Tabla destination = source.getTabla_accedida_por_mensaje();
@@ -1046,7 +1083,7 @@ public class ProyectommDiagramUpdater {
 			return result;
 		}
 		result.add(new ProyectommLinkDescriptor(source, destination,
-				ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004,
+				ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005,
 				MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID));
 		return result;
 	}
@@ -1054,7 +1091,7 @@ public class ProyectommDiagramUpdater {
 	/**
 	* @generated
 	*/
-	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4005(
+	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_BD_Atributo_seleccionado_4006(
 			proyectomm.BD source) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		Atributo destination = source.getAtributo_seleccionado();
@@ -1062,21 +1099,21 @@ public class ProyectommDiagramUpdater {
 			return result;
 		}
 		result.add(new ProyectommLinkDescriptor(source, destination,
-				ProyectommElementTypes.BDAtributo_seleccionado_4005, BDAtributo_seleccionadoEditPart.VISUAL_ID));
+				ProyectommElementTypes.BDAtributo_seleccionado_4006, BDAtributo_seleccionadoEditPart.VISUAL_ID));
 		return result;
 	}
 
 	/**
 	* @generated
 	*/
-	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_ForeignKey_Referencia_a_4006(
+	private static Collection<ProyectommLinkDescriptor> getOutgoingFeatureModelFacetLinks_ForeignKey_Referencia_a_4007(
 			ForeignKey source) {
 		LinkedList<ProyectommLinkDescriptor> result = new LinkedList<ProyectommLinkDescriptor>();
 		PrimaryKey destination = source.getReferencia_a();
 		if (destination == null) {
 			return result;
 		}
-		result.add(new ProyectommLinkDescriptor(source, destination, ProyectommElementTypes.ForeignKeyReferencia_a_4006,
+		result.add(new ProyectommLinkDescriptor(source, destination, ProyectommElementTypes.ForeignKeyReferencia_a_4007,
 				ForeignKeyReferencia_aEditPart.VISUAL_ID));
 		return result;
 	}

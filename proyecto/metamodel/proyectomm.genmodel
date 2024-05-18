@@ -51,7 +51,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Usuario/tabla_accedida_por_usuario"/>
     </genClasses>
     <genClasses ecoreClass="proyectomm.ecore#//Servicio">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Servicio/tabla_accedida_por_servicio"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Servicio/tabla_entrada_servicio"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Servicio/tabla_salida_servicio"/>
     </genClasses>
     <genClasses image="false" ecoreClass="proyectomm.ecore#//Mensaje">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proyectomm.ecore#//Mensaje/tabla_accedida_por_mensaje"/>

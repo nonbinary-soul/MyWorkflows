@@ -63,7 +63,7 @@ public class MensajeTabla_accedida_por_mensajeExternalLabelEditPart extends Labe
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 6004;
+	public static final int VISUAL_ID = 6005;
 
 	/**
 	* @generated
@@ -311,7 +311,7 @@ public class MensajeTabla_accedida_por_mensajeExternalLabelEditPart extends Labe
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;

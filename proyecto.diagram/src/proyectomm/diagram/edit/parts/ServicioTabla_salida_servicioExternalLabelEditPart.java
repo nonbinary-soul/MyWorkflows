@@ -57,12 +57,12 @@ import proyectomm.diagram.providers.ProyectommParserProvider;
 /**
  * @generated
  */
-public class ForeignKeyReferencia_aExternalLabelEditPart extends LabelEditPart implements ITextAwareEditPart {
+public class ServicioTabla_salida_servicioExternalLabelEditPart extends LabelEditPart implements ITextAwareEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 6007;
+	public static final int VISUAL_ID = 6004;
 
 	/**
 	* @generated
@@ -94,15 +94,15 @@ public class ForeignKeyReferencia_aExternalLabelEditPart extends LabelEditPart i
 	*/
 	static {
 		registerSnapBackPosition(
-				ProyectommVisualIDRegistry
-						.getType(proyectomm.diagram.edit.parts.ForeignKeyReferencia_aExternalLabelEditPart.VISUAL_ID),
+				ProyectommVisualIDRegistry.getType(
+						proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioExternalLabelEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	* @generated
 	*/
-	public ForeignKeyReferencia_aExternalLabelEditPart(View view) {
+	public ServicioTabla_salida_servicioExternalLabelEditPart(View view) {
 		super(view);
 	}
 
@@ -310,7 +310,7 @@ public class ForeignKeyReferencia_aExternalLabelEditPart extends LabelEditPart i
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ForeignKeyReferencia_a_4007,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.ServicioTabla_salida_servicio_4004,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;
@@ -593,19 +593,19 @@ public class ForeignKeyReferencia_aExternalLabelEditPart extends LabelEditPart i
 	* @generated
 	*/
 	protected IFigure createFigurePrim() {
-		return new ForeignKeyReferencia_aExternalLabelFigure();
+		return new ServicioTabla_salida_servicioExternalLabelFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ForeignKeyReferencia_aExternalLabelFigure extends WrappingLabel {
+	public class ServicioTabla_salida_servicioExternalLabelFigure extends WrappingLabel {
 
 		/**
 		 * @generated
 		 */
-		public ForeignKeyReferencia_aExternalLabelFigure() {
-			this.setText("Referencia a...");
+		public ServicioTabla_salida_servicioExternalLabelFigure() {
+			this.setText("Acceso a la tabla de salida...");
 		}
 
 	}

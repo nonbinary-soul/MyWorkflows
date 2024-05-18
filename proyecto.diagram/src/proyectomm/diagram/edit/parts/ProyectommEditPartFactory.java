@@ -142,11 +142,17 @@ public class ProyectommEditPartFactory implements EditPartFactory {
 			case UsuarioTabla_accedida_por_usuarioExternalLabelEditPart.VISUAL_ID:
 				return new UsuarioTabla_accedida_por_usuarioExternalLabelEditPart(view);
 
-			case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
-				return new ServicioTabla_accedida_por_servicioEditPart(view);
+			case ServicioTabla_entrada_servicioEditPart.VISUAL_ID:
+				return new ServicioTabla_entrada_servicioEditPart(view);
 
-			case ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID:
-				return new ServicioTabla_accedida_por_servicioExternalLabelEditPart(view);
+			case ServicioTabla_entrada_servicioExternalLabelEditPart.VISUAL_ID:
+				return new ServicioTabla_entrada_servicioExternalLabelEditPart(view);
+
+			case ServicioTabla_salida_servicioEditPart.VISUAL_ID:
+				return new ServicioTabla_salida_servicioEditPart(view);
+
+			case ServicioTabla_salida_servicioExternalLabelEditPart.VISUAL_ID:
+				return new ServicioTabla_salida_servicioExternalLabelEditPart(view);
 
 			case MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID:
 				return new MensajeTabla_accedida_por_mensajeEditPart(view);

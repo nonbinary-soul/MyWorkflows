@@ -346,53 +346,66 @@ public class ProyectommBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateServicioTabla_accedida_por_servicio_4003(Servicio source, Tabla target) {
+		public boolean canCreateServicioTabla_entrada_servicio_4003(Servicio source, Tabla target) {
 			if (source != null) {
-				if (source.getTabla_accedida_por_servicio() != null) {
+				if (source.getTabla_entrada_servicio() != null) {
 					return false;
 				}
 			}
 
-			return canExistServicioTabla_accedida_por_servicio_4003(source, target);
+			return canExistServicioTabla_entrada_servicio_4003(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMensajeTabla_accedida_por_mensaje_4004(Mensaje source, Tabla target) {
+		public boolean canCreateServicioTabla_salida_servicio_4004(Servicio source, Tabla target) {
+			if (source != null) {
+				if (source.getTabla_salida_servicio() != null) {
+					return false;
+				}
+			}
+
+			return canExistServicioTabla_salida_servicio_4004(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateMensajeTabla_accedida_por_mensaje_4005(Mensaje source, Tabla target) {
 			if (source != null) {
 				if (source.getTabla_accedida_por_mensaje() != null) {
 					return false;
 				}
 			}
 
-			return canExistMensajeTabla_accedida_por_mensaje_4004(source, target);
+			return canExistMensajeTabla_accedida_por_mensaje_4005(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateBDAtributo_seleccionado_4005(proyectomm.BD source, Atributo target) {
+		public boolean canCreateBDAtributo_seleccionado_4006(proyectomm.BD source, Atributo target) {
 			if (source != null) {
 				if (source.getAtributo_seleccionado() != null) {
 					return false;
 				}
 			}
 
-			return canExistBDAtributo_seleccionado_4005(source, target);
+			return canExistBDAtributo_seleccionado_4006(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateForeignKeyReferencia_a_4006(ForeignKey source, PrimaryKey target) {
+		public boolean canCreateForeignKeyReferencia_a_4007(ForeignKey source, PrimaryKey target) {
 			if (source != null) {
 				if (source.getReferencia_a() != null) {
 					return false;
 				}
 			}
 
-			return canExistForeignKeyReferencia_a_4006(source, target);
+			return canExistForeignKeyReferencia_a_4007(source, target);
 		}
 
 		/**
@@ -412,28 +425,35 @@ public class ProyectommBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
-		public boolean canExistServicioTabla_accedida_por_servicio_4003(Servicio source, Tabla target) {
+		public boolean canExistServicioTabla_entrada_servicio_4003(Servicio source, Tabla target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistMensajeTabla_accedida_por_mensaje_4004(Mensaje source, Tabla target) {
+		public boolean canExistServicioTabla_salida_servicio_4004(Servicio source, Tabla target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistBDAtributo_seleccionado_4005(proyectomm.BD source, Atributo target) {
+		public boolean canExistMensajeTabla_accedida_por_mensaje_4005(Mensaje source, Tabla target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistForeignKeyReferencia_a_4006(ForeignKey source, PrimaryKey target) {
+		public boolean canExistBDAtributo_seleccionado_4006(proyectomm.BD source, Atributo target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistForeignKeyReferencia_a_4007(ForeignKey source, PrimaryKey target) {
 			return true;
 		}
 	}

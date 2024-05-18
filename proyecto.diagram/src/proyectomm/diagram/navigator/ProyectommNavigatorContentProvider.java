@@ -50,7 +50,8 @@ import proyectomm.diagram.edit.parts.PrimaryKeyPrimaryKeyOpcionesCompartmentEdit
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
@@ -272,7 +273,10 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 					ProyectommVisualIDRegistry.getType(UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					ProyectommVisualIDRegistry.getType(ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID));
+					ProyectommVisualIDRegistry.getType(ServicioTabla_entrada_servicioEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ServicioTabla_salida_servicioEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					ProyectommVisualIDRegistry.getType(MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID));
@@ -374,7 +378,10 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 					ProyectommVisualIDRegistry.getType(UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ProyectommVisualIDRegistry.getType(ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID));
+					ProyectommVisualIDRegistry.getType(ServicioTabla_entrada_servicioEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ServicioTabla_salida_servicioEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					ProyectommVisualIDRegistry.getType(MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID));
@@ -617,7 +624,10 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 					ProyectommVisualIDRegistry.getType(TareaSucesorEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					ProyectommVisualIDRegistry.getType(ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID));
+					ProyectommVisualIDRegistry.getType(ServicioTabla_entrada_servicioEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ServicioTabla_salida_servicioEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
@@ -770,14 +780,39 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			return result.toArray();
 		}
 
-		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID: {
+		case ServicioTabla_entrada_servicioEditPart.VISUAL_ID: {
 			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			ProyectommNavigatorGroup target = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_ServicioTabla_accedida_por_servicio_4003_target,
+					Messages.NavigatorGroupName_ServicioTabla_entrada_servicio_4003_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			ProyectommNavigatorGroup source = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_ServicioTabla_accedida_por_servicio_4003_source,
+					Messages.NavigatorGroupName_ServicioTabla_entrada_servicio_4003_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(TablaEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ProyectommVisualIDRegistry.getType(ServicioEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case ServicioTabla_salida_servicioEditPart.VISUAL_ID: {
+			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			ProyectommNavigatorGroup target = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_ServicioTabla_salida_servicio_4004_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ProyectommNavigatorGroup source = new ProyectommNavigatorGroup(
+					Messages.NavigatorGroupName_ServicioTabla_salida_servicio_4004_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -799,10 +834,10 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			ProyectommNavigatorGroup target = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4004_target,
+					Messages.NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4005_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			ProyectommNavigatorGroup source = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4004_source,
+					Messages.NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4005_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -827,10 +862,10 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			ProyectommNavigatorGroup target = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_BDAtributo_seleccionado_4005_target,
+					Messages.NavigatorGroupName_BDAtributo_seleccionado_4006_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			ProyectommNavigatorGroup source = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_BDAtributo_seleccionado_4005_source,
+					Messages.NavigatorGroupName_BDAtributo_seleccionado_4006_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -861,10 +896,10 @@ public class ProyectommNavigatorContentProvider implements ICommonContentProvide
 			LinkedList<ProyectommAbstractNavigatorItem> result = new LinkedList<ProyectommAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			ProyectommNavigatorGroup target = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_ForeignKeyReferencia_a_4006_target,
+					Messages.NavigatorGroupName_ForeignKeyReferencia_a_4007_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			ProyectommNavigatorGroup source = new ProyectommNavigatorGroup(
-					Messages.NavigatorGroupName_ForeignKeyReferencia_a_4006_source,
+					Messages.NavigatorGroupName_ForeignKeyReferencia_a_4007_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),

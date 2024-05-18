@@ -446,22 +446,32 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida_por_servicio5CreationTool_title;
+	public static String Tabla_accedida_por_usuario5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida_por_servicio5CreationTool_desc;
+	public static String Tabla_accedida_por_usuario5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida_por_usuario6CreationTool_title;
+	public static String Tabla_entrada_servicio6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Tabla_accedida_por_usuario6CreationTool_desc;
+	public static String Tabla_entrada_servicio6CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_salida_servicio7CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Tabla_salida_servicio7CreationTool_desc;
 
 	/**
 	* @generated
@@ -631,42 +641,52 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ServicioTabla_accedida_por_servicio_4003_target;
+	public static String NavigatorGroupName_ServicioTabla_entrada_servicio_4003_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ServicioTabla_accedida_por_servicio_4003_source;
+	public static String NavigatorGroupName_ServicioTabla_entrada_servicio_4003_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4004_target;
+	public static String NavigatorGroupName_ServicioTabla_salida_servicio_4004_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4004_source;
+	public static String NavigatorGroupName_ServicioTabla_salida_servicio_4004_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_BDAtributo_seleccionado_4005_target;
+	public static String NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4005_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_BDAtributo_seleccionado_4005_source;
+	public static String NavigatorGroupName_MensajeTabla_accedida_por_mensaje_4005_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ForeignKeyReferencia_a_4006_target;
+	public static String NavigatorGroupName_BDAtributo_seleccionado_4006_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ForeignKeyReferencia_a_4006_source;
+	public static String NavigatorGroupName_BDAtributo_seleccionado_4006_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ForeignKeyReferencia_a_4007_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_ForeignKeyReferencia_a_4007_source;
 
 	/**
 	* @generated

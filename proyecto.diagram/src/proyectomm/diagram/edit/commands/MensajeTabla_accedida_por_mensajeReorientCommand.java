@@ -76,7 +76,7 @@ public class MensajeTabla_accedida_por_mensajeReorientCommand extends EditElemen
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistMensajeTabla_accedida_por_mensaje_4004(getNewSource(), getOldTarget());
+				.canExistMensajeTabla_accedida_por_mensaje_4005(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class MensajeTabla_accedida_por_mensajeReorientCommand extends EditElemen
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistMensajeTabla_accedida_por_mensaje_4004(getOldSource(), getNewTarget());
+				.canExistMensajeTabla_accedida_por_mensaje_4005(getOldSource(), getNewTarget());
 	}
 
 	/**

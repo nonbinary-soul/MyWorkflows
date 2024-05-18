@@ -19,7 +19,7 @@ import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 /**
  * @generated
  */
-public class ServicioTabla_accedida_por_servicioReorientCommand extends EditElementCommand {
+public class ServicioTabla_entrada_servicioReorientCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -44,7 +44,7 @@ public class ServicioTabla_accedida_por_servicioReorientCommand extends EditElem
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedida_por_servicioReorientCommand(ReorientReferenceRelationshipRequest request) {
+	public ServicioTabla_entrada_servicioReorientCommand(ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
 		referenceOwner = request.getReferenceOwner();
@@ -76,7 +76,7 @@ public class ServicioTabla_accedida_por_servicioReorientCommand extends EditElem
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistServicioTabla_accedida_por_servicio_4003(getNewSource(), getOldTarget());
+				.canExistServicioTabla_entrada_servicio_4003(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class ServicioTabla_accedida_por_servicioReorientCommand extends EditElem
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistServicioTabla_accedida_por_servicio_4003(getOldSource(), getNewTarget());
+				.canExistServicioTabla_entrada_servicio_4003(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -110,8 +110,8 @@ public class ServicioTabla_accedida_por_servicioReorientCommand extends EditElem
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().setTabla_accedida_por_servicio(null);
-		getNewSource().setTabla_accedida_por_servicio(getOldTarget());
+		getOldSource().setTabla_entrada_servicio(null);
+		getNewSource().setTabla_entrada_servicio(getOldTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
@@ -119,7 +119,7 @@ public class ServicioTabla_accedida_por_servicioReorientCommand extends EditElem
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getOldSource().setTabla_accedida_por_servicio(getNewTarget());
+		getOldSource().setTabla_entrada_servicio(getNewTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 

@@ -20,7 +20,8 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import proyectomm.diagram.edit.parts.BaseDeDatosBaseDeDatosTablasCompartmentEditPart;
 import proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
@@ -82,8 +83,17 @@ public class BaseDeDatosItemSemanticEditPolicy extends ProyectommBaseItemSemanti
 								cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 								continue;
 							}
-							if (ProyectommVisualIDRegistry.getVisualID(
-									incomingLink) == ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID) {
+							if (ProyectommVisualIDRegistry
+									.getVisualID(incomingLink) == ServicioTabla_entrada_servicioEditPart.VISUAL_ID) {
+								DestroyReferenceRequest r = new DestroyReferenceRequest(
+										incomingLink.getSource().getElement(), null,
+										incomingLink.getTarget().getElement(), false);
+								cmd.add(new DestroyReferenceCommand(r));
+								cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+								continue;
+							}
+							if (ProyectommVisualIDRegistry
+									.getVisualID(incomingLink) == ServicioTabla_salida_servicioEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(), null,
 										incomingLink.getTarget().getElement(), false);

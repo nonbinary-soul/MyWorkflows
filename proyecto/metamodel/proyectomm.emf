@@ -104,8 +104,10 @@ class Usuario extends Intermedia {
 
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/service.svg", label.icon="false", label.placement="external")
 class Servicio extends Intermedia {
-	@gmf.link(color="0,0,0", label="Acceso a la tabla...", target.decoration="filledclosedarrow", style="dash", width="2")
-	ref Tabla[1] tabla_accedida_por_servicio;
+	@gmf.link(color="0,0,0", label="Acceso a la tabla de entrada...", target.decoration="filledclosedarrow", style="dash", width="2")
+	ref Tabla[1] tabla_entrada_servicio;
+	@gmf.link(color="153,153,0", label="Acceso a la tabla de salida...", target.decoration="filledclosedarrow", style="dash", width="2")
+	ref Tabla[?] tabla_salida_servicio;
 }
 
 abstract class Mensaje extends Intermedia {

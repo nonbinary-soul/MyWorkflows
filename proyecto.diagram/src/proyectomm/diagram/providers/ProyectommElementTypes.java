@@ -35,7 +35,8 @@ import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
 import proyectomm.diagram.edit.parts.ProcesoDeNegocioEditPart;
 import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TareaSucesorEditPart;
 import proyectomm.diagram.edit.parts.UsuarioEditPart;
@@ -145,23 +146,28 @@ public class ProyectommElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType ServicioTabla_accedida_por_servicio_4003 = getElementType(
-			"proyecto.diagram.ServicioTabla_accedida_por_servicio_4003"); //$NON-NLS-1$
+	public static final IElementType ServicioTabla_entrada_servicio_4003 = getElementType(
+			"proyecto.diagram.ServicioTabla_entrada_servicio_4003"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType MensajeTabla_accedida_por_mensaje_4004 = getElementType(
-			"proyecto.diagram.MensajeTabla_accedida_por_mensaje_4004"); //$NON-NLS-1$
+	public static final IElementType ServicioTabla_salida_servicio_4004 = getElementType(
+			"proyecto.diagram.ServicioTabla_salida_servicio_4004"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType BDAtributo_seleccionado_4005 = getElementType(
-			"proyecto.diagram.BDAtributo_seleccionado_4005"); //$NON-NLS-1$
+	public static final IElementType MensajeTabla_accedida_por_mensaje_4005 = getElementType(
+			"proyecto.diagram.MensajeTabla_accedida_por_mensaje_4005"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType ForeignKeyReferencia_a_4006 = getElementType(
-			"proyecto.diagram.ForeignKeyReferencia_a_4006"); //$NON-NLS-1$
+	public static final IElementType BDAtributo_seleccionado_4006 = getElementType(
+			"proyecto.diagram.BDAtributo_seleccionado_4006"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType ForeignKeyReferencia_a_4007 = getElementType(
+			"proyecto.diagram.ForeignKeyReferencia_a_4007"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -238,15 +244,18 @@ public class ProyectommElementTypes {
 			elements.put(UsuarioTabla_accedida_por_usuario_4002,
 					ProyectommPackage.eINSTANCE.getUsuario_Tabla_accedida_por_usuario());
 
-			elements.put(ServicioTabla_accedida_por_servicio_4003,
-					ProyectommPackage.eINSTANCE.getServicio_Tabla_accedida_por_servicio());
+			elements.put(ServicioTabla_entrada_servicio_4003,
+					ProyectommPackage.eINSTANCE.getServicio_Tabla_entrada_servicio());
 
-			elements.put(MensajeTabla_accedida_por_mensaje_4004,
+			elements.put(ServicioTabla_salida_servicio_4004,
+					ProyectommPackage.eINSTANCE.getServicio_Tabla_salida_servicio());
+
+			elements.put(MensajeTabla_accedida_por_mensaje_4005,
 					ProyectommPackage.eINSTANCE.getMensaje_Tabla_accedida_por_mensaje());
 
-			elements.put(BDAtributo_seleccionado_4005, ProyectommPackage.eINSTANCE.getBD_Atributo_seleccionado());
+			elements.put(BDAtributo_seleccionado_4006, ProyectommPackage.eINSTANCE.getBD_Atributo_seleccionado());
 
-			elements.put(ForeignKeyReferencia_a_4006, ProyectommPackage.eINSTANCE.getForeignKey_Referencia_a());
+			elements.put(ForeignKeyReferencia_a_4007, ProyectommPackage.eINSTANCE.getForeignKey_Referencia_a());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -282,10 +291,11 @@ public class ProyectommElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Fin_3013);
 			KNOWN_ELEMENT_TYPES.add(TareaSucesor_4001);
 			KNOWN_ELEMENT_TYPES.add(UsuarioTabla_accedida_por_usuario_4002);
-			KNOWN_ELEMENT_TYPES.add(ServicioTabla_accedida_por_servicio_4003);
-			KNOWN_ELEMENT_TYPES.add(MensajeTabla_accedida_por_mensaje_4004);
-			KNOWN_ELEMENT_TYPES.add(BDAtributo_seleccionado_4005);
-			KNOWN_ELEMENT_TYPES.add(ForeignKeyReferencia_a_4006);
+			KNOWN_ELEMENT_TYPES.add(ServicioTabla_entrada_servicio_4003);
+			KNOWN_ELEMENT_TYPES.add(ServicioTabla_salida_servicio_4004);
+			KNOWN_ELEMENT_TYPES.add(MensajeTabla_accedida_por_mensaje_4005);
+			KNOWN_ELEMENT_TYPES.add(BDAtributo_seleccionado_4006);
+			KNOWN_ELEMENT_TYPES.add(ForeignKeyReferencia_a_4007);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -331,14 +341,16 @@ public class ProyectommElementTypes {
 			return TareaSucesor_4001;
 		case UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID:
 			return UsuarioTabla_accedida_por_usuario_4002;
-		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
-			return ServicioTabla_accedida_por_servicio_4003;
+		case ServicioTabla_entrada_servicioEditPart.VISUAL_ID:
+			return ServicioTabla_entrada_servicio_4003;
+		case ServicioTabla_salida_servicioEditPart.VISUAL_ID:
+			return ServicioTabla_salida_servicio_4004;
 		case MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID:
-			return MensajeTabla_accedida_por_mensaje_4004;
+			return MensajeTabla_accedida_por_mensaje_4005;
 		case BDAtributo_seleccionadoEditPart.VISUAL_ID:
-			return BDAtributo_seleccionado_4005;
+			return BDAtributo_seleccionado_4006;
 		case ForeignKeyReferencia_aEditPart.VISUAL_ID:
-			return ForeignKeyReferencia_a_4006;
+			return ForeignKeyReferencia_a_4007;
 		}
 		return null;
 	}

@@ -15,22 +15,22 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import proyectomm.diagram.edit.policies.ForeignKeyReferencia_aItemSemanticEditPolicy;
+import proyectomm.diagram.edit.policies.ServicioTabla_salida_servicioItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class ForeignKeyReferencia_aEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class ServicioTabla_salida_servicioEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 4007;
+	public static final int VISUAL_ID = 4004;
 
 	/**
 	* @generated
 	*/
-	public ForeignKeyReferencia_aEditPart(View view) {
+	public ServicioTabla_salida_servicioEditPart(View view) {
 		super(view);
 	}
 
@@ -39,7 +39,7 @@ public class ForeignKeyReferencia_aEditPart extends ConnectionNodeEditPart imple
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new ForeignKeyReferencia_aItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new ServicioTabla_salida_servicioItemSemanticEditPolicy());
 	}
 
 	/**
@@ -52,25 +52,25 @@ public class ForeignKeyReferencia_aEditPart extends ConnectionNodeEditPart imple
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new ForeignKeyReferencia_aFigure();
+		return new ServicioTabla_salida_servicioFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public ForeignKeyReferencia_aFigure getPrimaryShape() {
-		return (ForeignKeyReferencia_aFigure) getFigure();
+	public ServicioTabla_salida_servicioFigure getPrimaryShape() {
+		return (ServicioTabla_salida_servicioFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ForeignKeyReferencia_aFigure extends PolylineConnectionEx {
+	public class ServicioTabla_salida_servicioFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public ForeignKeyReferencia_aFigure() {
+		public ServicioTabla_salida_servicioFigure() {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);
@@ -99,6 +99,6 @@ public class ForeignKeyReferencia_aEditPart extends ConnectionNodeEditPart imple
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 0, 0, 0);
+	static final Color THIS_FORE = new Color(null, 153, 153, 0);
 
 }

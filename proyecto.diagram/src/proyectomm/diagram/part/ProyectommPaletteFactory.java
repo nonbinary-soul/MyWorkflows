@@ -64,8 +64,9 @@ public class ProyectommPaletteFactory {
 		paletteContainer.add(createReferencia_a2CreationTool());
 		paletteContainer.add(createSucesor3CreationTool());
 		paletteContainer.add(createTabla_accedida_por_mensaje4CreationTool());
-		paletteContainer.add(createTabla_accedida_por_servicio5CreationTool());
-		paletteContainer.add(createTabla_accedida_por_usuario6CreationTool());
+		paletteContainer.add(createTabla_accedida_por_usuario5CreationTool());
+		paletteContainer.add(createTabla_entrada_servicio6CreationTool());
+		paletteContainer.add(createTabla_salida_servicio7CreationTool());
 		return paletteContainer;
 	}
 
@@ -259,10 +260,10 @@ public class ProyectommPaletteFactory {
 	private ToolEntry createAtributo_seleccionado1CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Atributo_seleccionado1CreationTool_title,
 				Messages.Atributo_seleccionado1CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.BDAtributo_seleccionado_4005));
+				Collections.singletonList(ProyectommElementTypes.BDAtributo_seleccionado_4006));
 		entry.setId("createAtributo_seleccionado1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
-				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.BDAtributo_seleccionado_4005));
+				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.BDAtributo_seleccionado_4006));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -273,10 +274,10 @@ public class ProyectommPaletteFactory {
 	private ToolEntry createReferencia_a2CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Referencia_a2CreationTool_title,
 				Messages.Referencia_a2CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.ForeignKeyReferencia_a_4006));
+				Collections.singletonList(ProyectommElementTypes.ForeignKeyReferencia_a_4007));
 		entry.setId("createReferencia_a2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
-				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.ForeignKeyReferencia_a_4006));
+				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.ForeignKeyReferencia_a_4007));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -300,10 +301,10 @@ public class ProyectommPaletteFactory {
 	private ToolEntry createTabla_accedida_por_mensaje4CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_mensaje4CreationTool_title,
 				Messages.Tabla_accedida_por_mensaje4CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004));
+				Collections.singletonList(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005));
 		entry.setId("createTabla_accedida_por_mensaje4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProyectommElementTypes
-				.getImageDescriptor(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004));
+				.getImageDescriptor(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -311,27 +312,41 @@ public class ProyectommPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTabla_accedida_por_servicio5CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_servicio5CreationTool_title,
-				Messages.Tabla_accedida_por_servicio5CreationTool_desc,
-				Collections.singletonList(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003));
-		entry.setId("createTabla_accedida_por_servicio5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(ProyectommElementTypes
-				.getImageDescriptor(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createTabla_accedida_por_usuario6CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_usuario6CreationTool_title,
-				Messages.Tabla_accedida_por_usuario6CreationTool_desc,
+	private ToolEntry createTabla_accedida_por_usuario5CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_accedida_por_usuario5CreationTool_title,
+				Messages.Tabla_accedida_por_usuario5CreationTool_desc,
 				Collections.singletonList(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002));
-		entry.setId("createTabla_accedida_por_usuario6CreationTool"); //$NON-NLS-1$
+		entry.setId("createTabla_accedida_por_usuario5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ProyectommElementTypes
 				.getImageDescriptor(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createTabla_entrada_servicio6CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_entrada_servicio6CreationTool_title,
+				Messages.Tabla_entrada_servicio6CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.ServicioTabla_entrada_servicio_4003));
+		entry.setId("createTabla_entrada_servicio6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(
+				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.ServicioTabla_entrada_servicio_4003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createTabla_salida_servicio7CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Tabla_salida_servicio7CreationTool_title,
+				Messages.Tabla_salida_servicio7CreationTool_desc,
+				Collections.singletonList(ProyectommElementTypes.ServicioTabla_salida_servicio_4004));
+		entry.setId("createTabla_salida_servicio7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(
+				ProyectommElementTypes.getImageDescriptor(ProyectommElementTypes.ServicioTabla_salida_servicio_4004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

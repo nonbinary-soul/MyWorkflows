@@ -101,7 +101,7 @@ public class LecturaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4006 == req.getElementType()) {
 			return getGEFWrapper(new BDAtributo_seleccionadoCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -114,7 +114,7 @@ public class LecturaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEdi
 		if (ProyectommElementTypes.TareaSucesor_4001 == req.getElementType()) {
 			return getGEFWrapper(new TareaSucesorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4006 == req.getElementType()) {
 			return null;
 		}
 		return null;

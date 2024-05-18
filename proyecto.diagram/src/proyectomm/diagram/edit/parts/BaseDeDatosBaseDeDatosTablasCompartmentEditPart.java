@@ -103,8 +103,9 @@ public class BaseDeDatosBaseDeDatosTablasCompartmentEditPart extends ShapeCompar
 					if (type instanceof IElementType) {
 						IElementType elementType = (IElementType) type;
 						if (elementType.equals(ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002)
-								|| elementType.equals(ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003)
-								|| elementType.equals(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004))
+								|| elementType.equals(ProyectommElementTypes.ServicioTabla_entrada_servicio_4003)
+								|| elementType.equals(ProyectommElementTypes.ServicioTabla_salida_servicio_4004)
+								|| elementType.equals(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005))
 							return super.getTargetEditPart(request);
 					}
 				}

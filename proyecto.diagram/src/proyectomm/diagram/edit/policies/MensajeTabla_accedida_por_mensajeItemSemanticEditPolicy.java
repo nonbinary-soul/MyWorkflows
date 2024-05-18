@@ -18,7 +18,7 @@ public class MensajeTabla_accedida_por_mensajeItemSemanticEditPolicy extends Pro
 	* @generated
 	*/
 	public MensajeTabla_accedida_por_mensajeItemSemanticEditPolicy() {
-		super(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004);
+		super(ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005);
 	}
 
 	/**

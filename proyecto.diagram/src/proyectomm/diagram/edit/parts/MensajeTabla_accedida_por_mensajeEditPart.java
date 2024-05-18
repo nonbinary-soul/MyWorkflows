@@ -25,7 +25,7 @@ public class MensajeTabla_accedida_por_mensajeEditPart extends ConnectionNodeEdi
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 4004;
+	public static final int VISUAL_ID = 4005;
 
 	/**
 	* @generated

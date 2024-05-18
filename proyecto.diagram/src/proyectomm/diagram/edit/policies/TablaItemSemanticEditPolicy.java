@@ -22,8 +22,10 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import proyectomm.diagram.edit.commands.MensajeTabla_accedida_por_mensajeCreateCommand;
 import proyectomm.diagram.edit.commands.MensajeTabla_accedida_por_mensajeReorientCommand;
-import proyectomm.diagram.edit.commands.ServicioTabla_accedida_por_servicioCreateCommand;
-import proyectomm.diagram.edit.commands.ServicioTabla_accedida_por_servicioReorientCommand;
+import proyectomm.diagram.edit.commands.ServicioTabla_entrada_servicioCreateCommand;
+import proyectomm.diagram.edit.commands.ServicioTabla_entrada_servicioReorientCommand;
+import proyectomm.diagram.edit.commands.ServicioTabla_salida_servicioCreateCommand;
+import proyectomm.diagram.edit.commands.ServicioTabla_salida_servicioReorientCommand;
 import proyectomm.diagram.edit.commands.UsuarioTabla_accedida_por_usuarioCreateCommand;
 import proyectomm.diagram.edit.commands.UsuarioTabla_accedida_por_usuarioReorientCommand;
 import proyectomm.diagram.edit.parts.AtributoEditPart;
@@ -32,7 +34,8 @@ import proyectomm.diagram.edit.parts.ForeignKeyEditPart;
 import proyectomm.diagram.edit.parts.ForeignKeyReferencia_aEditPart;
 import proyectomm.diagram.edit.parts.MensajeTabla_accedida_por_mensajeEditPart;
 import proyectomm.diagram.edit.parts.PrimaryKeyEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
 import proyectomm.diagram.edit.parts.UsuarioTabla_accedida_por_usuarioEditPart;
 import proyectomm.diagram.part.ProyectommVisualIDRegistry;
@@ -68,7 +71,15 @@ public class TablaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 				continue;
 			}
 			if (ProyectommVisualIDRegistry
-					.getVisualID(incomingLink) == ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID) {
+					.getVisualID(incomingLink) == ServicioTabla_entrada_servicioEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(incomingLink.getSource().getElement(), null,
+						incomingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
+			if (ProyectommVisualIDRegistry
+					.getVisualID(incomingLink) == ServicioTabla_salida_servicioEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -207,10 +218,13 @@ public class TablaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 		if (ProyectommElementTypes.UsuarioTabla_accedida_por_usuario_4002 == req.getElementType()) {
 			return null;
 		}
-		if (ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003 == req.getElementType()) {
+		if (ProyectommElementTypes.ServicioTabla_entrada_servicio_4003 == req.getElementType()) {
 			return null;
 		}
-		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004 == req.getElementType()) {
+		if (ProyectommElementTypes.ServicioTabla_salida_servicio_4004 == req.getElementType()) {
+			return null;
+		}
+		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -224,11 +238,14 @@ public class TablaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 			return getGEFWrapper(
 					new UsuarioTabla_accedida_por_usuarioCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.ServicioTabla_accedida_por_servicio_4003 == req.getElementType()) {
+		if (ProyectommElementTypes.ServicioTabla_entrada_servicio_4003 == req.getElementType()) {
 			return getGEFWrapper(
-					new ServicioTabla_accedida_por_servicioCreateCommand(req, req.getSource(), req.getTarget()));
+					new ServicioTabla_entrada_servicioCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4004 == req.getElementType()) {
+		if (ProyectommElementTypes.ServicioTabla_salida_servicio_4004 == req.getElementType()) {
+			return getGEFWrapper(new ServicioTabla_salida_servicioCreateCommand(req, req.getSource(), req.getTarget()));
+		}
+		if (ProyectommElementTypes.MensajeTabla_accedida_por_mensaje_4005 == req.getElementType()) {
 			return getGEFWrapper(
 					new MensajeTabla_accedida_por_mensajeCreateCommand(req, req.getSource(), req.getTarget()));
 		}
@@ -245,8 +262,10 @@ public class TablaItemSemanticEditPolicy extends ProyectommBaseItemSemanticEditP
 		switch (getVisualID(req)) {
 		case UsuarioTabla_accedida_por_usuarioEditPart.VISUAL_ID:
 			return getGEFWrapper(new UsuarioTabla_accedida_por_usuarioReorientCommand(req));
-		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
-			return getGEFWrapper(new ServicioTabla_accedida_por_servicioReorientCommand(req));
+		case ServicioTabla_entrada_servicioEditPart.VISUAL_ID:
+			return getGEFWrapper(new ServicioTabla_entrada_servicioReorientCommand(req));
+		case ServicioTabla_salida_servicioEditPart.VISUAL_ID:
+			return getGEFWrapper(new ServicioTabla_salida_servicioReorientCommand(req));
 		case MensajeTabla_accedida_por_mensajeEditPart.VISUAL_ID:
 			return getGEFWrapper(new MensajeTabla_accedida_por_mensajeReorientCommand(req));
 		}

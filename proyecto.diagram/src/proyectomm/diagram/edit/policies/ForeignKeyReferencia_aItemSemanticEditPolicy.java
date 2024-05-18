@@ -18,7 +18,7 @@ public class ForeignKeyReferencia_aItemSemanticEditPolicy extends ProyectommBase
 	* @generated
 	*/
 	public ForeignKeyReferencia_aItemSemanticEditPolicy() {
-		super(ProyectommElementTypes.ForeignKeyReferencia_a_4006);
+		super(ProyectommElementTypes.ForeignKeyReferencia_a_4007);
 	}
 
 	/**

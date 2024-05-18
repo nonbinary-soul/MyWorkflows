@@ -106,8 +106,8 @@ public class TablaTablaAtributosCompartmentEditPart extends ShapeCompartmentEdit
 				for (Object type : ((CreateUnspecifiedTypeConnectionRequest) request).getElementTypes()) {
 					if (type instanceof IElementType) {
 						IElementType elementType = (IElementType) type;
-						if (elementType.equals(ProyectommElementTypes.BDAtributo_seleccionado_4005)
-								|| elementType.equals(ProyectommElementTypes.ForeignKeyReferencia_a_4006))
+						if (elementType.equals(ProyectommElementTypes.BDAtributo_seleccionado_4006)
+								|| elementType.equals(ProyectommElementTypes.ForeignKeyReferencia_a_4007))
 							return super.getTargetEditPart(request);
 					}
 				}

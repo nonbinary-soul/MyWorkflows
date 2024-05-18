@@ -204,11 +204,21 @@
       <details key="label.icon" value="false"/>
       <details key="label.placement" value="external"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_accedida_por_servicio"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_entrada_servicio"
         lowerBound="1" eType="#//Tabla">
       <eAnnotations source="gmf.link">
         <details key="color" value="0,0,0"/>
-        <details key="label" value="Acceso a la tabla..."/>
+        <details key="label" value="Acceso a la tabla de entrada..."/>
+        <details key="target.decoration" value="filledclosedarrow"/>
+        <details key="style" value="dash"/>
+        <details key="width" value="2"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_salida_servicio"
+        eType="#//Tabla">
+      <eAnnotations source="gmf.link">
+        <details key="color" value="153,153,0"/>
+        <details key="label" value="Acceso a la tabla de salida..."/>
         <details key="target.decoration" value="filledclosedarrow"/>
         <details key="style" value="dash"/>
         <details key="width" value="2"/>

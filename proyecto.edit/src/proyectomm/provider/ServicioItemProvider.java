@@ -43,25 +43,48 @@ public class ServicioItemProvider extends IntermediaItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTabla_accedida_por_servicioPropertyDescriptor(object);
+			addTabla_entrada_servicioPropertyDescriptor(object);
+			addTabla_salida_servicioPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Tabla accedida por servicio feature.
+	 * This adds a property descriptor for the Tabla entrada servicio feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTabla_accedida_por_servicioPropertyDescriptor(Object object) {
+	protected void addTabla_entrada_servicioPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Servicio_tabla_accedida_por_servicio_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Servicio_tabla_accedida_por_servicio_feature", "_UI_Servicio_type"),
-				 ProyectommPackage.Literals.SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO,
+				 getString("_UI_Servicio_tabla_entrada_servicio_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Servicio_tabla_entrada_servicio_feature", "_UI_Servicio_type"),
+				 ProyectommPackage.Literals.SERVICIO__TABLA_ENTRADA_SERVICIO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Tabla salida servicio feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTabla_salida_servicioPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Servicio_tabla_salida_servicio_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Servicio_tabla_salida_servicio_feature", "_UI_Servicio_type"),
+				 ProyectommPackage.Literals.SERVICIO__TABLA_SALIDA_SERVICIO,
 				 true,
 				 false,
 				 true,

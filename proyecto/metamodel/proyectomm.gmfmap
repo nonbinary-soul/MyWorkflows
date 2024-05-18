@@ -393,7 +393,7 @@
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="proyectomm.gmftool#//@palette/@tools.1/@tools.5"/>
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.4"/>
     <diagramLink
         href="proyectomm.gmfgraph#UsuarioTabla_accedida_por_usuario"/>
     <linkMetaFeature
@@ -405,16 +405,32 @@
         xsi:type="gmfmap:DesignLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="proyectomm.gmfgraph#ServicioTabla_accedida_por_servicioExternalLabel"/>
+          href="proyectomm.gmfgraph#ServicioTabla_entrada_servicioExternalLabel"/>
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="proyectomm.gmftool#//@palette/@tools.1/@tools.4"/>
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.5"/>
     <diagramLink
-        href="proyectomm.gmfgraph#ServicioTabla_accedida_por_servicio"/>
+        href="proyectomm.gmfgraph#ServicioTabla_entrada_servicio"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="proyectomm.ecore#//Servicio/tabla_accedida_por_servicio"/>
+        href="proyectomm.ecore#//Servicio/tabla_entrada_servicio"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="proyectomm.gmfgraph#ServicioTabla_salida_servicioExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="proyectomm.gmftool#//@palette/@tools.1/@tools.6"/>
+    <diagramLink
+        href="proyectomm.gmfgraph#ServicioTabla_salida_servicio"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="proyectomm.ecore#//Servicio/tabla_salida_servicio"/>
   </links>
   <links>
     <labelMappings

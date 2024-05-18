@@ -12,14 +12,14 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-import proyectomm.ForeignKey;
-import proyectomm.PrimaryKey;
+import proyectomm.Servicio;
+import proyectomm.Tabla;
 import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class ForeignKeyReferencia_aReorientCommand extends EditElementCommand {
+public class ServicioTabla_salida_servicioReorientCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -44,7 +44,7 @@ public class ForeignKeyReferencia_aReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public ForeignKeyReferencia_aReorientCommand(ReorientReferenceRelationshipRequest request) {
+	public ServicioTabla_salida_servicioReorientCommand(ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
 		referenceOwner = request.getReferenceOwner();
@@ -56,7 +56,7 @@ public class ForeignKeyReferencia_aReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof ForeignKey) {
+		if (false == referenceOwner instanceof Servicio) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -72,22 +72,22 @@ public class ForeignKeyReferencia_aReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof PrimaryKey && newEnd instanceof ForeignKey)) {
+		if (!(oldEnd instanceof Tabla && newEnd instanceof Servicio)) {
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistForeignKeyReferencia_a_4007(getNewSource(), getOldTarget());
+				.canExistServicioTabla_salida_servicio_4004(getNewSource(), getOldTarget());
 	}
 
 	/**
 	* @generated
 	*/
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof PrimaryKey && newEnd instanceof PrimaryKey)) {
+		if (!(oldEnd instanceof Tabla && newEnd instanceof Tabla)) {
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistForeignKeyReferencia_a_4007(getOldSource(), getNewTarget());
+				.canExistServicioTabla_salida_servicio_4004(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -110,8 +110,8 @@ public class ForeignKeyReferencia_aReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().setReferencia_a(null);
-		getNewSource().setReferencia_a(getOldTarget());
+		getOldSource().setTabla_salida_servicio(null);
+		getNewSource().setTabla_salida_servicio(getOldTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
@@ -119,35 +119,35 @@ public class ForeignKeyReferencia_aReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getOldSource().setReferencia_a(getNewTarget());
+		getOldSource().setTabla_salida_servicio(getNewTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
 	/**
 	* @generated
 	*/
-	protected ForeignKey getOldSource() {
-		return (ForeignKey) referenceOwner;
+	protected Servicio getOldSource() {
+		return (Servicio) referenceOwner;
 	}
 
 	/**
 	* @generated
 	*/
-	protected ForeignKey getNewSource() {
-		return (ForeignKey) newEnd;
+	protected Servicio getNewSource() {
+		return (Servicio) newEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected PrimaryKey getOldTarget() {
-		return (PrimaryKey) oldEnd;
+	protected Tabla getOldTarget() {
+		return (Tabla) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected PrimaryKey getNewTarget() {
-		return (PrimaryKey) newEnd;
+	protected Tabla getNewTarget() {
+		return (Tabla) newEnd;
 	}
 }

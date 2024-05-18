@@ -62,7 +62,7 @@ public class BDAtributo_seleccionadoExternalLabelEditPart extends LabelEditPart 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 6005;
+	public static final int VISUAL_ID = 6006;
 
 	/**
 	* @generated
@@ -310,7 +310,7 @@ public class BDAtributo_seleccionadoExternalLabelEditPart extends LabelEditPart 
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.BDAtributo_seleccionado_4005,
+			parser = ProyectommParserProvider.getParser(ProyectommElementTypes.BDAtributo_seleccionado_4006,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;

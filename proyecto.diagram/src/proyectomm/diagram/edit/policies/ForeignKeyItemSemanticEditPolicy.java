@@ -121,10 +121,10 @@ public class ForeignKeyItemSemanticEditPolicy extends ProyectommBaseItemSemantic
 	 * @generated
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4006 == req.getElementType()) {
 			return null;
 		}
-		if (ProyectommElementTypes.ForeignKeyReferencia_a_4006 == req.getElementType()) {
+		if (ProyectommElementTypes.ForeignKeyReferencia_a_4007 == req.getElementType()) {
 			return getGEFWrapper(new ForeignKeyReferencia_aCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -134,10 +134,10 @@ public class ForeignKeyItemSemanticEditPolicy extends ProyectommBaseItemSemantic
 	 * @generated
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (ProyectommElementTypes.BDAtributo_seleccionado_4005 == req.getElementType()) {
+		if (ProyectommElementTypes.BDAtributo_seleccionado_4006 == req.getElementType()) {
 			return getGEFWrapper(new BDAtributo_seleccionadoCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (ProyectommElementTypes.ForeignKeyReferencia_a_4006 == req.getElementType()) {
+		if (ProyectommElementTypes.ForeignKeyReferencia_a_4007 == req.getElementType()) {
 			return null;
 		}
 		return null;

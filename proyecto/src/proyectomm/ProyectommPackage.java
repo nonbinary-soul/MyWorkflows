@@ -909,13 +909,22 @@ public interface ProyectommPackage extends EPackage {
 	int SERVICIO__DESCRIPCION = INTERMEDIA__DESCRIPCION;
 
 	/**
-	 * The feature id for the '<em><b>Tabla accedida por servicio</b></em>' reference.
+	 * The feature id for the '<em><b>Tabla entrada servicio</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO = INTERMEDIA_FEATURE_COUNT + 0;
+	int SERVICIO__TABLA_ENTRADA_SERVICIO = INTERMEDIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tabla salida servicio</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICIO__TABLA_SALIDA_SERVICIO = INTERMEDIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Servicio</em>' class.
@@ -924,7 +933,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_FEATURE_COUNT = INTERMEDIA_FEATURE_COUNT + 1;
+	int SERVICIO_FEATURE_COUNT = INTERMEDIA_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>R09 unidireccionalidad</em>' operation.
@@ -2313,15 +2322,26 @@ public interface ProyectommPackage extends EPackage {
 	EClass getServicio();
 
 	/**
-	 * Returns the meta object for the reference '{@link proyectomm.Servicio#getTabla_accedida_por_servicio <em>Tabla accedida por servicio</em>}'.
+	 * Returns the meta object for the reference '{@link proyectomm.Servicio#getTabla_entrada_servicio <em>Tabla entrada servicio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tabla accedida por servicio</em>'.
-	 * @see proyectomm.Servicio#getTabla_accedida_por_servicio()
+	 * @return the meta object for the reference '<em>Tabla entrada servicio</em>'.
+	 * @see proyectomm.Servicio#getTabla_entrada_servicio()
 	 * @see #getServicio()
 	 * @generated
 	 */
-	EReference getServicio_Tabla_accedida_por_servicio();
+	EReference getServicio_Tabla_entrada_servicio();
+
+	/**
+	 * Returns the meta object for the reference '{@link proyectomm.Servicio#getTabla_salida_servicio <em>Tabla salida servicio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Tabla salida servicio</em>'.
+	 * @see proyectomm.Servicio#getTabla_salida_servicio()
+	 * @see #getServicio()
+	 * @generated
+	 */
+	EReference getServicio_Tabla_salida_servicio();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Mensaje <em>Mensaje</em>}'.
@@ -2910,12 +2930,20 @@ public interface ProyectommPackage extends EPackage {
 		EClass SERVICIO = eINSTANCE.getServicio();
 
 		/**
-		 * The meta object literal for the '<em><b>Tabla accedida por servicio</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tabla entrada servicio</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICIO__TABLA_ACCEDIDA_POR_SERVICIO = eINSTANCE.getServicio_Tabla_accedida_por_servicio();
+		EReference SERVICIO__TABLA_ENTRADA_SERVICIO = eINSTANCE.getServicio_Tabla_entrada_servicio();
+
+		/**
+		 * The meta object literal for the '<em><b>Tabla salida servicio</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICIO__TABLA_SALIDA_SERVICIO = eINSTANCE.getServicio_Tabla_salida_servicio();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.MensajeImpl <em>Mensaje</em>}' class.

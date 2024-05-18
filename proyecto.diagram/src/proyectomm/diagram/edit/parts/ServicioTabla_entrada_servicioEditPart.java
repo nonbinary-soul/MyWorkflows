@@ -15,12 +15,12 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import proyectomm.diagram.edit.policies.ServicioTabla_accedida_por_servicioItemSemanticEditPolicy;
+import proyectomm.diagram.edit.policies.ServicioTabla_entrada_servicioItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class ServicioTabla_accedida_por_servicioEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class ServicioTabla_entrada_servicioEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -30,7 +30,7 @@ public class ServicioTabla_accedida_por_servicioEditPart extends ConnectionNodeE
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedida_por_servicioEditPart(View view) {
+	public ServicioTabla_entrada_servicioEditPart(View view) {
 		super(view);
 	}
 
@@ -39,8 +39,7 @@ public class ServicioTabla_accedida_por_servicioEditPart extends ConnectionNodeE
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ServicioTabla_accedida_por_servicioItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new ServicioTabla_entrada_servicioItemSemanticEditPolicy());
 	}
 
 	/**
@@ -53,25 +52,25 @@ public class ServicioTabla_accedida_por_servicioEditPart extends ConnectionNodeE
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new ServicioTabla_accedida_por_servicioFigure();
+		return new ServicioTabla_entrada_servicioFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedida_por_servicioFigure getPrimaryShape() {
-		return (ServicioTabla_accedida_por_servicioFigure) getFigure();
+	public ServicioTabla_entrada_servicioFigure getPrimaryShape() {
+		return (ServicioTabla_entrada_servicioFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ServicioTabla_accedida_por_servicioFigure extends PolylineConnectionEx {
+	public class ServicioTabla_entrada_servicioFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public ServicioTabla_accedida_por_servicioFigure() {
+		public ServicioTabla_entrada_servicioFigure() {
 			this.setLineWidth(2);
 			this.setLineStyle(Graphics.LINE_DASH);
 			this.setForegroundColor(THIS_FORE);

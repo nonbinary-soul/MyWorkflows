@@ -18,7 +18,7 @@ import proyectomm.diagram.edit.policies.ProyectommBaseItemSemanticEditPolicy;
 /**
  * @generated
  */
-public class ServicioTabla_accedida_por_servicioCreateCommand extends EditElementCommand {
+public class ServicioTabla_salida_servicioCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -33,7 +33,7 @@ public class ServicioTabla_accedida_por_servicioCreateCommand extends EditElemen
 	/**
 	* @generated
 	*/
-	public ServicioTabla_accedida_por_servicioCreateCommand(CreateRelationshipRequest request, EObject source,
+	public ServicioTabla_salida_servicioCreateCommand(CreateRelationshipRequest request, EObject source,
 			EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
@@ -58,7 +58,7 @@ public class ServicioTabla_accedida_por_servicioCreateCommand extends EditElemen
 		}
 		// target may be null here but it's possible to check constraint
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateServicioTabla_accedida_por_servicio_4003(getSource(), getTarget());
+				.canCreateServicioTabla_salida_servicio_4004(getSource(), getTarget());
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class ServicioTabla_accedida_por_servicioCreateCommand extends EditElemen
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().setTabla_accedida_por_servicio(getTarget());
+			getSource().setTabla_salida_servicio(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 

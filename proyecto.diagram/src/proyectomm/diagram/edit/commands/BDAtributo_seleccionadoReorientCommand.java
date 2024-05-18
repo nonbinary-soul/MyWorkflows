@@ -75,7 +75,7 @@ public class BDAtributo_seleccionadoReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistBDAtributo_seleccionado_4005(getNewSource(), getOldTarget());
+				.canExistBDAtributo_seleccionado_4006(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class BDAtributo_seleccionadoReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return ProyectommBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistBDAtributo_seleccionado_4005(getOldSource(), getNewTarget());
+				.canExistBDAtributo_seleccionado_4006(getOldSource(), getNewTarget());
 	}
 
 	/**

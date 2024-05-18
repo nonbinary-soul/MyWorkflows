@@ -48,8 +48,10 @@ import proyectomm.diagram.edit.parts.RecepcionEditPart;
 import proyectomm.diagram.edit.parts.RecepcionNombreEditPart;
 import proyectomm.diagram.edit.parts.ServicioEditPart;
 import proyectomm.diagram.edit.parts.ServicioNombreEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioEditPart;
-import proyectomm.diagram.edit.parts.ServicioTabla_accedida_por_servicioExternalLabelEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_entrada_servicioExternalLabelEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioEditPart;
+import proyectomm.diagram.edit.parts.ServicioTabla_salida_servicioExternalLabelEditPart;
 import proyectomm.diagram.edit.parts.TablaEditPart;
 import proyectomm.diagram.edit.parts.TablaNombreEditPart;
 import proyectomm.diagram.edit.parts.TablaTablaAtributosCompartmentEditPart;
@@ -407,8 +409,13 @@ public class ProyectommVisualIDRegistry {
 				return true;
 			}
 			break;
-		case ServicioTabla_accedida_por_servicioEditPart.VISUAL_ID:
-			if (ServicioTabla_accedida_por_servicioExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+		case ServicioTabla_entrada_servicioEditPart.VISUAL_ID:
+			if (ServicioTabla_entrada_servicioExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ServicioTabla_salida_servicioEditPart.VISUAL_ID:
+			if (ServicioTabla_salida_servicioExternalLabelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
