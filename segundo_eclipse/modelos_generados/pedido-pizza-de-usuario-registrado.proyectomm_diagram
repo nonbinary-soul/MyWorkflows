@@ -18,21 +18,21 @@
         <children xmi:type="notation:DecorationNode" xmi:id="_0DG9IhTtEe-lp7XN6fFU7Q" type="5007">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_0DG9IxTtEe-lp7XN6fFU7Q" x="-20" y="87"/>
         </children>
-        <element xmi:type="proyectomm:Envio" href="pedido-pizza-de-usuario-registrado.proyectomm#//@actores.0/@tareas.2"/>
+        <element xmi:type="proyectomm:Envio" href="pedido-pizza-de-usuario-registrado.proyectomm#1"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0DG9IRTtEe-lp7XN6fFU7Q" x="446" y="30" width="91" height="79"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_-Mbc4BT1Ee-8Fa7bG8Kshg" type="3007" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_-McD8BT1Ee-8Fa7bG8Kshg" type="5008">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_-McD8RT1Ee-8Fa7bG8Kshg" y="5"/>
         </children>
-        <element xmi:type="proyectomm:Recepcion" href="pedido-pizza-de-usuario-registrado.proyectomm#//@actores.0/@tareas.3"/>
+        <element xmi:type="proyectomm:Recepcion" href="pedido-pizza-de-usuario-registrado.proyectomm#5"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Mbc4RT1Ee-8Fa7bG8Kshg" x="752" y="24" width="78" height="72"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_Uz1HkBT2Ee-8Fa7bG8Kshg" type="3010" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_Uz1uoBT2Ee-8Fa7bG8Kshg" type="5011">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_Uz1uoRT2Ee-8Fa7bG8Kshg" x="-20" y="96"/>
         </children>
-        <element xmi:type="proyectomm:Usuario" href="pedido-pizza-de-usuario-registrado.proyectomm#//@actores.0/@tareas.4"/>
+        <element xmi:type="proyectomm:Usuario" href="pedido-pizza-de-usuario-registrado.proyectomm#6"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Uz1HkRT2Ee-8Fa7bG8Kshg" x="980" y="30" width="84" height="76"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_AeAogBT3Ee-8Fa7bG8Kshg" type="3013" fontName="Segoe UI">
@@ -54,21 +54,21 @@
         <children xmi:type="notation:DecorationNode" xmi:id="_-muF0BTtEe-lp7XN6fFU7Q" type="5008">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_-muF0RTtEe-lp7XN6fFU7Q" x="-20" y="93"/>
         </children>
-        <element xmi:type="proyectomm:Recepcion" href="pedido-pizza-de-usuario-registrado.proyectomm#//@actores.1/@tareas.0"/>
+        <element xmi:type="proyectomm:Recepcion" href="pedido-pizza-de-usuario-registrado.proyectomm#2"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ms3sRTtEe-lp7XN6fFU7Q" x="26" y="30" width="103" height="85"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_l_b8IBTvEe-lp7XN6fFU7Q" type="3011" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_l_b8IhTvEe-lp7XN6fFU7Q" type="5012">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_l_b8IxTvEe-lp7XN6fFU7Q" x="-20" y="93"/>
         </children>
-        <element xmi:type="proyectomm:Servicio" href="pedido-pizza-de-usuario-registrado.proyectomm#//@actores.1/@tareas.1"/>
+        <element xmi:type="proyectomm:Servicio" href="pedido-pizza-de-usuario-registrado.proyectomm#3"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l_b8IRTvEe-lp7XN6fFU7Q" x="278" y="30" width="85" height="73"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_TGa1cBT0Ee-8Fa7bG8Kshg" type="3006" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_TGbcgBT0Ee-8Fa7bG8Kshg" type="5007">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_TGbcgRT0Ee-8Fa7bG8Kshg" x="-11" y="99"/>
         </children>
-        <element xmi:type="proyectomm:Envio" href="pedido-pizza-de-usuario-registrado.proyectomm#//@actores.1/@tareas.2"/>
+        <element xmi:type="proyectomm:Envio" href="pedido-pizza-de-usuario-registrado.proyectomm#4"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TGa1cRT0Ee-8Fa7bG8Kshg" x="548" y="30" width="103" height="85"/>
       </children>
     </children>

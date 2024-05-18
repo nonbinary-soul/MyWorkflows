@@ -37,15 +37,15 @@
   </bases_de_datos>
   <actores nombre="Cliente">
     <tareas xsi:type="proyectomm:Inicio" sucesor="//@actores.0/@tareas.1"/>
-    <tareas xsi:type="proyectomm:Usuario" nombre="Realizar pedido de una pizza" sucesor="//@actores.0/@tareas.2" predecesor="//@actores.0/@tareas.0" tabla_accedida_por_usuario="//@bases_de_datos.0/@tablas.1"/>
-    <tareas xsi:type="proyectomm:Envio" nombre="Enviar datos del pedido" sucesor="//@actores.1/@tareas.0" predecesor="//@actores.0/@tareas.1" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.1"/>
-    <tareas xsi:type="proyectomm:Recepcion" nombre="Recibir la pizza" sucesor="//@actores.0/@tareas.4" predecesor="//@actores.1/@tareas.2" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.2"/>
-    <tareas xsi:type="proyectomm:Usuario" nombre="Rellenar formulario de satisfacción" sucesor="//@actores.0/@tareas.5" predecesor="//@actores.0/@tareas.3" tabla_accedida_por_usuario="//@bases_de_datos.0/@tablas.3"/>
-    <tareas xsi:type="proyectomm:Fin" predecesor="//@actores.0/@tareas.4"/>
+    <tareas xsi:type="proyectomm:Usuario" nombre="Realizar pedido de una pizza" sucesor="1" predecesor="//@actores.0/@tareas.0" tabla_accedida_por_usuario="//@bases_de_datos.0/@tablas.1"/>
+    <tareas xsi:type="proyectomm:Envio" nombre="Enviar datos del pedido" sucesor="2" predecesor="//@actores.0/@tareas.1" id="1" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.1"/>
+    <tareas xsi:type="proyectomm:Recepcion" nombre="Recibir la pizza" sucesor="6" predecesor="4" id="5" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.2"/>
+    <tareas xsi:type="proyectomm:Usuario" nombre="Rellenar formulario de satisfacción" sucesor="//@actores.0/@tareas.5" predecesor="5" id="6" tabla_accedida_por_usuario="//@bases_de_datos.0/@tablas.3"/>
+    <tareas xsi:type="proyectomm:Fin" predecesor="6"/>
   </actores>
   <actores nombre="Pizzeria">
-    <tareas xsi:type="proyectomm:Recepcion" nombre="Recibir datos del pedido" sucesor="//@actores.1/@tareas.1" predecesor="//@actores.0/@tareas.2" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.1"/>
-    <tareas xsi:type="proyectomm:Servicio" nombre="Cocinar la pizza indicada" sucesor="//@actores.1/@tareas.2" predecesor="//@actores.1/@tareas.0" tabla_entrada_servicio="//@bases_de_datos.0/@tablas.1" tabla_salida_servicio="//@bases_de_datos.0/@tablas.2"/>
-    <tareas xsi:type="proyectomm:Envio" nombre="Notificar de pizza en camino" sucesor="//@actores.0/@tareas.3" predecesor="//@actores.1/@tareas.1" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.2"/>
+    <tareas xsi:type="proyectomm:Recepcion" nombre="Recibir datos del pedido" sucesor="3" predecesor="1" id="2" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.1"/>
+    <tareas xsi:type="proyectomm:Servicio" nombre="Cocinar la pizza indicada" sucesor="4" predecesor="2" id="3" tabla_entrada_servicio="//@bases_de_datos.0/@tablas.1" tabla_salida_servicio="//@bases_de_datos.0/@tablas.2"/>
+    <tareas xsi:type="proyectomm:Envio" nombre="Notificar de pizza en camino" sucesor="5" predecesor="3" id="4" tabla_accedida_por_mensaje="//@bases_de_datos.0/@tablas.2"/>
   </actores>
 </proyectomm:ProcesoDeNegocio>
