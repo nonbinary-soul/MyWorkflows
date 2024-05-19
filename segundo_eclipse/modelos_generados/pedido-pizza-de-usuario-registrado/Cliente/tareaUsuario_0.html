@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tUsuario</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+
+		<header class="topnav">
+	        <h1><a href="index.html">MisWorkflows</a></h1>
+	    </header>
+	
+    <form class="box" action="../Cliente/tareaEnvio_1.html" method="POST">
+
+	<h1>Tarea de Usuario de: Cliente</h1>
+
+	<fieldset>
+		<legend>Rellena los siguientes campos</legend>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			pizza_seleccionada<span class="required-mark">*</span>
+            <input type="text" name="pizza_seleccionada" required>
+			</label>
+		<div>
+        <!-- Generar un input para el resto de atributos -->
+		<div>
+			<label>
+			precio_total<span class="required-mark">*</span>
+            <input type="number" step="any" name="precio_total" required>
+			</label>
+		<div>
+        <!-- Generar un select para atributos de tipo LIST -->
+		<div>
+	        <label for="pizzas_disponibles">pizzas_disponibles</label>
+	        <div>
+	            <select name="pizzas_disponibles">
+                    <option value="Margarita">Margarita</option>
+                    <option value="Barbacoa">Barbacoa</option>
+                    <option value="Cuatro quesos">Cuatro quesos</option>
+                    <option value="Bacon queso">Bacon queso</option>
+                    <option value="Carbonara">Carbonara</option>
+	            </select>
+	        </div>
+	    </div>
+		<button type="submit">Siguiente</button>
+	</fieldset>
+    </form>
+
+		<footer class="bottomnav">
+	        <p>&copy; 2024 MisWorkflows. Todos los derechos reservados.</p>
+			<p>Jackie Lee Chong Ojeda & Sergio Eslava Velasco</p>
+	    </footer>
+
+</body>
+</html>

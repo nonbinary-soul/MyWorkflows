@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>tServicio</title>
+	<link rel="stylesheet" href="../../css/styles.css">
+
+	<script>
+        function ejecutarServicio() {
+            	alert("Se modificará la tabla: tabla_pedidos \n  Nombre Atributo: dni_cliente Tipo: INTEGER \n  Nombre Atributo: pizza_seleccionada Tipo: TEXT \n  Nombre Atributo: precio_total Tipo: REAL \n  Nombre Atributo: pizzas_disponibles Tipo: LIST \n  Nombre Atributo: numero_pedido Tipo: INTEGER \n ");
+        }
+    </script>
+</head>
+<body>
+
+		<header class="topnav">
+	        <h1><a href="index.html">MisWorkflows</a></h1>
+	    </header>
+
+	<div class="box">
+
+		<h1>Tarea de servicio: Cocinar la pizza indicada</h1>
+
+		<div class="box">
+			<h2>Información del servicio</h2>
+			<p>Id: 3</p>
+			<p>Nombre: Cocinar la pizza indicada</p>
+			<p>Descripción: </p>
+			<p></p>
+		</div>
+
+		<div class="box">
+			<h2>Datos accedidos</h2>
+			<p>Tabla: tabla_pedidos</p>
+			<ul>
+		            <li>Nombre: dni_cliente &emsp; Tipo: INTEGER</li>
+		            <li>Nombre: pizza_seleccionada &emsp; Tipo: TEXT</li>
+		            <li>Nombre: precio_total &emsp; Tipo: REAL</li>
+		            <li>Nombre: pizzas_disponibles &emsp; Tipo: LIST</li>
+		            <li>Nombre: numero_pedido &emsp; Tipo: INTEGER</li>
+			</ul>
+		</div>
+
+		<div class="box">
+			<h2>Acciones a tomar</h2>
+			<button type="button" onclick="ejecutarServicio()">Ejecutar Servicio</button>
+			<a href="../Pizzeria/tareaEnvio_4.html"><button type="button">Siguiente</button></a>
+		</div>
+	</div>
+
+		<footer class="bottomnav">
+	        <p>&copy; 2024 MisWorkflows. Todos los derechos reservados.</p>
+			<p>Jackie Lee Chong Ojeda & Sergio Eslava Velasco</p>
+	    </footer>
+</body>
+</html>
