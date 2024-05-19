@@ -308,7 +308,7 @@ tareaServicio_[tarea.id/].html
             	alert("¡Servicio ejecutado!");
         	[/if]
 			[if (tarea.tabla_salida_servicio.oclIsInvalid() = false)]
-            	alert("Se modificará la tabla: [tarea.tabla_entrada_servicio.nombre/] \n [for (atributo: Atributo | tarea.tabla_entrada_servicio.atributos)] Nombre Atributo: [atributo.nombre/] Tipo: [atributo.tipo/] \n [/for]");
+            	alert("Se modificará la tabla: [tarea.tabla_salida_servicio.nombre/] \n [for (atributo: Atributo | tarea.tabla_salida_servicio.atributos)] Nombre Atributo: [atributo.nombre/] Tipo: [atributo.tipo/] \n [/for]");
         	[/if]
         }
     </script>
@@ -330,7 +330,7 @@ tareaServicio_[tarea.id/].html
 		</div>
 
 		<div class="box">
-			<h2>Datos accedidos</h2>
+			<h2>Se está procesando...</h2>
 			<p>Tabla: [tarea.tabla_entrada_servicio.nombre/]</p>
 			<ul>
 				[for (atributo: Atributo | tarea.tabla_entrada_servicio.atributos)]
