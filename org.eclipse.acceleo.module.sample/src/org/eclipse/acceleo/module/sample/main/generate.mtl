@@ -313,7 +313,12 @@ tareaServicio.html
 
 	<script>
         function ejecutarServicio() {
-            alert("¡Servicio ejecutado!");
+			[if (tarea.tabla_salida_servicio.oclIsInvalid())]
+            	alert("¡Servicio ejecutado!");
+        	[/if]
+			[if (tarea.tabla_salida_servicio.oclIsInvalid() = false)]
+            	alert("Tabla de salida: [tarea.tabla_entrada_servicio.nombre/] \n [for (atributo: Atributo | tarea.tabla_entrada_servicio.atributos)] Nombre Atributo: [atributo.nombre/] Tipo: [atributo.tipo/] \n [/for]");
+        	[/if]
         }
     </script>
 </head>
