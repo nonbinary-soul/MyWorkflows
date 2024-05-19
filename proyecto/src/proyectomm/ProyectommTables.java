@@ -104,6 +104,7 @@ public class ProyectommTables extends AbstractTables
 	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Mensaje = TypeId.BAG.getSpecializedId(ProyectommTables.CLSSid_Mensaje);
 	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Servicio = TypeId.BAG.getSpecializedId(ProyectommTables.CLSSid_Servicio);
 	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Usuario = TypeId.BAG.getSpecializedId(ProyectommTables.CLSSid_Usuario);
+	public static final /*@NonInvalid*/ EnumerationLiteralId ELITid_BOOLEAN = ProyectommTables.ENUMid_EAtributo.getEnumerationLiteralId("BOOLEAN");
 	public static final /*@NonInvalid*/ EnumerationLiteralId ELITid_LIST = ProyectommTables.ENUMid_EAtributo.getEnumerationLiteralId("LIST");
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Actor = TypeId.ORDERED_SET.getSpecializedId(ProyectommTables.CLSSid_Actor);
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Atributo = TypeId.ORDERED_SET.getSpecializedId(ProyectommTables.CLSSid_Atributo);
@@ -113,6 +114,8 @@ public class ProyectommTables extends AbstractTables
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Tarea = TypeId.ORDERED_SET.getSpecializedId(ProyectommTables.CLSSid_Tarea);
 	public static final /*@NonInvalid*/ CollectionTypeId SET_CLSSid_Fin = TypeId.SET.getSpecializedId(ProyectommTables.CLSSid_Fin);
 	public static final /*@NonInvalid*/ CollectionTypeId SET_CLSSid_Inicio = TypeId.SET.getSpecializedId(ProyectommTables.CLSSid_Inicio);
+	public static final /*@NonInvalid*/ CollectionTypeId SET_CLSSid_Intermedia = TypeId.SET.getSpecializedId(ProyectommTables.CLSSid_Intermedia);
+	public static final /*@NonInvalid*/ CollectionTypeId SET_CLSSid_Tabla = TypeId.SET.getSpecializedId(ProyectommTables.CLSSid_Tabla);
 	public static final /*@NonInvalid*/ CollectionTypeId SET_CLSSid_Tarea = TypeId.SET.getSpecializedId(ProyectommTables.CLSSid_Tarea);
 
 	/**
@@ -1776,7 +1779,8 @@ public class ProyectommTables extends AbstractTables
 	 */
 	private static final EClass allInstancesEClasses /*@NonNull*/ [] = {
 		ProyectommPackage.Literals.FIN,
-		ProyectommPackage.Literals.INICIO
+		ProyectommPackage.Literals.INICIO,
+		ProyectommPackage.Literals.INTERMEDIA
 	};
 
 	@Override

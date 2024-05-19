@@ -78,6 +78,14 @@ public interface ProcesoDeNegocio extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='Intermedia.allInstances()-&gt;forAll(i1, i2 | i1 &lt;&gt; i2 implies i1.id &lt;&gt; i2.id)'"
+	 * @generated
+	 */
+	boolean P11_idsDeTareasIntermediasUnicos(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='Inicio.allInstances()-&gt;size() = 1'"
 	 * @generated
 	 */

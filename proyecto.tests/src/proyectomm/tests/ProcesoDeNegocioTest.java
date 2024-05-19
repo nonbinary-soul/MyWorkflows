@@ -16,6 +16,7 @@ import proyectomm.ProyectommFactory;
  * <p>
  * The following operations are tested:
  * <ul>
+ *   <li>{@link proyectomm.ProcesoDeNegocio#P11_idsDeTareasIntermediasUnicos(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P11 ids De Tareas Intermedias Unicos</em>}</li>
  *   <li>{@link proyectomm.ProcesoDeNegocio#R01_unaTareaInicial(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R01 una Tarea Inicial</em>}</li>
  *   <li>{@link proyectomm.ProcesoDeNegocio#R02_unaTareaFinal(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R02 una Tarea Final</em>}</li>
  * </ul>
@@ -91,6 +92,19 @@ public class ProcesoDeNegocioTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link proyectomm.ProcesoDeNegocio#P11_idsDeTareasIntermediasUnicos(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P11 ids De Tareas Intermedias Unicos</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see proyectomm.ProcesoDeNegocio#P11_idsDeTareasIntermediasUnicos(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testP11_idsDeTareasIntermediasUnicos__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 	/**

@@ -2,6 +2,9 @@
  */
 package proyectomm;
 
+import java.util.Map;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +20,8 @@ package proyectomm;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getServicio()
- * @model annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/service.svg' label.icon='false' label.placement='external'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P09_alMenosUnaTabla'"
+ *        annotation="gmf.node label='nombre' figure='svg' svg.uri='platform:/plugin/proyecto/icons/service.svg' label.icon='false' label.placement='external'"
  * @generated
  */
 public interface Servicio extends Intermedia {
@@ -28,8 +32,7 @@ public interface Servicio extends Intermedia {
 	 * @return the value of the '<em>Tabla entrada servicio</em>' reference.
 	 * @see #setTabla_entrada_servicio(Tabla)
 	 * @see proyectomm.ProyectommPackage#getServicio_Tabla_entrada_servicio()
-	 * @model required="true"
-	 *        annotation="gmf.link color='0,0,0' label='Acceso a la tabla de entrada...' target.decoration='filledclosedarrow' style='dash' width='2'"
+	 * @model annotation="gmf.link color='0,0,0' label='Acceso a la tabla de entrada...' target.decoration='filledclosedarrow' style='dash' width='2'"
 	 * @generated
 	 */
 	Tabla getTabla_entrada_servicio();
@@ -65,5 +68,13 @@ public interface Servicio extends Intermedia {
 	 * @generated
 	 */
 	void setTabla_salida_servicio(Tabla value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not self.tabla_entrada_servicio-&gt;isEmpty() or not self.tabla_salida_servicio-&gt;isEmpty()'"
+	 * @generated
+	 */
+	boolean P09_alMenosUnaTabla(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Servicio

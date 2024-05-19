@@ -240,8 +240,8 @@ public class ActorImpl extends EObjectImpl implements Actor {
 					/**
 					 * oclIsKindOf(Intermedia)
 					 */
-					final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_proyectomm_c_c_Intermedia = idResolver.getClass(ProyectommTables.CLSSid_Intermedia, null);
-					final /*@NonInvalid*/ boolean oclIsKindOf = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, _1, TYP_proyectomm_c_c_Intermedia).booleanValue();
+					final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_proyectomm_c_c_Intermedia_0 = idResolver.getClass(ProyectommTables.CLSSid_Intermedia, null);
+					final /*@NonInvalid*/ boolean oclIsKindOf = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, _1, TYP_proyectomm_c_c_Intermedia_0).booleanValue();
 					//
 					if (oclIsKindOf) {
 						accumulator.add(_1);

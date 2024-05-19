@@ -17,7 +17,7 @@ import proyectomm.Tabla;
  * The following operations are tested:
  * <ul>
  *   <li>{@link proyectomm.Tabla#P02_soloUnaClavePrimaria(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P02 solo Una Clave Primaria</em>}</li>
- *   <li>{@link proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 solo Una Clave Foranea</em>}</li>
+ *   <li>{@link proyectomm.Tabla#P08_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P08 solo Una Clave Foranea</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -107,13 +107,13 @@ public class TablaTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 solo Una Clave Foranea</em>}' operation.
+	 * Tests the '{@link proyectomm.Tabla#P08_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P08 solo Una Clave Foranea</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see proyectomm.Tabla#P08_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	public void testP07_soloUnaClaveForanea__DiagnosticChain_Map() {
+	public void testP08_soloUnaClaveForanea__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

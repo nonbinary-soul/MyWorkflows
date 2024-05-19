@@ -5,8 +5,8 @@
 @gmf
 package proyectomm;
 
-@Ecore(constraints="R01_unaTareaInicial R02_unaTareaFinal")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R01_unaTareaInicial="Inicio.allInstances()->size() = 1", R02_unaTareaFinal="Fin.allInstances()->size() = 1")
+@Ecore(constraints="R01_unaTareaInicial R02_unaTareaFinal P11_idsDeTareasIntermediasUnicos")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R01_unaTareaInicial="Inicio.allInstances()->size() = 1", R02_unaTareaFinal="Fin.allInstances()->size() = 1", P11_idsDeTareasIntermediasUnicos="Intermedia.allInstances()->forAll(i1, i2 | i1 <> i2 implies i1.id <> i2.id)")
 @gmf.diagram
 class ProcesoDeNegocio {	
 	val BaseDeDatos[+] bases_de_datos;
@@ -32,8 +32,8 @@ class BaseDeDatos {
 	val Tabla[+] tablas;
 }
 
-@Ecore(constraints="P02_soloUnaClavePrimaria P07_soloUnaClaveForanea")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P02_soloUnaClavePrimaria="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() <= 1", P07_soloUnaClaveForanea="self.atributos->select(a | a.oclIsTypeOf(ForeignKey))->size() <= 1")
+@Ecore(constraints="P02_soloUnaClavePrimaria P08_soloUnaClaveForanea")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P02_soloUnaClavePrimaria="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() <= 1", P08_soloUnaClaveForanea="self.atributos->select(a | a.oclIsTypeOf(ForeignKey))->size() <= 1")
 @gmf.node(label="nombre", figure="rectangle")
 class Tabla {
 	attr String[1] nombre;
@@ -102,10 +102,12 @@ class Usuario extends Intermedia {
 	ref Tabla[1] tabla_accedida_por_usuario;
 }
 
+@Ecore(constraints="P09_alMenosUnaTabla")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P09_alMenosUnaTabla="not self.tabla_entrada_servicio->isEmpty() or not self.tabla_salida_servicio->isEmpty()")
 @gmf.node(label="nombre", figure="svg", svg.uri="platform:/plugin/proyecto/icons/service.svg", label.icon="false", label.placement="external")
 class Servicio extends Intermedia {
 	@gmf.link(color="0,0,0", label="Acceso a la tabla de entrada...", target.decoration="filledclosedarrow", style="dash", width="2")
-	ref Tabla[1] tabla_entrada_servicio;
+	ref Tabla[?] tabla_entrada_servicio;
 	@gmf.link(color="153,153,0", label="Acceso a la tabla de salida...", target.decoration="filledclosedarrow", style="dash", width="2")
 	ref Tabla[?] tabla_salida_servicio;
 }
@@ -143,6 +145,8 @@ abstract class BD extends Intermedia {
 	ref Atributo[1] atributo_seleccionado;
 }
 
+@Ecore(constraints="P10_tipoPKPermitido")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(P10_tipoPKPermitido="self.tipo <> EAtributo::BOOLEAN and self.tipo <> EAtributo::LIST")
 class PrimaryKey extends Atributo {
 }
 

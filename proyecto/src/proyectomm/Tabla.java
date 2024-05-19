@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see proyectomm.ProyectommPackage#getTabla()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P07_soloUnaClaveForanea'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='P08_soloUnaClaveForanea'"
  *        annotation="gmf.node label='nombre' figure='rectangle'"
  * @generated
  */
@@ -77,6 +77,6 @@ public interface Tabla extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.atributos-&gt;select(a | a.oclIsTypeOf(ForeignKey))-&gt;size() &lt;= 1'"
 	 * @generated
 	 */
-	boolean P07_soloUnaClaveForanea(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean P08_soloUnaClaveForanea(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Tabla

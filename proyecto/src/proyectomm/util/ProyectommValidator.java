@@ -40,12 +40,20 @@ public class ProyectommValidator extends EObjectValidator {
 	public static final String DIAGNOSTIC_SOURCE = "proyectomm";
 
 	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P11 ids De Tareas Intermedias Unicos' of 'Proceso De Negocio'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int PROCESO_DE_NEGOCIO__P11_IDS_DE_TAREAS_INTERMEDIAS_UNICOS = 1;
+
+	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R01 una Tarea Inicial' of 'Proceso De Negocio'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int PROCESO_DE_NEGOCIO__R01_UNA_TAREA_INICIAL = 1;
+	public static final int PROCESO_DE_NEGOCIO__R01_UNA_TAREA_INICIAL = 2;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R02 una Tarea Final' of 'Proceso De Negocio'.
@@ -53,7 +61,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int PROCESO_DE_NEGOCIO__R02_UNA_TAREA_FINAL = 2;
+	public static final int PROCESO_DE_NEGOCIO__R02_UNA_TAREA_FINAL = 3;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R05 min Tarea Intermedia' of 'Actor'.
@@ -61,7 +69,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ACTOR__R05_MIN_TAREA_INTERMEDIA = 3;
+	public static final int ACTOR__R05_MIN_TAREA_INTERMEDIA = 4;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P02 solo Una Clave Primaria' of 'Tabla'.
@@ -69,15 +77,15 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TABLA__P02_SOLO_UNA_CLAVE_PRIMARIA = 4;
+	public static final int TABLA__P02_SOLO_UNA_CLAVE_PRIMARIA = 5;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P07 solo Una Clave Foranea' of 'Tabla'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P08 solo Una Clave Foranea' of 'Tabla'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TABLA__P07_SOLO_UNA_CLAVE_FORANEA = 5;
+	public static final int TABLA__P08_SOLO_UNA_CLAVE_FORANEA = 6;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P01 tiene Opciones' of 'Atributo'.
@@ -85,7 +93,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ATRIBUTO__P01_TIENE_OPCIONES = 6;
+	public static final int ATRIBUTO__P01_TIENE_OPCIONES = 7;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P04 sin Espacios En Blanco' of 'Atributo'.
@@ -93,7 +101,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int ATRIBUTO__P04_SIN_ESPACIOS_EN_BLANCO = 7;
+	public static final int ATRIBUTO__P04_SIN_ESPACIOS_EN_BLANCO = 8;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R09 unidireccionalidad' of 'Tarea'.
@@ -101,7 +109,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R09_UNIDIRECCIONALIDAD = 8;
+	public static final int TAREA__R09_UNIDIRECCIONALIDAD = 9;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R06 no Reflexiva' of 'Tarea'.
@@ -109,7 +117,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R06_NO_REFLEXIVA = 9;
+	public static final int TAREA__R06_NO_REFLEXIVA = 10;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R08 Conexiones Entre Tareas' of 'Tarea'.
@@ -117,7 +125,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TAREA__R08_CONEXIONES_ENTRE_TAREAS = 10;
+	public static final int TAREA__R08_CONEXIONES_ENTRE_TAREAS = 11;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R03 sin Predecesor' of 'Inicio'.
@@ -125,7 +133,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int INICIO__R03_SIN_PREDECESOR = 11;
+	public static final int INICIO__R03_SIN_PREDECESOR = 12;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R04 sin Sucesor' of 'Fin'.
@@ -133,7 +141,15 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int FIN__R04_SIN_SUCESOR = 12;
+	public static final int FIN__R04_SIN_SUCESOR = 13;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P09 al Menos Una Tabla' of 'Servicio'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SERVICIO__P09_AL_MENOS_UNA_TABLA = 14;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'R07 envio Asociado' of 'Recepcion'.
@@ -141,7 +157,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int RECEPCION__R07_ENVIO_ASOCIADO = 13;
+	public static final int RECEPCION__R07_ENVIO_ASOCIADO = 15;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P05 misma Tabla Que Envio' of 'Recepcion'.
@@ -149,7 +165,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int RECEPCION__P05_MISMA_TABLA_QUE_ENVIO = 14;
+	public static final int RECEPCION__P05_MISMA_TABLA_QUE_ENVIO = 16;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P03 borrado Con Clave Primaria' of 'Borrado'.
@@ -157,7 +173,15 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int BORRADO__P03_BORRADO_CON_CLAVE_PRIMARIA = 15;
+	public static final int BORRADO__P03_BORRADO_CON_CLAVE_PRIMARIA = 17;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P10 tipo PK Permitido' of 'Primary Key'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int PRIMARY_KEY__P10_TIPO_PK_PERMITIDO = 18;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P06 mismo Tipo Que PK' of 'Foreign Key'.
@@ -165,7 +189,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int FOREIGN_KEY__P06_MISMO_TIPO_QUE_PK = 16;
+	public static final int FOREIGN_KEY__P06_MISMO_TIPO_QUE_PK = 19;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'P07 PK En Otra Tabla' of 'Foreign Key'.
@@ -173,7 +197,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int FOREIGN_KEY__P07_PK_EN_OTRA_TABLA = 17;
+	public static final int FOREIGN_KEY__P07_PK_EN_OTRA_TABLA = 20;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -181,7 +205,7 @@ public class ProyectommValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 17;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 20;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -284,6 +308,7 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(procesoDeNegocio, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(procesoDeNegocio, diagnostics, context);
 		if (result || diagnostics != null) result &= validateProcesoDeNegocio_R02_unaTareaFinal(procesoDeNegocio, diagnostics, context);
+		if (result || diagnostics != null) result &= validateProcesoDeNegocio_P11_idsDeTareasIntermediasUnicos(procesoDeNegocio, diagnostics, context);
 		if (result || diagnostics != null) result &= validateProcesoDeNegocio_R01_unaTareaInicial(procesoDeNegocio, diagnostics, context);
 		return result;
 	}
@@ -296,6 +321,16 @@ public class ProyectommValidator extends EObjectValidator {
 	 */
 	public boolean validateProcesoDeNegocio_R02_unaTareaFinal(ProcesoDeNegocio procesoDeNegocio, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return procesoDeNegocio.R02_unaTareaFinal(diagnostics, context);
+	}
+
+	/**
+	 * Validates the P11_idsDeTareasIntermediasUnicos constraint of '<em>Proceso De Negocio</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProcesoDeNegocio_P11_idsDeTareasIntermediasUnicos(ProcesoDeNegocio procesoDeNegocio, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return procesoDeNegocio.P11_idsDeTareasIntermediasUnicos(diagnostics, context);
 	}
 
 	/**
@@ -361,19 +396,19 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tabla, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTabla_P07_soloUnaClaveForanea(tabla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTabla_P08_soloUnaClaveForanea(tabla, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTabla_P02_soloUnaClavePrimaria(tabla, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the P07_soloUnaClaveForanea constraint of '<em>Tabla</em>'.
+	 * Validates the P08_soloUnaClaveForanea constraint of '<em>Tabla</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTabla_P07_soloUnaClaveForanea(Tabla tabla, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return tabla.P07_soloUnaClaveForanea(diagnostics, context);
+	public boolean validateTabla_P08_soloUnaClaveForanea(Tabla tabla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return tabla.P08_soloUnaClaveForanea(diagnostics, context);
 	}
 
 	/**
@@ -601,7 +636,18 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateTarea_R08_ConexionesEntreTareas(servicio, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTarea_R09_unidireccionalidad(servicio, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTarea_R06_noReflexiva(servicio, diagnostics, context);
+		if (result || diagnostics != null) result &= validateServicio_P09_alMenosUnaTabla(servicio, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * Validates the P09_alMenosUnaTabla constraint of '<em>Servicio</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateServicio_P09_alMenosUnaTabla(Servicio servicio, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return servicio.P09_alMenosUnaTabla(diagnostics, context);
 	}
 
 	/**
@@ -780,7 +826,18 @@ public class ProyectommValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(primaryKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P04_sinEspaciosEnBlanco(primaryKey, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAtributo_P01_tieneOpciones(primaryKey, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePrimaryKey_P10_tipoPKPermitido(primaryKey, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * Validates the P10_tipoPKPermitido constraint of '<em>Primary Key</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePrimaryKey_P10_tipoPKPermitido(PrimaryKey primaryKey, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return primaryKey.P10_tipoPKPermitido(diagnostics, context);
 	}
 
 	/**

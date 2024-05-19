@@ -17,11 +17,12 @@
   <eAnnotations source="gmf"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProcesoDeNegocio">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R01_unaTareaInicial R02_unaTareaFinal"/>
+      <details key="constraints" value="R01_unaTareaInicial R02_unaTareaFinal P11_idsDeTareasIntermediasUnicos"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R01_unaTareaInicial" value="Inicio.allInstances()->size() = 1"/>
       <details key="R02_unaTareaFinal" value="Fin.allInstances()->size() = 1"/>
+      <details key="P11_idsDeTareasIntermediasUnicos" value="Intermedia.allInstances()->forAll(i1, i2 | i1 &lt;> i2 implies i1.id &lt;> i2.id)"/>
     </eAnnotations>
     <eAnnotations source="gmf.diagram"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bases_de_datos" lowerBound="1"
@@ -72,11 +73,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tabla">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="P02_soloUnaClavePrimaria P07_soloUnaClaveForanea"/>
+      <details key="constraints" value="P02_soloUnaClavePrimaria P08_soloUnaClaveForanea"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="P02_soloUnaClavePrimaria" value="self.atributos->select(a | a.oclIsTypeOf(PrimaryKey))->size() &lt;= 1"/>
-      <details key="P07_soloUnaClaveForanea" value="self.atributos->select(a | a.oclIsTypeOf(ForeignKey))->size() &lt;= 1"/>
+      <details key="P08_soloUnaClaveForanea" value="self.atributos->select(a | a.oclIsTypeOf(ForeignKey))->size() &lt;= 1"/>
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
@@ -197,6 +198,12 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Servicio" eSuperTypes="#//Intermedia">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="P09_alMenosUnaTabla"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="P09_alMenosUnaTabla" value="not self.tabla_entrada_servicio->isEmpty() or not self.tabla_salida_servicio->isEmpty()"/>
+    </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre"/>
       <details key="figure" value="svg"/>
@@ -205,7 +212,7 @@
       <details key="label.placement" value="external"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabla_entrada_servicio"
-        lowerBound="1" eType="#//Tabla">
+        eType="#//Tabla">
       <eAnnotations source="gmf.link">
         <details key="color" value="0,0,0"/>
         <details key="label" value="Acceso a la tabla de entrada..."/>
@@ -304,7 +311,14 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimaryKey" eSuperTypes="#//Atributo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="P10_tipoPKPermitido"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="P10_tipoPKPermitido" value="self.tipo &lt;> EAtributo::BOOLEAN and self.tipo &lt;> EAtributo::LIST"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey" eSuperTypes="#//Atributo">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="P06_mismoTipoQuePK P07_PKEnOtraTabla"/>

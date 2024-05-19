@@ -107,13 +107,22 @@ public interface ProyectommPackage extends EPackage {
 	int PROCESO_DE_NEGOCIO_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>P11 ids De Tareas Intermedias Unicos</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESO_DE_NEGOCIO___P11_IDS_DE_TAREAS_INTERMEDIAS_UNICOS__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The operation id for the '<em>R01 una Tarea Inicial</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESO_DE_NEGOCIO___R01_UNA_TAREA_INICIAL__DIAGNOSTICCHAIN_MAP = 0;
+	int PROCESO_DE_NEGOCIO___R01_UNA_TAREA_INICIAL__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The operation id for the '<em>R02 una Tarea Final</em>' operation.
@@ -122,7 +131,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESO_DE_NEGOCIO___R02_UNA_TAREA_FINAL__DIAGNOSTICCHAIN_MAP = 1;
+	int PROCESO_DE_NEGOCIO___R02_UNA_TAREA_FINAL__DIAGNOSTICCHAIN_MAP = 2;
 
 	/**
 	 * The number of operations of the '<em>Proceso De Negocio</em>' class.
@@ -131,7 +140,7 @@ public interface ProyectommPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESO_DE_NEGOCIO_OPERATION_COUNT = 2;
+	int PROCESO_DE_NEGOCIO_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.ActorImpl <em>Actor</em>}' class.
@@ -290,13 +299,13 @@ public interface ProyectommPackage extends EPackage {
 	int TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>P07 solo Una Clave Foranea</em>' operation.
+	 * The operation id for the '<em>P08 solo Una Clave Foranea</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP = 1;
+	int TABLA___P08_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The number of operations of the '<em>Tabla</em>' class.
@@ -963,13 +972,22 @@ public interface ProyectommPackage extends EPackage {
 	int SERVICIO___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP = INTERMEDIA___R08_CONEXIONES_ENTRE_TAREAS__DIAGNOSTICCHAIN_MAP;
 
 	/**
+	 * The operation id for the '<em>P09 al Menos Una Tabla</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICIO___P09_AL_MENOS_UNA_TABLA__DIAGNOSTICCHAIN_MAP = INTERMEDIA_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Servicio</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_OPERATION_COUNT = INTERMEDIA_OPERATION_COUNT + 0;
+	int SERVICIO_OPERATION_COUNT = INTERMEDIA_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.MensajeImpl <em>Mensaje</em>}' class.
@@ -1726,13 +1744,22 @@ public interface ProyectommPackage extends EPackage {
 	int PRIMARY_KEY___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP = ATRIBUTO___P04_SIN_ESPACIOS_EN_BLANCO__DIAGNOSTICCHAIN_MAP;
 
 	/**
+	 * The operation id for the '<em>P10 tipo PK Permitido</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMARY_KEY___P10_TIPO_PK_PERMITIDO__DIAGNOSTICCHAIN_MAP = ATRIBUTO_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Primary Key</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMARY_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
+	int PRIMARY_KEY_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link proyectomm.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.
@@ -1926,6 +1953,16 @@ public interface ProyectommPackage extends EPackage {
 	EAttribute getProcesoDeNegocio_Nombre();
 
 	/**
+	 * Returns the meta object for the '{@link proyectomm.ProcesoDeNegocio#P11_idsDeTareasIntermediasUnicos(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P11 ids De Tareas Intermedias Unicos</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>P11 ids De Tareas Intermedias Unicos</em>' operation.
+	 * @see proyectomm.ProcesoDeNegocio#P11_idsDeTareasIntermediasUnicos(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getProcesoDeNegocio__P11_idsDeTareasIntermediasUnicos__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for the '{@link proyectomm.ProcesoDeNegocio#R01_unaTareaInicial(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>R01 una Tarea Inicial</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2073,14 +2110,14 @@ public interface ProyectommPackage extends EPackage {
 	EOperation getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P07 solo Una Clave Foranea</em>}' operation.
+	 * Returns the meta object for the '{@link proyectomm.Tabla#P08_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P08 solo Una Clave Foranea</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>P07 solo Una Clave Foranea</em>' operation.
-	 * @see proyectomm.Tabla#P07_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>P08 solo Una Clave Foranea</em>' operation.
+	 * @see proyectomm.Tabla#P08_soloUnaClaveForanea(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map();
+	EOperation getTabla__P08_soloUnaClaveForanea__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link proyectomm.Atributo <em>Atributo</em>}'.
@@ -2344,6 +2381,16 @@ public interface ProyectommPackage extends EPackage {
 	EReference getServicio_Tabla_salida_servicio();
 
 	/**
+	 * Returns the meta object for the '{@link proyectomm.Servicio#P09_alMenosUnaTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P09 al Menos Una Tabla</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>P09 al Menos Una Tabla</em>' operation.
+	 * @see proyectomm.Servicio#P09_alMenosUnaTabla(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getServicio__P09_alMenosUnaTabla__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link proyectomm.Mensaje <em>Mensaje</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2477,6 +2524,16 @@ public interface ProyectommPackage extends EPackage {
 	EClass getPrimaryKey();
 
 	/**
+	 * Returns the meta object for the '{@link proyectomm.PrimaryKey#P10_tipoPKPermitido(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P10 tipo PK Permitido</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>P10 tipo PK Permitido</em>' operation.
+	 * @see proyectomm.PrimaryKey#P10_tipoPKPermitido(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getPrimaryKey__P10_tipoPKPermitido__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link proyectomm.ForeignKey <em>Foreign Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2606,6 +2663,14 @@ public interface ProyectommPackage extends EPackage {
 		EAttribute PROCESO_DE_NEGOCIO__NOMBRE = eINSTANCE.getProcesoDeNegocio_Nombre();
 
 		/**
+		 * The meta object literal for the '<em><b>P11 ids De Tareas Intermedias Unicos</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PROCESO_DE_NEGOCIO___P11_IDS_DE_TAREAS_INTERMEDIAS_UNICOS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getProcesoDeNegocio__P11_idsDeTareasIntermediasUnicos__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '<em><b>R01 una Tarea Inicial</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2724,12 +2789,12 @@ public interface ProyectommPackage extends EPackage {
 		EOperation TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P02_soloUnaClavePrimaria__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>P07 solo Una Clave Foranea</b></em>' operation.
+		 * The meta object literal for the '<em><b>P08 solo Una Clave Foranea</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P07_soloUnaClaveForanea__DiagnosticChain_Map();
+		EOperation TABLA___P08_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTabla__P08_soloUnaClaveForanea__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.AtributoImpl <em>Atributo</em>}' class.
@@ -2946,6 +3011,14 @@ public interface ProyectommPackage extends EPackage {
 		EReference SERVICIO__TABLA_SALIDA_SERVICIO = eINSTANCE.getServicio_Tabla_salida_servicio();
 
 		/**
+		 * The meta object literal for the '<em><b>P09 al Menos Una Tabla</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SERVICIO___P09_AL_MENOS_UNA_TABLA__DIAGNOSTICCHAIN_MAP = eINSTANCE.getServicio__P09_alMenosUnaTabla__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link proyectomm.impl.MensajeImpl <em>Mensaje</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3062,6 +3135,14 @@ public interface ProyectommPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRIMARY_KEY = eINSTANCE.getPrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>P10 tipo PK Permitido</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PRIMARY_KEY___P10_TIPO_PK_PERMITIDO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getPrimaryKey__P10_tipoPKPermitido__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link proyectomm.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.

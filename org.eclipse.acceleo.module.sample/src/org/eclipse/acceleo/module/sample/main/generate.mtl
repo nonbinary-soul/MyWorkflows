@@ -304,11 +304,11 @@ tareaServicio_[tarea.id/].html
 
 	<script>
         function ejecutarServicio() {
-			[if (tarea.tabla_salida_servicio.oclIsInvalid())]
-            	alert("¡Servicio ejecutado!");
+			[if (not tarea.tabla_entrada_servicio.oclIsUndefined() and tarea.tabla_salida_servicio.oclIsUndefined())]
+            	alert("Se ha terminado de procesar la tabla: [tarea.tabla_entrada_servicio.nombre/] \n [for (atributo: Atributo | tarea.tabla_entrada_servicio.atributos)] Nombre Atributo: [atributo.nombre/] Tipo: [atributo.tipo/] \n [/for]");
         	[/if]
-			[if (tarea.tabla_salida_servicio.oclIsInvalid() = false)]
-            	alert("Se modificará la tabla: [tarea.tabla_salida_servicio.nombre/] \n [for (atributo: Atributo | tarea.tabla_salida_servicio.atributos)] Nombre Atributo: [atributo.nombre/] Tipo: [atributo.tipo/] \n [/for]");
+			[if (not tarea.tabla_salida_servicio.oclIsUndefined())]
+            	alert("Se ha modificado la tabla: [tarea.tabla_salida_servicio.nombre/] \n [for (atributo: Atributo | tarea.tabla_salida_servicio.atributos)] Nombre Atributo: [atributo.nombre/] Tipo: [atributo.tipo/] \n [/for]");
         	[/if]
         }
     </script>

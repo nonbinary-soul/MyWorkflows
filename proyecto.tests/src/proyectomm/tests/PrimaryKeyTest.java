@@ -11,6 +11,12 @@ import proyectomm.ProyectommFactory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Primary Key</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link proyectomm.PrimaryKey#P10_tipoPKPermitido(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P10 tipo PK Permitido</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class PrimaryKeyTest extends AtributoTest {
@@ -65,6 +71,19 @@ public class PrimaryKeyTest extends AtributoTest {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link proyectomm.PrimaryKey#P10_tipoPKPermitido(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>P10 tipo PK Permitido</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see proyectomm.PrimaryKey#P10_tipoPKPermitido(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testP10_tipoPKPermitido__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //PrimaryKeyTest

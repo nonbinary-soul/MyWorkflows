@@ -2,14 +2,41 @@
  */
 package proyectomm.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.ocl.pivot.evaluation.Executor;
+
+import org.eclipse.ocl.pivot.ids.TypeId;
+
+import org.eclipse.ocl.pivot.library.collection.CollectionIsEmptyOperation;
+
+import org.eclipse.ocl.pivot.library.oclany.OclAnyOclAsSetOperation;
+import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
+
+import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
+import org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation;
+
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
+import org.eclipse.ocl.pivot.utilities.ValueUtil;
+
+import org.eclipse.ocl.pivot.values.IntegerValue;
+import org.eclipse.ocl.pivot.values.InvalidValueException;
+import org.eclipse.ocl.pivot.values.SetValue;
+
 import proyectomm.ProyectommPackage;
+import proyectomm.ProyectommTables;
 import proyectomm.Servicio;
 import proyectomm.Tabla;
 
@@ -153,6 +180,142 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 	 * @generated
 	 */
 	@Override
+	public boolean P09_alMenosUnaTabla(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Servicio::P09_alMenosUnaTabla";
+		try {
+			/**
+			 *
+			 * inv P09_alMenosUnaTabla:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let
+			 *         result : Boolean[?] = not self.tabla_entrada_servicio->isEmpty() or
+			 *         not self.tabla_salida_servicio->isEmpty()
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.SERVICIO___P09_AL_MENOS_UNA_TABLA__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ProyectommTables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_0;
+			if (le) {
+				local_0 = true;
+			}
+			else {
+				/*@Caught*/ Object CAUGHT_result;
+				try {
+					/*@Caught*/ Object CAUGHT_not;
+					try {
+						/*@Caught*/ Object CAUGHT_isEmpty;
+						try {
+							final /*@NonInvalid*/ Tabla tabla_entrada_servicio = this.getTabla_entrada_servicio();
+							final /*@Thrown*/ SetValue oclAsSet = OclAnyOclAsSetOperation.INSTANCE.evaluate(executor, ProyectommTables.SET_CLSSid_Tabla, tabla_entrada_servicio);
+							final /*@Thrown*/ boolean isEmpty = CollectionIsEmptyOperation.INSTANCE.evaluate(oclAsSet).booleanValue();
+							CAUGHT_isEmpty = isEmpty;
+						}
+						catch (Exception e) {
+							CAUGHT_isEmpty = ValueUtil.createInvalidValue(e);
+						}
+						if (CAUGHT_isEmpty instanceof InvalidValueException) {
+							throw (InvalidValueException)CAUGHT_isEmpty;
+						}
+						final /*@Thrown*/ Boolean not;
+						if (CAUGHT_isEmpty == ValueUtil.FALSE_VALUE) {
+							not = ValueUtil.TRUE_VALUE;
+						}
+						else {
+							if (CAUGHT_isEmpty == ValueUtil.TRUE_VALUE) {
+								not = ValueUtil.FALSE_VALUE;
+							}
+							else {
+								not = null;
+							}
+						}
+						CAUGHT_not = not;
+					}
+					catch (Exception e) {
+						CAUGHT_not = ValueUtil.createInvalidValue(e);
+					}
+					final /*@Thrown*/ Boolean result;
+					if (CAUGHT_not == ValueUtil.TRUE_VALUE) {
+						result = ValueUtil.TRUE_VALUE;
+					}
+					else {
+						/*@Caught*/ Object CAUGHT_not_0;
+						try {
+							/*@Caught*/ Object CAUGHT_isEmpty_0;
+							try {
+								final /*@NonInvalid*/ Tabla tabla_salida_servicio = this.getTabla_salida_servicio();
+								final /*@Thrown*/ SetValue oclAsSet_0 = OclAnyOclAsSetOperation.INSTANCE.evaluate(executor, ProyectommTables.SET_CLSSid_Tabla, tabla_salida_servicio);
+								final /*@Thrown*/ boolean isEmpty_0 = CollectionIsEmptyOperation.INSTANCE.evaluate(oclAsSet_0).booleanValue();
+								CAUGHT_isEmpty_0 = isEmpty_0;
+							}
+							catch (Exception e) {
+								CAUGHT_isEmpty_0 = ValueUtil.createInvalidValue(e);
+							}
+							if (CAUGHT_isEmpty_0 instanceof InvalidValueException) {
+								throw (InvalidValueException)CAUGHT_isEmpty_0;
+							}
+							final /*@Thrown*/ Boolean not_0;
+							if (CAUGHT_isEmpty_0 == ValueUtil.FALSE_VALUE) {
+								not_0 = ValueUtil.TRUE_VALUE;
+							}
+							else {
+								if (CAUGHT_isEmpty_0 == ValueUtil.TRUE_VALUE) {
+									not_0 = ValueUtil.FALSE_VALUE;
+								}
+								else {
+									not_0 = null;
+								}
+							}
+							CAUGHT_not_0 = not_0;
+						}
+						catch (Exception e) {
+							CAUGHT_not_0 = ValueUtil.createInvalidValue(e);
+						}
+						if (CAUGHT_not_0 == ValueUtil.TRUE_VALUE) {
+							result = ValueUtil.TRUE_VALUE;
+						}
+						else {
+							if (CAUGHT_not instanceof InvalidValueException) {
+								throw (InvalidValueException)CAUGHT_not;
+							}
+							if (CAUGHT_not_0 instanceof InvalidValueException) {
+								throw (InvalidValueException)CAUGHT_not_0;
+							}
+							if ((CAUGHT_not == null) || (CAUGHT_not_0 == null)) {
+								result = null;
+							}
+							else {
+								result = ValueUtil.FALSE_VALUE;
+							}
+						}
+					}
+					CAUGHT_result = result;
+				}
+				catch (Exception e) {
+					CAUGHT_result = ValueUtil.createInvalidValue(e);
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, ProyectommTables.INT_0).booleanValue();
+				local_0 = logDiagnostic;
+			}
+			return local_0;
+		}
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ProyectommPackage.SERVICIO__TABLA_ENTRADA_SERVICIO:
@@ -215,6 +378,21 @@ public class ServicioImpl extends IntermediaImpl implements Servicio {
 				return tabla_salida_servicio != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ProyectommPackage.SERVICIO___P09_AL_MENOS_UNA_TABLA__DIAGNOSTICCHAIN_MAP:
+				return P09_alMenosUnaTabla((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ServicioImpl

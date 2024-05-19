@@ -223,12 +223,12 @@ public class TablaImpl extends EObjectImpl implements Tabla {
 	 * @generated
 	 */
 	@Override
-	public boolean P07_soloUnaClaveForanea(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		final String constraintName = "Tabla::P07_soloUnaClaveForanea";
+	public boolean P08_soloUnaClaveForanea(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Tabla::P08_soloUnaClaveForanea";
 		try {
 			/**
 			 *
-			 * inv P07_soloUnaClaveForanea:
+			 * inv P08_soloUnaClaveForanea:
 			 *   let severity : Integer[1] = constraintName.getSeverity()
 			 *   in
 			 *     if severity <= 0
@@ -244,7 +244,7 @@ public class TablaImpl extends EObjectImpl implements Tabla {
 			 */
 			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
 			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ProyectommPackage.Literals.TABLA___P08_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ProyectommTables.INT_0).booleanValue();
 			/*@NonInvalid*/ boolean local_0;
 			if (le) {
@@ -379,8 +379,8 @@ public class TablaImpl extends EObjectImpl implements Tabla {
 		switch (operationID) {
 			case ProyectommPackage.TABLA___P02_SOLO_UNA_CLAVE_PRIMARIA__DIAGNOSTICCHAIN_MAP:
 				return P02_soloUnaClavePrimaria((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ProyectommPackage.TABLA___P07_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP:
-				return P07_soloUnaClaveForanea((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ProyectommPackage.TABLA___P08_SOLO_UNA_CLAVE_FORANEA__DIAGNOSTICCHAIN_MAP:
+				return P08_soloUnaClaveForanea((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
